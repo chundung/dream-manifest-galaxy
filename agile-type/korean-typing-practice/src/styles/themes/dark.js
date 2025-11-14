@@ -1,0 +1,92 @@
+// 다크 모드 테마
+export const darkTheme = {
+  name: 'dark',
+  colors: {
+    primary: '#4dabf7',
+    secondary: '#868e96',
+    success: '#51cf66',
+    danger: '#ff6b6b',
+    warning: '#ffd43b',
+    info: '#74c0fc',
+    background: '#1a1d23',
+    surface: '#2d3139',
+    border: '#373b41',
+    text: {
+      primary: '#f8f9fa',
+      secondary: '#adb5bd',
+      muted: '#6c757d',
+      inverse: '#212529',
+    },
+    typing: {
+      correct: '#51cf66',
+      incorrect: '#ff6b6b',
+      untyped: '#868e96',
+      current: '#4dabf7',
+    },
+    header: {
+      background: 'linear-gradient(135deg, #2d3139 0%, #1a1d23 100%)',
+      text: '#f8f9fa',
+    },
+    footer: {
+      background: '#0d1117',
+      text: '#f8f9fa',
+    },
+    card: {
+      background: '#2d3139',
+      border: '#373b41',
+      shadow: 'rgba(0, 0, 0, 0.3)',
+    },
+    scrollbar: {
+      track: '#2d3139',
+      thumb: '#495057',
+      thumbHover: '#6c757d',
+    },
+  },
+  fonts: {
+    primary: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+    monospace: "'Fira Code', 'Courier New', monospace",
+  },
+  fontSizes: {
+    xs: '0.75rem',
+    sm: '0.875rem',
+    base: '1rem',
+    lg: '1.125rem',
+    xl: '1.25rem',
+    '2xl': '1.5rem',
+    '3xl': '1.875rem',
+    '4xl': '2.25rem',
+    '5xl': '3rem',
+  },
+  spacing: {
+    xs: '0.25rem',
+    sm: '0.5rem',
+    md: '1rem',
+    lg: '1.5rem',
+    xl: '2rem',
+    '2xl': '3rem',
+    '3xl': '4rem',
+  },
+  borderRadius: {
+    sm: '0.25rem',
+    md: '0.5rem',
+    lg: '0.75rem',
+    xl: '1rem',
+    full: '9999px',
+  },
+  shadows: {
+    sm: '0 1px 2px 0 rgba(0, 0, 0, 0.3)',
+    md: '0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3)',
+    lg: '0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3)',
+    xl: '0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.3)',
+  },
+  transitions: {
+    fast: '0.15s ease-in-out',
+    normal: '0.3s ease-in-out',
+    slow: '0.5s ease-in-out',
+  },
+  breakpoints: {
+    mobile: '768px',
+    tablet: '1024px',
+    desktop: '1200px',
+  },
+};

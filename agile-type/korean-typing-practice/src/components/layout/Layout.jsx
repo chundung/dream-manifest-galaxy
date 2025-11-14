@@ -9,6 +9,7 @@ import {
   FooterContainer,
   LayoutContainer,
 } from './LayoutStyles';
+import ThemeToggle from '../common/ThemeToggle';
 
 const Layout = ({ children, currentPage, onNavClick }) => {
   return (
@@ -57,6 +58,7 @@ const Layout = ({ children, currentPage, onNavClick }) => {
             >
               개발 튜토리얼
             </NavLink>
+            <ThemeToggle />
           </Nav>
         </HeaderContainer>
       </Header>
