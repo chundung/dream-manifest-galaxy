@@ -968,6 +968,633 @@ console.table(assets);`,
           solution: "Node.js 메모리 제한을 늘리거나 빌드 과정을 분할하세요"
         }
       ]
+    },
+    '2-1': {
+      title: "전역 스타일 및 테마 시스템 초기 설정",
+      description: "다크/라이트 모드를 지원하는 동적 테마 시스템을 구축하고 전역 스타일을 정의합니다. 사용자 경험을 향상시키는 테마 전환 기능의 핵심을 학습합니다.",
+      objectives: [
+        "테마 디자인 토큰 구조 설계하기",
+        "라이트/다크 테마 색상 팔레트 구성하기",
+        "Redux를 통한 테마 상태 관리 구현하기",
+        "localStorage를 이용한 테마 영속성 구현하기",
+        "시스템 테마 감지 기능 추가하기",
+        "CSS 변수를 통한 동적 테마 적용하기"
+      ],
+      prerequisites: [
+        "Styled-components 기본 지식",
+        "Redux Toolkit 사용법",
+        "JavaScript localStorage API",
+        "CSS 변수 이해",
+        "미디어 쿼리 기본 지식"
+      ],
+      steps: [
+        {
+          title: "1. 테마 디자인 토큰 구조 설계",
+          content: "애플리케이션의 디자인 시스템을 위한 토큰 구조를 설계합니다. 일관된 디자인을 위해 색상, 타이포그래피, 간격 등을 체계적으로 정의합니다.",
+          code: `// src/styles/themes/light.js
+export const lightTheme = {
+  colors: {
+    primary: '#007bff',
+    secondary: '#6c757d',
+    success: '#28a745',
+    danger: '#dc3545',
+    warning: '#ffc107',
+    info: '#17a2b8',
+    background: '#ffffff',
+    surface: '#f8f9fa',
+    dark: '#343a40',
+    text: {
+      primary: '#212529',
+      secondary: '#6c757d',
+      muted: '#adb5bd',
+      inverse: '#ffffff'
+    },
+    scrollbar: {
+      track: '#f1f1f1',
+      thumb: '#c1c1c1',
+      thumbHover: '#a8a8a8'
+    }
+  },
+  fonts: {
+    primary: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+    monospace: "'Fira Code', 'Courier New', monospace"
+  },
+  fontSizes: {
+    xs: '0.75rem',
+    sm: '0.875rem',
+    base: '1rem',
+    lg: '1.125rem',
+    xl: '1.25rem',
+    '2xl': '1.5rem',
+    '3xl': '1.875rem',
+    '4xl': '2.25rem'
+  },
+  spacing: {
+    xs: '0.25rem',
+    sm: '0.5rem',
+    md: '1rem',
+    lg: '1.5rem',
+    xl: '2rem',
+    '2xl': '3rem'
+  },
+  borderRadius: {
+    sm: '0.25rem',
+    md: '0.5rem',
+    lg: '0.75rem',
+    xl: '1rem',
+    full: '9999px'
+  },
+  shadows: {
+    sm: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
+    md: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+    lg: '0 10px 15px -3px rgba(0, 0, 0, 0.1)',
+    xl: '0 20px 25px -5px rgba(0, 0, 0, 0.1)'
+  },
+  transitions: {
+    fast: '0.15s ease-in-out',
+    normal: '0.3s ease-in-out',
+    slow: '0.5s ease-in-out'
+  }
+};`,
+          explanation: "디자인 토큰은 디자인 시스템의 기본 단위입니다. 일관된 디자인을 유지하고 유지보수를 쉽게 만들어줍니다."
+        },
+        {
+          title: "2. 다크 테마 구현",
+          content: "라이트 테마를 기반으로 다크 테마를 구현합니다. 다크 모드에서의 가독성과 사용자 경험을 고려하여 색상을 조정합니다.",
+          code: `// src/styles/themes/dark.js
+import { lightTheme } from './light';
+
+export const darkTheme = {
+  ...lightTheme,
+  colors: {
+    ...lightTheme.colors,
+    background: '#1a1a1a',
+    surface: '#2d2d2d',
+    dark: '#0d1117',
+    text: {
+      primary: '#e9ecef',
+      secondary: '#adb5bd',
+      muted: '#6c757d',
+      inverse: '#212529'
+    },
+    scrollbar: {
+      track: '#2d2d2d',
+      thumb: '#6c757d',
+      thumbHover: '#adb5bd'
+    }
+  }
+};`,
+          explanation: "다크 테마는 라이트 테마의 구조를 재사용하면서 색상만 변경합니다. 이를 통해 일관성을 유지하고 관리 부담을 줄입니다."
+        },
+        {
+          title: "3. 테마 관리 유틸리티 구현",
+          content: "테마를 쉽게 관리하고 전환할 수 있는 유틸리티 함수를 구현합니다.",
+          code: `// src/styles/themes/index.js
+import { lightTheme } from './light';
+import { darkTheme } from './dark';
+
+export const themes = {
+  light: lightTheme,
+  dark: darkTheme
+};
+
+export const getTheme = (themeName) => {
+  return themes[themeName] || lightTheme;
+};
+
+export const isValidTheme = (themeName) => {
+  return Object.keys(themes).includes(themeName);
+};`,
+          explanation: "테마 유틸리티는 테마 관리 로직을 중앙화하고 재사용성을 높여줍니다."
+        },
+        {
+          title: "4. Redux 테마 슬라이스 생성",
+          content: "테마 상태를 관리하기 위한 Redux 슬라이스를 생성합니다. 현재 테마, 시스템 테마, 전환 로직을 관리합니다.",
+          code: `// src/store/slices/themeSlice.js
+import { createSlice } from '@reduxjs/toolkit';
+import { getTheme, isValidTheme } from '../../styles/themes';
+
+// localStorage에서 저장된 테마 가져오기
+const getSavedTheme = () => {
+  try {
+    const saved = localStorage.getItem('theme');
+    return isValidTheme(saved) ? saved : 'light';
+  } catch {
+    return 'light';
+  }
+};
+
+// 시스템 테마 감지
+const getSystemTheme = () => {
+  if (typeof window !== 'undefined' && window.matchMedia) {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+  return 'light';
+};
+
+const initialState = {
+  currentTheme: getSavedTheme(),
+  systemTheme: getSystemTheme(),
+  isSystemTheme: false
+};
+
+const themeSlice = createSlice({
+  name: 'theme',
+  initialState,
+  reducers: {
+    toggleTheme: (state) => {
+      state.currentTheme = state.currentTheme === 'light' ? 'dark' : 'light';
+      state.isSystemTheme = false;
+      localStorage.setItem('theme', state.currentTheme);
+    },
+    setTheme: (state, action) => {
+      const themeName = action.payload;
+      if (isValidTheme(themeName)) {
+        state.currentTheme = themeName;
+        state.isSystemTheme = false;
+        localStorage.setItem('theme', themeName);
+      }
+    },
+    setSystemTheme: (state, action) => {
+      state.systemTheme = action.payload;
+      // 사용자가 명시적으로 테마를 선택하지 않았다면 시스템 테마 따르기
+      if (state.isSystemTheme || !localStorage.getItem('theme')) {
+        state.currentTheme = action.payload;
+      }
+    },
+    followSystemTheme: (state) => {
+      state.currentTheme = state.systemTheme;
+      state.isSystemTheme = true;
+      localStorage.removeItem('theme');
+    }
+  }
+});
+
+export const { 
+  toggleTheme, 
+  setTheme, 
+  setSystemTheme, 
+  followSystemTheme 
+} = themeSlice.actions;
+
+// Selectors
+export const selectCurrentTheme = (state) => getTheme(state.theme.currentTheme);
+export const selectThemeName = (state) => state.theme.currentTheme;
+export const selectSystemTheme = (state) => state.theme.systemTheme;
+export const selectIsSystemTheme = (state) => state.theme.isSystemTheme;
+
+export default themeSlice.reducer;`,
+          explanation: "테마 슬라이스는 테마 관련 모든 상태와 로직을 관리합니다. localStorage 영속성과 시스템 테마 감지를 포함합니다."
+        },
+        {
+          title: "5. 시스템 테마 감지 훅 구현",
+          content: "사용자의 시스템 테마 설정을 실시간으로 감지하는 커스텀 훅을 구현합니다.",
+          code: `// src/hooks/useSystemThemeDetection.js
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { setSystemTheme } from '../store/slices/themeSlice';
+
+export const useSystemThemeDetection = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    // 시스템 테마 변경 감지
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    
+    const handleChange = () => {
+      const systemTheme = mediaQuery.matches ? 'dark' : 'light';
+      dispatch(setSystemTheme(systemTheme));
+    };
+
+    // 초기 시스템 테마 설정
+    handleChange();
+
+    // 시스템 테마 변경 리스너 등록
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener('change', handleChange);
+    } else {
+      // 구형 브라우저 지원
+      mediaQuery.addListener(handleChange);
+    }
+
+    // 클린업
+    return () => {
+      if (mediaQuery.removeEventListener) {
+        mediaQuery.removeEventListener('change', handleChange);
+      } else {
+        mediaQuery.removeListener(handleChange);
+      }
+    };
+  }, [dispatch]);
+};`,
+          explanation: "시스템 테마 감지 훅은 사용자의 OS 테마 설정 변경을 실시간으로 감지하여 Redux 상태를 업데이트합니다."
+        },
+        {
+          title: "6. 테마 커스텀 훅 구현",
+          content: "테마 관련 기능을 쉽게 사용할 수 있는 커스텀 훅을 구현합니다.",
+          code: `// src/hooks/useTheme.js
+import { useSelector, useDispatch } from 'react-redux';
+import { 
+  toggleTheme, 
+  setTheme, 
+  followSystemTheme,
+  selectCurrentTheme,
+  selectThemeName,
+  selectSystemTheme,
+  selectIsSystemTheme
+} from '../store/slices/themeSlice';
+
+export const useTheme = () => {
+  const dispatch = useDispatch();
+  const currentTheme = useSelector(selectCurrentTheme);
+  const themeName = useSelector(selectThemeName);
+  const systemTheme = useSelector(selectSystemTheme);
+  const isSystemTheme = useSelector(selectIsSystemTheme);
+
+  const toggle = () => {
+    dispatch(toggleTheme());
+  };
+
+  const set = (themeName) => {
+    dispatch(setTheme(themeName));
+  };
+
+  const followSystem = () => {
+    dispatch(followSystemTheme());
+  };
+
+  return {
+    currentTheme,
+    themeName,
+    systemTheme,
+    isSystemTheme,
+    toggle,
+    set,
+    followSystem
+  };
+};`,
+          explanation: "useTheme 훅은 테마 관련 모든 기능을 하나의 인터페이스로 제공하여 컴포넌트에서 쉽게 사용할 수 있게 합니다."
+        },
+        {
+          title: "7. 동적 전역 스타일 업데이트",
+          content: "테마 변경에 따라 동적으로 스타일이 적용되도록 GlobalStyle을 업데이트합니다.",
+          code: `// src/styles/GlobalStyle.js
+import { createGlobalStyle } from 'styled-components';
+
+export const GlobalStyle = createGlobalStyle\`
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: \${({ theme }) => theme.fonts.primary};
+    background-color: \${({ theme }) => theme.colors.background};
+    color: \${({ theme }) => theme.colors.text.primary};
+    line-height: 1.6;
+    overflow-x: hidden;
+    transition: background-color \${({ theme }) => theme.transitions.normal},
+                color \${({ theme }) => theme.transitions.normal};
+  }
+
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Focus styles for accessibility */
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid \${({ theme }) => theme.colors.primary};
+    outline-offset: 2px;
+  }
+
+  /* Selection color */
+  ::selection {
+    background-color: \${({ theme }) => theme.colors.primary};
+    color: \${({ theme }) => theme.colors.text.inverse};
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: \${({ theme }) => theme.colors.scrollbar.track};
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: \${({ theme }) => theme.colors.scrollbar.thumb};
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: \${({ theme }) => theme.colors.scrollbar.thumbHover};
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Remove default styles */
+  ul, ol {
+    list-style: none;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+\`;`,
+          explanation: "동적 GlobalStyle은 테마 변경 시 부드러운 전환 효과와 함께 모든 스타일이 적용되도록 보장합니다."
+        },
+        {
+          title: "8. ThemeProvider 래퍼 구현",
+          content: "Redux 상태와 styled-components ThemeProvider를 연결하는 래퍼 컴포넌트를 구현합니다.",
+          code: `// src/main.jsx
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { Provider } from 'react-redux';
+import { ThemeProvider } from 'styled-components';
+import { GlobalStyle } from './styles/GlobalStyle.js';
+import { store } from './store/store.js';
+import App from './App.jsx';
+import { useSelector } from 'react-redux';
+import { selectTheme } from './store/slices/themeSlice';
+import { useSystemThemeDetection } from './hooks/useSystemThemeDetection';
+
+// 테마 프로바이더 컴포넌트
+/* eslint-disable react-refresh/only-export-components */
+const ThemeProviderWrapper = ({ children }) => {
+  const theme = useSelector(selectTheme);
+  
+  // 시스템 테마 변경 감지
+  useSystemThemeDetection();
+  
+  return (
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      {children}
+    </ThemeProvider>
+  );
+};
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <Provider store={store}>
+      <ThemeProviderWrapper>
+        <App />
+      </ThemeProviderWrapper>
+    </Provider>
+  </StrictMode>
+);`,
+          explanation: "ThemeProviderWrapper는 Redux 상태를 styled-components ThemeProvider와 연결하여 동적 테마 전환을 가능하게 합니다."
+        }
+      ],
+      codeExamples: [
+        {
+          title: "테마 토글 버튼 컴포넌트",
+          code: `// src/components/common/ThemeToggle.jsx
+import React from 'react';
+import styled from 'styled-components';
+import { useTheme } from '../../hooks/useTheme';
+
+const ToggleButton = styled.button\`
+  background: \${({ theme, isDark }) => 
+    isDark ? theme.colors.primary : theme.colors.secondary};
+  border: none;
+  border-radius: 2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: all \${({ theme }) => theme.transitions.fast};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: \${({ theme }) => theme.shadows.md};
+  }
+
+  &:focus-visible {
+    outline: 2px solid \${({ theme }) => theme.colors.primary};
+    outline-offset: 2px;
+  }
+\`;
+
+const IconContainer = styled.span\`
+  font-size: 1.2rem;
+  transition: transform \${({ theme }) => theme.transitions.normal};
+  
+  \${ToggleButton}:hover & {
+    transform: rotate(20deg);
+  }
+\`;
+
+const ThemeToggle = () => {
+  const { currentTheme, toggle } = useTheme();
+  const isDark = currentTheme.name === 'dark';
+
+  const handleToggle = () => {
+    toggle();
+  };
+
+  return (
+    <ToggleButton 
+      onClick={handleToggle} 
+      isDark={isDark}
+      aria-label="테마 전환"
+    >
+      <IconContainer>
+        {isDark ? '🌙' : '☀️'}
+      </IconContainer>
+    </ToggleButton>
+  );
+};
+
+export default ThemeToggle;`,
+          explanation: "테마 토글 버튼은 접근성을 고려하고 부드러운 애니메이션 효과를 제공합니다."
+        },
+        {
+          title: "테마 선택 드롭다운",
+          code: `// src/components/common/ThemeSelector.jsx
+import React from 'react';
+import styled from 'styled-components';
+import { useTheme } from '../../hooks/useTheme';
+
+const SelectorContainer = styled.div\`
+  position: relative;
+\`;
+
+const SelectorButton = styled.button\`
+  background: \${({ theme }) => theme.colors.surface};
+  border: 1px solid \${({ theme }) => theme.colors.border};
+  border-radius: \${({ theme }) => theme.borderRadius.md};
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all \${({ theme }) => theme.transitions.fast};
+
+  &:hover {
+    border-color: \${({ theme }) => theme.colors.primary};
+  }
+\`;
+
+const Dropdown = styled.div\`
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: \${({ theme }) => theme.colors.surface};
+  border: 1px solid \${({ theme }) => theme.colors.border};
+  border-radius: \${({ theme }) => theme.borderRadius.md};
+  box-shadow: \${({ theme }) => theme.shadows.lg};
+  z-index: 1000;
+  min-width: 150px;
+\`;
+
+const Option = styled.button\`
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color \${({ theme }) => theme.transitions.fast};
+
+  &:hover {
+    background-color: \${({ theme }) => theme.colors.background};
+  }
+
+  &.active {
+    background-color: \${({ theme }) => theme.colors.primary};
+    color: \${({ theme }) => theme.colors.text.inverse};
+  }
+\`;
+
+const ThemeSelector = () => {
+  const { themeName, systemTheme, isSystemTheme, set, followSystem } = useTheme();
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  const handleSelect = (theme) => {
+    if (theme === 'system') {
+      followSystem();
+    } else {
+      set(theme);
+    }
+    setIsOpen(false);
+  };
+
+  return (
+    <SelectorContainer>
+      <SelectorButton onClick={() => setIsOpen(!isOpen)}>
+        테마: {isSystemTheme ? '시스템' : themeName === 'light' ? '라이트' : '다크'}
+      </SelectorButton>
+      
+      {isOpen && (
+        <Dropdown>
+          <Option 
+            onClick={() => handleSelect('light')}
+            className={themeName === 'light' && !isSystemTheme ? 'active' : ''}
+          >
+            ☀️ 라이트
+          </Option>
+          <Option 
+            onClick={() => handleSelect('dark')}
+            className={themeName === 'dark' && !isSystemTheme ? 'active' : ''}
+          >
+            🌙 다크
+          </Option>
+          <Option 
+            onClick={() => handleSelect('system')}
+            className={isSystemTheme ? 'active' : ''}
+          >
+            💻 시스템
+          </Option>
+        </Dropdown>
+      )}
+    </SelectorContainer>
+  );
+};
+
+export default ThemeSelector;`,
+          explanation: "테마 선택 드롭다운은 사용자에게 더 많은 테마 선택 옵션을 제공합니다."
+        }
+      ],
+      tips: [
+        "테마 전환 시 부드러운 애니메이션을 위해 CSS transition을 사용하세요",
+        "접근성을 위해 aria-label과 키보드 내비게이션을 지원하세요",
+        "사용자의 테마 선택을 localStorage에 저장하여 재방문 시에도 유지하세요",
+        "시스템 테마를 감지하여 사용자 경험을 개선하세요",
+        "테마 객체는 가능한 한 평평한 구조를 유지하여 성능을 최적화하세요",
+        "CSS 변수를 사용하면 JavaScript 없이도 테마 전환이 가능합니다"
+      ],
+      commonErrors: [
+        {
+          error: "테마가 적용되지 않음",
+          solution: "컴포넌트가 ThemeProvider 내부에 있는지 확인하고, 테마 객체 구조가 올바른지 검증하세요"
+        },
+        {
+          error: "localStorage 접근 오류",
+          solution: "SSR 환경에서는 window 객체가 없을 수 있으니 try-catch로 감싸거나 typeof window 체크를 사용하세요"
+        },
+        {
+          error: "시스템 테마 감지가 동작하지 않음",
+          solution: "matchMedia API를 지원하는 브라우저인지 확인하고, 이벤트 리스너 등록/해제를 올바르게 처리하세요"
+        },
+        {
+          error: "테마 전환 시 깜빡임 현상",
+          solution: "CSS transition을 추가하고, 테마 변경을 최소화하여 성능을 최적화하세요"
+        }
+      ]
     }
   };
 
