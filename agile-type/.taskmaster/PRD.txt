@@ -1,0 +1,165 @@
+<context>
+# Overview  
+한글 타이핑 연습 싱글 페이지 어플리케이션은 사용자들이 한국어 타이핑 속도와 정확성을 향상시킬 수 있도록 도와주는 웹 기반 교육 도구입니다. 이 어플리케이션은 초보자부터 숙련자까지 모든 수준의 사용자를 대상으로 하며, 게임화된 학습 경험과 실시간 피드백을 통해 동기부여를 제공합니다.
+
+# Core Features  
+## 실시간 타이핑 연습 모드
+- 사용자가 화면에 표시된 한글 텍스트를 따라 입력하는 기능
+- 실시간으로 타이핑 속도(WPM)와 정확성(%) 표시
+- 오타 발생 시 즉각적인 시각적 피드백 제공
+- 다양한 난이도의 연습 텍스트 제공 (초급, 중급, 고급)
+
+## 게임화된 학습 시스템
+- 레벨업 시스템과 경험치 획득
+- 도전 과제 및 업적 시스템
+- 일일/주간/월간 랭킹 보드
+- 스트릭 기능 (연속 학습 일수 기록)
+
+## 맞춤형 학습 콘텐츠
+- 사용자 수준에 맞는 텍스트 자동 추천
+- 다양한 주제의 연습 텍스트 (뉴스, 문학, 일상 대화 등)
+- 사용자 직접 텍스트 입력 기능
+- 한글 자모 연습 모드 (초보자용)
+
+## 통계 및 진도 추적
+- 상세한 타이핑 통계 (평균 속도, 정확성, 취약 키 분석)
+- 학습 진도 시각화 (그래프 및 차트)
+- 개인 기록 관리
+- 학습 패턴 분석 및 개선 제안
+
+# User Experience  
+## User Personas
+- **초보 학습자**: 컴퓨터 사용은 가능하지만 한글 타이핑이 느린 사용자
+- **중급 사용자**: 기본적인 타이핑은 가능하지만 속도 향상이 필요한 사용자
+- **숙련자**: 이미 빠른 타이핑이 가능하지만 정확성과 일관성을 개선하려는 사용자
+- **학생**: 학업이나 시험 준비를 위해 타이핑 실력 향상이 필요한 학생
+
+## Key User Flows
+1. **회원가입/로그인 → 레벨 테스트 → 맞춤형 학습 경험 제공**
+2. **연습 모드 선택 → 텍스트 입력 → 실시간 피드백 → 결과 분석**
+3. **통계 확인 → 약점 파악 → 맞춤 연습 → 실력 향상 확인**
+4. **도전 과제 수행 → 업적 획득 → 랭킹 상승 → 동기부여 유지**
+
+## UI/UX Considerations
+- 깔끔하고 미니멀한 디자인으로 학습 집중도 향상
+- 반응형 디자인으로 모든 기기에서 최적화된 경험 제공
+- 직관적인 인터페이스로 학습 곡선 최소화
+- 실시간 피드백을 위한 시각적/청각적 효과 적절히 활용
+- 다크/라이트 모드 지원으로 사용자 선호도 반영
+</context>
+<PRD>
+# Technical Architecture  
+## System Components
+- **Frontend**: React.js 기반 싱글 페이지 어플리케이션
+- **State Management**: Redux Toolkit for 전역 상태 관리
+- **Styling**: Styled-components 또는 Tailwind CSS
+- **Charts**: Chart.js 또는 Recharts for 통계 시각화
+- **Animation**: Framer Motion for 부드러운 애니메이션 효과
+
+## Data Models
+- **User**: id, username, email, level, experience, created_at
+- **TypingSession**: id, user_id, text_id, wpm, accuracy, duration, timestamp
+- **Text**: id, content, difficulty_level, category, character_count
+- **Achievement**: id, name, description, condition, icon
+- **UserAchievement**: id, user_id, achievement_id, earned_at
+
+## APIs and Integrations
+- **Local Storage**: 사용자 설정과 임시 데이터 저장
+- **IndexedDB**: 대용량 데이터와 오프라인 기능 지원
+- **Web Speech API**: 음성 피드백 기능 (선택적)
+- **PWA**: 오프라인 모드와 앱 설치 기능
+
+## Infrastructure Requirements
+- 정적 호스팅 (Vercel, Netlify 등)
+- CDN for fast content delivery
+- SSL certificate for security
+- Progressive Web App support
+
+# Development Roadmap  
+## MVP Requirements
+1. **기본 타이핑 연습 기능**
+   - 텍스트 표시 및 입력 영역
+   - 실시간 WPM 및 정확성 계산
+   - 기본적인 텍스트 콘텐츠 (5-10개)
+
+2. **사용자 인증 시스템**
+   - 로컬 스토리지 기반 사용자 관리
+   - 기본적인 프로필 정보 저장
+
+3. **간단한 통계 표시**
+   - 현재 세션 결과
+   - 기본적인 기록 저장
+
+## Future Enhancements
+1. **고급 통계 및 분석**
+   - 상세한 타이핑 패턴 분석
+   - 취약 키 식별 및 맞춤 연습
+   - 장기간 학습 추세 시각화
+
+2. **게임화 시스템**
+   - 레벨업 및 경험치 시스템
+   - 도전 과제 및 업적
+   - 랭킹 보드
+
+3. **커뮤니티 기능**
+   - 사용자 간 경쟁 모드
+   - 텍스트 공유 및 추천 시스템
+   - 그룹 학습 기능
+
+4. **고급 학습 기능**
+   - AI 기반 맞춤형 텍스트 추천
+   - 음성 인식을 통한 발음 연습
+   - 가상 키보드 시각화
+
+# Logical Dependency Chain
+1. **Foundation (Phase 1)**
+   - 기본 HTML/CSS 구조
+   - React 컴포넌트 기본 설정
+   - 타이핑 입력 감지 로직
+
+2. **Core Functionality (Phase 2)**
+   - 실시간 타이핑 계산 알고리즘
+   - 텍스트 관리 시스템
+   - 기본 UI 컴포넌트 구현
+
+3. **User Experience (Phase 3)**
+   - 사용자 데이터 저장/로드
+   - 통계 표시 및 시각화
+   - 반응형 디자인 완성
+
+4. **Enhancement (Phase 4)**
+   - 게임화 요소 추가
+   - 고급 분석 기능
+   - 성능 최적화
+
+# Risks and Mitigations  
+## Technical Challenges
+- **한글 입력 처리의 복잡성**: 조합형 한글 입력 시스템의 정확한 구현
+  - 해결책: IME API 활용 및 광범위한 테스트
+- **실시간 성능**: 많은 사용자가 동시에 사용할 때의 성능 저하
+  - 해결책: 클라이언트 측 최적화 및 효율적인 알고리즘 구현
+
+## MVP Scope Management
+- 기능 축소로 인한 사용자 경험 저하 위험
+  - 해결책: 핵심 기능에 집중하고 사용자 피드백 기반 확장
+- 초기 콘텐츠 부족
+  - 해결책: 다양한 난이도의 텍스트 라이브러리 확보
+
+## Resource Constraints
+- 단일 개발자의 시간 제약
+  - 해결책: MVP 기능 우선순위화 및 점진적 개발
+- 한글 타이핑 전문성 부족
+  - 해결책: 기존 타이핑 교육 자료 연구 및 사용자 테스트
+
+# Appendix  
+## Research Findings
+- 기존 한글 타이핑 사이트 분석 (타이핑클럽, 타자연습 등)
+- 사용자 선호도 조사 (게임화 요소, 통계 기능 중요도)
+- 효과적인 타이핑 교육 방법론 연구
+
+## Technical Specifications
+- 지원 브라우저: Chrome 90+, Firefox 88+, Safari 14+, Edge 90+
+- 최소 성능 요구사항: 60fps 애니메이션, 100ms 이내 응답 시간
+- 데이터 저장 용량: 최대 50MB (로컬 스토리지)
+- 오프라인 기능: 기본 연습 모드 및 데이터 동기화
+</PRD>

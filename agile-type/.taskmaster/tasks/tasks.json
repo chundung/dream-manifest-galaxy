@@ -1,0 +1,781 @@
+{
+  "master": {
+    "tasks": [
+      {
+        "id": 1,
+        "title": "프로젝트 초기 설정 및 기본 스택 통합",
+        "description": "React.js 애플리케이션을 초기화하고, Redux Toolkit, Styled-components (또는 Tailwind CSS), Chart.js (또는 Recharts), Framer Motion 등 핵심 프론트엔드 기술 스택을 통합합니다. 개발 환경을 설정하고 빌드 프로세스를 최적화합니다.",
+        "details": "React 프로젝트는 `create-react-app` 또는 Vite를 사용하여 초기화합니다. `npm install` 또는 `yarn add`를 통해 `react-redux`, `@reduxjs/toolkit`, `styled-components` (또는 `tailwindcss`), `chart.js` (또는 `recharts`), `framer-motion` 패키지를 설치합니다. Redux 스토어를 구성하고, Styled-components의 ThemeProvider를 설정하며, Tailwind CSS를 선택할 경우 `tailwind.config.js`를 구성합니다. 기본적인 라우팅을 위해 `react-router-dom`도 설치하고 설정합니다.",
+        "testStrategy": "프로젝트가 성공적으로 빌드되고, 각 라이브러리가 올바르게 import되어 작동하는지 확인하는 더미 컴포넌트 및 Redux 액션을 생성하여 테스트합니다. `package.json`의 의존성 목록을 확인합니다.",
+        "priority": "high",
+        "dependencies": [],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "React 프로젝트 초기화 및 핵심 의존성 설치",
+            "description": "Vite 또는 Create-React-App을 사용하여 새 React 애플리케이션을 초기화하고, Redux Toolkit, Styled-components, Chart.js, Framer Motion, React Router Dom 등 필수 프론트엔드 라이브러리를 설치합니다.",
+            "dependencies": [],
+            "details": "프로젝트 루트 디렉토리에서 'npx create-vite@latest my-app --template react-ts' (TypeScript 사용 시) 또는 'npx create-react-app my-app --template typescript' 명령어를 실행하여 프로젝트를 초기화합니다. 이후 'npm install react-redux @reduxjs/toolkit styled-components chart.js react-chartjs-2 framer-motion react-router-dom' 명령어를 사용하여 필요한 패키지들을 설치합니다. package.json 파일에 모든 의존성이 올바르게 추가되었는지 확인합니다.",
+            "status": "pending",
+            "testStrategy": "프로젝트가 성공적으로 초기화되고 'npm start' 또는 'npm run dev'로 실행되는지 확인합니다. package.json에 명시된 모든 라이브러리가 dependencies 목록에 정확히 포함되어 있는지 검증합니다."
+          },
+          {
+            "id": 2,
+            "title": "Styled-components 환경 설정 및 전역 스타일 정의",
+            "description": "Styled-components의 ThemeProvider를 설정하고, 애플리케이션 전체에 적용될 GlobalStyle을 정의하여 일관된 디자인 시스템의 기반을 마련합니다.",
+            "dependencies": [
+              1
+            ],
+            "details": "src/styles/theme.ts 파일을 생성하여 기본 색상 팔레트, 폰트 사이즈 등 디자인 토큰을 정의합니다. src/styles/GlobalStyle.ts 파일에는 애플리케이션 전반에 걸쳐 적용될 CSS 리셋 및 기본 스타일을 정의합니다. src/App.tsx 또는 src/main.tsx 파일에서 ThemeProvider와 GlobalStyle을 루트 컴포넌트에 감싸서 적용합니다. 필요하다면 다크/라이트 모드 지원을 위한 ThemeProvider의 동적 테마 변경 로직의 초기 스케치를 포함합니다.",
+            "status": "pending",
+            "testStrategy": "ThemeProvider와 GlobalStyle이 올바르게 적용되었는지 확인하기 위해 간단한 컴포넌트에 정의된 테마 변수(예: PrimaryColor)를 적용하고 브라우저에서 시각적으로 확인합니다. GlobalStyle의 CSS 리셋이 적용되었는지 개발자 도구로 검사합니다."
+          },
+          {
+            "id": 3,
+            "title": "Redux Toolkit 스토어 및 기본 예제 슬라이스 구성",
+            "description": "Redux Toolkit을 사용하여 중앙 집중식 상태 관리 스토어를 설정하고, 애플리케이션의 상태 관리 아키텍처의 기반을 구축하며, 간단한 상태를 관리하는 예제 슬라이스를 구현합니다.",
+            "dependencies": [
+              1
+            ],
+            "details": "src/app/store.ts 파일을 생성하여 Redux Toolkit의 `configureStore`를 사용하여 스토어를 초기화합니다. src/features/counter/counterSlice.ts와 같은 예제 슬라이스를 생성하여 액션(예: increment, decrement) 및 리듀서를 정의합니다. 스토어 구성 시 이 슬라이스를 포함하고, `react-redux`의 `Provider`를 사용하여 스토어를 React 컴포넌트 트리에 연결합니다. `useSelector` 및 `useDispatch` 훅의 사용법을 시연하는 간단한 컴포넌트를 작성합니다.",
+            "status": "pending",
+            "testStrategy": "예제 슬라이스의 상태와 액션을 사용하여 간단한 카운터 컴포넌트를 만들고, 버튼 클릭 시 상태가 업데이트되고 UI에 반영되는지 확인합니다. Redux DevTools 확장 프로그램을 사용하여 스토어의 상태 변화와 액션 디스패치가 올바르게 작동하는지 검증합니다."
+          },
+          {
+            "id": 4,
+            "title": "기본 라우팅 구조 및 초기 레이아웃 컴포넌트 구현",
+            "description": "`react-router-dom`을 사용하여 애플리케이션의 기본 라우팅 구조를 설정하고, 헤더, 푸터, 메인 콘텐츠 영역을 포함하는 초기 레이아웃 컴포넌트를 구현합니다.",
+            "dependencies": [
+              1,
+              2
+            ],
+            "details": "src/components/Layout.tsx 파일을 생성하여 헤더와 푸터를 포함하는 기본적인 레이아웃을 정의하고, `children` prop을 사용하여 동적으로 콘텐츠를 렌더링합니다. src/App.tsx에서 `BrowserRouter` 및 `Routes`, `Route` 컴포넌트를 사용하여 '/' 경로에 `Layout` 컴포넌트를 연결하고, 그 안에 Home과 같은 더미 페이지 컴포넌트를 정의합니다. Styled-components를 사용하여 레이아웃 컴포넌트의 스타일을 적용합니다.",
+            "status": "pending",
+            "testStrategy": "브라우저에서 애플리케이션을 실행하여 '/' 경로에 접근했을 때 Layout 컴포넌트와 Home 페이지 내용이 올바르게 렌더링되는지 확인합니다. 라우터가 제대로 작동하는지 확인하기 위해 NavBar에 다른 경로로 이동하는 링크를 추가하고 클릭 시 페이지가 변경되는지 검증합니다."
+          },
+          {
+            "id": 5,
+            "title": "개발 환경 최적화 및 빌드 스크립트 구성",
+            "description": "일관된 코드 스타일과 품질 유지를 위해 ESLint 및 Prettier를 설정하고, 개발 및 프로덕션 환경을 위한 빌드 스크립트를 최적화합니다.",
+            "dependencies": [
+              1
+            ],
+            "details": "ESLint 및 Prettier를 설치하고 프로젝트 루트에 `.eslintrc.json` 및 `.prettierrc.json` 파일을 생성하여 규칙을 구성합니다. 필요에 따라 Airbnb 스타일 가이드와 같은 표준 규칙 세트를 통합합니다. package.json의 scripts 섹션에 'lint' 및 'format' 스크립트를 추가하여 ESLint 및 Prettier를 실행할 수 있도록 합니다. 'build' 스크립트가 프로덕션 빌드를 생성하도록 설정하고, 빌드 결과물의 크기 및 성능을 간단히 검토합니다.",
+            "status": "pending",
+            "testStrategy": "의도적으로 코드 스타일에 어긋나는 코드를 작성한 후 'npm run lint' 및 'npm run format' 명령어를 실행하여 ESLint가 오류를 보고하고 Prettier가 코드를 자동으로 수정하는지 확인합니다. 'npm run build' 명령어를 실행하여 프로덕션 빌드가 성공적으로 완료되고, build 디렉토리가 생성되는지 검증합니다."
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "기본 레이아웃 및 반응형 디자인 컴포넌트 구현",
+        "description": "애플리케이션의 전반적인 UI/UX 고려사항에 따라 깔끔하고 미니멀하며 반응형인 기본 레이아웃 컴포넌트를 설계하고 구현합니다. 다크/라이트 모드 지원을 위한 토글 기능을 포함합니다.",
+        "details": "헤더, 푸터, 메인 콘텐츠 영역을 포함하는 `Layout` 컴포넌트를 생성합니다. Styled-components를 사용할 경우 전역 스타일 및 테마를 정의하고, Tailwind CSS를 사용할 경우 `postcss-preset-env`를 활용하여 유틸리티 클래스를 적용합니다. 미디어 쿼리를 사용하여 다양한 화면 크기에 대한 반응형 동작을 구현하고, 다크/라이트 모드 테마를 토글할 수 있는 컨텍스트 또는 Redux 상태를 설정합니다.",
+        "testStrategy": "다양한 브라우저 크기와 디바이스 에뮬레이터에서 레이아웃의 반응성을 테스트합니다. 다크/라이트 모드 토글 시 색상 팔레트가 올바르게 전환되는지 시각적으로 확인합니다.",
+        "priority": "high",
+        "dependencies": [
+          1
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "전역 스타일 및 테마 시스템 초기 설정",
+            "description": "애플리케이션 전반에 걸쳐 사용될 전역 스타일(CSS 리셋, 기본 폰트 등)과 다크/라이트 모드를 지원하는 테마 시스템을 설정합니다. Tailwind CSS를 사용하는 경우 `tailwind.config.js` 및 `postcss.config.js`를 구성하고, Styled-components를 사용하는 경우 `ThemeProvider`와 전역 스타일을 정의합니다.",
+            "dependencies": [],
+            "details": "프로젝트의 스타일링 프레임워크(Tailwind CSS 또는 Styled-components)를 기반으로 초기 설정 파일을 구성합니다. 전역 CSS 변수 또는 테마 객체를 정의하여 다크/라이트 모드 전환을 위한 색상 팔레트와 폰트 크기 등을 포함합니다. `postcss-preset-env`와 같은 필요한 PostCSS 플러그인을 설치하고 설정합니다.",
+            "status": "pending",
+            "testStrategy": "애플리케이션에 임시로 텍스트를 추가하여 전역 폰트 및 기본 텍스트 색상이 올바르게 적용되는지 시각적으로 확인합니다. 개발자 도구를 사용하여 CSS 변수나 테마 객체가 예상대로 로드되었는지 검사합니다."
+          },
+          {
+            "id": 2,
+            "title": "기본 `Layout` 컴포넌트 구조 구현",
+            "description": "애플리케이션의 모든 페이지에서 공통적으로 사용될 `Layout` 컴포넌트의 기본 마크업 구조를 구현합니다. 이 컴포넌트는 헤더, 메인 콘텐츠 영역, 푸터로 구성됩니다. 아직 복잡한 스타일이나 반응형 로직은 적용하지 않습니다.",
+            "dependencies": [
+              1
+            ],
+            "details": "`src/components/layout/Layout.tsx` 파일을 생성하고, `Header`, `main` (또는 `div`), `Footer` 요소를 포함하는 기본적인 JSX 구조를 작성합니다. 이 컴포넌트가 `children` props를 받아 메인 콘텐츠 영역에 렌더링할 수 있도록 합니다. 각 영역에 의미론적인 HTML 태그를 사용하여 접근성을 확보합니다.",
+            "status": "pending",
+            "testStrategy": "`Layout` 컴포넌트를 사용하여 임시 페이지를 렌더링하고, 헤더, 메인 콘텐츠, 푸터가 브라우저에 올바른 순서와 구조로 표시되는지 시각적으로 확인합니다. 개발자 도구의 요소 탭에서 HTML 구조가 예상과 일치하는지 검증합니다."
+          },
+          {
+            "id": 3,
+            "title": "반응형 디자인 및 스타일 적용",
+            "description": "구현된 `Layout` 컴포넌트 및 내부 요소에 대해 다양한 화면 크기(모바일, 태블릿, 데스크탑)에 대응하는 반응형 스타일을 적용합니다. 미디어 쿼리(Styled-components) 또는 Tailwind CSS의 반응형 유틸리티 클래스를 활용합니다.",
+            "dependencies": [
+              2
+            ],
+            "details": "`Layout` 컴포넌트의 각 섹션(헤더, 메인, 푸터)에 `min-width` 또는 `max-width` 미디어 쿼리를 사용하여 유연한 그리드 시스템이나 Flexbox/Grid 레이아웃을 적용합니다. Tailwind CSS를 사용하는 경우 `sm:`, `md:`, `lg:` 접두사를 활용하여 폰트 크기, 패딩, 마진, 요소의 정렬 방식을 조정합니다. 콘텐츠가 오버플로우되지 않도록 주의합니다.",
+            "status": "pending",
+            "testStrategy": "크롬 개발자 도구의 반응형 디자인 모드를 사용하여 다양한 디바이스 뷰포트(예: iPhone, iPad, Desktop)에서 레이아웃이 깨지지 않고 올바르게 조정되는지 시각적으로 확인합니다. 가로 및 세로 모드 전환 시에도 레이아웃의 안정성을 검사합니다."
+          },
+          {
+            "id": 4,
+            "title": "다크/라이트 모드 토글 기능 및 UI 구현",
+            "description": "사용자가 애플리케이션의 테마를 다크 모드와 라이트 모드 간에 전환할 수 있도록 하는 로직과 UI 컴포넌트를 구현합니다. React Context API 또는 Redux를 사용하여 전역 테마 상태를 관리하고, 테마 변경 시 전역 스타일이 업데이트되도록 연동합니다.",
+            "dependencies": [
+              1,
+              3
+            ],
+            "details": "테마 상태(`theme` 또는 `darkMode`)를 관리하는 Context(`ThemeContext`) 또는 Redux 슬라이스를 생성합니다. `Layout` 컴포넌트 내에 테마 전환을 위한 토글 버튼(예: 스위치 아이콘)을 추가하고, 이 버튼 클릭 시 상태가 변경되도록 연결합니다. 상태 변경에 따라 `body` 태그에 클래스를 추가하거나, `ThemeProvider`의 props를 업데이트하여 전역 스타일이 변경되도록 구현합니다. 사용자 선호 모드를 로컬 스토리지에 저장하여 재방문 시에도 유지되도록 합니다.",
+            "status": "pending",
+            "testStrategy": "다크/라이트 모드 토글 버튼을 클릭하여 전체 UI의 색상 팔레트가 올바르게 전환되는지 시각적으로 확인합니다. 페이지를 새로고침하거나 브라우저를 닫았다가 다시 열었을 때 마지막으로 설정된 테마 모드가 유지되는지 확인합니다. 개발자 도구를 사용하여 테마 관련 CSS 변수나 클래스가 올바르게 적용되는지 검증합니다."
+          },
+          {
+            "id": 5,
+            "title": "헤더 및 푸터 컴포넌트 초기 구현 및 통합",
+            "description": "기본 `Layout` 컴포넌트 내에 포함될 `Header`와 `Footer` 컴포넌트를 분리하여 구현하고, 각 컴포넌트에 기본적인 내용(로고, 탐색 링크 자리, 저작권 정보 등)과 스타일을 적용합니다. 구현된 다크/라이트 모드와 반응형 디자인을 지원하도록 합니다.",
+            "dependencies": [
+              3,
+              4
+            ],
+            "details": "`src/components/layout/Header.tsx`와 `src/components/layout/Footer.tsx` 파일을 생성합니다. `Header`에는 애플리케이션 로고, 다크/라이트 모드 토글 버튼을 포함하고, `Footer`에는 저작권 정보, 간단한 링크 등을 포함합니다. 이 컴포넌트들에 `Layout` 컴포넌트에서 정의된 테마와 반응형 스타일 가이드라인을 적용하여 일관된 UI를 유지합니다. 각 컴포넌트에 필요한 최소한의 스타일을 적용하여 시각적으로 구분되도록 합니다.",
+            "status": "pending",
+            "testStrategy": "`Layout` 컴포넌트를 통해 렌더링된 페이지에서 헤더와 푸터가 올바른 위치에 표시되는지 시각적으로 확인합니다. 다크/라이트 모드 전환 시 헤더와 푸터의 색상이 변경되는지, 다양한 화면 크기에서 내용이 깨지지 않고 반응형으로 잘 조정되는지 검증합니다."
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "타이핑 연습 텍스트 표시 컴포넌트 개발",
+        "description": "사용자가 화면에 표시된 한글 텍스트를 따라 입력할 수 있도록 연습 텍스트를 렌더링하는 UI 컴포넌트를 개발합니다. 이 컴포넌트는 입력 상태에 따라 텍스트의 각 문자를 동적으로 표시할 수 있어야 합니다.",
+        "details": "`TypingTextDisplay` 컴포넌트를 생성하여 연습 텍스트 문자열을 props로 받습니다. 텍스트를 개별 문자로 분리하고, 각 문자를 `<span>` 태그 등으로 렌더링합니다. 사용자의 입력과 현재 위치를 나타내는 인덱스를 추적하여, 올바르게 입력된 문자, 틀린 문자, 아직 입력하지 않은 문자에 대해 다른 스타일(예: 색상)을 적용할 수 있도록 합니다.",
+        "testStrategy": "다양한 길이의 한글 텍스트를 입력하여 올바르게 표시되는지 확인합니다. 사용자의 가상 입력에 따라 문자의 스타일이 정확히 변경되는지 시각적으로 검증합니다.",
+        "priority": "high",
+        "dependencies": [
+          2
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "TypingTextDisplay 컴포넌트 초기 설정 및 기본 텍스트 렌더링",
+            "description": "`TypingTextDisplay` 컴포넌트를 생성하고, `text` prop으로 받은 문자열을 개별 문자로 분리하여 `<span>` 태그로 화면에 표시합니다. 초기에는 모든 문자가 기본 스타일을 가집니다.",
+            "dependencies": [
+              2
+            ],
+            "details": "`src/components/TypingTextDisplay.tsx` 파일을 생성합니다. `React.FC`를 사용하여 컴포넌트를 정의하고, `text: string` prop을 받습니다. `text.split('')`을 사용하여 문자를 분리하고, `map` 함수를 이용해 각 문자를 고유한 `key`를 가진 `<span>` 요소로 렌더링합니다. Tailwind CSS를 사용하여 기본 텍스트 스타일을 적용합니다.",
+            "status": "pending",
+            "testStrategy": "다양한 길이의 한글 문자열을 `text` prop으로 전달하여 모든 문자가 순서대로 올바르게 렌더링되는지 시각적으로 확인합니다. 개발자 도구를 사용하여 각 문자가 별도의 `<span>` 요소로 존재하는지 검증합니다."
+          },
+          {
+            "id": 2,
+            "title": "입력 진행 상태 및 오류 추적을 위한 상태 관리 구현",
+            "description": "사용자의 현재 입력 위치(`currentInputIndex`), 입력된 문자열(`typedCharacters`), 그리고 발생한 오류(`errorIndices`)를 추적하기 위한 React `useState` 훅을 `TypingTextDisplay` 컴포넌트 내부에 정의합니다.",
+            "dependencies": [
+              2
+            ],
+            "details": "`useState`를 사용하여 `currentInputIndex` (number, 초기값 0), `typedCharacters` (string, 초기값 \"\"), `errorIndices` (Set<number> 또는 number[], 초기값 []) 상태 변수를 선언합니다. 이 상태들은 외부에서 전달될 입력 이벤트 핸들러를 통해 업데이트될 준비를 합니다.",
+            "status": "pending",
+            "testStrategy": "컴포넌트 스토리북(Storybook) 또는 임시 부모 컴포넌트에서 `currentInputIndex`, `typedCharacters`, `errorIndices` 상태를 수동으로 변경하며, 상태 변경이 컴포넌트 내부에 올바르게 반영되는지 확인합니다."
+          },
+          {
+            "id": 3,
+            "title": "입력 상태에 따른 문자별 동적 스타일링 로직 구현",
+            "description": "`currentInputIndex`, `typedCharacters`, `errorIndices` 상태를 기반으로 각 문자에 '올바른 입력', '틀린 입력', '현재 입력 위치', '미입력' 상태에 해당하는 CSS 클래스를 동적으로 적용하는 로직을 구현합니다.",
+            "dependencies": [
+              2
+            ],
+            "details": "각 문자를 렌더링하는 `map` 함수 내에서 조건부 로직을 추가합니다. `currentInputIndex`와 문자의 인덱스를 비교하여 현재 입력 위치를 식별하고, `typedCharacters`의 해당 인덱스 문자와 원본 `text`의 문자를 비교하여 올바른/틀린 입력을 판단합니다. `errorIndices`를 활용하여 틀린 문자를 표시합니다. Tailwind CSS 클래스(예: `text-green-500`, `text-red-500`, `bg-yellow-200`, `text-gray-400`)를 정의하고 적용합니다.",
+            "status": "pending",
+            "testStrategy": "`currentInputIndex`, `typedCharacters`, `errorIndices`를 다양한 시나리오(모든 문자 올바르게 입력, 중간에 틀린 문자, 특정 위치에서 멈춤 등)로 설정하여 각 문자의 색상 및 배경 스타일이 예상대로 변경되는지 시각적으로 검증합니다."
+          },
+          {
+            "id": 4,
+            "title": "외부 입력 이벤트 처리 및 `TypingTextDisplay` 상태 업데이트 함수 구현",
+            "description": "`TypingTextDisplay` 컴포넌트가 외부(예: 부모 컴포넌트의 키보드 입력 핸들러)로부터 입력 문자를 받아 내부 상태(`currentInputIndex`, `typedCharacters`, `errorIndices`)를 업데이트하는 함수를 구현합니다.",
+            "dependencies": [
+              2
+            ],
+            "details": "`handleInput`과 같은 함수를 컴포넌트 내부에 정의하거나, `onInput` prop으로 전달받아 사용합니다. 이 함수는 입력된 문자(예: `key`)를 인자로 받아, 현재 `currentInputIndex`의 원본 텍스트 문자와 비교합니다. 일치하면 `currentInputIndex`를 증가시키고 `typedCharacters`를 업데이트합니다. 불일치하면 `errorIndices`에 현재 인덱스를 추가하고 `typedCharacters`에 틀린 문자를 추가합니다. 백스페이스 처리 로직도 포함합니다.",
+            "status": "pending",
+            "testStrategy": "부모 컴포넌트에서 가상 키보드 입력을 시뮬레이션하여 `handleInput` 함수를 호출합니다. 올바른 문자, 틀린 문자, 백스페이스 입력 시 `currentInputIndex`, `typedCharacters`, `errorIndices`가 정확하게 업데이트되고 UI에 반영되는지 시각적으로 확인합니다."
+          },
+          {
+            "id": 5,
+            "title": "컴포넌트 접근성 및 성능 최적화",
+            "description": "`TypingTextDisplay` 컴포넌트의 접근성을 개선하고, 대량의 텍스트 처리 시 발생할 수 있는 성능 문제를 최소화합니다.",
+            "dependencies": [
+              2
+            ],
+            "details": "각 `<span>` 요소에 `aria-label` 또는 `sr-only` 텍스트를 추가하여 스크린 리더 사용자를 위한 정보를 제공합니다. `React.memo`를 사용하여 불필요한 리렌더링을 방지하고, `key` prop을 각 문자에 고유하게 할당하여 리스트 렌더링 성능을 최적화합니다. `useCallback`을 사용하여 `handleInput`과 같은 함수가 불필요하게 재생성되지 않도록 합니다.",
+            "status": "pending",
+            "testStrategy": "개발자 도구의 Lighthouse 또는 유사한 도구를 사용하여 접근성 점수를 확인합니다. 대량의 텍스트(예: 1000자 이상)를 입력하여 컴포넌트의 렌더링 성능이 저하되지 않는지 확인합니다. React DevTools를 사용하여 불필요한 리렌더링이 발생하는지 프로파일링합니다."
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "사용자 입력 처리 및 이벤트 리스너 구현",
+        "description": "사용자의 키보드 입력을 감지하고, 이를 표시된 연습 텍스트와 비교하여 진행 상황을 추적하는 로직을 구현합니다.",
+        "details": "`TypingInput` 컴포넌트를 생성하거나 `TypingTextDisplay` 컴포넌트에 통합하여 `keydown` 또는 `keypress` 이벤트 리스너를 추가합니다. 사용자가 입력한 문자와 현재 표시된 텍스트의 문자를 비교하고, 현재 입력 위치(커서)를 업데이트합니다. 한글 조합형 입력의 특성을 고려하여, `e.key` 대신 `e.target.value` 변화를 감지하고 한글 조합 로직을 처리하는 방법을 고려해야 합니다 (예: `compositionend` 이벤트 활용).",
+        "testStrategy": "영문, 한글, 특수문자를 포함한 다양한 키보드 입력을 테스트하여 정확하게 감지하고 비교하는지 확인합니다. 특히 한글 자음-모음 조합 시나리오를 여러 번 반복하여 오류 없이 처리되는지 검증합니다.",
+        "priority": "high",
+        "dependencies": [
+          3
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "입력 필드 컴포넌트 구조화 및 기본 속성 설정",
+            "description": "사용자의 타이핑 입력을 받을 HTML <textarea> 또는 <input> 요소를 포함하는 컴포넌트를 설계하고 구현합니다. 'TypingTextDisplay' 컴포넌트와 상호작용할 수 있도록 준비하며, 사용자 인터페이스(UI) 상에서 입력 영역을 명확히 정의합니다.",
+            "dependencies": [
+              3
+            ],
+            "details": "새로운 `TypingInput.js` 또는 `TypingInput.tsx` 파일을 생성하고, 기본 `<textarea>` 요소를 포함합니다. `textAreaRef`와 같은 `ref`를 사용하여 DOM 요소에 접근하고 포커스 관리가 가능하도록 설정합니다. `darkMode` 및 `isInputDisabled`와 같은 props를 받아 컴포넌트의 스타일 및 동작을 제어할 수 있도록 인터페이스를 정의합니다. `textarea`의 `onChange`, `onKeyDown`, `onPaste`, `onCompositionStart`, `onCompositionUpdate`, `onCompositionEnd` 이벤트를 위한 플레이스홀더 핸들러를 준비합니다.",
+            "status": "pending",
+            "testStrategy": "컴포넌트가 화면에 올바르게 렌더링되고, HTML 요소에 포커스가 제대로 작동하는지 확인합니다. `TypingTextDisplay` 컴포넌트와 함께 배치하여 초기 통합 가능성 및 스타일이 충돌하지 않는지 육안으로 검증합니다."
+          },
+          {
+            "id": 2,
+            "title": "기본 키보드 입력 이벤트 리스너 구현 (영문 및 단일 문자)",
+            "description": "입력 필드에 `onChange` (또는 `onInput`) 이벤트 핸들러를 추가하여, 사용자가 입력하는 영문 및 단일 문자를 감지하고, 이를 연습 텍스트와 비교하는 초기 로직을 구현합니다.",
+            "dependencies": [
+              1,
+              3
+            ],
+            "details": "입력 필드의 `onChange` 이벤트에 바인딩되는 `handleTextChange` 함수를 구현합니다. 이 함수 내에서 `event.target.value`를 사용하여 현재 입력된 텍스트를 가져오고, 컴포넌트의 `text` 상태를 업데이트합니다. 백스페이스(Backspace), 스페이스바(Spacebar), 엔터(Enter)와 같은 키 입력에 대한 기본적인 처리를 `onKeyDown` 이벤트에서 구현하고, 입력된 문자를 `TypingTextDisplay`에서 제공하는 기준 텍스트와 비교하여 `cursorPosition` 및 오타 여부를 업데이트할 준비를 합니다.",
+            "status": "pending",
+            "testStrategy": "영문 소문자, 대문자, 숫자, 일반적인 특수문자를 순서대로 입력하고, 백스페이스를 사용하여 수정했을 때, `text` 상태와 `cursorPosition`이 예상대로 업데이트되는지 React DevTools 또는 콘솔 로그를 통해 확인합니다. 엔터 키와 스페이스바가 예상대로 동작하는지 테스트합니다."
+          },
+          {
+            "id": 3,
+            "title": "한글 조합형 입력 처리 로직 구현 (IME 및 composition 이벤트)",
+            "description": "한글과 같이 조합형 언어(IME) 입력을 정확하게 처리하기 위해 `compositionstart`, `compositionupdate`, `compositionend` 이벤트를 활용한 로직을 구현합니다. 이는 `e.key` 대신 `e.target.value` 변화를 중심으로 하여 한글 조합의 복잡성을 관리합니다.",
+            "dependencies": [
+              2
+            ],
+            "details": "`onCompositionStart`, `onCompositionUpdate`, `onCompositionEnd` 이벤트 핸들러를 구현합니다. `compositionstart` 시에는 조합 중임을 나타내는 플래그를 설정하고, `compositionupdate` 시에는 중간 조합 상태를 관리하며, `compositionend` 시에는 최종적으로 조합이 완료된 한글 문자를 정확하게 캡처하여 `text` 상태에 반영합니다. IME 활성화 상태에서 `handleTextChange`가 불필요하게 여러 번 호출되는 것을 방지하고, 최종 입력된 글자만 처리하도록 로직을 조정합니다.",
+            "status": "pending",
+            "testStrategy": "한글 자음, 모음 조합(예: ㄱ + ㅏ = 가, ㅎ + ㅏ + ㄴ = 한)을 여러 번 입력하여 최종 글자가 정확하게 인식되고 `text` 상태에 반영되는지 확인합니다. 조합 중 백스페이스를 눌렀을 때, 조합이 취소되거나 올바르게 수정되는지 테스트합니다. 영문과 한글을 번갈아 입력하며 IME 사용 시 오류 없이 처리되는지 검증합니다."
+          },
+          {
+            "id": 4,
+            "title": "입력 상태 중앙 관리 및 텍스트 비교 로직 정교화",
+            "description": "타이핑 연습의 현재 상태(입력된 텍스트, 커서 위치, 각 문자의 정확성 등)를 효율적으로 관리하는 중앙 집중식 로직을 구축하고, 입력된 텍스트와 목표 텍스트를 문자 단위로 정교하게 비교하는 기능을 구현합니다.",
+            "dependencies": [
+              3
+            ],
+            "details": "컴포넌트 내에 `currentInputText`, `cursorIndex`, `charStatusArray` (각 문자의 상태: 'correct', 'incorrect', 'untyped', 'current')와 같은 상태 변수들을 정의합니다. `handleTextChange` 및 IME 관련 이벤트 핸들러에서 이 상태들을 업데이트합니다. 입력된 텍스트(`currentInputText`)를 `TypingTextDisplay`의 `targetText`와 문자별로 비교하여 `charStatusArray`를 생성하고 관리하는 함수를 개발합니다. 오타 발생 시 `cursorIndex`가 이동하지 않고 제자리에 머물게 하거나, 다음 글자로 넘어가는 규칙을 명확히 정의합니다.",
+            "status": "pending",
+            "testStrategy": "정확한 입력, 오타 입력, 백스페이스 사용, 한글 조합 입력 시 `cursorIndex`와 `charStatusArray`가 예상대로 업데이트되는지 React DevTools 또는 콘솔 로그를 통해 확인합니다. 특히 여러 줄의 텍스트에서 줄바꿈 문자와 공백이 올바르게 처리되는지 검증합니다."
+          },
+          {
+            "id": 5,
+            "title": "시각적 커서 및 입력 피드백 UI 업데이트",
+            "description": "입력 상태 관리 로직에서 생성된 정보를 바탕으로 'TypingTextDisplay' 컴포넌트 내에서 현재 타이핑 위치를 나타내는 시각적 커서와 입력된 문자의 정확성(정확/오타)에 따른 시각적 피드백을 구현합니다.",
+            "dependencies": [
+              4
+            ],
+            "details": "`TypingTextDisplay` 컴포넌트에서 `charStatusArray` 및 `cursorIndex`를 props로 받아 각 문자를 렌더링할 때 `charStatusArray`의 상태('correct', 'incorrect', 'untyped')에 따라 다른 CSS 클래스 또는 인라인 스타일을 적용합니다. `cursorIndex` 위치에 깜빡이는 커서(예: `border-right` 스타일 또는 별도의 깜빡이는 `<span>` 요소)를 표시합니다. `incorrect` 상태의 문자는 빨간색 배경 또는 텍스트 색상으로 강조하여 오타임을 명확히 보여줍니다. 필요시 Framer Motion을 활용하여 커서 이동이나 오타 피드백에 부드러운 애니메이션 효과를 추가하는 것을 고려합니다.",
+            "status": "pending",
+            "testStrategy": "정확하게 입력된 글자가 녹색 또는 회색으로, 오타가 빨간색으로 표시되는지 시각적으로 확인합니다. 커서가 정확한 위치에 깜빡이며 이동하는지 확인합니다. 한글과 영문 모두에서 오타 및 정확한 입력 피드백이 올바르게 나타나는지, 특히 줄바꿈이 있는 텍스트에서 커서가 다음 줄로 정확히 이동하는지 검증합니다."
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "실시간 타이핑 속도(WPM) 및 정확성 계산 로직 구현",
+        "description": "사용자가 텍스트를 입력하는 동안 실시간으로 WPM(분당 단어 수)과 정확성(%)을 계산하여 표시하는 기능을 개발합니다.",
+        "details": "타이핑 시작 시점을 기록하고, 사용자가 입력할 때마다 경과 시간을 업데이트합니다. 입력된 올바른 문자 수와 총 입력 문자 수를 기반으로 정확성을 계산합니다. WPM은 일반적으로 (총 올바른 문자 수 / 5) / (경과 시간(분)) 공식으로 계산합니다. 이 로직을 Redux 슬라이스 또는 사용자 정의 훅으로 구현하여 재사용성과 상태 관리를 용이하게 합니다.",
+        "testStrategy": "다양한 속도와 정확도로 텍스트를 입력하며 WPM 및 정확성 수치가 실시간으로 올바르게 업데이트되는지 확인합니다. 특히 오류 발생 시 정확성 감소, 빠른 입력 시 WPM 증가가 정확하게 반영되는지 검증합니다.",
+        "priority": "high",
+        "dependencies": [
+          4
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "WPM/정확성 계산을 위한 Redux 슬라이스 또는 커스텀 훅 초기 설정",
+            "description": "실시간 WPM 및 정확성 계산에 필요한 상태(예: 타이핑 시작 시간, 올바르게 입력된 문자 수, 총 입력된 문자 수, 현재 WPM, 정확성 등)를 정의하고, 이를 관리할 Redux 슬라이스 또는 커스텀 훅의 기본 구조를 설정합니다.",
+            "dependencies": [],
+            "details": "프로젝트의 `src/features/typing` 디렉토리 내에 `typingSlice.js` 파일을 생성하거나, `src/hooks` 디렉토리 내에 `useTypingStats.js` 커스텀 훅 파일을 생성합니다. `startTime`, `typedCharacters`, `correctCharacters`, `totalCharacters`, `wpm`, `accuracy`, `isRunning` 등 필수 상태 변수들을 초기값과 함께 정의합니다. Redux의 경우 `createSlice`를 사용하여 초기 상태와 비어있는 리듀서 맵을 설정합니다.",
+            "status": "pending",
+            "testStrategy": "슬라이스/훅 파일이 성공적으로 생성되고, 정의된 상태 변수들이 올바른 초기값을 가지는지 유닛 테스트 또는 더미 컴포넌트 마운트를 통해 확인합니다."
+          },
+          {
+            "id": 2,
+            "title": "타이핑 세션 시작/종료 및 경과 시간 관리 로직 구현",
+            "description": "타이핑 세션이 시작될 때 `startTime`을 기록하고, 세션이 진행되는 동안 현재까지의 경과 시간을 실시간으로 계산하여 업데이트하는 로직을 구현합니다. 세션 종료 시 타이머를 정지하는 기능도 포함합니다.",
+            "dependencies": [
+              1
+            ],
+            "details": "슬라이스 또는 훅 내에 타이핑 시작 시 `Date.now()`를 `startTime`으로 설정하는 액션(Redux) 또는 함수(Hook)를 추가합니다. `useEffect`와 `setInterval` 또는 `requestAnimationFrame`을 사용하여 `isRunning` 상태가 `true`일 때 매 초(또는 더 빈번하게) 경과 시간을 계산하고 `elapsedTime` 상태를 업데이트합니다. 세션 종료 시 타이머를 해제하는 클린업 로직도 구현합니다.",
+            "status": "pending",
+            "testStrategy": "타이핑 시작/정지 액션(함수)을 호출한 후 `elapsedTime`이 실시간으로 증가하는지 확인합니다. 타이머가 정확히 시작되고 멈추는지, 경과 시간 계산이 올바른지 유닛 테스트합니다."
+          },
+          {
+            "id": 3,
+            "title": "사용자 입력 문자 처리 및 정확성 실시간 계산 로직 구현",
+            "description": "사용자의 문자 입력을 감지하고, 이를 참조 텍스트와 비교하여 올바르게 입력된 문자 수와 총 입력된 문자 수를 실시간으로 업데이트하며, 이 데이터를 기반으로 현재 정확성(%)을 계산하는 로직을 구현합니다.",
+            "dependencies": [
+              1,
+              2,
+              4
+            ],
+            "details": "`TypingInput` 컴포넌트(Task 4)로부터 입력된 문자를 받는 액션(Redux) 또는 함수(Hook)를 구현합니다. 입력된 문자를 처리할 때마다 `totalCharacters`를 증가시키고, 입력된 문자가 현재 참조 텍스트의 해당 위치 문자와 일치하는 경우 `correctCharacters`도 증가시킵니다. `accuracy = (correctCharacters / totalCharacters) * 100` 공식을 사용하여 정확성을 계산하고 상태에 반영합니다.",
+            "status": "pending",
+            "testStrategy": "다양한 입력 시나리오(정확한 입력, 오타 발생, 공백 입력 등)에 대해 `correctCharacters`, `totalCharacters`, `accuracy` 상태가 예상대로 업데이트되는지 유닛 테스트를 통해 검증합니다. 특히 오타 발생 시 `accuracy`가 감소하는지 확인합니다."
+          },
+          {
+            "id": 4,
+            "title": "WPM (분당 단어 수) 실시간 계산 로직 개발",
+            "description": "올바르게 입력된 문자 수(`correctCharacters`)와 현재까지의 경과 시간(`elapsedTimeInMinutes`)을 활용하여 WPM(분당 단어 수)을 실시간으로 계산하고 업데이트하는 로직을 구현합니다.",
+            "dependencies": [
+              1,
+              2,
+              3
+            ],
+            "details": "`wpm = (correctCharacters / 5) / (elapsedTime / 60)` 공식을 적용하여 WPM을 계산합니다. `elapsedTime`은 초 단위이며, 이를 60으로 나누어 분 단위로 변환합니다. `correctCharacters` 또는 `elapsedTime` 상태가 변경될 때마다 이 계산이 자동으로 수행되도록 구현합니다. Redux의 경우 Selector를 통해 계산하거나, 훅의 경우 `useMemo` 또는 `useEffect` 내에서 계산합니다.",
+            "status": "pending",
+            "testStrategy": "다양한 `correctCharacters`와 `elapsedTime` 값에 대해 WPM 계산이 정확하게 이루어지는지 유닛 테스트합니다. 특히 초기 상태, 입력이 적은 경우, 시간이 많이 경과한 경우 등 엣지 케이스를 확인합니다."
+          },
+          {
+            "id": 5,
+            "title": "계산 결과 통합 및 타이핑 세션 초기화/재설정 기능 구현",
+            "description": "앞서 구현된 WPM, 정확성, 경과 시간 등의 모든 계산 로직들을 Redux 슬라이스 또는 커스텀 훅 내에서 완전히 통합하고, 새로운 타이핑 세션을 시작할 수 있도록 모든 통계 및 타이머 관련 상태를 초기값으로 재설정하는 기능을 추가합니다.",
+            "dependencies": [
+              2,
+              3,
+              4
+            ],
+            "details": "Redux의 경우 모든 액션(예: `startTyping`, `stopTyping`, `handleInput`, `resetSession`)과 해당 리듀서를 `typingSlice.js` 내에 정의합니다. 커스텀 훅의 경우 `useTypingStats` 훅이 모든 관련 상태와 계산 로직을 캡슐화하고 필요한 값(WPM, 정확성, 경과 시간)과 함수(시작, 정지, 입력 처리, 재설정)를 반환하도록 합니다. `resetSession` 액션 또는 함수는 모든 상태를 초기값으로 되돌리고 타이머를 정지시킵니다.",
+            "status": "pending",
+            "testStrategy": "전체 슬라이스/훅의 엔드투엔드 테스트를 수행하여 모든 기능(시작, 입력, 정지, 재설정)이 순조롭게 작동하는지 확인합니다. `resetSession` 호출 후 모든 통계 값이 초기 상태로 돌아가는지 검증합니다."
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "title": "오타 시각적 피드백 시스템 구현",
+        "description": "사용자가 오타를 입력했을 때 즉각적으로 시각적인 피드백을 제공하는 기능을 구현합니다. 이는 사용자의 학습 경험을 개선하는 데 중요합니다.",
+        "details": "오타 발생 시 `TypingTextDisplay` 컴포넌트의 해당 문자 요소에 특정 CSS 클래스(예: `error-char`)를 추가하거나 인라인 스타일을 적용하여 텍스트 색상을 빨간색으로 변경하거나 배경을 강조합니다. 오타가 수정되면 해당 스타일을 제거합니다. 필요에 따라 짧은 시각적 애니메이션(Framer Motion 사용 가능)이나 소리 피드백을 추가하는 것도 고려합니다.",
+        "testStrategy": "의도적으로 오타를 발생시켜 시각적 피드백이 즉시 나타나는지 확인합니다. 오타를 수정했을 때 피드백이 사라지는지, 여러 오타가 동시에 발생했을 때 각 오타가 정확히 표시되는지 테스트합니다.",
+        "priority": "medium",
+        "dependencies": [
+          4
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "오타 상태 관리 로직 구현",
+            "description": "사용자의 입력과 목표 텍스트를 비교하여 각 문자의 오타 상태(정확, 오타, 미입력)를 추적하는 핵심 로직을 개발합니다. 이 상태는 `TypingTextDisplay` 컴포넌트의 부모 컴포넌트나 Redux 스토어에서 관리되어야 합니다.",
+            "dependencies": [
+              4
+            ],
+            "details": "Task 4에서 구현될 핵심 타이핑 로직(입력 처리, 텍스트 추적)과 통합하여, 입력된 문자와 목표 문자를 비교하는 함수를 작성합니다. 각 문자의 상태를 저장할 배열 또는 맵 형태의 상태(예: `charStatus: Array<'correct' | 'incorrect' | 'untyped'>`)를 정의하고, 사용자의 입력이 발생할 때마다 이 `charStatus`를 업데이트하도록 구현합니다.",
+            "status": "pending",
+            "testStrategy": "의도적으로 오타를 발생시키고 수정하면서 `charStatus` 배열이 예상대로 'incorrect' 및 'correct' 상태로 업데이트되는지 콘솔 로그를 통해 확인합니다. 백스페이스 사용 시 상태가 올바르게 되돌려지는지도 검증합니다."
+          },
+          {
+            "id": 2,
+            "title": "TypingTextDisplay 컴포넌트에 오타 상태 프롭스 전달",
+            "description": "Subtask 1에서 구현된 오타 상태 관리 로직의 결과인 `charStatus` 데이터를 `TypingTextDisplay` 컴포넌트로 프롭스를 통해 전달하도록 수정합니다.",
+            "dependencies": [
+              1
+            ],
+            "details": "`TypingTextDisplay` 컴포넌트의 인터페이스를 업데이트하여 `charStatus` 배열을 새로운 프롭스로 받도록 정의합니다. `TypingTextDisplay`를 렌더링하는 부모 컴포넌트(예: `TypingSession` 컴포넌트)에서 Subtask 1에서 관리하는 `charStatus` 데이터를 이 프롭스로 전달하도록 구현합니다.",
+            "status": "pending",
+            "testStrategy": "`TypingTextDisplay` 컴포넌트 내부에서 전달받은 `charStatus` 프롭스의 값이 예상대로 수신되는지, 그리고 배열의 각 요소가 올바른 문자 상태를 반영하는지 개발자 도구의 React 컴포넌트 탭을 통해 확인합니다."
+          },
+          {
+            "id": 3,
+            "title": "TypingTextDisplay 컴포넌트 오타 시각적 피드백 스타일 적용",
+            "description": "`TypingTextDisplay` 컴포넌트가 `charStatus` 프롭스를 기반으로 각 문자에 적절한 CSS 클래스 또는 인라인 스타일을 적용하여 오타를 시각적으로 표시하도록 구현합니다. 오타 발생 시 텍스트 색상을 빨간색으로 변경하거나 배경을 강조합니다.",
+            "dependencies": [
+              2
+            ],
+            "details": "`TypingTextDisplay` 컴포넌트 내부에서 각 문자를 렌더링하는 `span` 또는 `CharacterSpan` 요소에 접근합니다. 해당 문자의 `charStatus`가 'incorrect'일 경우 `error-char`와 같은 특정 CSS 클래스를 조건부로 추가하거나, `style={{ color: 'red', backgroundColor: 'rgba(255,0,0,0.2)' }}`와 같은 인라인 스타일을 적용합니다. 기존의 현재 입력 위치 하이라이트와 시각적 충돌이 없도록 스타일 우선순위를 고려합니다.",
+            "status": "pending",
+            "testStrategy": "의도적으로 오타를 입력했을 때 해당 문자가 즉시 빨간색으로 변경되거나 배경이 강조되는지 시각적으로 확인합니다. 여러 오타가 동시에 발생했을 때 각 오타가 정확히 표시되는지 테스트합니다."
+          },
+          {
+            "id": 4,
+            "title": "오타 수정 시 시각적 피드백 해제 로직 구현",
+            "description": "사용자가 오타를 입력한 후 이를 백스페이스 등으로 수정하여 올바른 문자를 입력했을 때, 이전에 적용되었던 오타 시각적 피드백이 즉시 사라지도록 로직을 구현합니다.",
+            "dependencies": [
+              1,
+              3
+            ],
+            "details": "Subtask 1에서 구현된 `charStatus` 업데이트 로직을 개선하여, 사용자가 백스페이스로 문자를 삭제하거나 올바른 문자를 다시 입력하면 해당 문자의 상태가 'incorrect'에서 'correct' 또는 'untyped'로 정확하게 전환되도록 합니다. `TypingTextDisplay`는 업데이트된 `charStatus` 프롭스를 받아 오타 스타일을 자동으로 제거합니다.",
+            "status": "pending",
+            "testStrategy": "오타를 입력하여 피드백이 나타나게 한 다음, 백스페이스로 오타를 지우고 올바른 문자를 다시 입력했을 때 피드백이 정확히 사라지는지 확인합니다. 커서가 앞뒤로 이동할 때 피드백 상태가 올바르게 유지되는지도 테스트합니다."
+          },
+          {
+            "id": 5,
+            "title": "Framer Motion 애니메이션 및 선택적 사운드 피드백 통합",
+            "description": "오타 발생 시 더 직관적인 사용자 경험을 위해 Framer Motion을 사용하여 짧은 시각적 애니메이션(예: 흔들림)을 추가하고, 선택적으로 사운드 피드백을 통합합니다.",
+            "dependencies": [
+              3,
+              4
+            ],
+            "details": "`TypingTextDisplay` 컴포넌트 내부의 `CharacterSpan`에 Framer Motion의 `motion` 컴포넌트를 적용합니다. `charStatus`가 'incorrect'로 변경될 때, `animate` 프롭스를 사용하여 `x: [-2, 2, -2, 2, 0]`와 같은 짧은 흔들림 애니메이션을 구현합니다. 또한, 오타 발생 시 재생될 짧은 사운드 이펙트 파일을 준비하고, Subtask 1의 오타 감지 로직과 연동하여 특정 조건에서 `new Audio().play()`를 통해 사운드를 재생하도록 로직을 추가합니다.",
+            "status": "pending",
+            "testStrategy": "오타를 입력했을 때 해당 문자에 흔들림 애니메이션이 자연스럽게 적용되는지 시각적으로 확인합니다. 사운드 피드백을 활성화한 상태에서 오타 발생 시 지정된 사운드가 재생되는지 확인하고, 반복적인 오타 발생 시 사운드 중첩이나 지연 없이 올바르게 재생되는지 검증합니다."
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "title": "기본 텍스트 콘텐츠 관리 및 난이도별 제공",
+        "description": "초기 MVP를 위한 5-10개의 연습 텍스트를 준비하고, 이를 애플리케이션 내에서 관리 및 선택할 수 있는 시스템을 구현합니다. 초급, 중급, 고급 난이도 구분을 포함합니다.",
+        "details": "로컬 JSON 파일 또는 JavaScript 배열 형태로 초기 텍스트 데이터를 정의합니다. 각 텍스트 객체는 `id`, `content`, `difficulty_level`, `category`, `character_count` 속성을 가집니다. Redux 스토어에 `text` 슬라이스를 추가하여 텍스트 목록을 관리하고, 사용자가 난이도 또는 카테고리별로 텍스트를 선택할 수 있는 UI (예: 드롭다운 또는 버튼 그룹)를 구현합니다.",
+        "testStrategy": "다양한 난이도와 카테고리의 텍스트를 선택하여 `TypingTextDisplay`에 올바르게 로드되는지 확인합니다. 텍스트 선택 시 UI가 정상적으로 업데이트되는지 검증합니다.",
+        "priority": "medium",
+        "dependencies": [
+          1
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "초기 연습 텍스트 데이터 파일 정의 및 생성",
+            "description": "애플리케이션에서 사용될 초기 5-10개의 연습 텍스트를 정의합니다. 각 텍스트는 고유한 'id', 본문 'content', 'difficulty_level' (초급, 중급, 고급), 'category' (예: 뉴스, 소설), 그리고 'character_count' (초기에는 비워두고 나중에 계산) 속성을 가집니다. 이 데이터는 로컬 JSON 파일 또는 JavaScript 배열 형태로 관리됩니다.",
+            "dependencies": [],
+            "details": "src/data/texts.json 또는 src/data/texts.js 파일을 생성하고, 주어진 스키마에 따라 5-10개의 한글 연습 텍스트 데이터를 추가합니다. 'character_count'는 문자열 길이를 나타내며, 추후 로직을 통해 채워질 것입니다.",
+            "status": "pending",
+            "testStrategy": "생성된 JSON 파일 또는 JavaScript 배열의 구조와 데이터가 정의된 스키마를 따르는지 수동으로 검증합니다. 텍스트 내용 및 메타데이터의 정확성을 확인합니다."
+          },
+          {
+            "id": 2,
+            "title": "Redux 'text' 슬라이스 구현 및 스토어 통합",
+            "description": "연습 텍스트 목록을 관리하고, 사용자가 선택한 현재 텍스트의 상태를 저장하며, 난이도 및 카테고리별로 텍스트를 필터링하는 로직을 포함하는 Redux Toolkit 슬라이스를 구현합니다. 이 슬라이스를 전역 Redux 스토어에 통합합니다.",
+            "dependencies": [
+              1
+            ],
+            "details": "src/store/slices/textSlice.js 파일을 생성합니다. 초기 상태로 1번 태스크에서 정의된 텍스트 데이터를 로드합니다. 'setSelectedText', 'filterTextsByDifficulty', 'filterTextsByCategory' 등의 리듀서와 액션을 정의합니다. src/store/index.js에서 이 슬라이스를 루트 리듀서에 추가합니다.",
+            "status": "pending",
+            "testStrategy": "Redux DevTools를 사용하여 슬라이스의 초기 상태가 올바르게 로드되는지 확인합니다. 'setSelectedText' 액션을 디스패치하여 선택된 텍스트가 정확히 업데이트되는지, 필터링 액션 디스패치 시 텍스트 목록이 예상대로 변경되는지 단위 테스트 또는 수동 테스트로 검증합니다."
+          },
+          {
+            "id": 3,
+            "title": "난이도 및 카테고리별 텍스트 선택 UI 컴포넌트 개발",
+            "description": "사용자가 난이도('초급', '중급', '고급')와 카테고리(예: '뉴스', '문학', '일상')를 기준으로 연습 텍스트를 필터링하고 선택할 수 있는 드롭다운 또는 버튼 그룹 형태의 UI 컴포넌트를 개발합니다. 이 컴포넌트는 Redux 스토어의 'text' 슬라이스와 연동됩니다.",
+            "dependencies": [
+              2
+            ],
+            "details": "src/components/TextSelector.jsx 또는 유사한 이름의 컴포넌트를 생성합니다. Redux의 useSelector 훅을 사용하여 텍스트 목록과 현재 선택된 필터 상태를 가져옵니다. 사용자의 난이도/카테고리 선택에 따라 Redux 액션을 디스패치하여 스토어의 상태를 업데이트하고, 해당 필터에 맞는 텍스트 목록을 보여줍니다.",
+            "status": "pending",
+            "testStrategy": "UI 컴포넌트가 다양한 필터 옵션을 올바르게 렌더링하는지 확인합니다. 난이도 및 카테고리 필터를 변경할 때 Redux 스토어의 필터 상태가 정확히 업데이트되는지, 그리고 UI에 표시되는 텍스트 목록이 필터에 따라 동적으로 변하는지 시각적 및 기능적 테스트를 수행합니다."
+          },
+          {
+            "id": 4,
+            "title": "`TypingTextDisplay` 컴포넌트와 선택된 텍스트 연동",
+            "description": "Redux 스토어에서 현재 선택된 연습 텍스트의 'content'를 가져와 `TypingTextDisplay` 컴포넌트에 prop으로 전달하고, 이 텍스트가 타이핑 연습을 위해 화면에 올바르게 표시되도록 구현합니다.",
+            "dependencies": [
+              2,
+              3
+            ],
+            "details": "src/features/typing/TypingTextDisplay.jsx 컴포넌트 또는 해당 뷰 컴포넌트에서 Redux의 useSelector 훅을 사용하여 'text' 슬라이스에서 현재 선택된 텍스트의 'content'를 가져옵니다. 이 'content'를 `TypingTextDisplay` 컴포넌트에 prop으로 전달하여 타이핑 대상 텍스트로 사용합니다. 텍스트가 변경될 때마다 `TypingTextDisplay`가 업데이트되는지 확인합니다.",
+            "status": "pending",
+            "testStrategy": "텍스트 선택 UI(3번 태스크)를 통해 다른 텍스트를 선택했을 때 `TypingTextDisplay` 컴포넌트에 표시되는 텍스트가 올바르게 변경되는지 확인합니다. 선택된 텍스트가 정확히 화면에 렌더링되는지 시각적으로 검증하고, 타이핑 입력 시 해당 텍스트에 대한 처리가 정상적으로 이루어지는지 확인합니다."
+          },
+          {
+            "id": 5,
+            "title": "텍스트 데이터에 `character_count` 자동 계산 로직 통합",
+            "description": "초기 텍스트 데이터가 로드되거나 Redux 스토어에 추가될 때, 각 텍스트 객체의 'content' 길이를 기반으로 'character_count' 속성을 자동으로 계산하여 저장하는 로직을 구현합니다. 이는 텍스트 선택 UI 등에서 정보로 활용될 수 있습니다.",
+            "dependencies": [
+              1,
+              2
+            ],
+            "details": "1번 태스크에서 생성된 초기 텍스트 데이터 로드 시 또는 2번 태스크의 Redux 'text' 슬라이스 내부에서 텍스트가 스토어에 추가될 때, 각 텍스트 객체의 'content.length'를 계산하여 'character_count' 필드를 채웁니다. 이 값은 텍스트 선택 UI (3번 태스크)에서 텍스트 정보를 표시하는 데 사용될 수 있습니다.",
+            "status": "pending",
+            "testStrategy": "Redux DevTools를 통해 스토어에 로드된 텍스트 객체들의 'character_count' 값이 각 'content'의 실제 길이와 일치하는지 확인합니다. 이 값이 UI (예: 텍스트 미리보기)에 올바르게 표시되는지 시각적으로 검증합니다."
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "title": "로컬 스토리지 기반 사용자 인증 및 프로필 관리",
+        "description": "MVP를 위해 로컬 스토리지에 사용자 프로필 정보(username, level, experience 등)를 저장하고 관리하는 기본적인 사용자 인증 시스템을 구현합니다. 회원가입/로그인 플로우를 포함합니다.",
+        "details": "`Auth` Redux 슬라이스를 생성하여 `isLoggedIn`, `username`, `level`, `experience` 등의 사용자 상태를 관리합니다. `localStorage` API를 사용하여 사용자 데이터를 저장하고 불러옵니다. `Login` 및 `Signup` 컴포넌트를 구현하고, 사용자 정보(예: `username`)를 입력받아 `localStorage.setItem('user', JSON.stringify({ ... }))`으로 저장하며, 페이지 로드 시 `localStorage.getItem('user')`를 통해 사용자 세션을 복원합니다.",
+        "testStrategy": "회원가입, 로그인, 로그아웃 기능을 테스트하여 사용자 정보가 로컬 스토리지에 올바르게 저장/삭제되고, 페이지 새로고침 후에도 세션이 유지되는지 확인합니다.",
+        "priority": "high",
+        "dependencies": [
+          1
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 9,
+        "title": "IndexedDB 기반 타이핑 세션 데이터 저장",
+        "description": "사용자의 타이핑 세션 결과(`TypingSession` 데이터)를 IndexedDB에 저장하여 영구적인 기록 및 오프라인 기능을 지원하도록 구현합니다.",
+        "details": "IndexedDB를 사용하기 위해 `dexie.js`와 같은 라이브러리를 활용하거나 직접 `IndexedDB` API를 랩핑하는 유틸리티 모듈을 생성합니다. `TypingSession` 데이터 모델(`id`, `user_id`, `text_id`, `wpm`, `accuracy`, `duration`, `timestamp`)을 정의하고, 타이핑 세션 완료 시 이 데이터를 IndexedDB의 `TypingSession` 스토어에 저장하는 로직을 구현합니다. `user_id`는 로컬 스토리지에 저장된 사용자 ID를 활용합니다.",
+        "testStrategy": "여러 타이핑 세션을 완료한 후 개발자 도구의 Application 탭에서 IndexedDB에 `TypingSession` 데이터가 올바르게 저장되는지 확인합니다. 새로고침 후에도 기록이 유지되는지 검증합니다.",
+        "priority": "medium",
+        "dependencies": [
+          5,
+          8
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 10,
+        "title": "세션 결과 표시 및 간단한 통계 UI 구현",
+        "description": "타이핑 세션이 완료된 후, 해당 세션의 WPM, 정확성, 소요 시간 등 주요 결과를 사용자에게 표시하는 UI 컴포넌트를 개발합니다.",
+        "details": "`SessionResult` 컴포넌트를 생성하여 `wpm`, `accuracy`, `duration` 등의 세션 결과 데이터를 props로 받아 사용자에게 가독성 좋게 표시합니다. 이전 작업에서 저장된 `TypingSession` 데이터를 IndexedDB에서 불러와 가장 최근 세션의 결과를 표시할 수 있도록 합니다. 결과 화면에서 다시 시작하거나 다른 텍스트를 선택할 수 있는 액션 버튼도 포함합니다.",
+        "testStrategy": "타이핑 세션을 완료한 후 결과 화면에 WPM, 정확성, 소요 시간 등의 수치가 올바르게 표시되는지 확인합니다. 여러 세션 후에도 최신 결과가 정확히 나타나는지 검증합니다.",
+        "priority": "medium",
+        "dependencies": [
+          5,
+          9
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "세션 결과 컴포넌트 (SessionResult) 스켈레톤 및 기본 정보 표시 UI 구현",
+            "description": "타이핑 세션이 완료된 후 WPM, 정확성, 소요 시간 등 핵심 통계 데이터를 표시할 `SessionResult` 컴포넌트의 초기 구조를 정의합니다. `Task 2`의 디자인 가이드라인에 따라 레이아웃을 구성하고, 각 통계 항목을 표시할 더미 플레이스홀더를 포함합니다.",
+            "dependencies": [
+              2
+            ],
+            "details": "React 함수형 컴포넌트로 `src/components/SessionResult.tsx` 파일을 생성합니다. `wpm`, `accuracy`, `duration`을 props로 받아들이는 인터페이스를 정의하고, 이 값들을 표시할 JSX 구조를 만듭니다. Tailwind CSS 클래스 또는 Styled-components를 활용하여 가독성 좋은 스타일을 적용합니다. 초기에는 더미 데이터로 UI를 채웁니다.",
+            "status": "pending",
+            "testStrategy": "스토리북(Storybook) 또는 별도의 개발 페이지에서 `SessionResult` 컴포넌트를 더미 데이터와 함께 렌더링하여 UI 레이아웃과 스타일이 올바르게 표시되는지 시각적으로 확인합니다."
+          },
+          {
+            "id": 2,
+            "title": "IndexedDB에서 최신 TypingSession 데이터 조회 로직 개발",
+            "description": "`Task 9`에서 저장된 `TypingSession` 데이터 중 가장 최근에 완료된 세션의 데이터를 IndexedDB에서 비동기적으로 조회하는 로직을 구현합니다. 이 조회 로직은 애플리케이션의 전역 상태 관리(예: Redux 또는 Context API)와 통합될 수 있도록 설계합니다.",
+            "dependencies": [
+              9
+            ],
+            "details": "`Task 9`에서 구현될 IndexedDB 유틸리티 함수를 활용하여 최신 `TypingSession` 데이터를 가져오는 비동기 함수를 작성합니다. 이 함수를 Redux Thunk 액션 또는 React Query와 같은 데이터 fetching 라이브러리를 통해 호출할 수 있도록 준비합니다. `SessionResult` 컴포넌트가 마운트될 때 이 데이터를 트리거하도록 준비합니다.",
+            "status": "pending",
+            "testStrategy": "개발자 도구의 IndexedDB에서 여러 `TypingSession` 데이터를 생성한 후, 구현된 조회 로직을 사용하여 가장 최근의 데이터가 올바르게 조회되는지 테스트합니다. Redux DevTools를 통해 상태 업데이트를 모니터링하여 데이터 흐름을 확인합니다."
+          },
+          {
+            "id": 3,
+            "title": "SessionResult 컴포넌트에 실제 통계 데이터 연결 및 시각화",
+            "description": "IndexedDB에서 조회된 최신 `TypingSession` 데이터로부터 `Task 5`에서 계산된 WPM, 정확성, 소요 시간 등의 통계 지표를 추출하고, 이를 `SessionResult` 컴포넌트의 props로 전달하여 사용자에게 표시합니다. 데이터 형식 변환 및 단위 표시를 포함합니다.",
+            "dependencies": [
+              5,
+              9
+            ],
+            "details": "`SessionResult` 컴포넌트 또는 이를 감싸는 컨테이너 컴포넌트에서 `Task 2`에서 구현한 데이터 조회 로직을 사용하여 `wpm`, `accuracy`, `duration` 값을 가져옵니다. 예를 들어, `duration`은 초 단위로 받아와 분:초 형식으로 변환하여 표시하고, `accuracy`는 백분율로 포맷팅하여 표시합니다. `Task 1`에서 설정된 전역 상태 관리를 통해 데이터를 전달합니다.",
+            "status": "pending",
+            "testStrategy": "타이핑 세션을 완료한 후 `SessionResult` 화면에서 WPM, 정확성, 소요 시간 값이 실제 세션 결과와 일치하는지 확인합니다. 소수점 처리, 백분율, 시간 단위 표시 등 데이터 포맷팅이 올바른지 검증합니다."
+          },
+          {
+            "id": 4,
+            "title": "세션 재시작 및 다른 텍스트 선택 액션 버튼 기능 추가",
+            "description": "`SessionResult` 화면에 '다시 시작' 및 '다른 텍스트 선택' 버튼을 추가하고, 각 버튼 클릭 시 적절한 애플리케이션 상태 변경 및 화면 전환 로직을 구현합니다.",
+            "dependencies": [
+              1,
+              5
+            ],
+            "details": "`SessionResult` 컴포넌트 내에 두 개의 `Button` 컴포넌트(또는 유사한 UI 요소)를 추가합니다. '다시 시작' 버튼 클릭 시에는 `Task 5`에서 관리하는 타이핑 세션 관련 Redux 상태를 초기화하고, 타이핑 화면으로 전환합니다. '다른 텍스트 선택' 버튼 클릭 시에는 `Task 1`에서 설정된 `react-router-dom`의 `useNavigate` 훅을 활용하여 텍스트 선택 화면으로 라우팅합니다.",
+            "status": "pending",
+            "testStrategy": "'다시 시작' 버튼 클릭 시 타이핑 세션 상태가 초기화되고 사용자가 다시 타이핑을 시작할 준비가 되는지 확인합니다. '다른 텍스트 선택' 버튼 클릭 시 텍스트 선택 화면으로 정확히 이동하는지 테스트합니다."
+          },
+          {
+            "id": 5,
+            "title": "세션 완료 시 SessionResult 컴포넌트 조건부 렌더링 및 애플리케이션 흐름 통합",
+            "description": "타이핑 세션이 완료되었음을 나타내는 상태(예: Redux의 `sessionStatus: 'completed'`)를 감지하여 `SessionResult` 컴포넌트를 조건부로 렌더링하고, 타이핑 화면과 결과 화면 간의 원활한 UI 흐름을 관리합니다.",
+            "dependencies": [
+              1,
+              2
+            ],
+            "details": "메인 타이핑 화면 컴포넌트에서 `Task 1`에서 설정된 Redux 스토어의 `sessionStatus` 상태를 구독합니다. `sessionStatus`가 'completed'로 변경될 때 `SessionResult` 컴포넌트가 표시되도록 조건부 렌더링 로직을 구현합니다. 필요한 데이터를 `SessionResult` 컴포넌트에 props로 전달합니다. `Task 2`의 레이아웃 구성에 따라 자연스럽게 통합되도록 합니다. (향후 `Task 14`에서 애니메이션 효과 추가 가능)",
+            "status": "pending",
+            "testStrategy": "타이핑 세션을 완료했을 때 `SessionResult` 컴포넌트가 올바르게 나타나고, 다시 타이핑을 시작하거나 다른 텍스트를 선택하기 전까지 결과 화면이 유지되는지 확인합니다. 세션 진행 중에는 `SessionResult`가 표시되지 않는지 검증합니다."
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "title": "Chart.js/Recharts 연동을 통한 기본 통계 시각화",
+        "description": "사용자의 학습 진도를 시각적으로 보여주기 위해 Chart.js 또는 Recharts 라이브러리를 활용하여 기본적인 타이핑 통계(예: 시간별 WPM 추이)를 차트로 표시합니다.",
+        "details": "`StatsChart` 컴포넌트를 생성하고 Chart.js 또는 Recharts를 사용하여 선 그래프(Line Chart)를 구현합니다. IndexedDB에 저장된 `TypingSession` 데이터에서 특정 기간(예: 최근 7일) 동안의 WPM 및 정확성 데이터를 가져와 차트의 데이터 소스로 사용합니다. 사용자에게 학습 추이를 직관적으로 보여줄 수 있도록 Y축은 WPM/정확성, X축은 시간(날짜)으로 설정합니다.",
+        "testStrategy": "여러 타이핑 세션을 기록한 후 통계 화면에서 차트가 올바르게 렌더링되는지 확인합니다. 데이터가 추가될 때 차트가 업데이트되고, WPM 또는 정확성 변화가 그래프에 정확히 반영되는지 검증합니다.",
+        "priority": "medium",
+        "dependencies": [
+          9,
+          10
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 12,
+        "title": "PWA (Progressive Web App) 기본 설정 및 구현",
+        "description": "애플리케이션이 오프라인 모드를 지원하고 사용자가 앱을 설치할 수 있도록 PWA 기능을 구현합니다.",
+        "details": "서비스 워커(`service-worker.js`)를 등록하고, 애플리케이션 셸(HTML, CSS, JS 번들) 및 핵심 에셋(이미지, 폰트)을 캐싱하여 오프라인에서도 작동하도록 설정합니다. `manifest.json` 파일을 구성하여 앱 이름, 아이콘, 시작 URL, 표시 모드(standalone) 등을 정의합니다. `create-react-app`의 경우 PWA 템플릿을 활용하거나 `workbox`와 같은 라이브러리를 사용합니다.",
+        "testStrategy": "개발자 도구에서 'Audit' 탭을 사용하여 PWA 점수를 확인합니다. 네트워크를 오프라인으로 전환한 후 앱이 정상적으로 로드되고 핵심 기능(타이핑 연습)이 작동하는지 테스트합니다. 브라우저에서 '홈 화면에 추가' 또는 '설치' 옵션이 나타나는지 확인합니다.",
+        "priority": "medium",
+        "dependencies": [
+          9
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 13,
+        "title": "한글 자모 연습 모드 개발 (초보자용)",
+        "description": "한글 타이핑 초보자를 위한 자음과 모음 개별 연습 모드를 구현합니다. 이는 '맞춤형 학습 콘텐츠'의 한글 자모 연습 모드 요구사항을 충족합니다.",
+        "details": "한글의 자음(ㄱ, ㄴ, ㄷ...), 모음(ㅏ, ㅑ, ㅓ...) 목록을 정의합니다. `TypingTextDisplay` 컴포넌트를 재활용하거나 새롭게 자모 연습에 특화된 컴포넌트를 개발하여, 한 번에 하나의 자음 또는 모음을 화면에 표시하고 사용자가 이를 입력하도록 합니다. 입력이 성공하면 다음 자모로 넘어갑니다. 기본적인 통계(정확성, 소요 시간)도 기록합니다.",
+        "testStrategy": "각 자음과 모음을 정확하게 입력했을 때 다음 자모로 넘어가는지 확인합니다. 오타 발생 시 피드백이 올바르게 나타나는지, 그리고 이 모드에서 얻은 통계가 다른 연습 모드와 분리되어 기록되는지 테스트합니다.",
+        "priority": "low",
+        "dependencies": [
+          3,
+          4
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 14,
+        "title": "Framer Motion을 활용한 부드러운 애니메이션 효과 추가",
+        "description": "사용자 경험을 향상시키기 위해 Framer Motion 라이브러리를 사용하여 UI 전환 및 피드백에 부드러운 애니메이션 효과를 적용합니다.",
+        "details": "버튼 클릭, 모달 열기/닫기, 세션 결과 표시 전환, 오타 피드백 등 주요 UI 요소에 Framer Motion의 `motion` 컴포넌트와 `useAnimation` 훅을 적용하여 `fade`, `slide`, `scale` 등의 애니메이션 효과를 추가합니다. 특히 오타 시각적 피드백에는 경고 애니메이션(예: 잠시 흔들림)을 추가하여 시각적 강조 효과를 높입니다.",
+        "testStrategy": "애플리케이션을 사용하면서 주요 UI 상호작용에서 애니메이션이 부드럽게 작동하고 사용자 경험을 방해하지 않는지 시각적으로 확인합니다. 애니메이션이 적용된 컴포넌트의 상태 변화에 따라 예상대로 동작하는지 검증합니다.",
+        "priority": "low",
+        "dependencies": [
+          2,
+          6,
+          10
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Framer Motion 기본 구조 설정 및 공통 애니메이션 유틸리티 정의",
+            "description": "Framer Motion 라이브러리를 애플리케이션에 통합하기 위한 기본 설정을 완료하고, fade, slide, scale 등 재사용 가능한 공통 애니메이션 variants를 정의합니다.",
+            "dependencies": [
+              1,
+              2
+            ],
+            "details": "motion 컴포넌트를 사용하고 initial, animate, exit 속성을 활용하기 위한 환경을 조성합니다. 자주 사용될 fade (투명도), slide (위치), scale (크기) 등의 variants 객체를 animation.ts 또는 유사한 유틸리티 파일에 정의하여 재사용성을 높입니다.",
+            "status": "pending",
+            "testStrategy": "더미 컴포넌트에 정의된 variants를 적용하여 애니메이션이 올바르게 트리거되고 예상대로 동작하는지 시각적으로 확인합니다. motion 컴포넌트가 렌더링되는지 확인합니다."
+          },
+          {
+            "id": 2,
+            "title": "버튼 및 주요 UI 요소에 기본 상호작용 애니메이션 적용",
+            "description": "애플리케이션 내의 버튼 클릭, 호버 등 주요 UI 상호작용에 fade 및 scale 애니메이션 효과를 적용하여 사용자 피드백을 강화합니다.",
+            "dependencies": [
+              1
+            ],
+            "details": "motion.button 또는 다른 motion 컴포넌트를 사용하여 whileHover, whileTap 속성을 통해 버튼에 시각적 피드백 애니메이션(예: 살짝 커지는 scale, 투명도 변화)을 추가합니다. 기타 중요한 상호작용 가능한 UI 요소에도 유사한 효과를 적용합니다.",
+            "status": "pending",
+            "testStrategy": "각 버튼 및 UI 요소를 클릭하거나 호버링하여 정의된 애니메이션이 부드럽게 재생되고 사용성을 해치지 않는지 시각적으로 확인합니다."
+          },
+          {
+            "id": 3,
+            "title": "모달 컴포넌트 열기/닫기 전환 애니메이션 구현",
+            "description": "모달 컴포넌트가 열리고 닫힐 때 AnimatePresence를 활용하여 부드러운 fade 및 slide 전환 애니메이션을 적용합니다.",
+            "dependencies": [
+              1,
+              2
+            ],
+            "details": "기존 모달 컴포넌트를 motion.div로 감싸고, AnimatePresence 컴포넌트를 사용하여 모달이 DOM에서 제거될 때 exit 애니메이션이 실행되도록 합니다. initial, animate, exit 속성에 fade 또는 slide variants를 적용하여 자연스러운 등장/퇴장 효과를 구현합니다.",
+            "status": "pending",
+            "testStrategy": "모달을 열고 닫으면서 애니메이션이 부드럽게 시작하고 끝나는지, 내용이 깜빡이지 않는지 시각적으로 확인합니다. 여러 번 반복하여 안정성을 검증합니다."
+          },
+          {
+            "id": 4,
+            "title": "세션 결과 화면 전환 애니메이션 적용",
+            "description": "타이핑 세션이 완료된 후 결과 화면으로 전환될 때 slide 또는 fade 애니메이션을 적용하여 사용자에게 시각적 흐름을 제공합니다.",
+            "dependencies": [
+              1,
+              5
+            ],
+            "details": "세션 결과가 표시되는 컴포넌트 또는 뷰에 motion.div를 적용하고, initial, animate 속성을 사용하여 부드러운 등장 애니메이션(예: 아래에서 위로 slide 업, fade 인)을 구현합니다. 필요하다면 AnimatePresence를 사용하여 이전 화면과의 전환 효과를 만듭니다.",
+            "status": "pending",
+            "testStrategy": "타이핑 세션을 완료한 후 결과 화면이 나타날 때 애니메이션이 의도한 대로 자연스럽게 재생되는지 확인합니다. 다양한 조건에서 전환 효과가 일관되게 나타나는지 검증합니다."
+          },
+          {
+            "id": 5,
+            "title": "오타 발생 시 시각적 경고 애니메이션 (흔들림) 구현",
+            "description": "사용자가 오타를 입력했을 때 텍스트 입력 필드나 관련 UI 요소에 useAnimation 훅을 활용한 '흔들림' 경고 애니메이션을 적용하여 즉각적인 시각적 피드백을 제공합니다.",
+            "dependencies": [
+              1,
+              5
+            ],
+            "details": "오타 감지 로직(Task 5에서 제공될 것으로 예상)에 연결하여 오타 발생 시 useAnimation 훅으로 제어되는 motion 컴포넌트의 animate 함수를 호출합니다. keyframes 또는 transition 속성을 사용하여 좌우로 짧게 흔들리는 듯한 애니메이션 효과를 구현합니다. 예를 들어, x 값을 -10px, 10px, 0px 등으로 빠르게 변경합니다.",
+            "status": "pending",
+            "testStrategy": "의도적으로 오타를 입력하여 경고 애니메이션이 즉시, 한 번만, 그리고 눈에 띄게 재생되는지 확인합니다. 여러 번 오타를 냈을 때 애니메이션이 중첩되지 않고 올바르게 동작하는지 검증합니다."
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "title": "사용자 피드백 기반 초기 텍스트 콘텐츠 확장 및 수정",
+        "description": "MVP 배포 후 사용자 피드백을 수집하여 초기 텍스트 콘텐츠의 양과 질을 개선하고, 다양한 주제 및 난이도의 텍스트를 추가합니다.",
+        "details": "사용자 테스트 및 피드백을 통해 어떤 종류의 텍스트가 인기가 많고, 어떤 난이도 조절이 필요한지 파악합니다. 뉴스 기사, 문학 작품, 일상 대화 등 다양한 주제의 한글 텍스트를 수집하고, 이를 `Text` 데이터 모델에 맞게 추가합니다. 텍스트의 길이나 복잡성(희귀 단어, 문장 구조)을 기준으로 난이도를 분류하여 시스템에 반영합니다.",
+        "testStrategy": "새롭게 추가된 텍스트들이 `TypingTextDisplay`에 올바르게 로드되고, 해당 텍스트로 타이핑 연습 시 통계 계산이 정상적으로 이루어지는지 확인합니다. 다양한 난이도의 텍스트가 의도한 대로 난이도 구분을 따르는지 검증합니다.",
+        "priority": "low",
+        "dependencies": [
+          7
+        ],
+        "status": "pending",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "사용자 피드백 분석 방법론 수립 및 초기 보고서 작성",
+            "description": "MVP 배포 후 사용자로부터 수집될 텍스트 콘텐츠 관련 피드백(선호하는 주제, 난이도 선호도, 불편사항 등)을 효과적으로 수집하고 분석하기 위한 방법론을 수립하고, 이를 바탕으로 초기 분석 보고서를 작성합니다.",
+            "dependencies": [],
+            "details": "피드백 수집 채널(예: 인앱 설문조사, 사용자 인터뷰)을 결정하고, 수집된 데이터를 정량적/정성적으로 분석하는 절차를 명시합니다. 텍스트 주제(예: 뉴스, 문학, 일상 대화), 길이, 난이도, 오류 발생 빈도 등에 대한 사용자 선호도 파악을 목표로 합니다. 분석 결과는 향후 텍스트 수집 및 난이도 분류 기준을 정하는 데 활용됩니다.",
+            "status": "pending",
+            "testStrategy": "수립된 방법론에 따라 최소 10명 이상의 가상 사용자 피드백을 시뮬레이션하여 분석 보고서가 의도대로 작성되는지 검증합니다. 피드백 수집 도구가 정상 작동하는지 확인합니다."
+          },
+          {
+            "id": 2,
+            "title": "Text 데이터 모델에 난이도 및 주제 필드 추가",
+            "description": "기존 텍스트 데이터 모델(예: 백엔드의 `Text` 스키마)에 사용자의 피드백을 반영하여 텍스트의 난이도와 주제를 나타낼 수 있는 필드를 추가합니다. 이는 텍스트 분류 및 필터링 기능의 기반이 됩니다.",
+            "dependencies": [],
+            "details": "`Text` 모델(예: `src/models/Text.ts` 또는 데이터베이스 스키마 정의 파일)에 `difficulty` (예: `number` 또는 `enum` 타입), `topic` (예: `string` 또는 `enum` 'news', 'literature', 'conversation' 등) 필드를 추가합니다. 필요한 경우 `source` 또는 `author` 필드도 고려합니다. 기존 데이터에 영향을 주지 않는 데이터베이스 마이그레이션 스크립트를 작성합니다.",
+            "status": "pending",
+            "testStrategy": "데이터베이스 스키마가 성공적으로 업데이트되었는지 확인하고, 새로운 필드에 데이터를 삽입 및 조회할 수 있는지 간단한 CRUD 테스트를 수행합니다."
+          },
+          {
+            "id": 3,
+            "title": "한글 텍스트 복잡성 측정 로직 개발 및 난이도 지표 정의",
+            "description": "텍스트의 난이도를 객관적으로 판단할 수 있는 복잡성 측정 로직을 개발하고, 이를 기반으로 '쉬움', '보통', '어려움' 등의 난이도 지표를 정의합니다.",
+            "dependencies": [
+              2
+            ],
+            "details": "한글 텍스트의 복잡성을 측정하기 위한 기준을 설정합니다. 예를 들어, 문장 길이, 어휘 난이도(희귀 단어 사용 빈도), 문장 구조의 복잡성 등을 고려하여 이를 계산하는 유틸리티 함수(예: `src/utils/textAnalysis.ts` 또는 유사 모듈)를 작성합니다. 이 로직을 사용하여 텍스트에 `difficulty` 값을 할당하는 기준(예: 점수 범위별 난이도 등급)을 정의합니다.",
+            "status": "pending",
+            "testStrategy": "다양한 길이와 어휘 난이도를 가진 샘플 한글 텍스트를 준비하고, 개발된 복잡성 측정 로직이 예상대로 난이도 점수를 반환하는지 유닛 테스트를 작성합니다. 정의된 난이도 지표에 따라 샘플 텍스트가 올바른 등급으로 분류되는지 확인합니다."
+          },
+          {
+            "id": 4,
+            "title": "사용자 피드백 기반 신규 한글 텍스트 콘텐츠 수집 및 가공",
+            "description": "사용자 피드백 분석 결과 및 정의된 난이도/주제 지표에 따라 뉴스 기사, 문학 작품, 일상 대화 등 다양한 주제와 난이도의 새로운 한글 텍스트 콘텐츠를 수집하고, `Text` 데이터 모델에 맞게 가공합니다.",
+            "dependencies": [
+              1,
+              3
+            ],
+            "details": "외부 자료(뉴스 웹사이트, 공개 문학 자료, 대화 스크립트 등)에서 텍스트를 수집하고, 저작권 및 사용 가능 여부를 확인합니다. 개인 정보 등 민감한 내용은 제거하고, `Text` 모델의 필드에 맞춰 내용 정제, 길이 조절, 불필요한 특수문자 제거 등의 전처리 작업을 수행합니다. 이 과정에서 개발된 텍스트 복잡성 측정 로직을 사용하여 초기 난이도를 부여합니다.",
+            "status": "pending",
+            "testStrategy": "수집된 텍스트 샘플이 `Text` 데이터 모델의 제약 조건을 준수하는지 확인합니다. 가공된 텍스트가 예상되는 주제 및 난이도 특성을 잘 반영하는지 수동으로 검토합니다(예: '쉬움'으로 분류된 텍스트에 어려운 단어나 복잡한 문장이 없는지 확인)."
+          },
+          {
+            "id": 5,
+            "title": "수집된 텍스트 데이터베이스 삽입 및 프론트엔드 텍스트 선택 기능 업데이트",
+            "description": "가공된 새로운 한글 텍스트 콘텐츠를 데이터베이스에 삽입하고, 프론트엔드 `TypingTextDisplay` 컴포넌트에서 이 새로운 텍스트들을 선택하고 불러올 수 있도록 기능을 업데이트합니다.",
+            "dependencies": [
+              2,
+              4
+            ],
+            "details": "데이터베이스 관리 도구 또는 스크립트(예: `scripts/importTexts.ts`)를 사용하여 가공된 텍스트를 데이터베이스에 대량으로 삽입합니다. 프론트엔드의 `TypingTextDisplay` 또는 관련 로직(예: Redux store의 `text` slice)을 수정하여, 사용자가 주제나 난이도 필터를 사용하여 텍스트를 선택하고 불러올 수 있도록 API 연동을 업데이트합니다.",
+            "status": "pending",
+            "testStrategy": "새로 추가된 텍스트들이 백엔드 API를 통해 성공적으로 조회되는지 API 클라이언트(예: Postman)로 테스트합니다. 프론트엔드에서 주제 및 난이도 필터를 사용하여 다양한 텍스트를 선택하고, 선택된 텍스트가 `TypingTextDisplay`에 올바르게 로드되는지 E2E 테스트를 수행합니다. 타이핑 연습 시 통계 계산이 정상적으로 이루어지는지 확인합니다."
+          }
+        ]
+      }
+    ],
+    "metadata": {
+      "created": "2025-11-14T13:51:32.720Z",
+      "updated": "2025-11-14T13:51:32.720Z",
+      "description": "Tasks for master context"
+    }
+  }
+}
