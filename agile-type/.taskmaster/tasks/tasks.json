@@ -88,7 +88,7 @@
         "dependencies": [
           "1"
         ],
-        "status": "pending",
+        "status": "completed",
         "subtasks": [
           {
             "id": 1,
@@ -150,7 +150,8 @@
             "testStrategy": "`Layout` 컴포넌트를 통해 렌더링된 페이지에서 헤더와 푸터가 올바른 위치에 표시되는지 시각적으로 확인합니다. 다크/라이트 모드 전환 시 헤더와 푸터의 색상이 변경되는지, 다양한 화면 크기에서 내용이 깨지지 않고 반응형으로 잘 조정되는지 검증합니다.",
             "parentId": "undefined"
           }
-        ]
+        ],
+        "updatedAt": "2025-11-14T14:31:23.173Z"
       },
       {
         "id": "3",
@@ -830,7 +831,7 @@
     ],
     "metadata": {
       "version": "1.0.0",
-      "lastModified": "2025-11-14T14:28:10.154Z",
+      "lastModified": "2025-11-14T14:31:23.175Z",
       "taskCount": 15,
       "completedCount": 1,
       "tags": [
