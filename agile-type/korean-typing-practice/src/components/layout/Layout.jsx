@@ -47,6 +47,16 @@ const Layout = ({ children, currentPage, onNavClick }) => {
             >
               프로필
             </NavLink>
+            <NavLink
+              href="#tutorial"
+              className={currentPage === 'tutorial' ? 'active' : ''}
+              onClick={e => {
+                e.preventDefault();
+                onNavClick('tutorial');
+              }}
+            >
+              개발 튜토리얼
+            </NavLink>
           </Nav>
         </HeaderContainer>
       </Header>
