@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Title, Card } from '../components/common/UI';
 import { useAppSelector } from '../store/hooks';
 
-const TutorialPage = () => {
+const TutorialPage = ({ onSubtaskClick }) => {
   const { isLoggedIn } = useAppSelector(state => state.user);
 
   const task1Summary = {
@@ -202,8 +202,8 @@ const TutorialPage = () => {
   ];
 
   const handleSubtaskClick = (subtaskId) => {
-    // 서브태스크 상세 페이지로 이동 (상태 관리로 구현)
-    console.log(`Navigate to subtask ${subtaskId}`);
+    // 서브태스크 상세 페이지로 이동
+    onSubtaskClick(subtaskId.toString());
   };
 
   return (
