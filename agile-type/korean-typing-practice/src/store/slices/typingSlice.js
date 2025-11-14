@@ -46,6 +46,10 @@ const initialState = {
   correctChars: 0,
   incorrectChars: 0,
   totalChars: 0,
+  // Character-level tracking for TypingTextDisplay
+  charStates: [], // Array of character states: 'correct', 'incorrect', 'current', 'untyped'
+  errors: [], // Array of error positions
+  keystrokes: [], // Array of keystroke data for analytics
 };
 
 const typingSlice = createSlice({
@@ -60,11 +64,34 @@ const typingSlice = createSlice({
     },
     updateTypedText: (state, action) => {
       const newTypedText = action.payload;
+      const previousTypedText = state.typedText;
       state.typedText = newTypedText;
       state.currentIndex = newTypedText.length;
 
-      // Calculate statistics
+      // Update character states
       const currentText = state.currentText;
+      state.charStates = [];
+      state.errors = [];
+      
+      for (let i = 0; i < currentText.length; i++) {
+        if (i < newTypedText.length) {
+          // Typed character
+          if (newTypedText[i] === currentText[i]) {
+            state.charStates.push('correct');
+          } else {
+            state.charStates.push('incorrect');
+            state.errors.push(i);
+          }
+        } else if (i === newTypedText.length) {
+          // Current position
+          state.charStates.push('current');
+        } else {
+          // Untyped character
+          state.charStates.push('untyped');
+        }
+      }
+
+      // Calculate statistics
       state.correctChars = 0;
       state.incorrectChars = 0;
 
@@ -83,6 +110,22 @@ const typingSlice = createSlice({
         state.totalChars > 0
           ? Math.round((state.correctChars / state.totalChars) * 100)
           : 0;
+
+      // Track keystrokes for analytics
+      if (newTypedText.length > previousTypedText.length) {
+        // New character typed
+        const charIndex = newTypedText.length - 1;
+        const isCorrect = charIndex < currentText.length && 
+                         newTypedText[charIndex] === currentText[charIndex];
+        
+        state.keystrokes.push({
+          charIndex,
+          character: newTypedText[charIndex],
+          expected: currentText[charIndex],
+          isCorrect,
+          timestamp: Date.now(),
+        });
+      }
 
       // Check if completed
       if (newTypedText === currentText) {
@@ -110,13 +153,54 @@ const typingSlice = createSlice({
       state.correctChars = 0;
       state.incorrectChars = 0;
       state.totalChars = 0;
+      state.charStates = [];
+      state.errors = [];
+      state.keystrokes = [];
     },
     setCurrentText: (state, action) => {
       state.currentText = action.payload;
       state.resetTyping();
+      
+      // Initialize character states for new text
+      const text = action.payload;
+      state.charStates = [];
+      for (let i = 0; i < text.length; i++) {
+        if (i === 0) {
+          state.charStates.push('current');
+        } else {
+          state.charStates.push('untyped');
+        }
+      }
     },
     setDifficulty: (state, action) => {
       state.difficulty = action.payload;
+    },
+    // New actions for character-level management
+    updateCharState: (state, action) => {
+      const { index, charState } = action.payload;
+      if (index >= 0 && index < state.charStates.length) {
+        state.charStates[index] = charState;
+      }
+    },
+    addError: (state, action) => {
+      const errorIndex = action.payload;
+      if (!state.errors.includes(errorIndex)) {
+        state.errors.push(errorIndex);
+      }
+    },
+    removeError: (state, action) => {
+      const errorIndex = action.payload;
+      state.errors = state.errors.filter(index => index !== errorIndex);
+    },
+    clearErrors: state => {
+      state.errors = [];
+    },
+    recordKeystroke: (state, action) => {
+      const keystrokeData = action.payload;
+      state.keystrokes.push({
+        ...keystrokeData,
+        timestamp: Date.now(),
+      });
     },
   },
   extraReducers: builder => {
@@ -148,6 +232,11 @@ export const {
   resetTyping,
   setCurrentText,
   setDifficulty,
+  updateCharState,
+  addError,
+  removeError,
+  clearErrors,
+  recordKeystroke,
 } = typingSlice.actions;
 
 export default typingSlice.reducer;

@@ -3,75 +3,75 @@
     "tasks": [
       {
         "id": "1",
-        "title": "프로젝트 초기 설정 및 기본 스택 통합",
-        "description": "React.js 애플리케이션을 초기화하고, Redux Toolkit, Styled-components (또는 Tailwind CSS), Chart.js (또는 Recharts), Framer Motion 등 핵심 프론트엔드 기술 스택을 통합합니다. 개발 환경을 설정하고 빌드 프로세스를 최적화합니다.",
-        "details": "React 프로젝트는 `create-react-app` 또는 Vite를 사용하여 초기화합니다. `npm install` 또는 `yarn add`를 통해 `react-redux`, `@reduxjs/toolkit`, `styled-components` (또는 `tailwindcss`), `chart.js` (또는 `recharts`), `framer-motion` 패키지를 설치합니다. Redux 스토어를 구성하고, Styled-components의 ThemeProvider를 설정하며, Tailwind CSS를 선택할 경우 `tailwind.config.js`를 구성합니다. 기본적인 라우팅을 위해 `react-router-dom`도 설치하고 설정합니다.",
-        "testStrategy": "프로젝트가 성공적으로 빌드되고, 각 라이브러리가 올바르게 import되어 작동하는지 확인하는 더미 컴포넌트 및 Redux 액션을 생성하여 테스트합니다. `package.json`의 의존성 목록을 확인합니다.",
+        "title": "\ud504\ub85c\uc81d\ud2b8 \ucd08\uae30 \uc124\uc815 \ubc0f \uae30\ubcf8 \uc2a4\ud0dd \ud1b5\ud569",
+        "description": "React.js \uc560\ud50c\ub9ac\ucf00\uc774\uc158\uc744 \ucd08\uae30\ud654\ud558\uace0, Redux Toolkit, Styled-components (\ub610\ub294 Tailwind CSS), Chart.js (\ub610\ub294 Recharts), Framer Motion \ub4f1 \ud575\uc2ec \ud504\ub860\ud2b8\uc5d4\ub4dc \uae30\uc220 \uc2a4\ud0dd\uc744 \ud1b5\ud569\ud569\ub2c8\ub2e4. \uac1c\ubc1c \ud658\uacbd\uc744 \uc124\uc815\ud558\uace0 \ube4c\ub4dc \ud504\ub85c\uc138\uc2a4\ub97c \ucd5c\uc801\ud654\ud569\ub2c8\ub2e4.",
+        "details": "React \ud504\ub85c\uc81d\ud2b8\ub294 `create-react-app` \ub610\ub294 Vite\ub97c \uc0ac\uc6a9\ud558\uc5ec \ucd08\uae30\ud654\ud569\ub2c8\ub2e4. `npm install` \ub610\ub294 `yarn add`\ub97c \ud1b5\ud574 `react-redux`, `@reduxjs/toolkit`, `styled-components` (\ub610\ub294 `tailwindcss`), `chart.js` (\ub610\ub294 `recharts`), `framer-motion` \ud328\ud0a4\uc9c0\ub97c \uc124\uce58\ud569\ub2c8\ub2e4. Redux \uc2a4\ud1a0\uc5b4\ub97c \uad6c\uc131\ud558\uace0, Styled-components\uc758 ThemeProvider\ub97c \uc124\uc815\ud558\uba70, Tailwind CSS\ub97c \uc120\ud0dd\ud560 \uacbd\uc6b0 `tailwind.config.js`\ub97c \uad6c\uc131\ud569\ub2c8\ub2e4. \uae30\ubcf8\uc801\uc778 \ub77c\uc6b0\ud305\uc744 \uc704\ud574 `react-router-dom`\ub3c4 \uc124\uce58\ud558\uace0 \uc124\uc815\ud569\ub2c8\ub2e4.",
+        "testStrategy": "\ud504\ub85c\uc81d\ud2b8\uac00 \uc131\uacf5\uc801\uc73c\ub85c \ube4c\ub4dc\ub418\uace0, \uac01 \ub77c\uc774\ube0c\ub7ec\ub9ac\uac00 \uc62c\ubc14\ub974\uac8c import\ub418\uc5b4 \uc791\ub3d9\ud558\ub294\uc9c0 \ud655\uc778\ud558\ub294 \ub354\ubbf8 \ucef4\ud3ec\ub10c\ud2b8 \ubc0f Redux \uc561\uc158\uc744 \uc0dd\uc131\ud558\uc5ec \ud14c\uc2a4\ud2b8\ud569\ub2c8\ub2e4. `package.json`\uc758 \uc758\uc874\uc131 \ubaa9\ub85d\uc744 \ud655\uc778\ud569\ub2c8\ub2e4.",
         "priority": "high",
         "dependencies": [],
         "status": "done",
         "subtasks": [
           {
             "id": 1,
-            "title": "React 프로젝트 초기화 및 핵심 의존성 설치",
-            "description": "Vite 또는 Create-React-App을 사용하여 새 React 애플리케이션을 초기화하고, Redux Toolkit, Styled-components, Chart.js, Framer Motion, React Router Dom 등 필수 프론트엔드 라이브러리를 설치합니다.",
+            "title": "React \ud504\ub85c\uc81d\ud2b8 \ucd08\uae30\ud654 \ubc0f \ud575\uc2ec \uc758\uc874\uc131 \uc124\uce58",
+            "description": "Vite \ub610\ub294 Create-React-App\uc744 \uc0ac\uc6a9\ud558\uc5ec \uc0c8 React \uc560\ud50c\ub9ac\ucf00\uc774\uc158\uc744 \ucd08\uae30\ud654\ud558\uace0, Redux Toolkit, Styled-components, Chart.js, Framer Motion, React Router Dom \ub4f1 \ud544\uc218 \ud504\ub860\ud2b8\uc5d4\ub4dc \ub77c\uc774\ube0c\ub7ec\ub9ac\ub97c \uc124\uce58\ud569\ub2c8\ub2e4.",
             "dependencies": [],
-            "details": "프로젝트 루트 디렉토리에서 'npx create-vite@latest my-app --template react-ts' (TypeScript 사용 시) 또는 'npx create-react-app my-app --template typescript' 명령어를 실행하여 프로젝트를 초기화합니다. 이후 'npm install react-redux @reduxjs/toolkit styled-components chart.js react-chartjs-2 framer-motion react-router-dom' 명령어를 사용하여 필요한 패키지들을 설치합니다. package.json 파일에 모든 의존성이 올바르게 추가되었는지 확인합니다.",
+            "details": "\ud504\ub85c\uc81d\ud2b8 \ub8e8\ud2b8 \ub514\ub809\ud1a0\ub9ac\uc5d0\uc11c 'npx create-vite@latest my-app --template react-ts' (TypeScript \uc0ac\uc6a9 \uc2dc) \ub610\ub294 'npx create-react-app my-app --template typescript' \uba85\ub839\uc5b4\ub97c \uc2e4\ud589\ud558\uc5ec \ud504\ub85c\uc81d\ud2b8\ub97c \ucd08\uae30\ud654\ud569\ub2c8\ub2e4. \uc774\ud6c4 'npm install react-redux @reduxjs/toolkit styled-components chart.js react-chartjs-2 framer-motion react-router-dom' \uba85\ub839\uc5b4\ub97c \uc0ac\uc6a9\ud558\uc5ec \ud544\uc694\ud55c \ud328\ud0a4\uc9c0\ub4e4\uc744 \uc124\uce58\ud569\ub2c8\ub2e4. package.json \ud30c\uc77c\uc5d0 \ubaa8\ub4e0 \uc758\uc874\uc131\uc774 \uc62c\ubc14\ub974\uac8c \ucd94\uac00\ub418\uc5c8\ub294\uc9c0 \ud655\uc778\ud569\ub2c8\ub2e4.",
             "status": "done",
-            "testStrategy": "프로젝트가 성공적으로 초기화되고 'npm start' 또는 'npm run dev'로 실행되는지 확인합니다. package.json에 명시된 모든 라이브러리가 dependencies 목록에 정확히 포함되어 있는지 검증합니다.",
+            "testStrategy": "\ud504\ub85c\uc81d\ud2b8\uac00 \uc131\uacf5\uc801\uc73c\ub85c \ucd08\uae30\ud654\ub418\uace0 'npm start' \ub610\ub294 'npm run dev'\ub85c \uc2e4\ud589\ub418\ub294\uc9c0 \ud655\uc778\ud569\ub2c8\ub2e4. package.json\uc5d0 \uba85\uc2dc\ub41c \ubaa8\ub4e0 \ub77c\uc774\ube0c\ub7ec\ub9ac\uac00 dependencies \ubaa9\ub85d\uc5d0 \uc815\ud655\ud788 \ud3ec\ud568\ub418\uc5b4 \uc788\ub294\uc9c0 \uac80\uc99d\ud569\ub2c8\ub2e4.",
             "parentId": "undefined",
             "updatedAt": "2025-11-14T14:07:55.524Z"
           },
           {
             "id": 2,
-            "title": "Styled-components 환경 설정 및 전역 스타일 정의",
-            "description": "Styled-components의 ThemeProvider를 설정하고, 애플리케이션 전체에 적용될 GlobalStyle을 정의하여 일관된 디자인 시스템의 기반을 마련합니다.",
+            "title": "Styled-components \ud658\uacbd \uc124\uc815 \ubc0f \uc804\uc5ed \uc2a4\ud0c0\uc77c \uc815\uc758",
+            "description": "Styled-components\uc758 ThemeProvider\ub97c \uc124\uc815\ud558\uace0, \uc560\ud50c\ub9ac\ucf00\uc774\uc158 \uc804\uccb4\uc5d0 \uc801\uc6a9\ub420 GlobalStyle\uc744 \uc815\uc758\ud558\uc5ec \uc77c\uad00\ub41c \ub514\uc790\uc778 \uc2dc\uc2a4\ud15c\uc758 \uae30\ubc18\uc744 \ub9c8\ub828\ud569\ub2c8\ub2e4.",
             "dependencies": [
               1
             ],
-            "details": "src/styles/theme.ts 파일을 생성하여 기본 색상 팔레트, 폰트 사이즈 등 디자인 토큰을 정의합니다. src/styles/GlobalStyle.ts 파일에는 애플리케이션 전반에 걸쳐 적용될 CSS 리셋 및 기본 스타일을 정의합니다. src/App.tsx 또는 src/main.tsx 파일에서 ThemeProvider와 GlobalStyle을 루트 컴포넌트에 감싸서 적용합니다. 필요하다면 다크/라이트 모드 지원을 위한 ThemeProvider의 동적 테마 변경 로직의 초기 스케치를 포함합니다.",
+            "details": "src/styles/theme.ts \ud30c\uc77c\uc744 \uc0dd\uc131\ud558\uc5ec \uae30\ubcf8 \uc0c9\uc0c1 \ud314\ub808\ud2b8, \ud3f0\ud2b8 \uc0ac\uc774\uc988 \ub4f1 \ub514\uc790\uc778 \ud1a0\ud070\uc744 \uc815\uc758\ud569\ub2c8\ub2e4. src/styles/GlobalStyle.ts \ud30c\uc77c\uc5d0\ub294 \uc560\ud50c\ub9ac\ucf00\uc774\uc158 \uc804\ubc18\uc5d0 \uac78\uccd0 \uc801\uc6a9\ub420 CSS \ub9ac\uc14b \ubc0f \uae30\ubcf8 \uc2a4\ud0c0\uc77c\uc744 \uc815\uc758\ud569\ub2c8\ub2e4. src/App.tsx \ub610\ub294 src/main.tsx \ud30c\uc77c\uc5d0\uc11c ThemeProvider\uc640 GlobalStyle\uc744 \ub8e8\ud2b8 \ucef4\ud3ec\ub10c\ud2b8\uc5d0 \uac10\uc2f8\uc11c \uc801\uc6a9\ud569\ub2c8\ub2e4. \ud544\uc694\ud558\ub2e4\uba74 \ub2e4\ud06c/\ub77c\uc774\ud2b8 \ubaa8\ub4dc \uc9c0\uc6d0\uc744 \uc704\ud55c ThemeProvider\uc758 \ub3d9\uc801 \ud14c\ub9c8 \ubcc0\uacbd \ub85c\uc9c1\uc758 \ucd08\uae30 \uc2a4\ucf00\uce58\ub97c \ud3ec\ud568\ud569\ub2c8\ub2e4.",
             "status": "done",
-            "testStrategy": "ThemeProvider와 GlobalStyle이 올바르게 적용되었는지 확인하기 위해 간단한 컴포넌트에 정의된 테마 변수(예: PrimaryColor)를 적용하고 브라우저에서 시각적으로 확인합니다. GlobalStyle의 CSS 리셋이 적용되었는지 개발자 도구로 검사합니다.",
+            "testStrategy": "ThemeProvider\uc640 GlobalStyle\uc774 \uc62c\ubc14\ub974\uac8c \uc801\uc6a9\ub418\uc5c8\ub294\uc9c0 \ud655\uc778\ud558\uae30 \uc704\ud574 \uac04\ub2e8\ud55c \ucef4\ud3ec\ub10c\ud2b8\uc5d0 \uc815\uc758\ub41c \ud14c\ub9c8 \ubcc0\uc218(\uc608: PrimaryColor)\ub97c \uc801\uc6a9\ud558\uace0 \ube0c\ub77c\uc6b0\uc800\uc5d0\uc11c \uc2dc\uac01\uc801\uc73c\ub85c \ud655\uc778\ud569\ub2c8\ub2e4. GlobalStyle\uc758 CSS \ub9ac\uc14b\uc774 \uc801\uc6a9\ub418\uc5c8\ub294\uc9c0 \uac1c\ubc1c\uc790 \ub3c4\uad6c\ub85c \uac80\uc0ac\ud569\ub2c8\ub2e4.",
             "parentId": "undefined",
             "updatedAt": "2025-11-14T14:11:32.427Z"
           },
           {
             "id": 3,
-            "title": "Redux Toolkit 스토어 및 기본 예제 슬라이스 구성",
-            "description": "Redux Toolkit을 사용하여 중앙 집중식 상태 관리 스토어를 설정하고, 애플리케이션의 상태 관리 아키텍처의 기반을 구축하며, 간단한 상태를 관리하는 예제 슬라이스를 구현합니다.",
+            "title": "Redux Toolkit \uc2a4\ud1a0\uc5b4 \ubc0f \uae30\ubcf8 \uc608\uc81c \uc2ac\ub77c\uc774\uc2a4 \uad6c\uc131",
+            "description": "Redux Toolkit\uc744 \uc0ac\uc6a9\ud558\uc5ec \uc911\uc559 \uc9d1\uc911\uc2dd \uc0c1\ud0dc \uad00\ub9ac \uc2a4\ud1a0\uc5b4\ub97c \uc124\uc815\ud558\uace0, \uc560\ud50c\ub9ac\ucf00\uc774\uc158\uc758 \uc0c1\ud0dc \uad00\ub9ac \uc544\ud0a4\ud14d\ucc98\uc758 \uae30\ubc18\uc744 \uad6c\ucd95\ud558\uba70, \uac04\ub2e8\ud55c \uc0c1\ud0dc\ub97c \uad00\ub9ac\ud558\ub294 \uc608\uc81c \uc2ac\ub77c\uc774\uc2a4\ub97c \uad6c\ud604\ud569\ub2c8\ub2e4.",
             "dependencies": [
               1
             ],
-            "details": "src/app/store.ts 파일을 생성하여 Redux Toolkit의 `configureStore`를 사용하여 스토어를 초기화합니다. src/features/counter/counterSlice.ts와 같은 예제 슬라이스를 생성하여 액션(예: increment, decrement) 및 리듀서를 정의합니다. 스토어 구성 시 이 슬라이스를 포함하고, `react-redux`의 `Provider`를 사용하여 스토어를 React 컴포넌트 트리에 연결합니다. `useSelector` 및 `useDispatch` 훅의 사용법을 시연하는 간단한 컴포넌트를 작성합니다.",
+            "details": "src/app/store.ts \ud30c\uc77c\uc744 \uc0dd\uc131\ud558\uc5ec Redux Toolkit\uc758 `configureStore`\ub97c \uc0ac\uc6a9\ud558\uc5ec \uc2a4\ud1a0\uc5b4\ub97c \ucd08\uae30\ud654\ud569\ub2c8\ub2e4. src/features/counter/counterSlice.ts\uc640 \uac19\uc740 \uc608\uc81c \uc2ac\ub77c\uc774\uc2a4\ub97c \uc0dd\uc131\ud558\uc5ec \uc561\uc158(\uc608: increment, decrement) \ubc0f \ub9ac\ub4c0\uc11c\ub97c \uc815\uc758\ud569\ub2c8\ub2e4. \uc2a4\ud1a0\uc5b4 \uad6c\uc131 \uc2dc \uc774 \uc2ac\ub77c\uc774\uc2a4\ub97c \ud3ec\ud568\ud558\uace0, `react-redux`\uc758 `Provider`\ub97c \uc0ac\uc6a9\ud558\uc5ec \uc2a4\ud1a0\uc5b4\ub97c React \ucef4\ud3ec\ub10c\ud2b8 \ud2b8\ub9ac\uc5d0 \uc5f0\uacb0\ud569\ub2c8\ub2e4. `useSelector` \ubc0f `useDispatch` \ud6c5\uc758 \uc0ac\uc6a9\ubc95\uc744 \uc2dc\uc5f0\ud558\ub294 \uac04\ub2e8\ud55c \ucef4\ud3ec\ub10c\ud2b8\ub97c \uc791\uc131\ud569\ub2c8\ub2e4.",
             "status": "done",
-            "testStrategy": "예제 슬라이스의 상태와 액션을 사용하여 간단한 카운터 컴포넌트를 만들고, 버튼 클릭 시 상태가 업데이트되고 UI에 반영되는지 확인합니다. Redux DevTools 확장 프로그램을 사용하여 스토어의 상태 변화와 액션 디스패치가 올바르게 작동하는지 검증합니다.",
+            "testStrategy": "\uc608\uc81c \uc2ac\ub77c\uc774\uc2a4\uc758 \uc0c1\ud0dc\uc640 \uc561\uc158\uc744 \uc0ac\uc6a9\ud558\uc5ec \uac04\ub2e8\ud55c \uce74\uc6b4\ud130 \ucef4\ud3ec\ub10c\ud2b8\ub97c \ub9cc\ub4e4\uace0, \ubc84\ud2bc \ud074\ub9ad \uc2dc \uc0c1\ud0dc\uac00 \uc5c5\ub370\uc774\ud2b8\ub418\uace0 UI\uc5d0 \ubc18\uc601\ub418\ub294\uc9c0 \ud655\uc778\ud569\ub2c8\ub2e4. Redux DevTools \ud655\uc7a5 \ud504\ub85c\uadf8\ub7a8\uc744 \uc0ac\uc6a9\ud558\uc5ec \uc2a4\ud1a0\uc5b4\uc758 \uc0c1\ud0dc \ubcc0\ud654\uc640 \uc561\uc158 \ub514\uc2a4\ud328\uce58\uac00 \uc62c\ubc14\ub974\uac8c \uc791\ub3d9\ud558\ub294\uc9c0 \uac80\uc99d\ud569\ub2c8\ub2e4.",
             "parentId": "undefined",
             "updatedAt": "2025-11-14T14:15:05.273Z"
           },
           {
             "id": 4,
-            "title": "기본 라우팅 구조 및 초기 레이아웃 컴포넌트 구현",
-            "description": "`react-router-dom`을 사용하여 애플리케이션의 기본 라우팅 구조를 설정하고, 헤더, 푸터, 메인 콘텐츠 영역을 포함하는 초기 레이아웃 컴포넌트를 구현합니다.",
+            "title": "\uae30\ubcf8 \ub77c\uc6b0\ud305 \uad6c\uc870 \ubc0f \ucd08\uae30 \ub808\uc774\uc544\uc6c3 \ucef4\ud3ec\ub10c\ud2b8 \uad6c\ud604",
+            "description": "`react-router-dom`\uc744 \uc0ac\uc6a9\ud558\uc5ec \uc560\ud50c\ub9ac\ucf00\uc774\uc158\uc758 \uae30\ubcf8 \ub77c\uc6b0\ud305 \uad6c\uc870\ub97c \uc124\uc815\ud558\uace0, \ud5e4\ub354, \ud478\ud130, \uba54\uc778 \ucf58\ud150\uce20 \uc601\uc5ed\uc744 \ud3ec\ud568\ud558\ub294 \ucd08\uae30 \ub808\uc774\uc544\uc6c3 \ucef4\ud3ec\ub10c\ud2b8\ub97c \uad6c\ud604\ud569\ub2c8\ub2e4.",
             "dependencies": [
               1,
               2
             ],
-            "details": "src/components/Layout.tsx 파일을 생성하여 헤더와 푸터를 포함하는 기본적인 레이아웃을 정의하고, `children` prop을 사용하여 동적으로 콘텐츠를 렌더링합니다. src/App.tsx에서 `BrowserRouter` 및 `Routes`, `Route` 컴포넌트를 사용하여 '/' 경로에 `Layout` 컴포넌트를 연결하고, 그 안에 Home과 같은 더미 페이지 컴포넌트를 정의합니다. Styled-components를 사용하여 레이아웃 컴포넌트의 스타일을 적용합니다.",
+            "details": "src/components/Layout.tsx \ud30c\uc77c\uc744 \uc0dd\uc131\ud558\uc5ec \ud5e4\ub354\uc640 \ud478\ud130\ub97c \ud3ec\ud568\ud558\ub294 \uae30\ubcf8\uc801\uc778 \ub808\uc774\uc544\uc6c3\uc744 \uc815\uc758\ud558\uace0, `children` prop\uc744 \uc0ac\uc6a9\ud558\uc5ec \ub3d9\uc801\uc73c\ub85c \ucf58\ud150\uce20\ub97c \ub80c\ub354\ub9c1\ud569\ub2c8\ub2e4. src/App.tsx\uc5d0\uc11c `BrowserRouter` \ubc0f `Routes`, `Route` \ucef4\ud3ec\ub10c\ud2b8\ub97c \uc0ac\uc6a9\ud558\uc5ec '/' \uacbd\ub85c\uc5d0 `Layout` \ucef4\ud3ec\ub10c\ud2b8\ub97c \uc5f0\uacb0\ud558\uace0, \uadf8 \uc548\uc5d0 Home\uacfc \uac19\uc740 \ub354\ubbf8 \ud398\uc774\uc9c0 \ucef4\ud3ec\ub10c\ud2b8\ub97c \uc815\uc758\ud569\ub2c8\ub2e4. Styled-components\ub97c \uc0ac\uc6a9\ud558\uc5ec \ub808\uc774\uc544\uc6c3 \ucef4\ud3ec\ub10c\ud2b8\uc758 \uc2a4\ud0c0\uc77c\uc744 \uc801\uc6a9\ud569\ub2c8\ub2e4.",
             "status": "done",
-            "testStrategy": "브라우저에서 애플리케이션을 실행하여 '/' 경로에 접근했을 때 Layout 컴포넌트와 Home 페이지 내용이 올바르게 렌더링되는지 확인합니다. 라우터가 제대로 작동하는지 확인하기 위해 NavBar에 다른 경로로 이동하는 링크를 추가하고 클릭 시 페이지가 변경되는지 검증합니다.",
+            "testStrategy": "\ube0c\ub77c\uc6b0\uc800\uc5d0\uc11c \uc560\ud50c\ub9ac\ucf00\uc774\uc158\uc744 \uc2e4\ud589\ud558\uc5ec '/' \uacbd\ub85c\uc5d0 \uc811\uadfc\ud588\uc744 \ub54c Layout \ucef4\ud3ec\ub10c\ud2b8\uc640 Home \ud398\uc774\uc9c0 \ub0b4\uc6a9\uc774 \uc62c\ubc14\ub974\uac8c \ub80c\ub354\ub9c1\ub418\ub294\uc9c0 \ud655\uc778\ud569\ub2c8\ub2e4. \ub77c\uc6b0\ud130\uac00 \uc81c\ub300\ub85c \uc791\ub3d9\ud558\ub294\uc9c0 \ud655\uc778\ud558\uae30 \uc704\ud574 NavBar\uc5d0 \ub2e4\ub978 \uacbd\ub85c\ub85c \uc774\ub3d9\ud558\ub294 \ub9c1\ud06c\ub97c \ucd94\uac00\ud558\uace0 \ud074\ub9ad \uc2dc \ud398\uc774\uc9c0\uac00 \ubcc0\uacbd\ub418\ub294\uc9c0 \uac80\uc99d\ud569\ub2c8\ub2e4.",
             "parentId": "undefined",
             "updatedAt": "2025-11-14T14:20:18.857Z"
           },
           {
             "id": 5,
-            "title": "개발 환경 최적화 및 빌드 스크립트 구성",
-            "description": "일관된 코드 스타일과 품질 유지를 위해 ESLint 및 Prettier를 설정하고, 개발 및 프로덕션 환경을 위한 빌드 스크립트를 최적화합니다.",
+            "title": "\uac1c\ubc1c \ud658\uacbd \ucd5c\uc801\ud654 \ubc0f \ube4c\ub4dc \uc2a4\ud06c\ub9bd\ud2b8 \uad6c\uc131",
+            "description": "\uc77c\uad00\ub41c \ucf54\ub4dc \uc2a4\ud0c0\uc77c\uacfc \ud488\uc9c8 \uc720\uc9c0\ub97c \uc704\ud574 ESLint \ubc0f Prettier\ub97c \uc124\uc815\ud558\uace0, \uac1c\ubc1c \ubc0f \ud504\ub85c\ub355\uc158 \ud658\uacbd\uc744 \uc704\ud55c \ube4c\ub4dc \uc2a4\ud06c\ub9bd\ud2b8\ub97c \ucd5c\uc801\ud654\ud569\ub2c8\ub2e4.",
             "dependencies": [
               1
             ],
-            "details": "ESLint 및 Prettier를 설치하고 프로젝트 루트에 `.eslintrc.json` 및 `.prettierrc.json` 파일을 생성하여 규칙을 구성합니다. 필요에 따라 Airbnb 스타일 가이드와 같은 표준 규칙 세트를 통합합니다. package.json의 scripts 섹션에 'lint' 및 'format' 스크립트를 추가하여 ESLint 및 Prettier를 실행할 수 있도록 합니다. 'build' 스크립트가 프로덕션 빌드를 생성하도록 설정하고, 빌드 결과물의 크기 및 성능을 간단히 검토합니다.",
+            "details": "ESLint \ubc0f Prettier\ub97c \uc124\uce58\ud558\uace0 \ud504\ub85c\uc81d\ud2b8 \ub8e8\ud2b8\uc5d0 `.eslintrc.json` \ubc0f `.prettierrc.json` \ud30c\uc77c\uc744 \uc0dd\uc131\ud558\uc5ec \uaddc\uce59\uc744 \uad6c\uc131\ud569\ub2c8\ub2e4. \ud544\uc694\uc5d0 \ub530\ub77c Airbnb \uc2a4\ud0c0\uc77c \uac00\uc774\ub4dc\uc640 \uac19\uc740 \ud45c\uc900 \uaddc\uce59 \uc138\ud2b8\ub97c \ud1b5\ud569\ud569\ub2c8\ub2e4. package.json\uc758 scripts \uc139\uc158\uc5d0 'lint' \ubc0f 'format' \uc2a4\ud06c\ub9bd\ud2b8\ub97c \ucd94\uac00\ud558\uc5ec ESLint \ubc0f Prettier\ub97c \uc2e4\ud589\ud560 \uc218 \uc788\ub3c4\ub85d \ud569\ub2c8\ub2e4. 'build' \uc2a4\ud06c\ub9bd\ud2b8\uac00 \ud504\ub85c\ub355\uc158 \ube4c\ub4dc\ub97c \uc0dd\uc131\ud558\ub3c4\ub85d \uc124\uc815\ud558\uace0, \ube4c\ub4dc \uacb0\uacfc\ubb3c\uc758 \ud06c\uae30 \ubc0f \uc131\ub2a5\uc744 \uac04\ub2e8\ud788 \uac80\ud1a0\ud569\ub2c8\ub2e4.",
             "status": "done",
-            "testStrategy": "의도적으로 코드 스타일에 어긋나는 코드를 작성한 후 'npm run lint' 및 'npm run format' 명령어를 실행하여 ESLint가 오류를 보고하고 Prettier가 코드를 자동으로 수정하는지 확인합니다. 'npm run build' 명령어를 실행하여 프로덕션 빌드가 성공적으로 완료되고, build 디렉토리가 생성되는지 검증합니다.",
+            "testStrategy": "\uc758\ub3c4\uc801\uc73c\ub85c \ucf54\ub4dc \uc2a4\ud0c0\uc77c\uc5d0 \uc5b4\uae0b\ub098\ub294 \ucf54\ub4dc\ub97c \uc791\uc131\ud55c \ud6c4 'npm run lint' \ubc0f 'npm run format' \uba85\ub839\uc5b4\ub97c \uc2e4\ud589\ud558\uc5ec ESLint\uac00 \uc624\ub958\ub97c \ubcf4\uace0\ud558\uace0 Prettier\uac00 \ucf54\ub4dc\ub97c \uc790\ub3d9\uc73c\ub85c \uc218\uc815\ud558\ub294\uc9c0 \ud655\uc778\ud569\ub2c8\ub2e4. 'npm run build' \uba85\ub839\uc5b4\ub97c \uc2e4\ud589\ud558\uc5ec \ud504\ub85c\ub355\uc158 \ube4c\ub4dc\uac00 \uc131\uacf5\uc801\uc73c\ub85c \uc644\ub8cc\ub418\uace0, build \ub514\ub809\ud1a0\ub9ac\uac00 \uc0dd\uc131\ub418\ub294\uc9c0 \uac80\uc99d\ud569\ub2c8\ub2e4.",
             "parentId": "undefined",
             "updatedAt": "2025-11-14T14:28:10.152Z"
           }
@@ -80,10 +80,10 @@
       },
       {
         "id": "2",
-        "title": "기본 레이아웃 및 반응형 디자인 컴포넌트 구현",
-        "description": "애플리케이션의 전반적인 UI/UX 고려사항에 따라 깔끔하고 미니멀하며 반응형인 기본 레이아웃 컴포넌트를 설계하고 구현합니다. 다크/라이트 모드 지원을 위한 토글 기능을 포함합니다.",
-        "details": "헤더, 푸터, 메인 콘텐츠 영역을 포함하는 `Layout` 컴포넌트를 생성합니다. Styled-components를 사용할 경우 전역 스타일 및 테마를 정의하고, Tailwind CSS를 사용할 경우 `postcss-preset-env`를 활용하여 유틸리티 클래스를 적용합니다. 미디어 쿼리를 사용하여 다양한 화면 크기에 대한 반응형 동작을 구현하고, 다크/라이트 모드 테마를 토글할 수 있는 컨텍스트 또는 Redux 상태를 설정합니다.",
-        "testStrategy": "다양한 브라우저 크기와 디바이스 에뮬레이터에서 레이아웃의 반응성을 테스트합니다. 다크/라이트 모드 토글 시 색상 팔레트가 올바르게 전환되는지 시각적으로 확인합니다.",
+        "title": "\uae30\ubcf8 \ub808\uc774\uc544\uc6c3 \ubc0f \ubc18\uc751\ud615 \ub514\uc790\uc778 \ucef4\ud3ec\ub10c\ud2b8 \uad6c\ud604",
+        "description": "\uc560\ud50c\ub9ac\ucf00\uc774\uc158\uc758 \uc804\ubc18\uc801\uc778 UI/UX \uace0\ub824\uc0ac\ud56d\uc5d0 \ub530\ub77c \uae54\ub054\ud558\uace0 \ubbf8\ub2c8\uba40\ud558\uba70 \ubc18\uc751\ud615\uc778 \uae30\ubcf8 \ub808\uc774\uc544\uc6c3 \ucef4\ud3ec\ub10c\ud2b8\ub97c \uc124\uacc4\ud558\uace0 \uad6c\ud604\ud569\ub2c8\ub2e4. \ub2e4\ud06c/\ub77c\uc774\ud2b8 \ubaa8\ub4dc \uc9c0\uc6d0\uc744 \uc704\ud55c \ud1a0\uae00 \uae30\ub2a5\uc744 \ud3ec\ud568\ud569\ub2c8\ub2e4.",
+        "details": "\ud5e4\ub354, \ud478\ud130, \uba54\uc778 \ucf58\ud150\uce20 \uc601\uc5ed\uc744 \ud3ec\ud568\ud558\ub294 `Layout` \ucef4\ud3ec\ub10c\ud2b8\ub97c \uc0dd\uc131\ud569\ub2c8\ub2e4. Styled-components\ub97c \uc0ac\uc6a9\ud560 \uacbd\uc6b0 \uc804\uc5ed \uc2a4\ud0c0\uc77c \ubc0f \ud14c\ub9c8\ub97c \uc815\uc758\ud558\uace0, Tailwind CSS\ub97c \uc0ac\uc6a9\ud560 \uacbd\uc6b0 `postcss-preset-env`\ub97c \ud65c\uc6a9\ud558\uc5ec \uc720\ud2f8\ub9ac\ud2f0 \ud074\ub798\uc2a4\ub97c \uc801\uc6a9\ud569\ub2c8\ub2e4. \ubbf8\ub514\uc5b4 \ucffc\ub9ac\ub97c \uc0ac\uc6a9\ud558\uc5ec \ub2e4\uc591\ud55c \ud654\uba74 \ud06c\uae30\uc5d0 \ub300\ud55c \ubc18\uc751\ud615 \ub3d9\uc791\uc744 \uad6c\ud604\ud558\uace0, \ub2e4\ud06c/\ub77c\uc774\ud2b8 \ubaa8\ub4dc \ud14c\ub9c8\ub97c \ud1a0\uae00\ud560 \uc218 \uc788\ub294 \ucee8\ud14d\uc2a4\ud2b8 \ub610\ub294 Redux \uc0c1\ud0dc\ub97c \uc124\uc815\ud569\ub2c8\ub2e4.",
+        "testStrategy": "\ub2e4\uc591\ud55c \ube0c\ub77c\uc6b0\uc800 \ud06c\uae30\uc640 \ub514\ubc14\uc774\uc2a4 \uc5d0\ubbac\ub808\uc774\ud130\uc5d0\uc11c \ub808\uc774\uc544\uc6c3\uc758 \ubc18\uc751\uc131\uc744 \ud14c\uc2a4\ud2b8\ud569\ub2c8\ub2e4. \ub2e4\ud06c/\ub77c\uc774\ud2b8 \ubaa8\ub4dc \ud1a0\uae00 \uc2dc \uc0c9\uc0c1 \ud314\ub808\ud2b8\uac00 \uc62c\ubc14\ub974\uac8c \uc804\ud658\ub418\ub294\uc9c0 \uc2dc\uac01\uc801\uc73c\ub85c \ud655\uc778\ud569\ub2c8\ub2e4.",
         "priority": "high",
         "dependencies": [
           "1"
@@ -92,62 +92,62 @@
         "subtasks": [
           {
             "id": 1,
-            "title": "전역 스타일 및 테마 시스템 초기 설정",
-            "description": "애플리케이션 전반에 걸쳐 사용될 전역 스타일(CSS 리셋, 기본 폰트 등)과 다크/라이트 모드를 지원하는 테마 시스템을 설정합니다. Tailwind CSS를 사용하는 경우 `tailwind.config.js` 및 `postcss.config.js`를 구성하고, Styled-components를 사용하는 경우 `ThemeProvider`와 전역 스타일을 정의합니다.",
+            "title": "\uc804\uc5ed \uc2a4\ud0c0\uc77c \ubc0f \ud14c\ub9c8 \uc2dc\uc2a4\ud15c \ucd08\uae30 \uc124\uc815",
+            "description": "\uc560\ud50c\ub9ac\ucf00\uc774\uc158 \uc804\ubc18\uc5d0 \uac78\uccd0 \uc0ac\uc6a9\ub420 \uc804\uc5ed \uc2a4\ud0c0\uc77c(CSS \ub9ac\uc14b, \uae30\ubcf8 \ud3f0\ud2b8 \ub4f1)\uacfc \ub2e4\ud06c/\ub77c\uc774\ud2b8 \ubaa8\ub4dc\ub97c \uc9c0\uc6d0\ud558\ub294 \ud14c\ub9c8 \uc2dc\uc2a4\ud15c\uc744 \uc124\uc815\ud569\ub2c8\ub2e4. Tailwind CSS\ub97c \uc0ac\uc6a9\ud558\ub294 \uacbd\uc6b0 `tailwind.config.js` \ubc0f `postcss.config.js`\ub97c \uad6c\uc131\ud558\uace0, Styled-components\ub97c \uc0ac\uc6a9\ud558\ub294 \uacbd\uc6b0 `ThemeProvider`\uc640 \uc804\uc5ed \uc2a4\ud0c0\uc77c\uc744 \uc815\uc758\ud569\ub2c8\ub2e4.",
             "dependencies": [],
-            "details": "프로젝트의 스타일링 프레임워크(Tailwind CSS 또는 Styled-components)를 기반으로 초기 설정 파일을 구성합니다. 전역 CSS 변수 또는 테마 객체를 정의하여 다크/라이트 모드 전환을 위한 색상 팔레트와 폰트 크기 등을 포함합니다. `postcss-preset-env`와 같은 필요한 PostCSS 플러그인을 설치하고 설정합니다.",
+            "details": "\ud504\ub85c\uc81d\ud2b8\uc758 \uc2a4\ud0c0\uc77c\ub9c1 \ud504\ub808\uc784\uc6cc\ud06c(Tailwind CSS \ub610\ub294 Styled-components)\ub97c \uae30\ubc18\uc73c\ub85c \ucd08\uae30 \uc124\uc815 \ud30c\uc77c\uc744 \uad6c\uc131\ud569\ub2c8\ub2e4. \uc804\uc5ed CSS \ubcc0\uc218 \ub610\ub294 \ud14c\ub9c8 \uac1d\uccb4\ub97c \uc815\uc758\ud558\uc5ec \ub2e4\ud06c/\ub77c\uc774\ud2b8 \ubaa8\ub4dc \uc804\ud658\uc744 \uc704\ud55c \uc0c9\uc0c1 \ud314\ub808\ud2b8\uc640 \ud3f0\ud2b8 \ud06c\uae30 \ub4f1\uc744 \ud3ec\ud568\ud569\ub2c8\ub2e4. `postcss-preset-env`\uc640 \uac19\uc740 \ud544\uc694\ud55c PostCSS \ud50c\ub7ec\uadf8\uc778\uc744 \uc124\uce58\ud558\uace0 \uc124\uc815\ud569\ub2c8\ub2e4.",
             "status": "pending",
-            "testStrategy": "애플리케이션에 임시로 텍스트를 추가하여 전역 폰트 및 기본 텍스트 색상이 올바르게 적용되는지 시각적으로 확인합니다. 개발자 도구를 사용하여 CSS 변수나 테마 객체가 예상대로 로드되었는지 검사합니다.",
+            "testStrategy": "\uc560\ud50c\ub9ac\ucf00\uc774\uc158\uc5d0 \uc784\uc2dc\ub85c \ud14d\uc2a4\ud2b8\ub97c \ucd94\uac00\ud558\uc5ec \uc804\uc5ed \ud3f0\ud2b8 \ubc0f \uae30\ubcf8 \ud14d\uc2a4\ud2b8 \uc0c9\uc0c1\uc774 \uc62c\ubc14\ub974\uac8c \uc801\uc6a9\ub418\ub294\uc9c0 \uc2dc\uac01\uc801\uc73c\ub85c \ud655\uc778\ud569\ub2c8\ub2e4. \uac1c\ubc1c\uc790 \ub3c4\uad6c\ub97c \uc0ac\uc6a9\ud558\uc5ec CSS \ubcc0\uc218\ub098 \ud14c\ub9c8 \uac1d\uccb4\uac00 \uc608\uc0c1\ub300\ub85c \ub85c\ub4dc\ub418\uc5c8\ub294\uc9c0 \uac80\uc0ac\ud569\ub2c8\ub2e4.",
             "parentId": "undefined"
           },
           {
             "id": 2,
-            "title": "기본 `Layout` 컴포넌트 구조 구현",
-            "description": "애플리케이션의 모든 페이지에서 공통적으로 사용될 `Layout` 컴포넌트의 기본 마크업 구조를 구현합니다. 이 컴포넌트는 헤더, 메인 콘텐츠 영역, 푸터로 구성됩니다. 아직 복잡한 스타일이나 반응형 로직은 적용하지 않습니다.",
+            "title": "\uae30\ubcf8 `Layout` \ucef4\ud3ec\ub10c\ud2b8 \uad6c\uc870 \uad6c\ud604",
+            "description": "\uc560\ud50c\ub9ac\ucf00\uc774\uc158\uc758 \ubaa8\ub4e0 \ud398\uc774\uc9c0\uc5d0\uc11c \uacf5\ud1b5\uc801\uc73c\ub85c \uc0ac\uc6a9\ub420 `Layout` \ucef4\ud3ec\ub10c\ud2b8\uc758 \uae30\ubcf8 \ub9c8\ud06c\uc5c5 \uad6c\uc870\ub97c \uad6c\ud604\ud569\ub2c8\ub2e4. \uc774 \ucef4\ud3ec\ub10c\ud2b8\ub294 \ud5e4\ub354, \uba54\uc778 \ucf58\ud150\uce20 \uc601\uc5ed, \ud478\ud130\ub85c \uad6c\uc131\ub429\ub2c8\ub2e4. \uc544\uc9c1 \ubcf5\uc7a1\ud55c \uc2a4\ud0c0\uc77c\uc774\ub098 \ubc18\uc751\ud615 \ub85c\uc9c1\uc740 \uc801\uc6a9\ud558\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4.",
             "dependencies": [
               1
             ],
-            "details": "`src/components/layout/Layout.tsx` 파일을 생성하고, `Header`, `main` (또는 `div`), `Footer` 요소를 포함하는 기본적인 JSX 구조를 작성합니다. 이 컴포넌트가 `children` props를 받아 메인 콘텐츠 영역에 렌더링할 수 있도록 합니다. 각 영역에 의미론적인 HTML 태그를 사용하여 접근성을 확보합니다.",
+            "details": "`src/components/layout/Layout.tsx` \ud30c\uc77c\uc744 \uc0dd\uc131\ud558\uace0, `Header`, `main` (\ub610\ub294 `div`), `Footer` \uc694\uc18c\ub97c \ud3ec\ud568\ud558\ub294 \uae30\ubcf8\uc801\uc778 JSX \uad6c\uc870\ub97c \uc791\uc131\ud569\ub2c8\ub2e4. \uc774 \ucef4\ud3ec\ub10c\ud2b8\uac00 `children` props\ub97c \ubc1b\uc544 \uba54\uc778 \ucf58\ud150\uce20 \uc601\uc5ed\uc5d0 \ub80c\ub354\ub9c1\ud560 \uc218 \uc788\ub3c4\ub85d \ud569\ub2c8\ub2e4. \uac01 \uc601\uc5ed\uc5d0 \uc758\ubbf8\ub860\uc801\uc778 HTML \ud0dc\uadf8\ub97c \uc0ac\uc6a9\ud558\uc5ec \uc811\uadfc\uc131\uc744 \ud655\ubcf4\ud569\ub2c8\ub2e4.",
             "status": "pending",
-            "testStrategy": "`Layout` 컴포넌트를 사용하여 임시 페이지를 렌더링하고, 헤더, 메인 콘텐츠, 푸터가 브라우저에 올바른 순서와 구조로 표시되는지 시각적으로 확인합니다. 개발자 도구의 요소 탭에서 HTML 구조가 예상과 일치하는지 검증합니다.",
+            "testStrategy": "`Layout` \ucef4\ud3ec\ub10c\ud2b8\ub97c \uc0ac\uc6a9\ud558\uc5ec \uc784\uc2dc \ud398\uc774\uc9c0\ub97c \ub80c\ub354\ub9c1\ud558\uace0, \ud5e4\ub354, \uba54\uc778 \ucf58\ud150\uce20, \ud478\ud130\uac00 \ube0c\ub77c\uc6b0\uc800\uc5d0 \uc62c\ubc14\ub978 \uc21c\uc11c\uc640 \uad6c\uc870\ub85c \ud45c\uc2dc\ub418\ub294\uc9c0 \uc2dc\uac01\uc801\uc73c\ub85c \ud655\uc778\ud569\ub2c8\ub2e4. \uac1c\ubc1c\uc790 \ub3c4\uad6c\uc758 \uc694\uc18c \ud0ed\uc5d0\uc11c HTML \uad6c\uc870\uac00 \uc608\uc0c1\uacfc \uc77c\uce58\ud558\ub294\uc9c0 \uac80\uc99d\ud569\ub2c8\ub2e4.",
             "parentId": "undefined"
           },
           {
             "id": 3,
-            "title": "반응형 디자인 및 스타일 적용",
-            "description": "구현된 `Layout` 컴포넌트 및 내부 요소에 대해 다양한 화면 크기(모바일, 태블릿, 데스크탑)에 대응하는 반응형 스타일을 적용합니다. 미디어 쿼리(Styled-components) 또는 Tailwind CSS의 반응형 유틸리티 클래스를 활용합니다.",
+            "title": "\ubc18\uc751\ud615 \ub514\uc790\uc778 \ubc0f \uc2a4\ud0c0\uc77c \uc801\uc6a9",
+            "description": "\uad6c\ud604\ub41c `Layout` \ucef4\ud3ec\ub10c\ud2b8 \ubc0f \ub0b4\ubd80 \uc694\uc18c\uc5d0 \ub300\ud574 \ub2e4\uc591\ud55c \ud654\uba74 \ud06c\uae30(\ubaa8\ubc14\uc77c, \ud0dc\ube14\ub9bf, \ub370\uc2a4\ud06c\ud0d1)\uc5d0 \ub300\uc751\ud558\ub294 \ubc18\uc751\ud615 \uc2a4\ud0c0\uc77c\uc744 \uc801\uc6a9\ud569\ub2c8\ub2e4. \ubbf8\ub514\uc5b4 \ucffc\ub9ac(Styled-components) \ub610\ub294 Tailwind CSS\uc758 \ubc18\uc751\ud615 \uc720\ud2f8\ub9ac\ud2f0 \ud074\ub798\uc2a4\ub97c \ud65c\uc6a9\ud569\ub2c8\ub2e4.",
             "dependencies": [
               2
             ],
-            "details": "`Layout` 컴포넌트의 각 섹션(헤더, 메인, 푸터)에 `min-width` 또는 `max-width` 미디어 쿼리를 사용하여 유연한 그리드 시스템이나 Flexbox/Grid 레이아웃을 적용합니다. Tailwind CSS를 사용하는 경우 `sm:`, `md:`, `lg:` 접두사를 활용하여 폰트 크기, 패딩, 마진, 요소의 정렬 방식을 조정합니다. 콘텐츠가 오버플로우되지 않도록 주의합니다.",
+            "details": "`Layout` \ucef4\ud3ec\ub10c\ud2b8\uc758 \uac01 \uc139\uc158(\ud5e4\ub354, \uba54\uc778, \ud478\ud130)\uc5d0 `min-width` \ub610\ub294 `max-width` \ubbf8\ub514\uc5b4 \ucffc\ub9ac\ub97c \uc0ac\uc6a9\ud558\uc5ec \uc720\uc5f0\ud55c \uadf8\ub9ac\ub4dc \uc2dc\uc2a4\ud15c\uc774\ub098 Flexbox/Grid \ub808\uc774\uc544\uc6c3\uc744 \uc801\uc6a9\ud569\ub2c8\ub2e4. Tailwind CSS\ub97c \uc0ac\uc6a9\ud558\ub294 \uacbd\uc6b0 `sm:`, `md:`, `lg:` \uc811\ub450\uc0ac\ub97c \ud65c\uc6a9\ud558\uc5ec \ud3f0\ud2b8 \ud06c\uae30, \ud328\ub529, \ub9c8\uc9c4, \uc694\uc18c\uc758 \uc815\ub82c \ubc29\uc2dd\uc744 \uc870\uc815\ud569\ub2c8\ub2e4. \ucf58\ud150\uce20\uac00 \uc624\ubc84\ud50c\ub85c\uc6b0\ub418\uc9c0 \uc54a\ub3c4\ub85d \uc8fc\uc758\ud569\ub2c8\ub2e4.",
             "status": "pending",
-            "testStrategy": "크롬 개발자 도구의 반응형 디자인 모드를 사용하여 다양한 디바이스 뷰포트(예: iPhone, iPad, Desktop)에서 레이아웃이 깨지지 않고 올바르게 조정되는지 시각적으로 확인합니다. 가로 및 세로 모드 전환 시에도 레이아웃의 안정성을 검사합니다.",
+            "testStrategy": "\ud06c\ub86c \uac1c\ubc1c\uc790 \ub3c4\uad6c\uc758 \ubc18\uc751\ud615 \ub514\uc790\uc778 \ubaa8\ub4dc\ub97c \uc0ac\uc6a9\ud558\uc5ec \ub2e4\uc591\ud55c \ub514\ubc14\uc774\uc2a4 \ubdf0\ud3ec\ud2b8(\uc608: iPhone, iPad, Desktop)\uc5d0\uc11c \ub808\uc774\uc544\uc6c3\uc774 \uae68\uc9c0\uc9c0 \uc54a\uace0 \uc62c\ubc14\ub974\uac8c \uc870\uc815\ub418\ub294\uc9c0 \uc2dc\uac01\uc801\uc73c\ub85c \ud655\uc778\ud569\ub2c8\ub2e4. \uac00\ub85c \ubc0f \uc138\ub85c \ubaa8\ub4dc \uc804\ud658 \uc2dc\uc5d0\ub3c4 \ub808\uc774\uc544\uc6c3\uc758 \uc548\uc815\uc131\uc744 \uac80\uc0ac\ud569\ub2c8\ub2e4.",
             "parentId": "undefined"
           },
           {
             "id": 4,
-            "title": "다크/라이트 모드 토글 기능 및 UI 구현",
-            "description": "사용자가 애플리케이션의 테마를 다크 모드와 라이트 모드 간에 전환할 수 있도록 하는 로직과 UI 컴포넌트를 구현합니다. React Context API 또는 Redux를 사용하여 전역 테마 상태를 관리하고, 테마 변경 시 전역 스타일이 업데이트되도록 연동합니다.",
+            "title": "\ub2e4\ud06c/\ub77c\uc774\ud2b8 \ubaa8\ub4dc \ud1a0\uae00 \uae30\ub2a5 \ubc0f UI \uad6c\ud604",
+            "description": "\uc0ac\uc6a9\uc790\uac00 \uc560\ud50c\ub9ac\ucf00\uc774\uc158\uc758 \ud14c\ub9c8\ub97c \ub2e4\ud06c \ubaa8\ub4dc\uc640 \ub77c\uc774\ud2b8 \ubaa8\ub4dc \uac04\uc5d0 \uc804\ud658\ud560 \uc218 \uc788\ub3c4\ub85d \ud558\ub294 \ub85c\uc9c1\uacfc UI \ucef4\ud3ec\ub10c\ud2b8\ub97c \uad6c\ud604\ud569\ub2c8\ub2e4. React Context API \ub610\ub294 Redux\ub97c \uc0ac\uc6a9\ud558\uc5ec \uc804\uc5ed \ud14c\ub9c8 \uc0c1\ud0dc\ub97c \uad00\ub9ac\ud558\uace0, \ud14c\ub9c8 \ubcc0\uacbd \uc2dc \uc804\uc5ed \uc2a4\ud0c0\uc77c\uc774 \uc5c5\ub370\uc774\ud2b8\ub418\ub3c4\ub85d \uc5f0\ub3d9\ud569\ub2c8\ub2e4.",
             "dependencies": [
               1,
               3
             ],
-            "details": "테마 상태(`theme` 또는 `darkMode`)를 관리하는 Context(`ThemeContext`) 또는 Redux 슬라이스를 생성합니다. `Layout` 컴포넌트 내에 테마 전환을 위한 토글 버튼(예: 스위치 아이콘)을 추가하고, 이 버튼 클릭 시 상태가 변경되도록 연결합니다. 상태 변경에 따라 `body` 태그에 클래스를 추가하거나, `ThemeProvider`의 props를 업데이트하여 전역 스타일이 변경되도록 구현합니다. 사용자 선호 모드를 로컬 스토리지에 저장하여 재방문 시에도 유지되도록 합니다.",
+            "details": "\ud14c\ub9c8 \uc0c1\ud0dc(`theme` \ub610\ub294 `darkMode`)\ub97c \uad00\ub9ac\ud558\ub294 Context(`ThemeContext`) \ub610\ub294 Redux \uc2ac\ub77c\uc774\uc2a4\ub97c \uc0dd\uc131\ud569\ub2c8\ub2e4. `Layout` \ucef4\ud3ec\ub10c\ud2b8 \ub0b4\uc5d0 \ud14c\ub9c8 \uc804\ud658\uc744 \uc704\ud55c \ud1a0\uae00 \ubc84\ud2bc(\uc608: \uc2a4\uc704\uce58 \uc544\uc774\ucf58)\uc744 \ucd94\uac00\ud558\uace0, \uc774 \ubc84\ud2bc \ud074\ub9ad \uc2dc \uc0c1\ud0dc\uac00 \ubcc0\uacbd\ub418\ub3c4\ub85d \uc5f0\uacb0\ud569\ub2c8\ub2e4. \uc0c1\ud0dc \ubcc0\uacbd\uc5d0 \ub530\ub77c `body` \ud0dc\uadf8\uc5d0 \ud074\ub798\uc2a4\ub97c \ucd94\uac00\ud558\uac70\ub098, `ThemeProvider`\uc758 props\ub97c \uc5c5\ub370\uc774\ud2b8\ud558\uc5ec \uc804\uc5ed \uc2a4\ud0c0\uc77c\uc774 \ubcc0\uacbd\ub418\ub3c4\ub85d \uad6c\ud604\ud569\ub2c8\ub2e4. \uc0ac\uc6a9\uc790 \uc120\ud638 \ubaa8\ub4dc\ub97c \ub85c\uceec \uc2a4\ud1a0\ub9ac\uc9c0\uc5d0 \uc800\uc7a5\ud558\uc5ec \uc7ac\ubc29\ubb38 \uc2dc\uc5d0\ub3c4 \uc720\uc9c0\ub418\ub3c4\ub85d \ud569\ub2c8\ub2e4.",
             "status": "pending",
-            "testStrategy": "다크/라이트 모드 토글 버튼을 클릭하여 전체 UI의 색상 팔레트가 올바르게 전환되는지 시각적으로 확인합니다. 페이지를 새로고침하거나 브라우저를 닫았다가 다시 열었을 때 마지막으로 설정된 테마 모드가 유지되는지 확인합니다. 개발자 도구를 사용하여 테마 관련 CSS 변수나 클래스가 올바르게 적용되는지 검증합니다.",
+            "testStrategy": "\ub2e4\ud06c/\ub77c\uc774\ud2b8 \ubaa8\ub4dc \ud1a0\uae00 \ubc84\ud2bc\uc744 \ud074\ub9ad\ud558\uc5ec \uc804\uccb4 UI\uc758 \uc0c9\uc0c1 \ud314\ub808\ud2b8\uac00 \uc62c\ubc14\ub974\uac8c \uc804\ud658\ub418\ub294\uc9c0 \uc2dc\uac01\uc801\uc73c\ub85c \ud655\uc778\ud569\ub2c8\ub2e4. \ud398\uc774\uc9c0\ub97c \uc0c8\ub85c\uace0\uce68\ud558\uac70\ub098 \ube0c\ub77c\uc6b0\uc800\ub97c \ub2eb\uc558\ub2e4\uac00 \ub2e4\uc2dc \uc5f4\uc5c8\uc744 \ub54c \ub9c8\uc9c0\ub9c9\uc73c\ub85c \uc124\uc815\ub41c \ud14c\ub9c8 \ubaa8\ub4dc\uac00 \uc720\uc9c0\ub418\ub294\uc9c0 \ud655\uc778\ud569\ub2c8\ub2e4. \uac1c\ubc1c\uc790 \ub3c4\uad6c\ub97c \uc0ac\uc6a9\ud558\uc5ec \ud14c\ub9c8 \uad00\ub828 CSS \ubcc0\uc218\ub098 \ud074\ub798\uc2a4\uac00 \uc62c\ubc14\ub974\uac8c \uc801\uc6a9\ub418\ub294\uc9c0 \uac80\uc99d\ud569\ub2c8\ub2e4.",
             "parentId": "undefined"
           },
           {
             "id": 5,
-            "title": "헤더 및 푸터 컴포넌트 초기 구현 및 통합",
-            "description": "기본 `Layout` 컴포넌트 내에 포함될 `Header`와 `Footer` 컴포넌트를 분리하여 구현하고, 각 컴포넌트에 기본적인 내용(로고, 탐색 링크 자리, 저작권 정보 등)과 스타일을 적용합니다. 구현된 다크/라이트 모드와 반응형 디자인을 지원하도록 합니다.",
+            "title": "\ud5e4\ub354 \ubc0f \ud478\ud130 \ucef4\ud3ec\ub10c\ud2b8 \ucd08\uae30 \uad6c\ud604 \ubc0f \ud1b5\ud569",
+            "description": "\uae30\ubcf8 `Layout` \ucef4\ud3ec\ub10c\ud2b8 \ub0b4\uc5d0 \ud3ec\ud568\ub420 `Header`\uc640 `Footer` \ucef4\ud3ec\ub10c\ud2b8\ub97c \ubd84\ub9ac\ud558\uc5ec \uad6c\ud604\ud558\uace0, \uac01 \ucef4\ud3ec\ub10c\ud2b8\uc5d0 \uae30\ubcf8\uc801\uc778 \ub0b4\uc6a9(\ub85c\uace0, \ud0d0\uc0c9 \ub9c1\ud06c \uc790\ub9ac, \uc800\uc791\uad8c \uc815\ubcf4 \ub4f1)\uacfc \uc2a4\ud0c0\uc77c\uc744 \uc801\uc6a9\ud569\ub2c8\ub2e4. \uad6c\ud604\ub41c \ub2e4\ud06c/\ub77c\uc774\ud2b8 \ubaa8\ub4dc\uc640 \ubc18\uc751\ud615 \ub514\uc790\uc778\uc744 \uc9c0\uc6d0\ud558\ub3c4\ub85d \ud569\ub2c8\ub2e4.",
             "dependencies": [
               3,
               4
             ],
-            "details": "`src/components/layout/Header.tsx`와 `src/components/layout/Footer.tsx` 파일을 생성합니다. `Header`에는 애플리케이션 로고, 다크/라이트 모드 토글 버튼을 포함하고, `Footer`에는 저작권 정보, 간단한 링크 등을 포함합니다. 이 컴포넌트들에 `Layout` 컴포넌트에서 정의된 테마와 반응형 스타일 가이드라인을 적용하여 일관된 UI를 유지합니다. 각 컴포넌트에 필요한 최소한의 스타일을 적용하여 시각적으로 구분되도록 합니다.",
+            "details": "`src/components/layout/Header.tsx`\uc640 `src/components/layout/Footer.tsx` \ud30c\uc77c\uc744 \uc0dd\uc131\ud569\ub2c8\ub2e4. `Header`\uc5d0\ub294 \uc560\ud50c\ub9ac\ucf00\uc774\uc158 \ub85c\uace0, \ub2e4\ud06c/\ub77c\uc774\ud2b8 \ubaa8\ub4dc \ud1a0\uae00 \ubc84\ud2bc\uc744 \ud3ec\ud568\ud558\uace0, `Footer`\uc5d0\ub294 \uc800\uc791\uad8c \uc815\ubcf4, \uac04\ub2e8\ud55c \ub9c1\ud06c \ub4f1\uc744 \ud3ec\ud568\ud569\ub2c8\ub2e4. \uc774 \ucef4\ud3ec\ub10c\ud2b8\ub4e4\uc5d0 `Layout` \ucef4\ud3ec\ub10c\ud2b8\uc5d0\uc11c \uc815\uc758\ub41c \ud14c\ub9c8\uc640 \ubc18\uc751\ud615 \uc2a4\ud0c0\uc77c \uac00\uc774\ub4dc\ub77c\uc778\uc744 \uc801\uc6a9\ud558\uc5ec \uc77c\uad00\ub41c UI\ub97c \uc720\uc9c0\ud569\ub2c8\ub2e4. \uac01 \ucef4\ud3ec\ub10c\ud2b8\uc5d0 \ud544\uc694\ud55c \ucd5c\uc18c\ud55c\uc758 \uc2a4\ud0c0\uc77c\uc744 \uc801\uc6a9\ud558\uc5ec \uc2dc\uac01\uc801\uc73c\ub85c \uad6c\ubd84\ub418\ub3c4\ub85d \ud569\ub2c8\ub2e4.",
             "status": "pending",
-            "testStrategy": "`Layout` 컴포넌트를 통해 렌더링된 페이지에서 헤더와 푸터가 올바른 위치에 표시되는지 시각적으로 확인합니다. 다크/라이트 모드 전환 시 헤더와 푸터의 색상이 변경되는지, 다양한 화면 크기에서 내용이 깨지지 않고 반응형으로 잘 조정되는지 검증합니다.",
+            "testStrategy": "`Layout` \ucef4\ud3ec\ub10c\ud2b8\ub97c \ud1b5\ud574 \ub80c\ub354\ub9c1\ub41c \ud398\uc774\uc9c0\uc5d0\uc11c \ud5e4\ub354\uc640 \ud478\ud130\uac00 \uc62c\ubc14\ub978 \uc704\uce58\uc5d0 \ud45c\uc2dc\ub418\ub294\uc9c0 \uc2dc\uac01\uc801\uc73c\ub85c \ud655\uc778\ud569\ub2c8\ub2e4. \ub2e4\ud06c/\ub77c\uc774\ud2b8 \ubaa8\ub4dc \uc804\ud658 \uc2dc \ud5e4\ub354\uc640 \ud478\ud130\uc758 \uc0c9\uc0c1\uc774 \ubcc0\uacbd\ub418\ub294\uc9c0, \ub2e4\uc591\ud55c \ud654\uba74 \ud06c\uae30\uc5d0\uc11c \ub0b4\uc6a9\uc774 \uae68\uc9c0\uc9c0 \uc54a\uace0 \ubc18\uc751\ud615\uc73c\ub85c \uc798 \uc870\uc815\ub418\ub294\uc9c0 \uac80\uc99d\ud569\ub2c8\ub2e4.",
             "parentId": "undefined"
           }
         ],
@@ -155,84 +155,84 @@
       },
       {
         "id": "3",
-        "title": "타이핑 연습 텍스트 표시 컴포넌트 개발",
-        "description": "사용자가 화면에 표시된 한글 텍스트를 따라 입력할 수 있도록 연습 텍스트를 렌더링하는 UI 컴포넌트를 개발합니다. 이 컴포넌트는 입력 상태에 따라 텍스트의 각 문자를 동적으로 표시할 수 있어야 합니다.",
-        "details": "`TypingTextDisplay` 컴포넌트를 생성하여 연습 텍스트 문자열을 props로 받습니다. 텍스트를 개별 문자로 분리하고, 각 문자를 `<span>` 태그 등으로 렌더링합니다. 사용자의 입력과 현재 위치를 나타내는 인덱스를 추적하여, 올바르게 입력된 문자, 틀린 문자, 아직 입력하지 않은 문자에 대해 다른 스타일(예: 색상)을 적용할 수 있도록 합니다.",
-        "testStrategy": "다양한 길이의 한글 텍스트를 입력하여 올바르게 표시되는지 확인합니다. 사용자의 가상 입력에 따라 문자의 스타일이 정확히 변경되는지 시각적으로 검증합니다.",
+        "title": "\ud0c0\uc774\ud551 \uc5f0\uc2b5 \ud14d\uc2a4\ud2b8 \ud45c\uc2dc \ucef4\ud3ec\ub10c\ud2b8 \uac1c\ubc1c",
+        "description": "\uc0ac\uc6a9\uc790\uac00 \ud654\uba74\uc5d0 \ud45c\uc2dc\ub41c \ud55c\uae00 \ud14d\uc2a4\ud2b8\ub97c \ub530\ub77c \uc785\ub825\ud560 \uc218 \uc788\ub3c4\ub85d \uc5f0\uc2b5 \ud14d\uc2a4\ud2b8\ub97c \ub80c\ub354\ub9c1\ud558\ub294 UI \ucef4\ud3ec\ub10c\ud2b8\ub97c \uac1c\ubc1c\ud569\ub2c8\ub2e4. \uc774 \ucef4\ud3ec\ub10c\ud2b8\ub294 \uc785\ub825 \uc0c1\ud0dc\uc5d0 \ub530\ub77c \ud14d\uc2a4\ud2b8\uc758 \uac01 \ubb38\uc790\ub97c \ub3d9\uc801\uc73c\ub85c \ud45c\uc2dc\ud560 \uc218 \uc788\uc5b4\uc57c \ud569\ub2c8\ub2e4.",
+        "details": "`TypingTextDisplay` \ucef4\ud3ec\ub10c\ud2b8\ub97c \uc0dd\uc131\ud558\uc5ec \uc5f0\uc2b5 \ud14d\uc2a4\ud2b8 \ubb38\uc790\uc5f4\uc744 props\ub85c \ubc1b\uc2b5\ub2c8\ub2e4. \ud14d\uc2a4\ud2b8\ub97c \uac1c\ubcc4 \ubb38\uc790\ub85c \ubd84\ub9ac\ud558\uace0, \uac01 \ubb38\uc790\ub97c `<span>` \ud0dc\uadf8 \ub4f1\uc73c\ub85c \ub80c\ub354\ub9c1\ud569\ub2c8\ub2e4. \uc0ac\uc6a9\uc790\uc758 \uc785\ub825\uacfc \ud604\uc7ac \uc704\uce58\ub97c \ub098\ud0c0\ub0b4\ub294 \uc778\ub371\uc2a4\ub97c \ucd94\uc801\ud558\uc5ec, \uc62c\ubc14\ub974\uac8c \uc785\ub825\ub41c \ubb38\uc790, \ud2c0\ub9b0 \ubb38\uc790, \uc544\uc9c1 \uc785\ub825\ud558\uc9c0 \uc54a\uc740 \ubb38\uc790\uc5d0 \ub300\ud574 \ub2e4\ub978 \uc2a4\ud0c0\uc77c(\uc608: \uc0c9\uc0c1)\uc744 \uc801\uc6a9\ud560 \uc218 \uc788\ub3c4\ub85d \ud569\ub2c8\ub2e4.",
+        "testStrategy": "\ub2e4\uc591\ud55c \uae38\uc774\uc758 \ud55c\uae00 \ud14d\uc2a4\ud2b8\ub97c \uc785\ub825\ud558\uc5ec \uc62c\ubc14\ub974\uac8c \ud45c\uc2dc\ub418\ub294\uc9c0 \ud655\uc778\ud569\ub2c8\ub2e4. \uc0ac\uc6a9\uc790\uc758 \uac00\uc0c1 \uc785\ub825\uc5d0 \ub530\ub77c \ubb38\uc790\uc758 \uc2a4\ud0c0\uc77c\uc774 \uc815\ud655\ud788 \ubcc0\uacbd\ub418\ub294\uc9c0 \uc2dc\uac01\uc801\uc73c\ub85c \uac80\uc99d\ud569\ub2c8\ub2e4.",
         "priority": "high",
         "dependencies": [
           "2"
         ],
-        "status": "pending",
+        "status": "completed",
         "subtasks": [
           {
             "id": 1,
-            "title": "TypingTextDisplay 컴포넌트 초기 설정 및 기본 텍스트 렌더링",
-            "description": "`TypingTextDisplay` 컴포넌트를 생성하고, `text` prop으로 받은 문자열을 개별 문자로 분리하여 `<span>` 태그로 화면에 표시합니다. 초기에는 모든 문자가 기본 스타일을 가집니다.",
+            "title": "TypingTextDisplay \ucef4\ud3ec\ub10c\ud2b8 \ucd08\uae30 \uc124\uc815 \ubc0f \uae30\ubcf8 \ud14d\uc2a4\ud2b8 \ub80c\ub354\ub9c1",
+            "description": "`TypingTextDisplay` \ucef4\ud3ec\ub10c\ud2b8\ub97c \uc0dd\uc131\ud558\uace0, `text` prop\uc73c\ub85c \ubc1b\uc740 \ubb38\uc790\uc5f4\uc744 \uac1c\ubcc4 \ubb38\uc790\ub85c \ubd84\ub9ac\ud558\uc5ec `<span>` \ud0dc\uadf8\ub85c \ud654\uba74\uc5d0 \ud45c\uc2dc\ud569\ub2c8\ub2e4. \ucd08\uae30\uc5d0\ub294 \ubaa8\ub4e0 \ubb38\uc790\uac00 \uae30\ubcf8 \uc2a4\ud0c0\uc77c\uc744 \uac00\uc9d1\ub2c8\ub2e4.",
             "dependencies": [
               2
             ],
-            "details": "`src/components/TypingTextDisplay.tsx` 파일을 생성합니다. `React.FC`를 사용하여 컴포넌트를 정의하고, `text: string` prop을 받습니다. `text.split('')`을 사용하여 문자를 분리하고, `map` 함수를 이용해 각 문자를 고유한 `key`를 가진 `<span>` 요소로 렌더링합니다. Tailwind CSS를 사용하여 기본 텍스트 스타일을 적용합니다.",
-            "status": "pending",
-            "testStrategy": "다양한 길이의 한글 문자열을 `text` prop으로 전달하여 모든 문자가 순서대로 올바르게 렌더링되는지 시각적으로 확인합니다. 개발자 도구를 사용하여 각 문자가 별도의 `<span>` 요소로 존재하는지 검증합니다.",
+            "details": "`src/components/TypingTextDisplay.tsx` \ud30c\uc77c\uc744 \uc0dd\uc131\ud569\ub2c8\ub2e4. `React.FC`\ub97c \uc0ac\uc6a9\ud558\uc5ec \ucef4\ud3ec\ub10c\ud2b8\ub97c \uc815\uc758\ud558\uace0, `text: string` prop\uc744 \ubc1b\uc2b5\ub2c8\ub2e4. `text.split('')`\uc744 \uc0ac\uc6a9\ud558\uc5ec \ubb38\uc790\ub97c \ubd84\ub9ac\ud558\uace0, `map` \ud568\uc218\ub97c \uc774\uc6a9\ud574 \uac01 \ubb38\uc790\ub97c \uace0\uc720\ud55c `key`\ub97c \uac00\uc9c4 `<span>` \uc694\uc18c\ub85c \ub80c\ub354\ub9c1\ud569\ub2c8\ub2e4. Tailwind CSS\ub97c \uc0ac\uc6a9\ud558\uc5ec \uae30\ubcf8 \ud14d\uc2a4\ud2b8 \uc2a4\ud0c0\uc77c\uc744 \uc801\uc6a9\ud569\ub2c8\ub2e4.",
+            "status": "completed",
+            "testStrategy": "\ub2e4\uc591\ud55c \uae38\uc774\uc758 \ud55c\uae00 \ubb38\uc790\uc5f4\uc744 `text` prop\uc73c\ub85c \uc804\ub2ec\ud558\uc5ec \ubaa8\ub4e0 \ubb38\uc790\uac00 \uc21c\uc11c\ub300\ub85c \uc62c\ubc14\ub974\uac8c \ub80c\ub354\ub9c1\ub418\ub294\uc9c0 \uc2dc\uac01\uc801\uc73c\ub85c \ud655\uc778\ud569\ub2c8\ub2e4. \uac1c\ubc1c\uc790 \ub3c4\uad6c\ub97c \uc0ac\uc6a9\ud558\uc5ec \uac01 \ubb38\uc790\uac00 \ubcc4\ub3c4\uc758 `<span>` \uc694\uc18c\ub85c \uc874\uc7ac\ud558\ub294\uc9c0 \uac80\uc99d\ud569\ub2c8\ub2e4.",
             "parentId": "undefined"
           },
           {
             "id": 2,
-            "title": "입력 진행 상태 및 오류 추적을 위한 상태 관리 구현",
-            "description": "사용자의 현재 입력 위치(`currentInputIndex`), 입력된 문자열(`typedCharacters`), 그리고 발생한 오류(`errorIndices`)를 추적하기 위한 React `useState` 훅을 `TypingTextDisplay` 컴포넌트 내부에 정의합니다.",
+            "title": "\uc785\ub825 \uc9c4\ud589 \uc0c1\ud0dc \ubc0f \uc624\ub958 \ucd94\uc801\uc744 \uc704\ud55c \uc0c1\ud0dc \uad00\ub9ac \uad6c\ud604",
+            "description": "\uc0ac\uc6a9\uc790\uc758 \ud604\uc7ac \uc785\ub825 \uc704\uce58(`currentInputIndex`), \uc785\ub825\ub41c \ubb38\uc790\uc5f4(`typedCharacters`), \uadf8\ub9ac\uace0 \ubc1c\uc0dd\ud55c \uc624\ub958(`errorIndices`)\ub97c \ucd94\uc801\ud558\uae30 \uc704\ud55c React `useState` \ud6c5\uc744 `TypingTextDisplay` \ucef4\ud3ec\ub10c\ud2b8 \ub0b4\ubd80\uc5d0 \uc815\uc758\ud569\ub2c8\ub2e4.",
             "dependencies": [
               2
             ],
-            "details": "`useState`를 사용하여 `currentInputIndex` (number, 초기값 0), `typedCharacters` (string, 초기값 \"\"), `errorIndices` (Set<number> 또는 number[], 초기값 []) 상태 변수를 선언합니다. 이 상태들은 외부에서 전달될 입력 이벤트 핸들러를 통해 업데이트될 준비를 합니다.",
-            "status": "pending",
-            "testStrategy": "컴포넌트 스토리북(Storybook) 또는 임시 부모 컴포넌트에서 `currentInputIndex`, `typedCharacters`, `errorIndices` 상태를 수동으로 변경하며, 상태 변경이 컴포넌트 내부에 올바르게 반영되는지 확인합니다.",
+            "details": "`useState`\ub97c \uc0ac\uc6a9\ud558\uc5ec `currentInputIndex` (number, \ucd08\uae30\uac12 0), `typedCharacters` (string, \ucd08\uae30\uac12 \"\"), `errorIndices` (Set<number> \ub610\ub294 number[], \ucd08\uae30\uac12 []) \uc0c1\ud0dc \ubcc0\uc218\ub97c \uc120\uc5b8\ud569\ub2c8\ub2e4. \uc774 \uc0c1\ud0dc\ub4e4\uc740 \uc678\ubd80\uc5d0\uc11c \uc804\ub2ec\ub420 \uc785\ub825 \uc774\ubca4\ud2b8 \ud578\ub4e4\ub7ec\ub97c \ud1b5\ud574 \uc5c5\ub370\uc774\ud2b8\ub420 \uc900\ube44\ub97c \ud569\ub2c8\ub2e4.",
+            "status": "completed",
+            "testStrategy": "\ucef4\ud3ec\ub10c\ud2b8 \uc2a4\ud1a0\ub9ac\ubd81(Storybook) \ub610\ub294 \uc784\uc2dc \ubd80\ubaa8 \ucef4\ud3ec\ub10c\ud2b8\uc5d0\uc11c `currentInputIndex`, `typedCharacters`, `errorIndices` \uc0c1\ud0dc\ub97c \uc218\ub3d9\uc73c\ub85c \ubcc0\uacbd\ud558\uba70, \uc0c1\ud0dc \ubcc0\uacbd\uc774 \ucef4\ud3ec\ub10c\ud2b8 \ub0b4\ubd80\uc5d0 \uc62c\ubc14\ub974\uac8c \ubc18\uc601\ub418\ub294\uc9c0 \ud655\uc778\ud569\ub2c8\ub2e4.",
             "parentId": "undefined"
           },
           {
             "id": 3,
-            "title": "입력 상태에 따른 문자별 동적 스타일링 로직 구현",
-            "description": "`currentInputIndex`, `typedCharacters`, `errorIndices` 상태를 기반으로 각 문자에 '올바른 입력', '틀린 입력', '현재 입력 위치', '미입력' 상태에 해당하는 CSS 클래스를 동적으로 적용하는 로직을 구현합니다.",
+            "title": "\uc785\ub825 \uc0c1\ud0dc\uc5d0 \ub530\ub978 \ubb38\uc790\ubcc4 \ub3d9\uc801 \uc2a4\ud0c0\uc77c\ub9c1 \ub85c\uc9c1 \uad6c\ud604",
+            "description": "`currentInputIndex`, `typedCharacters`, `errorIndices` \uc0c1\ud0dc\ub97c \uae30\ubc18\uc73c\ub85c \uac01 \ubb38\uc790\uc5d0 '\uc62c\ubc14\ub978 \uc785\ub825', '\ud2c0\ub9b0 \uc785\ub825', '\ud604\uc7ac \uc785\ub825 \uc704\uce58', '\ubbf8\uc785\ub825' \uc0c1\ud0dc\uc5d0 \ud574\ub2f9\ud558\ub294 CSS \ud074\ub798\uc2a4\ub97c \ub3d9\uc801\uc73c\ub85c \uc801\uc6a9\ud558\ub294 \ub85c\uc9c1\uc744 \uad6c\ud604\ud569\ub2c8\ub2e4.",
             "dependencies": [
               2
             ],
-            "details": "각 문자를 렌더링하는 `map` 함수 내에서 조건부 로직을 추가합니다. `currentInputIndex`와 문자의 인덱스를 비교하여 현재 입력 위치를 식별하고, `typedCharacters`의 해당 인덱스 문자와 원본 `text`의 문자를 비교하여 올바른/틀린 입력을 판단합니다. `errorIndices`를 활용하여 틀린 문자를 표시합니다. Tailwind CSS 클래스(예: `text-green-500`, `text-red-500`, `bg-yellow-200`, `text-gray-400`)를 정의하고 적용합니다.",
-            "status": "pending",
-            "testStrategy": "`currentInputIndex`, `typedCharacters`, `errorIndices`를 다양한 시나리오(모든 문자 올바르게 입력, 중간에 틀린 문자, 특정 위치에서 멈춤 등)로 설정하여 각 문자의 색상 및 배경 스타일이 예상대로 변경되는지 시각적으로 검증합니다.",
+            "details": "\uac01 \ubb38\uc790\ub97c \ub80c\ub354\ub9c1\ud558\ub294 `map` \ud568\uc218 \ub0b4\uc5d0\uc11c \uc870\uac74\ubd80 \ub85c\uc9c1\uc744 \ucd94\uac00\ud569\ub2c8\ub2e4. `currentInputIndex`\uc640 \ubb38\uc790\uc758 \uc778\ub371\uc2a4\ub97c \ube44\uad50\ud558\uc5ec \ud604\uc7ac \uc785\ub825 \uc704\uce58\ub97c \uc2dd\ubcc4\ud558\uace0, `typedCharacters`\uc758 \ud574\ub2f9 \uc778\ub371\uc2a4 \ubb38\uc790\uc640 \uc6d0\ubcf8 `text`\uc758 \ubb38\uc790\ub97c \ube44\uad50\ud558\uc5ec \uc62c\ubc14\ub978/\ud2c0\ub9b0 \uc785\ub825\uc744 \ud310\ub2e8\ud569\ub2c8\ub2e4. `errorIndices`\ub97c \ud65c\uc6a9\ud558\uc5ec \ud2c0\ub9b0 \ubb38\uc790\ub97c \ud45c\uc2dc\ud569\ub2c8\ub2e4. Tailwind CSS \ud074\ub798\uc2a4(\uc608: `text-green-500`, `text-red-500`, `bg-yellow-200`, `text-gray-400`)\ub97c \uc815\uc758\ud558\uace0 \uc801\uc6a9\ud569\ub2c8\ub2e4.",
+            "status": "completed",
+            "testStrategy": "`currentInputIndex`, `typedCharacters`, `errorIndices`\ub97c \ub2e4\uc591\ud55c \uc2dc\ub098\ub9ac\uc624(\ubaa8\ub4e0 \ubb38\uc790 \uc62c\ubc14\ub974\uac8c \uc785\ub825, \uc911\uac04\uc5d0 \ud2c0\ub9b0 \ubb38\uc790, \ud2b9\uc815 \uc704\uce58\uc5d0\uc11c \uba48\ucda4 \ub4f1)\ub85c \uc124\uc815\ud558\uc5ec \uac01 \ubb38\uc790\uc758 \uc0c9\uc0c1 \ubc0f \ubc30\uacbd \uc2a4\ud0c0\uc77c\uc774 \uc608\uc0c1\ub300\ub85c \ubcc0\uacbd\ub418\ub294\uc9c0 \uc2dc\uac01\uc801\uc73c\ub85c \uac80\uc99d\ud569\ub2c8\ub2e4.",
             "parentId": "undefined"
           },
           {
             "id": 4,
-            "title": "외부 입력 이벤트 처리 및 `TypingTextDisplay` 상태 업데이트 함수 구현",
-            "description": "`TypingTextDisplay` 컴포넌트가 외부(예: 부모 컴포넌트의 키보드 입력 핸들러)로부터 입력 문자를 받아 내부 상태(`currentInputIndex`, `typedCharacters`, `errorIndices`)를 업데이트하는 함수를 구현합니다.",
+            "title": "\uc678\ubd80 \uc785\ub825 \uc774\ubca4\ud2b8 \ucc98\ub9ac \ubc0f `TypingTextDisplay` \uc0c1\ud0dc \uc5c5\ub370\uc774\ud2b8 \ud568\uc218 \uad6c\ud604",
+            "description": "`TypingTextDisplay` \ucef4\ud3ec\ub10c\ud2b8\uac00 \uc678\ubd80(\uc608: \ubd80\ubaa8 \ucef4\ud3ec\ub10c\ud2b8\uc758 \ud0a4\ubcf4\ub4dc \uc785\ub825 \ud578\ub4e4\ub7ec)\ub85c\ubd80\ud130 \uc785\ub825 \ubb38\uc790\ub97c \ubc1b\uc544 \ub0b4\ubd80 \uc0c1\ud0dc(`currentInputIndex`, `typedCharacters`, `errorIndices`)\ub97c \uc5c5\ub370\uc774\ud2b8\ud558\ub294 \ud568\uc218\ub97c \uad6c\ud604\ud569\ub2c8\ub2e4.",
             "dependencies": [
               2
             ],
-            "details": "`handleInput`과 같은 함수를 컴포넌트 내부에 정의하거나, `onInput` prop으로 전달받아 사용합니다. 이 함수는 입력된 문자(예: `key`)를 인자로 받아, 현재 `currentInputIndex`의 원본 텍스트 문자와 비교합니다. 일치하면 `currentInputIndex`를 증가시키고 `typedCharacters`를 업데이트합니다. 불일치하면 `errorIndices`에 현재 인덱스를 추가하고 `typedCharacters`에 틀린 문자를 추가합니다. 백스페이스 처리 로직도 포함합니다.",
-            "status": "pending",
-            "testStrategy": "부모 컴포넌트에서 가상 키보드 입력을 시뮬레이션하여 `handleInput` 함수를 호출합니다. 올바른 문자, 틀린 문자, 백스페이스 입력 시 `currentInputIndex`, `typedCharacters`, `errorIndices`가 정확하게 업데이트되고 UI에 반영되는지 시각적으로 확인합니다.",
+            "details": "`handleInput`\uacfc \uac19\uc740 \ud568\uc218\ub97c \ucef4\ud3ec\ub10c\ud2b8 \ub0b4\ubd80\uc5d0 \uc815\uc758\ud558\uac70\ub098, `onInput` prop\uc73c\ub85c \uc804\ub2ec\ubc1b\uc544 \uc0ac\uc6a9\ud569\ub2c8\ub2e4. \uc774 \ud568\uc218\ub294 \uc785\ub825\ub41c \ubb38\uc790(\uc608: `key`)\ub97c \uc778\uc790\ub85c \ubc1b\uc544, \ud604\uc7ac `currentInputIndex`\uc758 \uc6d0\ubcf8 \ud14d\uc2a4\ud2b8 \ubb38\uc790\uc640 \ube44\uad50\ud569\ub2c8\ub2e4. \uc77c\uce58\ud558\uba74 `currentInputIndex`\ub97c \uc99d\uac00\uc2dc\ud0a4\uace0 `typedCharacters`\ub97c \uc5c5\ub370\uc774\ud2b8\ud569\ub2c8\ub2e4. \ubd88\uc77c\uce58\ud558\uba74 `errorIndices`\uc5d0 \ud604\uc7ac \uc778\ub371\uc2a4\ub97c \ucd94\uac00\ud558\uace0 `typedCharacters`\uc5d0 \ud2c0\ub9b0 \ubb38\uc790\ub97c \ucd94\uac00\ud569\ub2c8\ub2e4. \ubc31\uc2a4\ud398\uc774\uc2a4 \ucc98\ub9ac \ub85c\uc9c1\ub3c4 \ud3ec\ud568\ud569\ub2c8\ub2e4.",
+            "status": "completed",
+            "testStrategy": "\ubd80\ubaa8 \ucef4\ud3ec\ub10c\ud2b8\uc5d0\uc11c \uac00\uc0c1 \ud0a4\ubcf4\ub4dc \uc785\ub825\uc744 \uc2dc\ubbac\ub808\uc774\uc158\ud558\uc5ec `handleInput` \ud568\uc218\ub97c \ud638\ucd9c\ud569\ub2c8\ub2e4. \uc62c\ubc14\ub978 \ubb38\uc790, \ud2c0\ub9b0 \ubb38\uc790, \ubc31\uc2a4\ud398\uc774\uc2a4 \uc785\ub825 \uc2dc `currentInputIndex`, `typedCharacters`, `errorIndices`\uac00 \uc815\ud655\ud558\uac8c \uc5c5\ub370\uc774\ud2b8\ub418\uace0 UI\uc5d0 \ubc18\uc601\ub418\ub294\uc9c0 \uc2dc\uac01\uc801\uc73c\ub85c \ud655\uc778\ud569\ub2c8\ub2e4.",
             "parentId": "undefined"
           },
           {
             "id": 5,
-            "title": "컴포넌트 접근성 및 성능 최적화",
-            "description": "`TypingTextDisplay` 컴포넌트의 접근성을 개선하고, 대량의 텍스트 처리 시 발생할 수 있는 성능 문제를 최소화합니다.",
+            "title": "\ucef4\ud3ec\ub10c\ud2b8 \uc811\uadfc\uc131 \ubc0f \uc131\ub2a5 \ucd5c\uc801\ud654",
+            "description": "`TypingTextDisplay` \ucef4\ud3ec\ub10c\ud2b8\uc758 \uc811\uadfc\uc131\uc744 \uac1c\uc120\ud558\uace0, \ub300\ub7c9\uc758 \ud14d\uc2a4\ud2b8 \ucc98\ub9ac \uc2dc \ubc1c\uc0dd\ud560 \uc218 \uc788\ub294 \uc131\ub2a5 \ubb38\uc81c\ub97c \ucd5c\uc18c\ud654\ud569\ub2c8\ub2e4.",
             "dependencies": [
               2
             ],
-            "details": "각 `<span>` 요소에 `aria-label` 또는 `sr-only` 텍스트를 추가하여 스크린 리더 사용자를 위한 정보를 제공합니다. `React.memo`를 사용하여 불필요한 리렌더링을 방지하고, `key` prop을 각 문자에 고유하게 할당하여 리스트 렌더링 성능을 최적화합니다. `useCallback`을 사용하여 `handleInput`과 같은 함수가 불필요하게 재생성되지 않도록 합니다.",
-            "status": "pending",
-            "testStrategy": "개발자 도구의 Lighthouse 또는 유사한 도구를 사용하여 접근성 점수를 확인합니다. 대량의 텍스트(예: 1000자 이상)를 입력하여 컴포넌트의 렌더링 성능이 저하되지 않는지 확인합니다. React DevTools를 사용하여 불필요한 리렌더링이 발생하는지 프로파일링합니다.",
+            "details": "\uac01 `<span>` \uc694\uc18c\uc5d0 `aria-label` \ub610\ub294 `sr-only` \ud14d\uc2a4\ud2b8\ub97c \ucd94\uac00\ud558\uc5ec \uc2a4\ud06c\ub9b0 \ub9ac\ub354 \uc0ac\uc6a9\uc790\ub97c \uc704\ud55c \uc815\ubcf4\ub97c \uc81c\uacf5\ud569\ub2c8\ub2e4. `React.memo`\ub97c \uc0ac\uc6a9\ud558\uc5ec \ubd88\ud544\uc694\ud55c \ub9ac\ub80c\ub354\ub9c1\uc744 \ubc29\uc9c0\ud558\uace0, `key` prop\uc744 \uac01 \ubb38\uc790\uc5d0 \uace0\uc720\ud558\uac8c \ud560\ub2f9\ud558\uc5ec \ub9ac\uc2a4\ud2b8 \ub80c\ub354\ub9c1 \uc131\ub2a5\uc744 \ucd5c\uc801\ud654\ud569\ub2c8\ub2e4. `useCallback`\uc744 \uc0ac\uc6a9\ud558\uc5ec `handleInput`\uacfc \uac19\uc740 \ud568\uc218\uac00 \ubd88\ud544\uc694\ud558\uac8c \uc7ac\uc0dd\uc131\ub418\uc9c0 \uc54a\ub3c4\ub85d \ud569\ub2c8\ub2e4.",
+            "status": "completed",
+            "testStrategy": "\uac1c\ubc1c\uc790 \ub3c4\uad6c\uc758 Lighthouse \ub610\ub294 \uc720\uc0ac\ud55c \ub3c4\uad6c\ub97c \uc0ac\uc6a9\ud558\uc5ec \uc811\uadfc\uc131 \uc810\uc218\ub97c \ud655\uc778\ud569\ub2c8\ub2e4. \ub300\ub7c9\uc758 \ud14d\uc2a4\ud2b8(\uc608: 1000\uc790 \uc774\uc0c1)\ub97c \uc785\ub825\ud558\uc5ec \ucef4\ud3ec\ub10c\ud2b8\uc758 \ub80c\ub354\ub9c1 \uc131\ub2a5\uc774 \uc800\ud558\ub418\uc9c0 \uc54a\ub294\uc9c0 \ud655\uc778\ud569\ub2c8\ub2e4. React DevTools\ub97c \uc0ac\uc6a9\ud558\uc5ec \ubd88\ud544\uc694\ud55c \ub9ac\ub80c\ub354\ub9c1\uc774 \ubc1c\uc0dd\ud558\ub294\uc9c0 \ud504\ub85c\ud30c\uc77c\ub9c1\ud569\ub2c8\ub2e4.",
             "parentId": "undefined"
           }
         ]
       },
       {
         "id": "4",
-        "title": "사용자 입력 처리 및 이벤트 리스너 구현",
-        "description": "사용자의 키보드 입력을 감지하고, 이를 표시된 연습 텍스트와 비교하여 진행 상황을 추적하는 로직을 구현합니다.",
-        "details": "`TypingInput` 컴포넌트를 생성하거나 `TypingTextDisplay` 컴포넌트에 통합하여 `keydown` 또는 `keypress` 이벤트 리스너를 추가합니다. 사용자가 입력한 문자와 현재 표시된 텍스트의 문자를 비교하고, 현재 입력 위치(커서)를 업데이트합니다. 한글 조합형 입력의 특성을 고려하여, `e.key` 대신 `e.target.value` 변화를 감지하고 한글 조합 로직을 처리하는 방법을 고려해야 합니다 (예: `compositionend` 이벤트 활용).",
-        "testStrategy": "영문, 한글, 특수문자를 포함한 다양한 키보드 입력을 테스트하여 정확하게 감지하고 비교하는지 확인합니다. 특히 한글 자음-모음 조합 시나리오를 여러 번 반복하여 오류 없이 처리되는지 검증합니다.",
+        "title": "\uc0ac\uc6a9\uc790 \uc785\ub825 \ucc98\ub9ac \ubc0f \uc774\ubca4\ud2b8 \ub9ac\uc2a4\ub108 \uad6c\ud604",
+        "description": "\uc0ac\uc6a9\uc790\uc758 \ud0a4\ubcf4\ub4dc \uc785\ub825\uc744 \uac10\uc9c0\ud558\uace0, \uc774\ub97c \ud45c\uc2dc\ub41c \uc5f0\uc2b5 \ud14d\uc2a4\ud2b8\uc640 \ube44\uad50\ud558\uc5ec \uc9c4\ud589 \uc0c1\ud669\uc744 \ucd94\uc801\ud558\ub294 \ub85c\uc9c1\uc744 \uad6c\ud604\ud569\ub2c8\ub2e4.",
+        "details": "`TypingInput` \ucef4\ud3ec\ub10c\ud2b8\ub97c \uc0dd\uc131\ud558\uac70\ub098 `TypingTextDisplay` \ucef4\ud3ec\ub10c\ud2b8\uc5d0 \ud1b5\ud569\ud558\uc5ec `keydown` \ub610\ub294 `keypress` \uc774\ubca4\ud2b8 \ub9ac\uc2a4\ub108\ub97c \ucd94\uac00\ud569\ub2c8\ub2e4. \uc0ac\uc6a9\uc790\uac00 \uc785\ub825\ud55c \ubb38\uc790\uc640 \ud604\uc7ac \ud45c\uc2dc\ub41c \ud14d\uc2a4\ud2b8\uc758 \ubb38\uc790\ub97c \ube44\uad50\ud558\uace0, \ud604\uc7ac \uc785\ub825 \uc704\uce58(\ucee4\uc11c)\ub97c \uc5c5\ub370\uc774\ud2b8\ud569\ub2c8\ub2e4. \ud55c\uae00 \uc870\ud569\ud615 \uc785\ub825\uc758 \ud2b9\uc131\uc744 \uace0\ub824\ud558\uc5ec, `e.key` \ub300\uc2e0 `e.target.value` \ubcc0\ud654\ub97c \uac10\uc9c0\ud558\uace0 \ud55c\uae00 \uc870\ud569 \ub85c\uc9c1\uc744 \ucc98\ub9ac\ud558\ub294 \ubc29\ubc95\uc744 \uace0\ub824\ud574\uc57c \ud569\ub2c8\ub2e4 (\uc608: `compositionend` \uc774\ubca4\ud2b8 \ud65c\uc6a9).",
+        "testStrategy": "\uc601\ubb38, \ud55c\uae00, \ud2b9\uc218\ubb38\uc790\ub97c \ud3ec\ud568\ud55c \ub2e4\uc591\ud55c \ud0a4\ubcf4\ub4dc \uc785\ub825\uc744 \ud14c\uc2a4\ud2b8\ud558\uc5ec \uc815\ud655\ud558\uac8c \uac10\uc9c0\ud558\uace0 \ube44\uad50\ud558\ub294\uc9c0 \ud655\uc778\ud569\ub2c8\ub2e4. \ud2b9\ud788 \ud55c\uae00 \uc790\uc74c-\ubaa8\uc74c \uc870\ud569 \uc2dc\ub098\ub9ac\uc624\ub97c \uc5ec\ub7ec \ubc88 \ubc18\ubcf5\ud558\uc5ec \uc624\ub958 \uc5c6\uc774 \ucc98\ub9ac\ub418\ub294\uc9c0 \uac80\uc99d\ud569\ub2c8\ub2e4.",
         "priority": "high",
         "dependencies": [
           "3"
@@ -241,73 +241,73 @@
         "subtasks": [
           {
             "id": 1,
-            "title": "입력 필드 컴포넌트 구조화 및 기본 속성 설정",
-            "description": "사용자의 타이핑 입력을 받을 HTML <textarea> 또는 <input> 요소를 포함하는 컴포넌트를 설계하고 구현합니다. 'TypingTextDisplay' 컴포넌트와 상호작용할 수 있도록 준비하며, 사용자 인터페이스(UI) 상에서 입력 영역을 명확히 정의합니다.",
+            "title": "\uc785\ub825 \ud544\ub4dc \ucef4\ud3ec\ub10c\ud2b8 \uad6c\uc870\ud654 \ubc0f \uae30\ubcf8 \uc18d\uc131 \uc124\uc815",
+            "description": "\uc0ac\uc6a9\uc790\uc758 \ud0c0\uc774\ud551 \uc785\ub825\uc744 \ubc1b\uc744 HTML <textarea> \ub610\ub294 <input> \uc694\uc18c\ub97c \ud3ec\ud568\ud558\ub294 \ucef4\ud3ec\ub10c\ud2b8\ub97c \uc124\uacc4\ud558\uace0 \uad6c\ud604\ud569\ub2c8\ub2e4. 'TypingTextDisplay' \ucef4\ud3ec\ub10c\ud2b8\uc640 \uc0c1\ud638\uc791\uc6a9\ud560 \uc218 \uc788\ub3c4\ub85d \uc900\ube44\ud558\uba70, \uc0ac\uc6a9\uc790 \uc778\ud130\ud398\uc774\uc2a4(UI) \uc0c1\uc5d0\uc11c \uc785\ub825 \uc601\uc5ed\uc744 \uba85\ud655\ud788 \uc815\uc758\ud569\ub2c8\ub2e4.",
             "dependencies": [
               3
             ],
-            "details": "새로운 `TypingInput.js` 또는 `TypingInput.tsx` 파일을 생성하고, 기본 `<textarea>` 요소를 포함합니다. `textAreaRef`와 같은 `ref`를 사용하여 DOM 요소에 접근하고 포커스 관리가 가능하도록 설정합니다. `darkMode` 및 `isInputDisabled`와 같은 props를 받아 컴포넌트의 스타일 및 동작을 제어할 수 있도록 인터페이스를 정의합니다. `textarea`의 `onChange`, `onKeyDown`, `onPaste`, `onCompositionStart`, `onCompositionUpdate`, `onCompositionEnd` 이벤트를 위한 플레이스홀더 핸들러를 준비합니다.",
+            "details": "\uc0c8\ub85c\uc6b4 `TypingInput.js` \ub610\ub294 `TypingInput.tsx` \ud30c\uc77c\uc744 \uc0dd\uc131\ud558\uace0, \uae30\ubcf8 `<textarea>` \uc694\uc18c\ub97c \ud3ec\ud568\ud569\ub2c8\ub2e4. `textAreaRef`\uc640 \uac19\uc740 `ref`\ub97c \uc0ac\uc6a9\ud558\uc5ec DOM \uc694\uc18c\uc5d0 \uc811\uadfc\ud558\uace0 \ud3ec\ucee4\uc2a4 \uad00\ub9ac\uac00 \uac00\ub2a5\ud558\ub3c4\ub85d \uc124\uc815\ud569\ub2c8\ub2e4. `darkMode` \ubc0f `isInputDisabled`\uc640 \uac19\uc740 props\ub97c \ubc1b\uc544 \ucef4\ud3ec\ub10c\ud2b8\uc758 \uc2a4\ud0c0\uc77c \ubc0f \ub3d9\uc791\uc744 \uc81c\uc5b4\ud560 \uc218 \uc788\ub3c4\ub85d \uc778\ud130\ud398\uc774\uc2a4\ub97c \uc815\uc758\ud569\ub2c8\ub2e4. `textarea`\uc758 `onChange`, `onKeyDown`, `onPaste`, `onCompositionStart`, `onCompositionUpdate`, `onCompositionEnd` \uc774\ubca4\ud2b8\ub97c \uc704\ud55c \ud50c\ub808\uc774\uc2a4\ud640\ub354 \ud578\ub4e4\ub7ec\ub97c \uc900\ube44\ud569\ub2c8\ub2e4.",
             "status": "pending",
-            "testStrategy": "컴포넌트가 화면에 올바르게 렌더링되고, HTML 요소에 포커스가 제대로 작동하는지 확인합니다. `TypingTextDisplay` 컴포넌트와 함께 배치하여 초기 통합 가능성 및 스타일이 충돌하지 않는지 육안으로 검증합니다.",
+            "testStrategy": "\ucef4\ud3ec\ub10c\ud2b8\uac00 \ud654\uba74\uc5d0 \uc62c\ubc14\ub974\uac8c \ub80c\ub354\ub9c1\ub418\uace0, HTML \uc694\uc18c\uc5d0 \ud3ec\ucee4\uc2a4\uac00 \uc81c\ub300\ub85c \uc791\ub3d9\ud558\ub294\uc9c0 \ud655\uc778\ud569\ub2c8\ub2e4. `TypingTextDisplay` \ucef4\ud3ec\ub10c\ud2b8\uc640 \ud568\uaed8 \ubc30\uce58\ud558\uc5ec \ucd08\uae30 \ud1b5\ud569 \uac00\ub2a5\uc131 \ubc0f \uc2a4\ud0c0\uc77c\uc774 \ucda9\ub3cc\ud558\uc9c0 \uc54a\ub294\uc9c0 \uc721\uc548\uc73c\ub85c \uac80\uc99d\ud569\ub2c8\ub2e4.",
             "parentId": "undefined"
           },
           {
             "id": 2,
-            "title": "기본 키보드 입력 이벤트 리스너 구현 (영문 및 단일 문자)",
-            "description": "입력 필드에 `onChange` (또는 `onInput`) 이벤트 핸들러를 추가하여, 사용자가 입력하는 영문 및 단일 문자를 감지하고, 이를 연습 텍스트와 비교하는 초기 로직을 구현합니다.",
+            "title": "\uae30\ubcf8 \ud0a4\ubcf4\ub4dc \uc785\ub825 \uc774\ubca4\ud2b8 \ub9ac\uc2a4\ub108 \uad6c\ud604 (\uc601\ubb38 \ubc0f \ub2e8\uc77c \ubb38\uc790)",
+            "description": "\uc785\ub825 \ud544\ub4dc\uc5d0 `onChange` (\ub610\ub294 `onInput`) \uc774\ubca4\ud2b8 \ud578\ub4e4\ub7ec\ub97c \ucd94\uac00\ud558\uc5ec, \uc0ac\uc6a9\uc790\uac00 \uc785\ub825\ud558\ub294 \uc601\ubb38 \ubc0f \ub2e8\uc77c \ubb38\uc790\ub97c \uac10\uc9c0\ud558\uace0, \uc774\ub97c \uc5f0\uc2b5 \ud14d\uc2a4\ud2b8\uc640 \ube44\uad50\ud558\ub294 \ucd08\uae30 \ub85c\uc9c1\uc744 \uad6c\ud604\ud569\ub2c8\ub2e4.",
             "dependencies": [
               1,
               3
             ],
-            "details": "입력 필드의 `onChange` 이벤트에 바인딩되는 `handleTextChange` 함수를 구현합니다. 이 함수 내에서 `event.target.value`를 사용하여 현재 입력된 텍스트를 가져오고, 컴포넌트의 `text` 상태를 업데이트합니다. 백스페이스(Backspace), 스페이스바(Spacebar), 엔터(Enter)와 같은 키 입력에 대한 기본적인 처리를 `onKeyDown` 이벤트에서 구현하고, 입력된 문자를 `TypingTextDisplay`에서 제공하는 기준 텍스트와 비교하여 `cursorPosition` 및 오타 여부를 업데이트할 준비를 합니다.",
+            "details": "\uc785\ub825 \ud544\ub4dc\uc758 `onChange` \uc774\ubca4\ud2b8\uc5d0 \ubc14\uc778\ub529\ub418\ub294 `handleTextChange` \ud568\uc218\ub97c \uad6c\ud604\ud569\ub2c8\ub2e4. \uc774 \ud568\uc218 \ub0b4\uc5d0\uc11c `event.target.value`\ub97c \uc0ac\uc6a9\ud558\uc5ec \ud604\uc7ac \uc785\ub825\ub41c \ud14d\uc2a4\ud2b8\ub97c \uac00\uc838\uc624\uace0, \ucef4\ud3ec\ub10c\ud2b8\uc758 `text` \uc0c1\ud0dc\ub97c \uc5c5\ub370\uc774\ud2b8\ud569\ub2c8\ub2e4. \ubc31\uc2a4\ud398\uc774\uc2a4(Backspace), \uc2a4\ud398\uc774\uc2a4\ubc14(Spacebar), \uc5d4\ud130(Enter)\uc640 \uac19\uc740 \ud0a4 \uc785\ub825\uc5d0 \ub300\ud55c \uae30\ubcf8\uc801\uc778 \ucc98\ub9ac\ub97c `onKeyDown` \uc774\ubca4\ud2b8\uc5d0\uc11c \uad6c\ud604\ud558\uace0, \uc785\ub825\ub41c \ubb38\uc790\ub97c `TypingTextDisplay`\uc5d0\uc11c \uc81c\uacf5\ud558\ub294 \uae30\uc900 \ud14d\uc2a4\ud2b8\uc640 \ube44\uad50\ud558\uc5ec `cursorPosition` \ubc0f \uc624\ud0c0 \uc5ec\ubd80\ub97c \uc5c5\ub370\uc774\ud2b8\ud560 \uc900\ube44\ub97c \ud569\ub2c8\ub2e4.",
             "status": "pending",
-            "testStrategy": "영문 소문자, 대문자, 숫자, 일반적인 특수문자를 순서대로 입력하고, 백스페이스를 사용하여 수정했을 때, `text` 상태와 `cursorPosition`이 예상대로 업데이트되는지 React DevTools 또는 콘솔 로그를 통해 확인합니다. 엔터 키와 스페이스바가 예상대로 동작하는지 테스트합니다.",
+            "testStrategy": "\uc601\ubb38 \uc18c\ubb38\uc790, \ub300\ubb38\uc790, \uc22b\uc790, \uc77c\ubc18\uc801\uc778 \ud2b9\uc218\ubb38\uc790\ub97c \uc21c\uc11c\ub300\ub85c \uc785\ub825\ud558\uace0, \ubc31\uc2a4\ud398\uc774\uc2a4\ub97c \uc0ac\uc6a9\ud558\uc5ec \uc218\uc815\ud588\uc744 \ub54c, `text` \uc0c1\ud0dc\uc640 `cursorPosition`\uc774 \uc608\uc0c1\ub300\ub85c \uc5c5\ub370\uc774\ud2b8\ub418\ub294\uc9c0 React DevTools \ub610\ub294 \ucf58\uc194 \ub85c\uadf8\ub97c \ud1b5\ud574 \ud655\uc778\ud569\ub2c8\ub2e4. \uc5d4\ud130 \ud0a4\uc640 \uc2a4\ud398\uc774\uc2a4\ubc14\uac00 \uc608\uc0c1\ub300\ub85c \ub3d9\uc791\ud558\ub294\uc9c0 \ud14c\uc2a4\ud2b8\ud569\ub2c8\ub2e4.",
             "parentId": "undefined"
           },
           {
             "id": 3,
-            "title": "한글 조합형 입력 처리 로직 구현 (IME 및 composition 이벤트)",
-            "description": "한글과 같이 조합형 언어(IME) 입력을 정확하게 처리하기 위해 `compositionstart`, `compositionupdate`, `compositionend` 이벤트를 활용한 로직을 구현합니다. 이는 `e.key` 대신 `e.target.value` 변화를 중심으로 하여 한글 조합의 복잡성을 관리합니다.",
+            "title": "\ud55c\uae00 \uc870\ud569\ud615 \uc785\ub825 \ucc98\ub9ac \ub85c\uc9c1 \uad6c\ud604 (IME \ubc0f composition \uc774\ubca4\ud2b8)",
+            "description": "\ud55c\uae00\uacfc \uac19\uc774 \uc870\ud569\ud615 \uc5b8\uc5b4(IME) \uc785\ub825\uc744 \uc815\ud655\ud558\uac8c \ucc98\ub9ac\ud558\uae30 \uc704\ud574 `compositionstart`, `compositionupdate`, `compositionend` \uc774\ubca4\ud2b8\ub97c \ud65c\uc6a9\ud55c \ub85c\uc9c1\uc744 \uad6c\ud604\ud569\ub2c8\ub2e4. \uc774\ub294 `e.key` \ub300\uc2e0 `e.target.value` \ubcc0\ud654\ub97c \uc911\uc2ec\uc73c\ub85c \ud558\uc5ec \ud55c\uae00 \uc870\ud569\uc758 \ubcf5\uc7a1\uc131\uc744 \uad00\ub9ac\ud569\ub2c8\ub2e4.",
             "dependencies": [
               2
             ],
-            "details": "`onCompositionStart`, `onCompositionUpdate`, `onCompositionEnd` 이벤트 핸들러를 구현합니다. `compositionstart` 시에는 조합 중임을 나타내는 플래그를 설정하고, `compositionupdate` 시에는 중간 조합 상태를 관리하며, `compositionend` 시에는 최종적으로 조합이 완료된 한글 문자를 정확하게 캡처하여 `text` 상태에 반영합니다. IME 활성화 상태에서 `handleTextChange`가 불필요하게 여러 번 호출되는 것을 방지하고, 최종 입력된 글자만 처리하도록 로직을 조정합니다.",
+            "details": "`onCompositionStart`, `onCompositionUpdate`, `onCompositionEnd` \uc774\ubca4\ud2b8 \ud578\ub4e4\ub7ec\ub97c \uad6c\ud604\ud569\ub2c8\ub2e4. `compositionstart` \uc2dc\uc5d0\ub294 \uc870\ud569 \uc911\uc784\uc744 \ub098\ud0c0\ub0b4\ub294 \ud50c\ub798\uadf8\ub97c \uc124\uc815\ud558\uace0, `compositionupdate` \uc2dc\uc5d0\ub294 \uc911\uac04 \uc870\ud569 \uc0c1\ud0dc\ub97c \uad00\ub9ac\ud558\uba70, `compositionend` \uc2dc\uc5d0\ub294 \ucd5c\uc885\uc801\uc73c\ub85c \uc870\ud569\uc774 \uc644\ub8cc\ub41c \ud55c\uae00 \ubb38\uc790\ub97c \uc815\ud655\ud558\uac8c \ucea1\ucc98\ud558\uc5ec `text` \uc0c1\ud0dc\uc5d0 \ubc18\uc601\ud569\ub2c8\ub2e4. IME \ud65c\uc131\ud654 \uc0c1\ud0dc\uc5d0\uc11c `handleTextChange`\uac00 \ubd88\ud544\uc694\ud558\uac8c \uc5ec\ub7ec \ubc88 \ud638\ucd9c\ub418\ub294 \uac83\uc744 \ubc29\uc9c0\ud558\uace0, \ucd5c\uc885 \uc785\ub825\ub41c \uae00\uc790\ub9cc \ucc98\ub9ac\ud558\ub3c4\ub85d \ub85c\uc9c1\uc744 \uc870\uc815\ud569\ub2c8\ub2e4.",
             "status": "pending",
-            "testStrategy": "한글 자음, 모음 조합(예: ㄱ + ㅏ = 가, ㅎ + ㅏ + ㄴ = 한)을 여러 번 입력하여 최종 글자가 정확하게 인식되고 `text` 상태에 반영되는지 확인합니다. 조합 중 백스페이스를 눌렀을 때, 조합이 취소되거나 올바르게 수정되는지 테스트합니다. 영문과 한글을 번갈아 입력하며 IME 사용 시 오류 없이 처리되는지 검증합니다.",
+            "testStrategy": "\ud55c\uae00 \uc790\uc74c, \ubaa8\uc74c \uc870\ud569(\uc608: \u3131 + \u314f = \uac00, \u314e + \u314f + \u3134 = \ud55c)\uc744 \uc5ec\ub7ec \ubc88 \uc785\ub825\ud558\uc5ec \ucd5c\uc885 \uae00\uc790\uac00 \uc815\ud655\ud558\uac8c \uc778\uc2dd\ub418\uace0 `text` \uc0c1\ud0dc\uc5d0 \ubc18\uc601\ub418\ub294\uc9c0 \ud655\uc778\ud569\ub2c8\ub2e4. \uc870\ud569 \uc911 \ubc31\uc2a4\ud398\uc774\uc2a4\ub97c \ub20c\ub800\uc744 \ub54c, \uc870\ud569\uc774 \ucde8\uc18c\ub418\uac70\ub098 \uc62c\ubc14\ub974\uac8c \uc218\uc815\ub418\ub294\uc9c0 \ud14c\uc2a4\ud2b8\ud569\ub2c8\ub2e4. \uc601\ubb38\uacfc \ud55c\uae00\uc744 \ubc88\uac08\uc544 \uc785\ub825\ud558\uba70 IME \uc0ac\uc6a9 \uc2dc \uc624\ub958 \uc5c6\uc774 \ucc98\ub9ac\ub418\ub294\uc9c0 \uac80\uc99d\ud569\ub2c8\ub2e4.",
             "parentId": "undefined"
           },
           {
             "id": 4,
-            "title": "입력 상태 중앙 관리 및 텍스트 비교 로직 정교화",
-            "description": "타이핑 연습의 현재 상태(입력된 텍스트, 커서 위치, 각 문자의 정확성 등)를 효율적으로 관리하는 중앙 집중식 로직을 구축하고, 입력된 텍스트와 목표 텍스트를 문자 단위로 정교하게 비교하는 기능을 구현합니다.",
+            "title": "\uc785\ub825 \uc0c1\ud0dc \uc911\uc559 \uad00\ub9ac \ubc0f \ud14d\uc2a4\ud2b8 \ube44\uad50 \ub85c\uc9c1 \uc815\uad50\ud654",
+            "description": "\ud0c0\uc774\ud551 \uc5f0\uc2b5\uc758 \ud604\uc7ac \uc0c1\ud0dc(\uc785\ub825\ub41c \ud14d\uc2a4\ud2b8, \ucee4\uc11c \uc704\uce58, \uac01 \ubb38\uc790\uc758 \uc815\ud655\uc131 \ub4f1)\ub97c \ud6a8\uc728\uc801\uc73c\ub85c \uad00\ub9ac\ud558\ub294 \uc911\uc559 \uc9d1\uc911\uc2dd \ub85c\uc9c1\uc744 \uad6c\ucd95\ud558\uace0, \uc785\ub825\ub41c \ud14d\uc2a4\ud2b8\uc640 \ubaa9\ud45c \ud14d\uc2a4\ud2b8\ub97c \ubb38\uc790 \ub2e8\uc704\ub85c \uc815\uad50\ud558\uac8c \ube44\uad50\ud558\ub294 \uae30\ub2a5\uc744 \uad6c\ud604\ud569\ub2c8\ub2e4.",
             "dependencies": [
               3
             ],
-            "details": "컴포넌트 내에 `currentInputText`, `cursorIndex`, `charStatusArray` (각 문자의 상태: 'correct', 'incorrect', 'untyped', 'current')와 같은 상태 변수들을 정의합니다. `handleTextChange` 및 IME 관련 이벤트 핸들러에서 이 상태들을 업데이트합니다. 입력된 텍스트(`currentInputText`)를 `TypingTextDisplay`의 `targetText`와 문자별로 비교하여 `charStatusArray`를 생성하고 관리하는 함수를 개발합니다. 오타 발생 시 `cursorIndex`가 이동하지 않고 제자리에 머물게 하거나, 다음 글자로 넘어가는 규칙을 명확히 정의합니다.",
+            "details": "\ucef4\ud3ec\ub10c\ud2b8 \ub0b4\uc5d0 `currentInputText`, `cursorIndex`, `charStatusArray` (\uac01 \ubb38\uc790\uc758 \uc0c1\ud0dc: 'correct', 'incorrect', 'untyped', 'current')\uc640 \uac19\uc740 \uc0c1\ud0dc \ubcc0\uc218\ub4e4\uc744 \uc815\uc758\ud569\ub2c8\ub2e4. `handleTextChange` \ubc0f IME \uad00\ub828 \uc774\ubca4\ud2b8 \ud578\ub4e4\ub7ec\uc5d0\uc11c \uc774 \uc0c1\ud0dc\ub4e4\uc744 \uc5c5\ub370\uc774\ud2b8\ud569\ub2c8\ub2e4. \uc785\ub825\ub41c \ud14d\uc2a4\ud2b8(`currentInputText`)\ub97c `TypingTextDisplay`\uc758 `targetText`\uc640 \ubb38\uc790\ubcc4\ub85c \ube44\uad50\ud558\uc5ec `charStatusArray`\ub97c \uc0dd\uc131\ud558\uace0 \uad00\ub9ac\ud558\ub294 \ud568\uc218\ub97c \uac1c\ubc1c\ud569\ub2c8\ub2e4. \uc624\ud0c0 \ubc1c\uc0dd \uc2dc `cursorIndex`\uac00 \uc774\ub3d9\ud558\uc9c0 \uc54a\uace0 \uc81c\uc790\ub9ac\uc5d0 \uba38\ubb3c\uac8c \ud558\uac70\ub098, \ub2e4\uc74c \uae00\uc790\ub85c \ub118\uc5b4\uac00\ub294 \uaddc\uce59\uc744 \uba85\ud655\ud788 \uc815\uc758\ud569\ub2c8\ub2e4.",
             "status": "pending",
-            "testStrategy": "정확한 입력, 오타 입력, 백스페이스 사용, 한글 조합 입력 시 `cursorIndex`와 `charStatusArray`가 예상대로 업데이트되는지 React DevTools 또는 콘솔 로그를 통해 확인합니다. 특히 여러 줄의 텍스트에서 줄바꿈 문자와 공백이 올바르게 처리되는지 검증합니다.",
+            "testStrategy": "\uc815\ud655\ud55c \uc785\ub825, \uc624\ud0c0 \uc785\ub825, \ubc31\uc2a4\ud398\uc774\uc2a4 \uc0ac\uc6a9, \ud55c\uae00 \uc870\ud569 \uc785\ub825 \uc2dc `cursorIndex`\uc640 `charStatusArray`\uac00 \uc608\uc0c1\ub300\ub85c \uc5c5\ub370\uc774\ud2b8\ub418\ub294\uc9c0 React DevTools \ub610\ub294 \ucf58\uc194 \ub85c\uadf8\ub97c \ud1b5\ud574 \ud655\uc778\ud569\ub2c8\ub2e4. \ud2b9\ud788 \uc5ec\ub7ec \uc904\uc758 \ud14d\uc2a4\ud2b8\uc5d0\uc11c \uc904\ubc14\uafc8 \ubb38\uc790\uc640 \uacf5\ubc31\uc774 \uc62c\ubc14\ub974\uac8c \ucc98\ub9ac\ub418\ub294\uc9c0 \uac80\uc99d\ud569\ub2c8\ub2e4.",
             "parentId": "undefined"
           },
           {
             "id": 5,
-            "title": "시각적 커서 및 입력 피드백 UI 업데이트",
-            "description": "입력 상태 관리 로직에서 생성된 정보를 바탕으로 'TypingTextDisplay' 컴포넌트 내에서 현재 타이핑 위치를 나타내는 시각적 커서와 입력된 문자의 정확성(정확/오타)에 따른 시각적 피드백을 구현합니다.",
+            "title": "\uc2dc\uac01\uc801 \ucee4\uc11c \ubc0f \uc785\ub825 \ud53c\ub4dc\ubc31 UI \uc5c5\ub370\uc774\ud2b8",
+            "description": "\uc785\ub825 \uc0c1\ud0dc \uad00\ub9ac \ub85c\uc9c1\uc5d0\uc11c \uc0dd\uc131\ub41c \uc815\ubcf4\ub97c \ubc14\ud0d5\uc73c\ub85c 'TypingTextDisplay' \ucef4\ud3ec\ub10c\ud2b8 \ub0b4\uc5d0\uc11c \ud604\uc7ac \ud0c0\uc774\ud551 \uc704\uce58\ub97c \ub098\ud0c0\ub0b4\ub294 \uc2dc\uac01\uc801 \ucee4\uc11c\uc640 \uc785\ub825\ub41c \ubb38\uc790\uc758 \uc815\ud655\uc131(\uc815\ud655/\uc624\ud0c0)\uc5d0 \ub530\ub978 \uc2dc\uac01\uc801 \ud53c\ub4dc\ubc31\uc744 \uad6c\ud604\ud569\ub2c8\ub2e4.",
             "dependencies": [
               4
             ],
-            "details": "`TypingTextDisplay` 컴포넌트에서 `charStatusArray` 및 `cursorIndex`를 props로 받아 각 문자를 렌더링할 때 `charStatusArray`의 상태('correct', 'incorrect', 'untyped')에 따라 다른 CSS 클래스 또는 인라인 스타일을 적용합니다. `cursorIndex` 위치에 깜빡이는 커서(예: `border-right` 스타일 또는 별도의 깜빡이는 `<span>` 요소)를 표시합니다. `incorrect` 상태의 문자는 빨간색 배경 또는 텍스트 색상으로 강조하여 오타임을 명확히 보여줍니다. 필요시 Framer Motion을 활용하여 커서 이동이나 오타 피드백에 부드러운 애니메이션 효과를 추가하는 것을 고려합니다.",
+            "details": "`TypingTextDisplay` \ucef4\ud3ec\ub10c\ud2b8\uc5d0\uc11c `charStatusArray` \ubc0f `cursorIndex`\ub97c props\ub85c \ubc1b\uc544 \uac01 \ubb38\uc790\ub97c \ub80c\ub354\ub9c1\ud560 \ub54c `charStatusArray`\uc758 \uc0c1\ud0dc('correct', 'incorrect', 'untyped')\uc5d0 \ub530\ub77c \ub2e4\ub978 CSS \ud074\ub798\uc2a4 \ub610\ub294 \uc778\ub77c\uc778 \uc2a4\ud0c0\uc77c\uc744 \uc801\uc6a9\ud569\ub2c8\ub2e4. `cursorIndex` \uc704\uce58\uc5d0 \uae5c\ube61\uc774\ub294 \ucee4\uc11c(\uc608: `border-right` \uc2a4\ud0c0\uc77c \ub610\ub294 \ubcc4\ub3c4\uc758 \uae5c\ube61\uc774\ub294 `<span>` \uc694\uc18c)\ub97c \ud45c\uc2dc\ud569\ub2c8\ub2e4. `incorrect` \uc0c1\ud0dc\uc758 \ubb38\uc790\ub294 \ube68\uac04\uc0c9 \ubc30\uacbd \ub610\ub294 \ud14d\uc2a4\ud2b8 \uc0c9\uc0c1\uc73c\ub85c \uac15\uc870\ud558\uc5ec \uc624\ud0c0\uc784\uc744 \uba85\ud655\ud788 \ubcf4\uc5ec\uc90d\ub2c8\ub2e4. \ud544\uc694\uc2dc Framer Motion\uc744 \ud65c\uc6a9\ud558\uc5ec \ucee4\uc11c \uc774\ub3d9\uc774\ub098 \uc624\ud0c0 \ud53c\ub4dc\ubc31\uc5d0 \ubd80\ub4dc\ub7ec\uc6b4 \uc560\ub2c8\uba54\uc774\uc158 \ud6a8\uacfc\ub97c \ucd94\uac00\ud558\ub294 \uac83\uc744 \uace0\ub824\ud569\ub2c8\ub2e4.",
             "status": "pending",
-            "testStrategy": "정확하게 입력된 글자가 녹색 또는 회색으로, 오타가 빨간색으로 표시되는지 시각적으로 확인합니다. 커서가 정확한 위치에 깜빡이며 이동하는지 확인합니다. 한글과 영문 모두에서 오타 및 정확한 입력 피드백이 올바르게 나타나는지, 특히 줄바꿈이 있는 텍스트에서 커서가 다음 줄로 정확히 이동하는지 검증합니다.",
+            "testStrategy": "\uc815\ud655\ud558\uac8c \uc785\ub825\ub41c \uae00\uc790\uac00 \ub179\uc0c9 \ub610\ub294 \ud68c\uc0c9\uc73c\ub85c, \uc624\ud0c0\uac00 \ube68\uac04\uc0c9\uc73c\ub85c \ud45c\uc2dc\ub418\ub294\uc9c0 \uc2dc\uac01\uc801\uc73c\ub85c \ud655\uc778\ud569\ub2c8\ub2e4. \ucee4\uc11c\uac00 \uc815\ud655\ud55c \uc704\uce58\uc5d0 \uae5c\ube61\uc774\uba70 \uc774\ub3d9\ud558\ub294\uc9c0 \ud655\uc778\ud569\ub2c8\ub2e4. \ud55c\uae00\uacfc \uc601\ubb38 \ubaa8\ub450\uc5d0\uc11c \uc624\ud0c0 \ubc0f \uc815\ud655\ud55c \uc785\ub825 \ud53c\ub4dc\ubc31\uc774 \uc62c\ubc14\ub974\uac8c \ub098\ud0c0\ub098\ub294\uc9c0, \ud2b9\ud788 \uc904\ubc14\uafc8\uc774 \uc788\ub294 \ud14d\uc2a4\ud2b8\uc5d0\uc11c \ucee4\uc11c\uac00 \ub2e4\uc74c \uc904\ub85c \uc815\ud655\ud788 \uc774\ub3d9\ud558\ub294\uc9c0 \uac80\uc99d\ud569\ub2c8\ub2e4.",
             "parentId": "undefined"
           }
         ]
       },
       {
         "id": "5",
-        "title": "실시간 타이핑 속도(WPM) 및 정확성 계산 로직 구현",
-        "description": "사용자가 텍스트를 입력하는 동안 실시간으로 WPM(분당 단어 수)과 정확성(%)을 계산하여 표시하는 기능을 개발합니다.",
-        "details": "타이핑 시작 시점을 기록하고, 사용자가 입력할 때마다 경과 시간을 업데이트합니다. 입력된 올바른 문자 수와 총 입력 문자 수를 기반으로 정확성을 계산합니다. WPM은 일반적으로 (총 올바른 문자 수 / 5) / (경과 시간(분)) 공식으로 계산합니다. 이 로직을 Redux 슬라이스 또는 사용자 정의 훅으로 구현하여 재사용성과 상태 관리를 용이하게 합니다.",
-        "testStrategy": "다양한 속도와 정확도로 텍스트를 입력하며 WPM 및 정확성 수치가 실시간으로 올바르게 업데이트되는지 확인합니다. 특히 오류 발생 시 정확성 감소, 빠른 입력 시 WPM 증가가 정확하게 반영되는지 검증합니다.",
+        "title": "\uc2e4\uc2dc\uac04 \ud0c0\uc774\ud551 \uc18d\ub3c4(WPM) \ubc0f \uc815\ud655\uc131 \uacc4\uc0b0 \ub85c\uc9c1 \uad6c\ud604",
+        "description": "\uc0ac\uc6a9\uc790\uac00 \ud14d\uc2a4\ud2b8\ub97c \uc785\ub825\ud558\ub294 \ub3d9\uc548 \uc2e4\uc2dc\uac04\uc73c\ub85c WPM(\ubd84\ub2f9 \ub2e8\uc5b4 \uc218)\uacfc \uc815\ud655\uc131(%)\uc744 \uacc4\uc0b0\ud558\uc5ec \ud45c\uc2dc\ud558\ub294 \uae30\ub2a5\uc744 \uac1c\ubc1c\ud569\ub2c8\ub2e4.",
+        "details": "\ud0c0\uc774\ud551 \uc2dc\uc791 \uc2dc\uc810\uc744 \uae30\ub85d\ud558\uace0, \uc0ac\uc6a9\uc790\uac00 \uc785\ub825\ud560 \ub54c\ub9c8\ub2e4 \uacbd\uacfc \uc2dc\uac04\uc744 \uc5c5\ub370\uc774\ud2b8\ud569\ub2c8\ub2e4. \uc785\ub825\ub41c \uc62c\ubc14\ub978 \ubb38\uc790 \uc218\uc640 \ucd1d \uc785\ub825 \ubb38\uc790 \uc218\ub97c \uae30\ubc18\uc73c\ub85c \uc815\ud655\uc131\uc744 \uacc4\uc0b0\ud569\ub2c8\ub2e4. WPM\uc740 \uc77c\ubc18\uc801\uc73c\ub85c (\ucd1d \uc62c\ubc14\ub978 \ubb38\uc790 \uc218 / 5) / (\uacbd\uacfc \uc2dc\uac04(\ubd84)) \uacf5\uc2dd\uc73c\ub85c \uacc4\uc0b0\ud569\ub2c8\ub2e4. \uc774 \ub85c\uc9c1\uc744 Redux \uc2ac\ub77c\uc774\uc2a4 \ub610\ub294 \uc0ac\uc6a9\uc790 \uc815\uc758 \ud6c5\uc73c\ub85c \uad6c\ud604\ud558\uc5ec \uc7ac\uc0ac\uc6a9\uc131\uacfc \uc0c1\ud0dc \uad00\ub9ac\ub97c \uc6a9\uc774\ud558\uac8c \ud569\ub2c8\ub2e4.",
+        "testStrategy": "\ub2e4\uc591\ud55c \uc18d\ub3c4\uc640 \uc815\ud655\ub3c4\ub85c \ud14d\uc2a4\ud2b8\ub97c \uc785\ub825\ud558\uba70 WPM \ubc0f \uc815\ud655\uc131 \uc218\uce58\uac00 \uc2e4\uc2dc\uac04\uc73c\ub85c \uc62c\ubc14\ub974\uac8c \uc5c5\ub370\uc774\ud2b8\ub418\ub294\uc9c0 \ud655\uc778\ud569\ub2c8\ub2e4. \ud2b9\ud788 \uc624\ub958 \ubc1c\uc0dd \uc2dc \uc815\ud655\uc131 \uac10\uc18c, \ube60\ub978 \uc785\ub825 \uc2dc WPM \uc99d\uac00\uac00 \uc815\ud655\ud558\uac8c \ubc18\uc601\ub418\ub294\uc9c0 \uac80\uc99d\ud569\ub2c8\ub2e4.",
         "priority": "high",
         "dependencies": [
           "4"
@@ -316,76 +316,76 @@
         "subtasks": [
           {
             "id": 1,
-            "title": "WPM/정확성 계산을 위한 Redux 슬라이스 또는 커스텀 훅 초기 설정",
-            "description": "실시간 WPM 및 정확성 계산에 필요한 상태(예: 타이핑 시작 시간, 올바르게 입력된 문자 수, 총 입력된 문자 수, 현재 WPM, 정확성 등)를 정의하고, 이를 관리할 Redux 슬라이스 또는 커스텀 훅의 기본 구조를 설정합니다.",
+            "title": "WPM/\uc815\ud655\uc131 \uacc4\uc0b0\uc744 \uc704\ud55c Redux \uc2ac\ub77c\uc774\uc2a4 \ub610\ub294 \ucee4\uc2a4\ud140 \ud6c5 \ucd08\uae30 \uc124\uc815",
+            "description": "\uc2e4\uc2dc\uac04 WPM \ubc0f \uc815\ud655\uc131 \uacc4\uc0b0\uc5d0 \ud544\uc694\ud55c \uc0c1\ud0dc(\uc608: \ud0c0\uc774\ud551 \uc2dc\uc791 \uc2dc\uac04, \uc62c\ubc14\ub974\uac8c \uc785\ub825\ub41c \ubb38\uc790 \uc218, \ucd1d \uc785\ub825\ub41c \ubb38\uc790 \uc218, \ud604\uc7ac WPM, \uc815\ud655\uc131 \ub4f1)\ub97c \uc815\uc758\ud558\uace0, \uc774\ub97c \uad00\ub9ac\ud560 Redux \uc2ac\ub77c\uc774\uc2a4 \ub610\ub294 \ucee4\uc2a4\ud140 \ud6c5\uc758 \uae30\ubcf8 \uad6c\uc870\ub97c \uc124\uc815\ud569\ub2c8\ub2e4.",
             "dependencies": [],
-            "details": "프로젝트의 `src/features/typing` 디렉토리 내에 `typingSlice.js` 파일을 생성하거나, `src/hooks` 디렉토리 내에 `useTypingStats.js` 커스텀 훅 파일을 생성합니다. `startTime`, `typedCharacters`, `correctCharacters`, `totalCharacters`, `wpm`, `accuracy`, `isRunning` 등 필수 상태 변수들을 초기값과 함께 정의합니다. Redux의 경우 `createSlice`를 사용하여 초기 상태와 비어있는 리듀서 맵을 설정합니다.",
+            "details": "\ud504\ub85c\uc81d\ud2b8\uc758 `src/features/typing` \ub514\ub809\ud1a0\ub9ac \ub0b4\uc5d0 `typingSlice.js` \ud30c\uc77c\uc744 \uc0dd\uc131\ud558\uac70\ub098, `src/hooks` \ub514\ub809\ud1a0\ub9ac \ub0b4\uc5d0 `useTypingStats.js` \ucee4\uc2a4\ud140 \ud6c5 \ud30c\uc77c\uc744 \uc0dd\uc131\ud569\ub2c8\ub2e4. `startTime`, `typedCharacters`, `correctCharacters`, `totalCharacters`, `wpm`, `accuracy`, `isRunning` \ub4f1 \ud544\uc218 \uc0c1\ud0dc \ubcc0\uc218\ub4e4\uc744 \ucd08\uae30\uac12\uacfc \ud568\uaed8 \uc815\uc758\ud569\ub2c8\ub2e4. Redux\uc758 \uacbd\uc6b0 `createSlice`\ub97c \uc0ac\uc6a9\ud558\uc5ec \ucd08\uae30 \uc0c1\ud0dc\uc640 \ube44\uc5b4\uc788\ub294 \ub9ac\ub4c0\uc11c \ub9f5\uc744 \uc124\uc815\ud569\ub2c8\ub2e4.",
             "status": "pending",
-            "testStrategy": "슬라이스/훅 파일이 성공적으로 생성되고, 정의된 상태 변수들이 올바른 초기값을 가지는지 유닛 테스트 또는 더미 컴포넌트 마운트를 통해 확인합니다.",
+            "testStrategy": "\uc2ac\ub77c\uc774\uc2a4/\ud6c5 \ud30c\uc77c\uc774 \uc131\uacf5\uc801\uc73c\ub85c \uc0dd\uc131\ub418\uace0, \uc815\uc758\ub41c \uc0c1\ud0dc \ubcc0\uc218\ub4e4\uc774 \uc62c\ubc14\ub978 \ucd08\uae30\uac12\uc744 \uac00\uc9c0\ub294\uc9c0 \uc720\ub2db \ud14c\uc2a4\ud2b8 \ub610\ub294 \ub354\ubbf8 \ucef4\ud3ec\ub10c\ud2b8 \ub9c8\uc6b4\ud2b8\ub97c \ud1b5\ud574 \ud655\uc778\ud569\ub2c8\ub2e4.",
             "parentId": "undefined"
           },
           {
             "id": 2,
-            "title": "타이핑 세션 시작/종료 및 경과 시간 관리 로직 구현",
-            "description": "타이핑 세션이 시작될 때 `startTime`을 기록하고, 세션이 진행되는 동안 현재까지의 경과 시간을 실시간으로 계산하여 업데이트하는 로직을 구현합니다. 세션 종료 시 타이머를 정지하는 기능도 포함합니다.",
+            "title": "\ud0c0\uc774\ud551 \uc138\uc158 \uc2dc\uc791/\uc885\ub8cc \ubc0f \uacbd\uacfc \uc2dc\uac04 \uad00\ub9ac \ub85c\uc9c1 \uad6c\ud604",
+            "description": "\ud0c0\uc774\ud551 \uc138\uc158\uc774 \uc2dc\uc791\ub420 \ub54c `startTime`\uc744 \uae30\ub85d\ud558\uace0, \uc138\uc158\uc774 \uc9c4\ud589\ub418\ub294 \ub3d9\uc548 \ud604\uc7ac\uae4c\uc9c0\uc758 \uacbd\uacfc \uc2dc\uac04\uc744 \uc2e4\uc2dc\uac04\uc73c\ub85c \uacc4\uc0b0\ud558\uc5ec \uc5c5\ub370\uc774\ud2b8\ud558\ub294 \ub85c\uc9c1\uc744 \uad6c\ud604\ud569\ub2c8\ub2e4. \uc138\uc158 \uc885\ub8cc \uc2dc \ud0c0\uc774\uba38\ub97c \uc815\uc9c0\ud558\ub294 \uae30\ub2a5\ub3c4 \ud3ec\ud568\ud569\ub2c8\ub2e4.",
             "dependencies": [
               1
             ],
-            "details": "슬라이스 또는 훅 내에 타이핑 시작 시 `Date.now()`를 `startTime`으로 설정하는 액션(Redux) 또는 함수(Hook)를 추가합니다. `useEffect`와 `setInterval` 또는 `requestAnimationFrame`을 사용하여 `isRunning` 상태가 `true`일 때 매 초(또는 더 빈번하게) 경과 시간을 계산하고 `elapsedTime` 상태를 업데이트합니다. 세션 종료 시 타이머를 해제하는 클린업 로직도 구현합니다.",
+            "details": "\uc2ac\ub77c\uc774\uc2a4 \ub610\ub294 \ud6c5 \ub0b4\uc5d0 \ud0c0\uc774\ud551 \uc2dc\uc791 \uc2dc `Date.now()`\ub97c `startTime`\uc73c\ub85c \uc124\uc815\ud558\ub294 \uc561\uc158(Redux) \ub610\ub294 \ud568\uc218(Hook)\ub97c \ucd94\uac00\ud569\ub2c8\ub2e4. `useEffect`\uc640 `setInterval` \ub610\ub294 `requestAnimationFrame`\uc744 \uc0ac\uc6a9\ud558\uc5ec `isRunning` \uc0c1\ud0dc\uac00 `true`\uc77c \ub54c \ub9e4 \ucd08(\ub610\ub294 \ub354 \ube48\ubc88\ud558\uac8c) \uacbd\uacfc \uc2dc\uac04\uc744 \uacc4\uc0b0\ud558\uace0 `elapsedTime` \uc0c1\ud0dc\ub97c \uc5c5\ub370\uc774\ud2b8\ud569\ub2c8\ub2e4. \uc138\uc158 \uc885\ub8cc \uc2dc \ud0c0\uc774\uba38\ub97c \ud574\uc81c\ud558\ub294 \ud074\ub9b0\uc5c5 \ub85c\uc9c1\ub3c4 \uad6c\ud604\ud569\ub2c8\ub2e4.",
             "status": "pending",
-            "testStrategy": "타이핑 시작/정지 액션(함수)을 호출한 후 `elapsedTime`이 실시간으로 증가하는지 확인합니다. 타이머가 정확히 시작되고 멈추는지, 경과 시간 계산이 올바른지 유닛 테스트합니다.",
+            "testStrategy": "\ud0c0\uc774\ud551 \uc2dc\uc791/\uc815\uc9c0 \uc561\uc158(\ud568\uc218)\uc744 \ud638\ucd9c\ud55c \ud6c4 `elapsedTime`\uc774 \uc2e4\uc2dc\uac04\uc73c\ub85c \uc99d\uac00\ud558\ub294\uc9c0 \ud655\uc778\ud569\ub2c8\ub2e4. \ud0c0\uc774\uba38\uac00 \uc815\ud655\ud788 \uc2dc\uc791\ub418\uace0 \uba48\ucd94\ub294\uc9c0, \uacbd\uacfc \uc2dc\uac04 \uacc4\uc0b0\uc774 \uc62c\ubc14\ub978\uc9c0 \uc720\ub2db \ud14c\uc2a4\ud2b8\ud569\ub2c8\ub2e4.",
             "parentId": "undefined"
           },
           {
             "id": 3,
-            "title": "사용자 입력 문자 처리 및 정확성 실시간 계산 로직 구현",
-            "description": "사용자의 문자 입력을 감지하고, 이를 참조 텍스트와 비교하여 올바르게 입력된 문자 수와 총 입력된 문자 수를 실시간으로 업데이트하며, 이 데이터를 기반으로 현재 정확성(%)을 계산하는 로직을 구현합니다.",
+            "title": "\uc0ac\uc6a9\uc790 \uc785\ub825 \ubb38\uc790 \ucc98\ub9ac \ubc0f \uc815\ud655\uc131 \uc2e4\uc2dc\uac04 \uacc4\uc0b0 \ub85c\uc9c1 \uad6c\ud604",
+            "description": "\uc0ac\uc6a9\uc790\uc758 \ubb38\uc790 \uc785\ub825\uc744 \uac10\uc9c0\ud558\uace0, \uc774\ub97c \ucc38\uc870 \ud14d\uc2a4\ud2b8\uc640 \ube44\uad50\ud558\uc5ec \uc62c\ubc14\ub974\uac8c \uc785\ub825\ub41c \ubb38\uc790 \uc218\uc640 \ucd1d \uc785\ub825\ub41c \ubb38\uc790 \uc218\ub97c \uc2e4\uc2dc\uac04\uc73c\ub85c \uc5c5\ub370\uc774\ud2b8\ud558\uba70, \uc774 \ub370\uc774\ud130\ub97c \uae30\ubc18\uc73c\ub85c \ud604\uc7ac \uc815\ud655\uc131(%)\uc744 \uacc4\uc0b0\ud558\ub294 \ub85c\uc9c1\uc744 \uad6c\ud604\ud569\ub2c8\ub2e4.",
             "dependencies": [
               1,
               2,
               4
             ],
-            "details": "`TypingInput` 컴포넌트(Task 4)로부터 입력된 문자를 받는 액션(Redux) 또는 함수(Hook)를 구현합니다. 입력된 문자를 처리할 때마다 `totalCharacters`를 증가시키고, 입력된 문자가 현재 참조 텍스트의 해당 위치 문자와 일치하는 경우 `correctCharacters`도 증가시킵니다. `accuracy = (correctCharacters / totalCharacters) * 100` 공식을 사용하여 정확성을 계산하고 상태에 반영합니다.",
+            "details": "`TypingInput` \ucef4\ud3ec\ub10c\ud2b8(Task 4)\ub85c\ubd80\ud130 \uc785\ub825\ub41c \ubb38\uc790\ub97c \ubc1b\ub294 \uc561\uc158(Redux) \ub610\ub294 \ud568\uc218(Hook)\ub97c \uad6c\ud604\ud569\ub2c8\ub2e4. \uc785\ub825\ub41c \ubb38\uc790\ub97c \ucc98\ub9ac\ud560 \ub54c\ub9c8\ub2e4 `totalCharacters`\ub97c \uc99d\uac00\uc2dc\ud0a4\uace0, \uc785\ub825\ub41c \ubb38\uc790\uac00 \ud604\uc7ac \ucc38\uc870 \ud14d\uc2a4\ud2b8\uc758 \ud574\ub2f9 \uc704\uce58 \ubb38\uc790\uc640 \uc77c\uce58\ud558\ub294 \uacbd\uc6b0 `correctCharacters`\ub3c4 \uc99d\uac00\uc2dc\ud0b5\ub2c8\ub2e4. `accuracy = (correctCharacters / totalCharacters) * 100` \uacf5\uc2dd\uc744 \uc0ac\uc6a9\ud558\uc5ec \uc815\ud655\uc131\uc744 \uacc4\uc0b0\ud558\uace0 \uc0c1\ud0dc\uc5d0 \ubc18\uc601\ud569\ub2c8\ub2e4.",
             "status": "pending",
-            "testStrategy": "다양한 입력 시나리오(정확한 입력, 오타 발생, 공백 입력 등)에 대해 `correctCharacters`, `totalCharacters`, `accuracy` 상태가 예상대로 업데이트되는지 유닛 테스트를 통해 검증합니다. 특히 오타 발생 시 `accuracy`가 감소하는지 확인합니다.",
+            "testStrategy": "\ub2e4\uc591\ud55c \uc785\ub825 \uc2dc\ub098\ub9ac\uc624(\uc815\ud655\ud55c \uc785\ub825, \uc624\ud0c0 \ubc1c\uc0dd, \uacf5\ubc31 \uc785\ub825 \ub4f1)\uc5d0 \ub300\ud574 `correctCharacters`, `totalCharacters`, `accuracy` \uc0c1\ud0dc\uac00 \uc608\uc0c1\ub300\ub85c \uc5c5\ub370\uc774\ud2b8\ub418\ub294\uc9c0 \uc720\ub2db \ud14c\uc2a4\ud2b8\ub97c \ud1b5\ud574 \uac80\uc99d\ud569\ub2c8\ub2e4. \ud2b9\ud788 \uc624\ud0c0 \ubc1c\uc0dd \uc2dc `accuracy`\uac00 \uac10\uc18c\ud558\ub294\uc9c0 \ud655\uc778\ud569\ub2c8\ub2e4.",
             "parentId": "undefined"
           },
           {
             "id": 4,
-            "title": "WPM (분당 단어 수) 실시간 계산 로직 개발",
-            "description": "올바르게 입력된 문자 수(`correctCharacters`)와 현재까지의 경과 시간(`elapsedTimeInMinutes`)을 활용하여 WPM(분당 단어 수)을 실시간으로 계산하고 업데이트하는 로직을 구현합니다.",
+            "title": "WPM (\ubd84\ub2f9 \ub2e8\uc5b4 \uc218) \uc2e4\uc2dc\uac04 \uacc4\uc0b0 \ub85c\uc9c1 \uac1c\ubc1c",
+            "description": "\uc62c\ubc14\ub974\uac8c \uc785\ub825\ub41c \ubb38\uc790 \uc218(`correctCharacters`)\uc640 \ud604\uc7ac\uae4c\uc9c0\uc758 \uacbd\uacfc \uc2dc\uac04(`elapsedTimeInMinutes`)\uc744 \ud65c\uc6a9\ud558\uc5ec WPM(\ubd84\ub2f9 \ub2e8\uc5b4 \uc218)\uc744 \uc2e4\uc2dc\uac04\uc73c\ub85c \uacc4\uc0b0\ud558\uace0 \uc5c5\ub370\uc774\ud2b8\ud558\ub294 \ub85c\uc9c1\uc744 \uad6c\ud604\ud569\ub2c8\ub2e4.",
             "dependencies": [
               1,
               2,
               3
             ],
-            "details": "`wpm = (correctCharacters / 5) / (elapsedTime / 60)` 공식을 적용하여 WPM을 계산합니다. `elapsedTime`은 초 단위이며, 이를 60으로 나누어 분 단위로 변환합니다. `correctCharacters` 또는 `elapsedTime` 상태가 변경될 때마다 이 계산이 자동으로 수행되도록 구현합니다. Redux의 경우 Selector를 통해 계산하거나, 훅의 경우 `useMemo` 또는 `useEffect` 내에서 계산합니다.",
+            "details": "`wpm = (correctCharacters / 5) / (elapsedTime / 60)` \uacf5\uc2dd\uc744 \uc801\uc6a9\ud558\uc5ec WPM\uc744 \uacc4\uc0b0\ud569\ub2c8\ub2e4. `elapsedTime`\uc740 \ucd08 \ub2e8\uc704\uc774\uba70, \uc774\ub97c 60\uc73c\ub85c \ub098\ub204\uc5b4 \ubd84 \ub2e8\uc704\ub85c \ubcc0\ud658\ud569\ub2c8\ub2e4. `correctCharacters` \ub610\ub294 `elapsedTime` \uc0c1\ud0dc\uac00 \ubcc0\uacbd\ub420 \ub54c\ub9c8\ub2e4 \uc774 \uacc4\uc0b0\uc774 \uc790\ub3d9\uc73c\ub85c \uc218\ud589\ub418\ub3c4\ub85d \uad6c\ud604\ud569\ub2c8\ub2e4. Redux\uc758 \uacbd\uc6b0 Selector\ub97c \ud1b5\ud574 \uacc4\uc0b0\ud558\uac70\ub098, \ud6c5\uc758 \uacbd\uc6b0 `useMemo` \ub610\ub294 `useEffect` \ub0b4\uc5d0\uc11c \uacc4\uc0b0\ud569\ub2c8\ub2e4.",
             "status": "pending",
-            "testStrategy": "다양한 `correctCharacters`와 `elapsedTime` 값에 대해 WPM 계산이 정확하게 이루어지는지 유닛 테스트합니다. 특히 초기 상태, 입력이 적은 경우, 시간이 많이 경과한 경우 등 엣지 케이스를 확인합니다.",
+            "testStrategy": "\ub2e4\uc591\ud55c `correctCharacters`\uc640 `elapsedTime` \uac12\uc5d0 \ub300\ud574 WPM \uacc4\uc0b0\uc774 \uc815\ud655\ud558\uac8c \uc774\ub8e8\uc5b4\uc9c0\ub294\uc9c0 \uc720\ub2db \ud14c\uc2a4\ud2b8\ud569\ub2c8\ub2e4. \ud2b9\ud788 \ucd08\uae30 \uc0c1\ud0dc, \uc785\ub825\uc774 \uc801\uc740 \uacbd\uc6b0, \uc2dc\uac04\uc774 \ub9ce\uc774 \uacbd\uacfc\ud55c \uacbd\uc6b0 \ub4f1 \uc5e3\uc9c0 \ucf00\uc774\uc2a4\ub97c \ud655\uc778\ud569\ub2c8\ub2e4.",
             "parentId": "undefined"
           },
           {
             "id": 5,
-            "title": "계산 결과 통합 및 타이핑 세션 초기화/재설정 기능 구현",
-            "description": "앞서 구현된 WPM, 정확성, 경과 시간 등의 모든 계산 로직들을 Redux 슬라이스 또는 커스텀 훅 내에서 완전히 통합하고, 새로운 타이핑 세션을 시작할 수 있도록 모든 통계 및 타이머 관련 상태를 초기값으로 재설정하는 기능을 추가합니다.",
+            "title": "\uacc4\uc0b0 \uacb0\uacfc \ud1b5\ud569 \ubc0f \ud0c0\uc774\ud551 \uc138\uc158 \ucd08\uae30\ud654/\uc7ac\uc124\uc815 \uae30\ub2a5 \uad6c\ud604",
+            "description": "\uc55e\uc11c \uad6c\ud604\ub41c WPM, \uc815\ud655\uc131, \uacbd\uacfc \uc2dc\uac04 \ub4f1\uc758 \ubaa8\ub4e0 \uacc4\uc0b0 \ub85c\uc9c1\ub4e4\uc744 Redux \uc2ac\ub77c\uc774\uc2a4 \ub610\ub294 \ucee4\uc2a4\ud140 \ud6c5 \ub0b4\uc5d0\uc11c \uc644\uc804\ud788 \ud1b5\ud569\ud558\uace0, \uc0c8\ub85c\uc6b4 \ud0c0\uc774\ud551 \uc138\uc158\uc744 \uc2dc\uc791\ud560 \uc218 \uc788\ub3c4\ub85d \ubaa8\ub4e0 \ud1b5\uacc4 \ubc0f \ud0c0\uc774\uba38 \uad00\ub828 \uc0c1\ud0dc\ub97c \ucd08\uae30\uac12\uc73c\ub85c \uc7ac\uc124\uc815\ud558\ub294 \uae30\ub2a5\uc744 \ucd94\uac00\ud569\ub2c8\ub2e4.",
             "dependencies": [
               2,
               3,
               4
             ],
-            "details": "Redux의 경우 모든 액션(예: `startTyping`, `stopTyping`, `handleInput`, `resetSession`)과 해당 리듀서를 `typingSlice.js` 내에 정의합니다. 커스텀 훅의 경우 `useTypingStats` 훅이 모든 관련 상태와 계산 로직을 캡슐화하고 필요한 값(WPM, 정확성, 경과 시간)과 함수(시작, 정지, 입력 처리, 재설정)를 반환하도록 합니다. `resetSession` 액션 또는 함수는 모든 상태를 초기값으로 되돌리고 타이머를 정지시킵니다.",
+            "details": "Redux\uc758 \uacbd\uc6b0 \ubaa8\ub4e0 \uc561\uc158(\uc608: `startTyping`, `stopTyping`, `handleInput`, `resetSession`)\uacfc \ud574\ub2f9 \ub9ac\ub4c0\uc11c\ub97c `typingSlice.js` \ub0b4\uc5d0 \uc815\uc758\ud569\ub2c8\ub2e4. \ucee4\uc2a4\ud140 \ud6c5\uc758 \uacbd\uc6b0 `useTypingStats` \ud6c5\uc774 \ubaa8\ub4e0 \uad00\ub828 \uc0c1\ud0dc\uc640 \uacc4\uc0b0 \ub85c\uc9c1\uc744 \ucea1\uc290\ud654\ud558\uace0 \ud544\uc694\ud55c \uac12(WPM, \uc815\ud655\uc131, \uacbd\uacfc \uc2dc\uac04)\uacfc \ud568\uc218(\uc2dc\uc791, \uc815\uc9c0, \uc785\ub825 \ucc98\ub9ac, \uc7ac\uc124\uc815)\ub97c \ubc18\ud658\ud558\ub3c4\ub85d \ud569\ub2c8\ub2e4. `resetSession` \uc561\uc158 \ub610\ub294 \ud568\uc218\ub294 \ubaa8\ub4e0 \uc0c1\ud0dc\ub97c \ucd08\uae30\uac12\uc73c\ub85c \ub418\ub3cc\ub9ac\uace0 \ud0c0\uc774\uba38\ub97c \uc815\uc9c0\uc2dc\ud0b5\ub2c8\ub2e4.",
             "status": "pending",
-            "testStrategy": "전체 슬라이스/훅의 엔드투엔드 테스트를 수행하여 모든 기능(시작, 입력, 정지, 재설정)이 순조롭게 작동하는지 확인합니다. `resetSession` 호출 후 모든 통계 값이 초기 상태로 돌아가는지 검증합니다.",
+            "testStrategy": "\uc804\uccb4 \uc2ac\ub77c\uc774\uc2a4/\ud6c5\uc758 \uc5d4\ub4dc\ud22c\uc5d4\ub4dc \ud14c\uc2a4\ud2b8\ub97c \uc218\ud589\ud558\uc5ec \ubaa8\ub4e0 \uae30\ub2a5(\uc2dc\uc791, \uc785\ub825, \uc815\uc9c0, \uc7ac\uc124\uc815)\uc774 \uc21c\uc870\ub86d\uac8c \uc791\ub3d9\ud558\ub294\uc9c0 \ud655\uc778\ud569\ub2c8\ub2e4. `resetSession` \ud638\ucd9c \ud6c4 \ubaa8\ub4e0 \ud1b5\uacc4 \uac12\uc774 \ucd08\uae30 \uc0c1\ud0dc\ub85c \ub3cc\uc544\uac00\ub294\uc9c0 \uac80\uc99d\ud569\ub2c8\ub2e4.",
             "parentId": "undefined"
           }
         ]
       },
       {
         "id": "6",
-        "title": "오타 시각적 피드백 시스템 구현",
-        "description": "사용자가 오타를 입력했을 때 즉각적으로 시각적인 피드백을 제공하는 기능을 구현합니다. 이는 사용자의 학습 경험을 개선하는 데 중요합니다.",
-        "details": "오타 발생 시 `TypingTextDisplay` 컴포넌트의 해당 문자 요소에 특정 CSS 클래스(예: `error-char`)를 추가하거나 인라인 스타일을 적용하여 텍스트 색상을 빨간색으로 변경하거나 배경을 강조합니다. 오타가 수정되면 해당 스타일을 제거합니다. 필요에 따라 짧은 시각적 애니메이션(Framer Motion 사용 가능)이나 소리 피드백을 추가하는 것도 고려합니다.",
-        "testStrategy": "의도적으로 오타를 발생시켜 시각적 피드백이 즉시 나타나는지 확인합니다. 오타를 수정했을 때 피드백이 사라지는지, 여러 오타가 동시에 발생했을 때 각 오타가 정확히 표시되는지 테스트합니다.",
+        "title": "\uc624\ud0c0 \uc2dc\uac01\uc801 \ud53c\ub4dc\ubc31 \uc2dc\uc2a4\ud15c \uad6c\ud604",
+        "description": "\uc0ac\uc6a9\uc790\uac00 \uc624\ud0c0\ub97c \uc785\ub825\ud588\uc744 \ub54c \uc989\uac01\uc801\uc73c\ub85c \uc2dc\uac01\uc801\uc778 \ud53c\ub4dc\ubc31\uc744 \uc81c\uacf5\ud558\ub294 \uae30\ub2a5\uc744 \uad6c\ud604\ud569\ub2c8\ub2e4. \uc774\ub294 \uc0ac\uc6a9\uc790\uc758 \ud559\uc2b5 \uacbd\ud5d8\uc744 \uac1c\uc120\ud558\ub294 \ub370 \uc911\uc694\ud569\ub2c8\ub2e4.",
+        "details": "\uc624\ud0c0 \ubc1c\uc0dd \uc2dc `TypingTextDisplay` \ucef4\ud3ec\ub10c\ud2b8\uc758 \ud574\ub2f9 \ubb38\uc790 \uc694\uc18c\uc5d0 \ud2b9\uc815 CSS \ud074\ub798\uc2a4(\uc608: `error-char`)\ub97c \ucd94\uac00\ud558\uac70\ub098 \uc778\ub77c\uc778 \uc2a4\ud0c0\uc77c\uc744 \uc801\uc6a9\ud558\uc5ec \ud14d\uc2a4\ud2b8 \uc0c9\uc0c1\uc744 \ube68\uac04\uc0c9\uc73c\ub85c \ubcc0\uacbd\ud558\uac70\ub098 \ubc30\uacbd\uc744 \uac15\uc870\ud569\ub2c8\ub2e4. \uc624\ud0c0\uac00 \uc218\uc815\ub418\uba74 \ud574\ub2f9 \uc2a4\ud0c0\uc77c\uc744 \uc81c\uac70\ud569\ub2c8\ub2e4. \ud544\uc694\uc5d0 \ub530\ub77c \uc9e7\uc740 \uc2dc\uac01\uc801 \uc560\ub2c8\uba54\uc774\uc158(Framer Motion \uc0ac\uc6a9 \uac00\ub2a5)\uc774\ub098 \uc18c\ub9ac \ud53c\ub4dc\ubc31\uc744 \ucd94\uac00\ud558\ub294 \uac83\ub3c4 \uace0\ub824\ud569\ub2c8\ub2e4.",
+        "testStrategy": "\uc758\ub3c4\uc801\uc73c\ub85c \uc624\ud0c0\ub97c \ubc1c\uc0dd\uc2dc\ucf1c \uc2dc\uac01\uc801 \ud53c\ub4dc\ubc31\uc774 \uc989\uc2dc \ub098\ud0c0\ub098\ub294\uc9c0 \ud655\uc778\ud569\ub2c8\ub2e4. \uc624\ud0c0\ub97c \uc218\uc815\ud588\uc744 \ub54c \ud53c\ub4dc\ubc31\uc774 \uc0ac\ub77c\uc9c0\ub294\uc9c0, \uc5ec\ub7ec \uc624\ud0c0\uac00 \ub3d9\uc2dc\uc5d0 \ubc1c\uc0dd\ud588\uc744 \ub54c \uac01 \uc624\ud0c0\uac00 \uc815\ud655\ud788 \ud45c\uc2dc\ub418\ub294\uc9c0 \ud14c\uc2a4\ud2b8\ud569\ub2c8\ub2e4.",
         "priority": "medium",
         "dependencies": [
           "4"
@@ -394,74 +394,74 @@
         "subtasks": [
           {
             "id": 1,
-            "title": "오타 상태 관리 로직 구현",
-            "description": "사용자의 입력과 목표 텍스트를 비교하여 각 문자의 오타 상태(정확, 오타, 미입력)를 추적하는 핵심 로직을 개발합니다. 이 상태는 `TypingTextDisplay` 컴포넌트의 부모 컴포넌트나 Redux 스토어에서 관리되어야 합니다.",
+            "title": "\uc624\ud0c0 \uc0c1\ud0dc \uad00\ub9ac \ub85c\uc9c1 \uad6c\ud604",
+            "description": "\uc0ac\uc6a9\uc790\uc758 \uc785\ub825\uacfc \ubaa9\ud45c \ud14d\uc2a4\ud2b8\ub97c \ube44\uad50\ud558\uc5ec \uac01 \ubb38\uc790\uc758 \uc624\ud0c0 \uc0c1\ud0dc(\uc815\ud655, \uc624\ud0c0, \ubbf8\uc785\ub825)\ub97c \ucd94\uc801\ud558\ub294 \ud575\uc2ec \ub85c\uc9c1\uc744 \uac1c\ubc1c\ud569\ub2c8\ub2e4. \uc774 \uc0c1\ud0dc\ub294 `TypingTextDisplay` \ucef4\ud3ec\ub10c\ud2b8\uc758 \ubd80\ubaa8 \ucef4\ud3ec\ub10c\ud2b8\ub098 Redux \uc2a4\ud1a0\uc5b4\uc5d0\uc11c \uad00\ub9ac\ub418\uc5b4\uc57c \ud569\ub2c8\ub2e4.",
             "dependencies": [
               4
             ],
-            "details": "Task 4에서 구현될 핵심 타이핑 로직(입력 처리, 텍스트 추적)과 통합하여, 입력된 문자와 목표 문자를 비교하는 함수를 작성합니다. 각 문자의 상태를 저장할 배열 또는 맵 형태의 상태(예: `charStatus: Array<'correct' | 'incorrect' | 'untyped'>`)를 정의하고, 사용자의 입력이 발생할 때마다 이 `charStatus`를 업데이트하도록 구현합니다.",
+            "details": "Task 4\uc5d0\uc11c \uad6c\ud604\ub420 \ud575\uc2ec \ud0c0\uc774\ud551 \ub85c\uc9c1(\uc785\ub825 \ucc98\ub9ac, \ud14d\uc2a4\ud2b8 \ucd94\uc801)\uacfc \ud1b5\ud569\ud558\uc5ec, \uc785\ub825\ub41c \ubb38\uc790\uc640 \ubaa9\ud45c \ubb38\uc790\ub97c \ube44\uad50\ud558\ub294 \ud568\uc218\ub97c \uc791\uc131\ud569\ub2c8\ub2e4. \uac01 \ubb38\uc790\uc758 \uc0c1\ud0dc\ub97c \uc800\uc7a5\ud560 \ubc30\uc5f4 \ub610\ub294 \ub9f5 \ud615\ud0dc\uc758 \uc0c1\ud0dc(\uc608: `charStatus: Array<'correct' | 'incorrect' | 'untyped'>`)\ub97c \uc815\uc758\ud558\uace0, \uc0ac\uc6a9\uc790\uc758 \uc785\ub825\uc774 \ubc1c\uc0dd\ud560 \ub54c\ub9c8\ub2e4 \uc774 `charStatus`\ub97c \uc5c5\ub370\uc774\ud2b8\ud558\ub3c4\ub85d \uad6c\ud604\ud569\ub2c8\ub2e4.",
             "status": "pending",
-            "testStrategy": "의도적으로 오타를 발생시키고 수정하면서 `charStatus` 배열이 예상대로 'incorrect' 및 'correct' 상태로 업데이트되는지 콘솔 로그를 통해 확인합니다. 백스페이스 사용 시 상태가 올바르게 되돌려지는지도 검증합니다.",
+            "testStrategy": "\uc758\ub3c4\uc801\uc73c\ub85c \uc624\ud0c0\ub97c \ubc1c\uc0dd\uc2dc\ud0a4\uace0 \uc218\uc815\ud558\uba74\uc11c `charStatus` \ubc30\uc5f4\uc774 \uc608\uc0c1\ub300\ub85c 'incorrect' \ubc0f 'correct' \uc0c1\ud0dc\ub85c \uc5c5\ub370\uc774\ud2b8\ub418\ub294\uc9c0 \ucf58\uc194 \ub85c\uadf8\ub97c \ud1b5\ud574 \ud655\uc778\ud569\ub2c8\ub2e4. \ubc31\uc2a4\ud398\uc774\uc2a4 \uc0ac\uc6a9 \uc2dc \uc0c1\ud0dc\uac00 \uc62c\ubc14\ub974\uac8c \ub418\ub3cc\ub824\uc9c0\ub294\uc9c0\ub3c4 \uac80\uc99d\ud569\ub2c8\ub2e4.",
             "parentId": "undefined"
           },
           {
             "id": 2,
-            "title": "TypingTextDisplay 컴포넌트에 오타 상태 프롭스 전달",
-            "description": "Subtask 1에서 구현된 오타 상태 관리 로직의 결과인 `charStatus` 데이터를 `TypingTextDisplay` 컴포넌트로 프롭스를 통해 전달하도록 수정합니다.",
+            "title": "TypingTextDisplay \ucef4\ud3ec\ub10c\ud2b8\uc5d0 \uc624\ud0c0 \uc0c1\ud0dc \ud504\ub86d\uc2a4 \uc804\ub2ec",
+            "description": "Subtask 1\uc5d0\uc11c \uad6c\ud604\ub41c \uc624\ud0c0 \uc0c1\ud0dc \uad00\ub9ac \ub85c\uc9c1\uc758 \uacb0\uacfc\uc778 `charStatus` \ub370\uc774\ud130\ub97c `TypingTextDisplay` \ucef4\ud3ec\ub10c\ud2b8\ub85c \ud504\ub86d\uc2a4\ub97c \ud1b5\ud574 \uc804\ub2ec\ud558\ub3c4\ub85d \uc218\uc815\ud569\ub2c8\ub2e4.",
             "dependencies": [
               1
             ],
-            "details": "`TypingTextDisplay` 컴포넌트의 인터페이스를 업데이트하여 `charStatus` 배열을 새로운 프롭스로 받도록 정의합니다. `TypingTextDisplay`를 렌더링하는 부모 컴포넌트(예: `TypingSession` 컴포넌트)에서 Subtask 1에서 관리하는 `charStatus` 데이터를 이 프롭스로 전달하도록 구현합니다.",
+            "details": "`TypingTextDisplay` \ucef4\ud3ec\ub10c\ud2b8\uc758 \uc778\ud130\ud398\uc774\uc2a4\ub97c \uc5c5\ub370\uc774\ud2b8\ud558\uc5ec `charStatus` \ubc30\uc5f4\uc744 \uc0c8\ub85c\uc6b4 \ud504\ub86d\uc2a4\ub85c \ubc1b\ub3c4\ub85d \uc815\uc758\ud569\ub2c8\ub2e4. `TypingTextDisplay`\ub97c \ub80c\ub354\ub9c1\ud558\ub294 \ubd80\ubaa8 \ucef4\ud3ec\ub10c\ud2b8(\uc608: `TypingSession` \ucef4\ud3ec\ub10c\ud2b8)\uc5d0\uc11c Subtask 1\uc5d0\uc11c \uad00\ub9ac\ud558\ub294 `charStatus` \ub370\uc774\ud130\ub97c \uc774 \ud504\ub86d\uc2a4\ub85c \uc804\ub2ec\ud558\ub3c4\ub85d \uad6c\ud604\ud569\ub2c8\ub2e4.",
             "status": "pending",
-            "testStrategy": "`TypingTextDisplay` 컴포넌트 내부에서 전달받은 `charStatus` 프롭스의 값이 예상대로 수신되는지, 그리고 배열의 각 요소가 올바른 문자 상태를 반영하는지 개발자 도구의 React 컴포넌트 탭을 통해 확인합니다.",
+            "testStrategy": "`TypingTextDisplay` \ucef4\ud3ec\ub10c\ud2b8 \ub0b4\ubd80\uc5d0\uc11c \uc804\ub2ec\ubc1b\uc740 `charStatus` \ud504\ub86d\uc2a4\uc758 \uac12\uc774 \uc608\uc0c1\ub300\ub85c \uc218\uc2e0\ub418\ub294\uc9c0, \uadf8\ub9ac\uace0 \ubc30\uc5f4\uc758 \uac01 \uc694\uc18c\uac00 \uc62c\ubc14\ub978 \ubb38\uc790 \uc0c1\ud0dc\ub97c \ubc18\uc601\ud558\ub294\uc9c0 \uac1c\ubc1c\uc790 \ub3c4\uad6c\uc758 React \ucef4\ud3ec\ub10c\ud2b8 \ud0ed\uc744 \ud1b5\ud574 \ud655\uc778\ud569\ub2c8\ub2e4.",
             "parentId": "undefined"
           },
           {
             "id": 3,
-            "title": "TypingTextDisplay 컴포넌트 오타 시각적 피드백 스타일 적용",
-            "description": "`TypingTextDisplay` 컴포넌트가 `charStatus` 프롭스를 기반으로 각 문자에 적절한 CSS 클래스 또는 인라인 스타일을 적용하여 오타를 시각적으로 표시하도록 구현합니다. 오타 발생 시 텍스트 색상을 빨간색으로 변경하거나 배경을 강조합니다.",
+            "title": "TypingTextDisplay \ucef4\ud3ec\ub10c\ud2b8 \uc624\ud0c0 \uc2dc\uac01\uc801 \ud53c\ub4dc\ubc31 \uc2a4\ud0c0\uc77c \uc801\uc6a9",
+            "description": "`TypingTextDisplay` \ucef4\ud3ec\ub10c\ud2b8\uac00 `charStatus` \ud504\ub86d\uc2a4\ub97c \uae30\ubc18\uc73c\ub85c \uac01 \ubb38\uc790\uc5d0 \uc801\uc808\ud55c CSS \ud074\ub798\uc2a4 \ub610\ub294 \uc778\ub77c\uc778 \uc2a4\ud0c0\uc77c\uc744 \uc801\uc6a9\ud558\uc5ec \uc624\ud0c0\ub97c \uc2dc\uac01\uc801\uc73c\ub85c \ud45c\uc2dc\ud558\ub3c4\ub85d \uad6c\ud604\ud569\ub2c8\ub2e4. \uc624\ud0c0 \ubc1c\uc0dd \uc2dc \ud14d\uc2a4\ud2b8 \uc0c9\uc0c1\uc744 \ube68\uac04\uc0c9\uc73c\ub85c \ubcc0\uacbd\ud558\uac70\ub098 \ubc30\uacbd\uc744 \uac15\uc870\ud569\ub2c8\ub2e4.",
             "dependencies": [
               2
             ],
-            "details": "`TypingTextDisplay` 컴포넌트 내부에서 각 문자를 렌더링하는 `span` 또는 `CharacterSpan` 요소에 접근합니다. 해당 문자의 `charStatus`가 'incorrect'일 경우 `error-char`와 같은 특정 CSS 클래스를 조건부로 추가하거나, `style={{ color: 'red', backgroundColor: 'rgba(255,0,0,0.2)' }}`와 같은 인라인 스타일을 적용합니다. 기존의 현재 입력 위치 하이라이트와 시각적 충돌이 없도록 스타일 우선순위를 고려합니다.",
+            "details": "`TypingTextDisplay` \ucef4\ud3ec\ub10c\ud2b8 \ub0b4\ubd80\uc5d0\uc11c \uac01 \ubb38\uc790\ub97c \ub80c\ub354\ub9c1\ud558\ub294 `span` \ub610\ub294 `CharacterSpan` \uc694\uc18c\uc5d0 \uc811\uadfc\ud569\ub2c8\ub2e4. \ud574\ub2f9 \ubb38\uc790\uc758 `charStatus`\uac00 'incorrect'\uc77c \uacbd\uc6b0 `error-char`\uc640 \uac19\uc740 \ud2b9\uc815 CSS \ud074\ub798\uc2a4\ub97c \uc870\uac74\ubd80\ub85c \ucd94\uac00\ud558\uac70\ub098, `style={{ color: 'red', backgroundColor: 'rgba(255,0,0,0.2)' }}`\uc640 \uac19\uc740 \uc778\ub77c\uc778 \uc2a4\ud0c0\uc77c\uc744 \uc801\uc6a9\ud569\ub2c8\ub2e4. \uae30\uc874\uc758 \ud604\uc7ac \uc785\ub825 \uc704\uce58 \ud558\uc774\ub77c\uc774\ud2b8\uc640 \uc2dc\uac01\uc801 \ucda9\ub3cc\uc774 \uc5c6\ub3c4\ub85d \uc2a4\ud0c0\uc77c \uc6b0\uc120\uc21c\uc704\ub97c \uace0\ub824\ud569\ub2c8\ub2e4.",
             "status": "pending",
-            "testStrategy": "의도적으로 오타를 입력했을 때 해당 문자가 즉시 빨간색으로 변경되거나 배경이 강조되는지 시각적으로 확인합니다. 여러 오타가 동시에 발생했을 때 각 오타가 정확히 표시되는지 테스트합니다.",
+            "testStrategy": "\uc758\ub3c4\uc801\uc73c\ub85c \uc624\ud0c0\ub97c \uc785\ub825\ud588\uc744 \ub54c \ud574\ub2f9 \ubb38\uc790\uac00 \uc989\uc2dc \ube68\uac04\uc0c9\uc73c\ub85c \ubcc0\uacbd\ub418\uac70\ub098 \ubc30\uacbd\uc774 \uac15\uc870\ub418\ub294\uc9c0 \uc2dc\uac01\uc801\uc73c\ub85c \ud655\uc778\ud569\ub2c8\ub2e4. \uc5ec\ub7ec \uc624\ud0c0\uac00 \ub3d9\uc2dc\uc5d0 \ubc1c\uc0dd\ud588\uc744 \ub54c \uac01 \uc624\ud0c0\uac00 \uc815\ud655\ud788 \ud45c\uc2dc\ub418\ub294\uc9c0 \ud14c\uc2a4\ud2b8\ud569\ub2c8\ub2e4.",
             "parentId": "undefined"
           },
           {
             "id": 4,
-            "title": "오타 수정 시 시각적 피드백 해제 로직 구현",
-            "description": "사용자가 오타를 입력한 후 이를 백스페이스 등으로 수정하여 올바른 문자를 입력했을 때, 이전에 적용되었던 오타 시각적 피드백이 즉시 사라지도록 로직을 구현합니다.",
+            "title": "\uc624\ud0c0 \uc218\uc815 \uc2dc \uc2dc\uac01\uc801 \ud53c\ub4dc\ubc31 \ud574\uc81c \ub85c\uc9c1 \uad6c\ud604",
+            "description": "\uc0ac\uc6a9\uc790\uac00 \uc624\ud0c0\ub97c \uc785\ub825\ud55c \ud6c4 \uc774\ub97c \ubc31\uc2a4\ud398\uc774\uc2a4 \ub4f1\uc73c\ub85c \uc218\uc815\ud558\uc5ec \uc62c\ubc14\ub978 \ubb38\uc790\ub97c \uc785\ub825\ud588\uc744 \ub54c, \uc774\uc804\uc5d0 \uc801\uc6a9\ub418\uc5c8\ub358 \uc624\ud0c0 \uc2dc\uac01\uc801 \ud53c\ub4dc\ubc31\uc774 \uc989\uc2dc \uc0ac\ub77c\uc9c0\ub3c4\ub85d \ub85c\uc9c1\uc744 \uad6c\ud604\ud569\ub2c8\ub2e4.",
             "dependencies": [
               1,
               3
             ],
-            "details": "Subtask 1에서 구현된 `charStatus` 업데이트 로직을 개선하여, 사용자가 백스페이스로 문자를 삭제하거나 올바른 문자를 다시 입력하면 해당 문자의 상태가 'incorrect'에서 'correct' 또는 'untyped'로 정확하게 전환되도록 합니다. `TypingTextDisplay`는 업데이트된 `charStatus` 프롭스를 받아 오타 스타일을 자동으로 제거합니다.",
+            "details": "Subtask 1\uc5d0\uc11c \uad6c\ud604\ub41c `charStatus` \uc5c5\ub370\uc774\ud2b8 \ub85c\uc9c1\uc744 \uac1c\uc120\ud558\uc5ec, \uc0ac\uc6a9\uc790\uac00 \ubc31\uc2a4\ud398\uc774\uc2a4\ub85c \ubb38\uc790\ub97c \uc0ad\uc81c\ud558\uac70\ub098 \uc62c\ubc14\ub978 \ubb38\uc790\ub97c \ub2e4\uc2dc \uc785\ub825\ud558\uba74 \ud574\ub2f9 \ubb38\uc790\uc758 \uc0c1\ud0dc\uac00 'incorrect'\uc5d0\uc11c 'correct' \ub610\ub294 'untyped'\ub85c \uc815\ud655\ud558\uac8c \uc804\ud658\ub418\ub3c4\ub85d \ud569\ub2c8\ub2e4. `TypingTextDisplay`\ub294 \uc5c5\ub370\uc774\ud2b8\ub41c `charStatus` \ud504\ub86d\uc2a4\ub97c \ubc1b\uc544 \uc624\ud0c0 \uc2a4\ud0c0\uc77c\uc744 \uc790\ub3d9\uc73c\ub85c \uc81c\uac70\ud569\ub2c8\ub2e4.",
             "status": "pending",
-            "testStrategy": "오타를 입력하여 피드백이 나타나게 한 다음, 백스페이스로 오타를 지우고 올바른 문자를 다시 입력했을 때 피드백이 정확히 사라지는지 확인합니다. 커서가 앞뒤로 이동할 때 피드백 상태가 올바르게 유지되는지도 테스트합니다.",
+            "testStrategy": "\uc624\ud0c0\ub97c \uc785\ub825\ud558\uc5ec \ud53c\ub4dc\ubc31\uc774 \ub098\ud0c0\ub098\uac8c \ud55c \ub2e4\uc74c, \ubc31\uc2a4\ud398\uc774\uc2a4\ub85c \uc624\ud0c0\ub97c \uc9c0\uc6b0\uace0 \uc62c\ubc14\ub978 \ubb38\uc790\ub97c \ub2e4\uc2dc \uc785\ub825\ud588\uc744 \ub54c \ud53c\ub4dc\ubc31\uc774 \uc815\ud655\ud788 \uc0ac\ub77c\uc9c0\ub294\uc9c0 \ud655\uc778\ud569\ub2c8\ub2e4. \ucee4\uc11c\uac00 \uc55e\ub4a4\ub85c \uc774\ub3d9\ud560 \ub54c \ud53c\ub4dc\ubc31 \uc0c1\ud0dc\uac00 \uc62c\ubc14\ub974\uac8c \uc720\uc9c0\ub418\ub294\uc9c0\ub3c4 \ud14c\uc2a4\ud2b8\ud569\ub2c8\ub2e4.",
             "parentId": "undefined"
           },
           {
             "id": 5,
-            "title": "Framer Motion 애니메이션 및 선택적 사운드 피드백 통합",
-            "description": "오타 발생 시 더 직관적인 사용자 경험을 위해 Framer Motion을 사용하여 짧은 시각적 애니메이션(예: 흔들림)을 추가하고, 선택적으로 사운드 피드백을 통합합니다.",
+            "title": "Framer Motion \uc560\ub2c8\uba54\uc774\uc158 \ubc0f \uc120\ud0dd\uc801 \uc0ac\uc6b4\ub4dc \ud53c\ub4dc\ubc31 \ud1b5\ud569",
+            "description": "\uc624\ud0c0 \ubc1c\uc0dd \uc2dc \ub354 \uc9c1\uad00\uc801\uc778 \uc0ac\uc6a9\uc790 \uacbd\ud5d8\uc744 \uc704\ud574 Framer Motion\uc744 \uc0ac\uc6a9\ud558\uc5ec \uc9e7\uc740 \uc2dc\uac01\uc801 \uc560\ub2c8\uba54\uc774\uc158(\uc608: \ud754\ub4e4\ub9bc)\uc744 \ucd94\uac00\ud558\uace0, \uc120\ud0dd\uc801\uc73c\ub85c \uc0ac\uc6b4\ub4dc \ud53c\ub4dc\ubc31\uc744 \ud1b5\ud569\ud569\ub2c8\ub2e4.",
             "dependencies": [
               3,
               4
             ],
-            "details": "`TypingTextDisplay` 컴포넌트 내부의 `CharacterSpan`에 Framer Motion의 `motion` 컴포넌트를 적용합니다. `charStatus`가 'incorrect'로 변경될 때, `animate` 프롭스를 사용하여 `x: [-2, 2, -2, 2, 0]`와 같은 짧은 흔들림 애니메이션을 구현합니다. 또한, 오타 발생 시 재생될 짧은 사운드 이펙트 파일을 준비하고, Subtask 1의 오타 감지 로직과 연동하여 특정 조건에서 `new Audio().play()`를 통해 사운드를 재생하도록 로직을 추가합니다.",
+            "details": "`TypingTextDisplay` \ucef4\ud3ec\ub10c\ud2b8 \ub0b4\ubd80\uc758 `CharacterSpan`\uc5d0 Framer Motion\uc758 `motion` \ucef4\ud3ec\ub10c\ud2b8\ub97c \uc801\uc6a9\ud569\ub2c8\ub2e4. `charStatus`\uac00 'incorrect'\ub85c \ubcc0\uacbd\ub420 \ub54c, `animate` \ud504\ub86d\uc2a4\ub97c \uc0ac\uc6a9\ud558\uc5ec `x: [-2, 2, -2, 2, 0]`\uc640 \uac19\uc740 \uc9e7\uc740 \ud754\ub4e4\ub9bc \uc560\ub2c8\uba54\uc774\uc158\uc744 \uad6c\ud604\ud569\ub2c8\ub2e4. \ub610\ud55c, \uc624\ud0c0 \ubc1c\uc0dd \uc2dc \uc7ac\uc0dd\ub420 \uc9e7\uc740 \uc0ac\uc6b4\ub4dc \uc774\ud399\ud2b8 \ud30c\uc77c\uc744 \uc900\ube44\ud558\uace0, Subtask 1\uc758 \uc624\ud0c0 \uac10\uc9c0 \ub85c\uc9c1\uacfc \uc5f0\ub3d9\ud558\uc5ec \ud2b9\uc815 \uc870\uac74\uc5d0\uc11c `new Audio().play()`\ub97c \ud1b5\ud574 \uc0ac\uc6b4\ub4dc\ub97c \uc7ac\uc0dd\ud558\ub3c4\ub85d \ub85c\uc9c1\uc744 \ucd94\uac00\ud569\ub2c8\ub2e4.",
             "status": "pending",
-            "testStrategy": "오타를 입력했을 때 해당 문자에 흔들림 애니메이션이 자연스럽게 적용되는지 시각적으로 확인합니다. 사운드 피드백을 활성화한 상태에서 오타 발생 시 지정된 사운드가 재생되는지 확인하고, 반복적인 오타 발생 시 사운드 중첩이나 지연 없이 올바르게 재생되는지 검증합니다.",
+            "testStrategy": "\uc624\ud0c0\ub97c \uc785\ub825\ud588\uc744 \ub54c \ud574\ub2f9 \ubb38\uc790\uc5d0 \ud754\ub4e4\ub9bc \uc560\ub2c8\uba54\uc774\uc158\uc774 \uc790\uc5f0\uc2a4\ub7fd\uac8c \uc801\uc6a9\ub418\ub294\uc9c0 \uc2dc\uac01\uc801\uc73c\ub85c \ud655\uc778\ud569\ub2c8\ub2e4. \uc0ac\uc6b4\ub4dc \ud53c\ub4dc\ubc31\uc744 \ud65c\uc131\ud654\ud55c \uc0c1\ud0dc\uc5d0\uc11c \uc624\ud0c0 \ubc1c\uc0dd \uc2dc \uc9c0\uc815\ub41c \uc0ac\uc6b4\ub4dc\uac00 \uc7ac\uc0dd\ub418\ub294\uc9c0 \ud655\uc778\ud558\uace0, \ubc18\ubcf5\uc801\uc778 \uc624\ud0c0 \ubc1c\uc0dd \uc2dc \uc0ac\uc6b4\ub4dc \uc911\ucca9\uc774\ub098 \uc9c0\uc5f0 \uc5c6\uc774 \uc62c\ubc14\ub974\uac8c \uc7ac\uc0dd\ub418\ub294\uc9c0 \uac80\uc99d\ud569\ub2c8\ub2e4.",
             "parentId": "undefined"
           }
         ]
       },
       {
         "id": "7",
-        "title": "기본 텍스트 콘텐츠 관리 및 난이도별 제공",
-        "description": "초기 MVP를 위한 5-10개의 연습 텍스트를 준비하고, 이를 애플리케이션 내에서 관리 및 선택할 수 있는 시스템을 구현합니다. 초급, 중급, 고급 난이도 구분을 포함합니다.",
-        "details": "로컬 JSON 파일 또는 JavaScript 배열 형태로 초기 텍스트 데이터를 정의합니다. 각 텍스트 객체는 `id`, `content`, `difficulty_level`, `category`, `character_count` 속성을 가집니다. Redux 스토어에 `text` 슬라이스를 추가하여 텍스트 목록을 관리하고, 사용자가 난이도 또는 카테고리별로 텍스트를 선택할 수 있는 UI (예: 드롭다운 또는 버튼 그룹)를 구현합니다.",
-        "testStrategy": "다양한 난이도와 카테고리의 텍스트를 선택하여 `TypingTextDisplay`에 올바르게 로드되는지 확인합니다. 텍스트 선택 시 UI가 정상적으로 업데이트되는지 검증합니다.",
+        "title": "\uae30\ubcf8 \ud14d\uc2a4\ud2b8 \ucf58\ud150\uce20 \uad00\ub9ac \ubc0f \ub09c\uc774\ub3c4\ubcc4 \uc81c\uacf5",
+        "description": "\ucd08\uae30 MVP\ub97c \uc704\ud55c 5-10\uac1c\uc758 \uc5f0\uc2b5 \ud14d\uc2a4\ud2b8\ub97c \uc900\ube44\ud558\uace0, \uc774\ub97c \uc560\ud50c\ub9ac\ucf00\uc774\uc158 \ub0b4\uc5d0\uc11c \uad00\ub9ac \ubc0f \uc120\ud0dd\ud560 \uc218 \uc788\ub294 \uc2dc\uc2a4\ud15c\uc744 \uad6c\ud604\ud569\ub2c8\ub2e4. \ucd08\uae09, \uc911\uae09, \uace0\uae09 \ub09c\uc774\ub3c4 \uad6c\ubd84\uc744 \ud3ec\ud568\ud569\ub2c8\ub2e4.",
+        "details": "\ub85c\uceec JSON \ud30c\uc77c \ub610\ub294 JavaScript \ubc30\uc5f4 \ud615\ud0dc\ub85c \ucd08\uae30 \ud14d\uc2a4\ud2b8 \ub370\uc774\ud130\ub97c \uc815\uc758\ud569\ub2c8\ub2e4. \uac01 \ud14d\uc2a4\ud2b8 \uac1d\uccb4\ub294 `id`, `content`, `difficulty_level`, `category`, `character_count` \uc18d\uc131\uc744 \uac00\uc9d1\ub2c8\ub2e4. Redux \uc2a4\ud1a0\uc5b4\uc5d0 `text` \uc2ac\ub77c\uc774\uc2a4\ub97c \ucd94\uac00\ud558\uc5ec \ud14d\uc2a4\ud2b8 \ubaa9\ub85d\uc744 \uad00\ub9ac\ud558\uace0, \uc0ac\uc6a9\uc790\uac00 \ub09c\uc774\ub3c4 \ub610\ub294 \uce74\ud14c\uace0\ub9ac\ubcc4\ub85c \ud14d\uc2a4\ud2b8\ub97c \uc120\ud0dd\ud560 \uc218 \uc788\ub294 UI (\uc608: \ub4dc\ub86d\ub2e4\uc6b4 \ub610\ub294 \ubc84\ud2bc \uadf8\ub8f9)\ub97c \uad6c\ud604\ud569\ub2c8\ub2e4.",
+        "testStrategy": "\ub2e4\uc591\ud55c \ub09c\uc774\ub3c4\uc640 \uce74\ud14c\uace0\ub9ac\uc758 \ud14d\uc2a4\ud2b8\ub97c \uc120\ud0dd\ud558\uc5ec `TypingTextDisplay`\uc5d0 \uc62c\ubc14\ub974\uac8c \ub85c\ub4dc\ub418\ub294\uc9c0 \ud655\uc778\ud569\ub2c8\ub2e4. \ud14d\uc2a4\ud2b8 \uc120\ud0dd \uc2dc UI\uac00 \uc815\uc0c1\uc801\uc73c\ub85c \uc5c5\ub370\uc774\ud2b8\ub418\ub294\uc9c0 \uac80\uc99d\ud569\ub2c8\ub2e4.",
         "priority": "medium",
         "dependencies": [
           "1"
@@ -470,72 +470,72 @@
         "subtasks": [
           {
             "id": 1,
-            "title": "초기 연습 텍스트 데이터 파일 정의 및 생성",
-            "description": "애플리케이션에서 사용될 초기 5-10개의 연습 텍스트를 정의합니다. 각 텍스트는 고유한 'id', 본문 'content', 'difficulty_level' (초급, 중급, 고급), 'category' (예: 뉴스, 소설), 그리고 'character_count' (초기에는 비워두고 나중에 계산) 속성을 가집니다. 이 데이터는 로컬 JSON 파일 또는 JavaScript 배열 형태로 관리됩니다.",
+            "title": "\ucd08\uae30 \uc5f0\uc2b5 \ud14d\uc2a4\ud2b8 \ub370\uc774\ud130 \ud30c\uc77c \uc815\uc758 \ubc0f \uc0dd\uc131",
+            "description": "\uc560\ud50c\ub9ac\ucf00\uc774\uc158\uc5d0\uc11c \uc0ac\uc6a9\ub420 \ucd08\uae30 5-10\uac1c\uc758 \uc5f0\uc2b5 \ud14d\uc2a4\ud2b8\ub97c \uc815\uc758\ud569\ub2c8\ub2e4. \uac01 \ud14d\uc2a4\ud2b8\ub294 \uace0\uc720\ud55c 'id', \ubcf8\ubb38 'content', 'difficulty_level' (\ucd08\uae09, \uc911\uae09, \uace0\uae09), 'category' (\uc608: \ub274\uc2a4, \uc18c\uc124), \uadf8\ub9ac\uace0 'character_count' (\ucd08\uae30\uc5d0\ub294 \ube44\uc6cc\ub450\uace0 \ub098\uc911\uc5d0 \uacc4\uc0b0) \uc18d\uc131\uc744 \uac00\uc9d1\ub2c8\ub2e4. \uc774 \ub370\uc774\ud130\ub294 \ub85c\uceec JSON \ud30c\uc77c \ub610\ub294 JavaScript \ubc30\uc5f4 \ud615\ud0dc\ub85c \uad00\ub9ac\ub429\ub2c8\ub2e4.",
             "dependencies": [],
-            "details": "src/data/texts.json 또는 src/data/texts.js 파일을 생성하고, 주어진 스키마에 따라 5-10개의 한글 연습 텍스트 데이터를 추가합니다. 'character_count'는 문자열 길이를 나타내며, 추후 로직을 통해 채워질 것입니다.",
+            "details": "src/data/texts.json \ub610\ub294 src/data/texts.js \ud30c\uc77c\uc744 \uc0dd\uc131\ud558\uace0, \uc8fc\uc5b4\uc9c4 \uc2a4\ud0a4\ub9c8\uc5d0 \ub530\ub77c 5-10\uac1c\uc758 \ud55c\uae00 \uc5f0\uc2b5 \ud14d\uc2a4\ud2b8 \ub370\uc774\ud130\ub97c \ucd94\uac00\ud569\ub2c8\ub2e4. 'character_count'\ub294 \ubb38\uc790\uc5f4 \uae38\uc774\ub97c \ub098\ud0c0\ub0b4\uba70, \ucd94\ud6c4 \ub85c\uc9c1\uc744 \ud1b5\ud574 \ucc44\uc6cc\uc9c8 \uac83\uc785\ub2c8\ub2e4.",
             "status": "pending",
-            "testStrategy": "생성된 JSON 파일 또는 JavaScript 배열의 구조와 데이터가 정의된 스키마를 따르는지 수동으로 검증합니다. 텍스트 내용 및 메타데이터의 정확성을 확인합니다.",
+            "testStrategy": "\uc0dd\uc131\ub41c JSON \ud30c\uc77c \ub610\ub294 JavaScript \ubc30\uc5f4\uc758 \uad6c\uc870\uc640 \ub370\uc774\ud130\uac00 \uc815\uc758\ub41c \uc2a4\ud0a4\ub9c8\ub97c \ub530\ub974\ub294\uc9c0 \uc218\ub3d9\uc73c\ub85c \uac80\uc99d\ud569\ub2c8\ub2e4. \ud14d\uc2a4\ud2b8 \ub0b4\uc6a9 \ubc0f \uba54\ud0c0\ub370\uc774\ud130\uc758 \uc815\ud655\uc131\uc744 \ud655\uc778\ud569\ub2c8\ub2e4.",
             "parentId": "undefined"
           },
           {
             "id": 2,
-            "title": "Redux 'text' 슬라이스 구현 및 스토어 통합",
-            "description": "연습 텍스트 목록을 관리하고, 사용자가 선택한 현재 텍스트의 상태를 저장하며, 난이도 및 카테고리별로 텍스트를 필터링하는 로직을 포함하는 Redux Toolkit 슬라이스를 구현합니다. 이 슬라이스를 전역 Redux 스토어에 통합합니다.",
+            "title": "Redux 'text' \uc2ac\ub77c\uc774\uc2a4 \uad6c\ud604 \ubc0f \uc2a4\ud1a0\uc5b4 \ud1b5\ud569",
+            "description": "\uc5f0\uc2b5 \ud14d\uc2a4\ud2b8 \ubaa9\ub85d\uc744 \uad00\ub9ac\ud558\uace0, \uc0ac\uc6a9\uc790\uac00 \uc120\ud0dd\ud55c \ud604\uc7ac \ud14d\uc2a4\ud2b8\uc758 \uc0c1\ud0dc\ub97c \uc800\uc7a5\ud558\uba70, \ub09c\uc774\ub3c4 \ubc0f \uce74\ud14c\uace0\ub9ac\ubcc4\ub85c \ud14d\uc2a4\ud2b8\ub97c \ud544\ud130\ub9c1\ud558\ub294 \ub85c\uc9c1\uc744 \ud3ec\ud568\ud558\ub294 Redux Toolkit \uc2ac\ub77c\uc774\uc2a4\ub97c \uad6c\ud604\ud569\ub2c8\ub2e4. \uc774 \uc2ac\ub77c\uc774\uc2a4\ub97c \uc804\uc5ed Redux \uc2a4\ud1a0\uc5b4\uc5d0 \ud1b5\ud569\ud569\ub2c8\ub2e4.",
             "dependencies": [
               1
             ],
-            "details": "src/store/slices/textSlice.js 파일을 생성합니다. 초기 상태로 1번 태스크에서 정의된 텍스트 데이터를 로드합니다. 'setSelectedText', 'filterTextsByDifficulty', 'filterTextsByCategory' 등의 리듀서와 액션을 정의합니다. src/store/index.js에서 이 슬라이스를 루트 리듀서에 추가합니다.",
+            "details": "src/store/slices/textSlice.js \ud30c\uc77c\uc744 \uc0dd\uc131\ud569\ub2c8\ub2e4. \ucd08\uae30 \uc0c1\ud0dc\ub85c 1\ubc88 \ud0dc\uc2a4\ud06c\uc5d0\uc11c \uc815\uc758\ub41c \ud14d\uc2a4\ud2b8 \ub370\uc774\ud130\ub97c \ub85c\ub4dc\ud569\ub2c8\ub2e4. 'setSelectedText', 'filterTextsByDifficulty', 'filterTextsByCategory' \ub4f1\uc758 \ub9ac\ub4c0\uc11c\uc640 \uc561\uc158\uc744 \uc815\uc758\ud569\ub2c8\ub2e4. src/store/index.js\uc5d0\uc11c \uc774 \uc2ac\ub77c\uc774\uc2a4\ub97c \ub8e8\ud2b8 \ub9ac\ub4c0\uc11c\uc5d0 \ucd94\uac00\ud569\ub2c8\ub2e4.",
             "status": "pending",
-            "testStrategy": "Redux DevTools를 사용하여 슬라이스의 초기 상태가 올바르게 로드되는지 확인합니다. 'setSelectedText' 액션을 디스패치하여 선택된 텍스트가 정확히 업데이트되는지, 필터링 액션 디스패치 시 텍스트 목록이 예상대로 변경되는지 단위 테스트 또는 수동 테스트로 검증합니다.",
+            "testStrategy": "Redux DevTools\ub97c \uc0ac\uc6a9\ud558\uc5ec \uc2ac\ub77c\uc774\uc2a4\uc758 \ucd08\uae30 \uc0c1\ud0dc\uac00 \uc62c\ubc14\ub974\uac8c \ub85c\ub4dc\ub418\ub294\uc9c0 \ud655\uc778\ud569\ub2c8\ub2e4. 'setSelectedText' \uc561\uc158\uc744 \ub514\uc2a4\ud328\uce58\ud558\uc5ec \uc120\ud0dd\ub41c \ud14d\uc2a4\ud2b8\uac00 \uc815\ud655\ud788 \uc5c5\ub370\uc774\ud2b8\ub418\ub294\uc9c0, \ud544\ud130\ub9c1 \uc561\uc158 \ub514\uc2a4\ud328\uce58 \uc2dc \ud14d\uc2a4\ud2b8 \ubaa9\ub85d\uc774 \uc608\uc0c1\ub300\ub85c \ubcc0\uacbd\ub418\ub294\uc9c0 \ub2e8\uc704 \ud14c\uc2a4\ud2b8 \ub610\ub294 \uc218\ub3d9 \ud14c\uc2a4\ud2b8\ub85c \uac80\uc99d\ud569\ub2c8\ub2e4.",
             "parentId": "undefined"
           },
           {
             "id": 3,
-            "title": "난이도 및 카테고리별 텍스트 선택 UI 컴포넌트 개발",
-            "description": "사용자가 난이도('초급', '중급', '고급')와 카테고리(예: '뉴스', '문학', '일상')를 기준으로 연습 텍스트를 필터링하고 선택할 수 있는 드롭다운 또는 버튼 그룹 형태의 UI 컴포넌트를 개발합니다. 이 컴포넌트는 Redux 스토어의 'text' 슬라이스와 연동됩니다.",
+            "title": "\ub09c\uc774\ub3c4 \ubc0f \uce74\ud14c\uace0\ub9ac\ubcc4 \ud14d\uc2a4\ud2b8 \uc120\ud0dd UI \ucef4\ud3ec\ub10c\ud2b8 \uac1c\ubc1c",
+            "description": "\uc0ac\uc6a9\uc790\uac00 \ub09c\uc774\ub3c4('\ucd08\uae09', '\uc911\uae09', '\uace0\uae09')\uc640 \uce74\ud14c\uace0\ub9ac(\uc608: '\ub274\uc2a4', '\ubb38\ud559', '\uc77c\uc0c1')\ub97c \uae30\uc900\uc73c\ub85c \uc5f0\uc2b5 \ud14d\uc2a4\ud2b8\ub97c \ud544\ud130\ub9c1\ud558\uace0 \uc120\ud0dd\ud560 \uc218 \uc788\ub294 \ub4dc\ub86d\ub2e4\uc6b4 \ub610\ub294 \ubc84\ud2bc \uadf8\ub8f9 \ud615\ud0dc\uc758 UI \ucef4\ud3ec\ub10c\ud2b8\ub97c \uac1c\ubc1c\ud569\ub2c8\ub2e4. \uc774 \ucef4\ud3ec\ub10c\ud2b8\ub294 Redux \uc2a4\ud1a0\uc5b4\uc758 'text' \uc2ac\ub77c\uc774\uc2a4\uc640 \uc5f0\ub3d9\ub429\ub2c8\ub2e4.",
             "dependencies": [
               2
             ],
-            "details": "src/components/TextSelector.jsx 또는 유사한 이름의 컴포넌트를 생성합니다. Redux의 useSelector 훅을 사용하여 텍스트 목록과 현재 선택된 필터 상태를 가져옵니다. 사용자의 난이도/카테고리 선택에 따라 Redux 액션을 디스패치하여 스토어의 상태를 업데이트하고, 해당 필터에 맞는 텍스트 목록을 보여줍니다.",
+            "details": "src/components/TextSelector.jsx \ub610\ub294 \uc720\uc0ac\ud55c \uc774\ub984\uc758 \ucef4\ud3ec\ub10c\ud2b8\ub97c \uc0dd\uc131\ud569\ub2c8\ub2e4. Redux\uc758 useSelector \ud6c5\uc744 \uc0ac\uc6a9\ud558\uc5ec \ud14d\uc2a4\ud2b8 \ubaa9\ub85d\uacfc \ud604\uc7ac \uc120\ud0dd\ub41c \ud544\ud130 \uc0c1\ud0dc\ub97c \uac00\uc838\uc635\ub2c8\ub2e4. \uc0ac\uc6a9\uc790\uc758 \ub09c\uc774\ub3c4/\uce74\ud14c\uace0\ub9ac \uc120\ud0dd\uc5d0 \ub530\ub77c Redux \uc561\uc158\uc744 \ub514\uc2a4\ud328\uce58\ud558\uc5ec \uc2a4\ud1a0\uc5b4\uc758 \uc0c1\ud0dc\ub97c \uc5c5\ub370\uc774\ud2b8\ud558\uace0, \ud574\ub2f9 \ud544\ud130\uc5d0 \ub9de\ub294 \ud14d\uc2a4\ud2b8 \ubaa9\ub85d\uc744 \ubcf4\uc5ec\uc90d\ub2c8\ub2e4.",
             "status": "pending",
-            "testStrategy": "UI 컴포넌트가 다양한 필터 옵션을 올바르게 렌더링하는지 확인합니다. 난이도 및 카테고리 필터를 변경할 때 Redux 스토어의 필터 상태가 정확히 업데이트되는지, 그리고 UI에 표시되는 텍스트 목록이 필터에 따라 동적으로 변하는지 시각적 및 기능적 테스트를 수행합니다.",
+            "testStrategy": "UI \ucef4\ud3ec\ub10c\ud2b8\uac00 \ub2e4\uc591\ud55c \ud544\ud130 \uc635\uc158\uc744 \uc62c\ubc14\ub974\uac8c \ub80c\ub354\ub9c1\ud558\ub294\uc9c0 \ud655\uc778\ud569\ub2c8\ub2e4. \ub09c\uc774\ub3c4 \ubc0f \uce74\ud14c\uace0\ub9ac \ud544\ud130\ub97c \ubcc0\uacbd\ud560 \ub54c Redux \uc2a4\ud1a0\uc5b4\uc758 \ud544\ud130 \uc0c1\ud0dc\uac00 \uc815\ud655\ud788 \uc5c5\ub370\uc774\ud2b8\ub418\ub294\uc9c0, \uadf8\ub9ac\uace0 UI\uc5d0 \ud45c\uc2dc\ub418\ub294 \ud14d\uc2a4\ud2b8 \ubaa9\ub85d\uc774 \ud544\ud130\uc5d0 \ub530\ub77c \ub3d9\uc801\uc73c\ub85c \ubcc0\ud558\ub294\uc9c0 \uc2dc\uac01\uc801 \ubc0f \uae30\ub2a5\uc801 \ud14c\uc2a4\ud2b8\ub97c \uc218\ud589\ud569\ub2c8\ub2e4.",
             "parentId": "undefined"
           },
           {
             "id": 4,
-            "title": "`TypingTextDisplay` 컴포넌트와 선택된 텍스트 연동",
-            "description": "Redux 스토어에서 현재 선택된 연습 텍스트의 'content'를 가져와 `TypingTextDisplay` 컴포넌트에 prop으로 전달하고, 이 텍스트가 타이핑 연습을 위해 화면에 올바르게 표시되도록 구현합니다.",
+            "title": "`TypingTextDisplay` \ucef4\ud3ec\ub10c\ud2b8\uc640 \uc120\ud0dd\ub41c \ud14d\uc2a4\ud2b8 \uc5f0\ub3d9",
+            "description": "Redux \uc2a4\ud1a0\uc5b4\uc5d0\uc11c \ud604\uc7ac \uc120\ud0dd\ub41c \uc5f0\uc2b5 \ud14d\uc2a4\ud2b8\uc758 'content'\ub97c \uac00\uc838\uc640 `TypingTextDisplay` \ucef4\ud3ec\ub10c\ud2b8\uc5d0 prop\uc73c\ub85c \uc804\ub2ec\ud558\uace0, \uc774 \ud14d\uc2a4\ud2b8\uac00 \ud0c0\uc774\ud551 \uc5f0\uc2b5\uc744 \uc704\ud574 \ud654\uba74\uc5d0 \uc62c\ubc14\ub974\uac8c \ud45c\uc2dc\ub418\ub3c4\ub85d \uad6c\ud604\ud569\ub2c8\ub2e4.",
             "dependencies": [
               2,
               3
             ],
-            "details": "src/features/typing/TypingTextDisplay.jsx 컴포넌트 또는 해당 뷰 컴포넌트에서 Redux의 useSelector 훅을 사용하여 'text' 슬라이스에서 현재 선택된 텍스트의 'content'를 가져옵니다. 이 'content'를 `TypingTextDisplay` 컴포넌트에 prop으로 전달하여 타이핑 대상 텍스트로 사용합니다. 텍스트가 변경될 때마다 `TypingTextDisplay`가 업데이트되는지 확인합니다.",
+            "details": "src/features/typing/TypingTextDisplay.jsx \ucef4\ud3ec\ub10c\ud2b8 \ub610\ub294 \ud574\ub2f9 \ubdf0 \ucef4\ud3ec\ub10c\ud2b8\uc5d0\uc11c Redux\uc758 useSelector \ud6c5\uc744 \uc0ac\uc6a9\ud558\uc5ec 'text' \uc2ac\ub77c\uc774\uc2a4\uc5d0\uc11c \ud604\uc7ac \uc120\ud0dd\ub41c \ud14d\uc2a4\ud2b8\uc758 'content'\ub97c \uac00\uc838\uc635\ub2c8\ub2e4. \uc774 'content'\ub97c `TypingTextDisplay` \ucef4\ud3ec\ub10c\ud2b8\uc5d0 prop\uc73c\ub85c \uc804\ub2ec\ud558\uc5ec \ud0c0\uc774\ud551 \ub300\uc0c1 \ud14d\uc2a4\ud2b8\ub85c \uc0ac\uc6a9\ud569\ub2c8\ub2e4. \ud14d\uc2a4\ud2b8\uac00 \ubcc0\uacbd\ub420 \ub54c\ub9c8\ub2e4 `TypingTextDisplay`\uac00 \uc5c5\ub370\uc774\ud2b8\ub418\ub294\uc9c0 \ud655\uc778\ud569\ub2c8\ub2e4.",
             "status": "pending",
-            "testStrategy": "텍스트 선택 UI(3번 태스크)를 통해 다른 텍스트를 선택했을 때 `TypingTextDisplay` 컴포넌트에 표시되는 텍스트가 올바르게 변경되는지 확인합니다. 선택된 텍스트가 정확히 화면에 렌더링되는지 시각적으로 검증하고, 타이핑 입력 시 해당 텍스트에 대한 처리가 정상적으로 이루어지는지 확인합니다.",
+            "testStrategy": "\ud14d\uc2a4\ud2b8 \uc120\ud0dd UI(3\ubc88 \ud0dc\uc2a4\ud06c)\ub97c \ud1b5\ud574 \ub2e4\ub978 \ud14d\uc2a4\ud2b8\ub97c \uc120\ud0dd\ud588\uc744 \ub54c `TypingTextDisplay` \ucef4\ud3ec\ub10c\ud2b8\uc5d0 \ud45c\uc2dc\ub418\ub294 \ud14d\uc2a4\ud2b8\uac00 \uc62c\ubc14\ub974\uac8c \ubcc0\uacbd\ub418\ub294\uc9c0 \ud655\uc778\ud569\ub2c8\ub2e4. \uc120\ud0dd\ub41c \ud14d\uc2a4\ud2b8\uac00 \uc815\ud655\ud788 \ud654\uba74\uc5d0 \ub80c\ub354\ub9c1\ub418\ub294\uc9c0 \uc2dc\uac01\uc801\uc73c\ub85c \uac80\uc99d\ud558\uace0, \ud0c0\uc774\ud551 \uc785\ub825 \uc2dc \ud574\ub2f9 \ud14d\uc2a4\ud2b8\uc5d0 \ub300\ud55c \ucc98\ub9ac\uac00 \uc815\uc0c1\uc801\uc73c\ub85c \uc774\ub8e8\uc5b4\uc9c0\ub294\uc9c0 \ud655\uc778\ud569\ub2c8\ub2e4.",
             "parentId": "undefined"
           },
           {
             "id": 5,
-            "title": "텍스트 데이터에 `character_count` 자동 계산 로직 통합",
-            "description": "초기 텍스트 데이터가 로드되거나 Redux 스토어에 추가될 때, 각 텍스트 객체의 'content' 길이를 기반으로 'character_count' 속성을 자동으로 계산하여 저장하는 로직을 구현합니다. 이는 텍스트 선택 UI 등에서 정보로 활용될 수 있습니다.",
+            "title": "\ud14d\uc2a4\ud2b8 \ub370\uc774\ud130\uc5d0 `character_count` \uc790\ub3d9 \uacc4\uc0b0 \ub85c\uc9c1 \ud1b5\ud569",
+            "description": "\ucd08\uae30 \ud14d\uc2a4\ud2b8 \ub370\uc774\ud130\uac00 \ub85c\ub4dc\ub418\uac70\ub098 Redux \uc2a4\ud1a0\uc5b4\uc5d0 \ucd94\uac00\ub420 \ub54c, \uac01 \ud14d\uc2a4\ud2b8 \uac1d\uccb4\uc758 'content' \uae38\uc774\ub97c \uae30\ubc18\uc73c\ub85c 'character_count' \uc18d\uc131\uc744 \uc790\ub3d9\uc73c\ub85c \uacc4\uc0b0\ud558\uc5ec \uc800\uc7a5\ud558\ub294 \ub85c\uc9c1\uc744 \uad6c\ud604\ud569\ub2c8\ub2e4. \uc774\ub294 \ud14d\uc2a4\ud2b8 \uc120\ud0dd UI \ub4f1\uc5d0\uc11c \uc815\ubcf4\ub85c \ud65c\uc6a9\ub420 \uc218 \uc788\uc2b5\ub2c8\ub2e4.",
             "dependencies": [
               1,
               2
             ],
-            "details": "1번 태스크에서 생성된 초기 텍스트 데이터 로드 시 또는 2번 태스크의 Redux 'text' 슬라이스 내부에서 텍스트가 스토어에 추가될 때, 각 텍스트 객체의 'content.length'를 계산하여 'character_count' 필드를 채웁니다. 이 값은 텍스트 선택 UI (3번 태스크)에서 텍스트 정보를 표시하는 데 사용될 수 있습니다.",
+            "details": "1\ubc88 \ud0dc\uc2a4\ud06c\uc5d0\uc11c \uc0dd\uc131\ub41c \ucd08\uae30 \ud14d\uc2a4\ud2b8 \ub370\uc774\ud130 \ub85c\ub4dc \uc2dc \ub610\ub294 2\ubc88 \ud0dc\uc2a4\ud06c\uc758 Redux 'text' \uc2ac\ub77c\uc774\uc2a4 \ub0b4\ubd80\uc5d0\uc11c \ud14d\uc2a4\ud2b8\uac00 \uc2a4\ud1a0\uc5b4\uc5d0 \ucd94\uac00\ub420 \ub54c, \uac01 \ud14d\uc2a4\ud2b8 \uac1d\uccb4\uc758 'content.length'\ub97c \uacc4\uc0b0\ud558\uc5ec 'character_count' \ud544\ub4dc\ub97c \ucc44\uc6c1\ub2c8\ub2e4. \uc774 \uac12\uc740 \ud14d\uc2a4\ud2b8 \uc120\ud0dd UI (3\ubc88 \ud0dc\uc2a4\ud06c)\uc5d0\uc11c \ud14d\uc2a4\ud2b8 \uc815\ubcf4\ub97c \ud45c\uc2dc\ud558\ub294 \ub370 \uc0ac\uc6a9\ub420 \uc218 \uc788\uc2b5\ub2c8\ub2e4.",
             "status": "pending",
-            "testStrategy": "Redux DevTools를 통해 스토어에 로드된 텍스트 객체들의 'character_count' 값이 각 'content'의 실제 길이와 일치하는지 확인합니다. 이 값이 UI (예: 텍스트 미리보기)에 올바르게 표시되는지 시각적으로 검증합니다.",
+            "testStrategy": "Redux DevTools\ub97c \ud1b5\ud574 \uc2a4\ud1a0\uc5b4\uc5d0 \ub85c\ub4dc\ub41c \ud14d\uc2a4\ud2b8 \uac1d\uccb4\ub4e4\uc758 'character_count' \uac12\uc774 \uac01 'content'\uc758 \uc2e4\uc81c \uae38\uc774\uc640 \uc77c\uce58\ud558\ub294\uc9c0 \ud655\uc778\ud569\ub2c8\ub2e4. \uc774 \uac12\uc774 UI (\uc608: \ud14d\uc2a4\ud2b8 \ubbf8\ub9ac\ubcf4\uae30)\uc5d0 \uc62c\ubc14\ub974\uac8c \ud45c\uc2dc\ub418\ub294\uc9c0 \uc2dc\uac01\uc801\uc73c\ub85c \uac80\uc99d\ud569\ub2c8\ub2e4.",
             "parentId": "undefined"
           }
         ]
       },
       {
         "id": "8",
-        "title": "로컬 스토리지 기반 사용자 인증 및 프로필 관리",
-        "description": "MVP를 위해 로컬 스토리지에 사용자 프로필 정보(username, level, experience 등)를 저장하고 관리하는 기본적인 사용자 인증 시스템을 구현합니다. 회원가입/로그인 플로우를 포함합니다.",
-        "details": "`Auth` Redux 슬라이스를 생성하여 `isLoggedIn`, `username`, `level`, `experience` 등의 사용자 상태를 관리합니다. `localStorage` API를 사용하여 사용자 데이터를 저장하고 불러옵니다. `Login` 및 `Signup` 컴포넌트를 구현하고, 사용자 정보(예: `username`)를 입력받아 `localStorage.setItem('user', JSON.stringify({ ... }))`으로 저장하며, 페이지 로드 시 `localStorage.getItem('user')`를 통해 사용자 세션을 복원합니다.",
-        "testStrategy": "회원가입, 로그인, 로그아웃 기능을 테스트하여 사용자 정보가 로컬 스토리지에 올바르게 저장/삭제되고, 페이지 새로고침 후에도 세션이 유지되는지 확인합니다.",
+        "title": "\ub85c\uceec \uc2a4\ud1a0\ub9ac\uc9c0 \uae30\ubc18 \uc0ac\uc6a9\uc790 \uc778\uc99d \ubc0f \ud504\ub85c\ud544 \uad00\ub9ac",
+        "description": "MVP\ub97c \uc704\ud574 \ub85c\uceec \uc2a4\ud1a0\ub9ac\uc9c0\uc5d0 \uc0ac\uc6a9\uc790 \ud504\ub85c\ud544 \uc815\ubcf4(username, level, experience \ub4f1)\ub97c \uc800\uc7a5\ud558\uace0 \uad00\ub9ac\ud558\ub294 \uae30\ubcf8\uc801\uc778 \uc0ac\uc6a9\uc790 \uc778\uc99d \uc2dc\uc2a4\ud15c\uc744 \uad6c\ud604\ud569\ub2c8\ub2e4. \ud68c\uc6d0\uac00\uc785/\ub85c\uadf8\uc778 \ud50c\ub85c\uc6b0\ub97c \ud3ec\ud568\ud569\ub2c8\ub2e4.",
+        "details": "`Auth` Redux \uc2ac\ub77c\uc774\uc2a4\ub97c \uc0dd\uc131\ud558\uc5ec `isLoggedIn`, `username`, `level`, `experience` \ub4f1\uc758 \uc0ac\uc6a9\uc790 \uc0c1\ud0dc\ub97c \uad00\ub9ac\ud569\ub2c8\ub2e4. `localStorage` API\ub97c \uc0ac\uc6a9\ud558\uc5ec \uc0ac\uc6a9\uc790 \ub370\uc774\ud130\ub97c \uc800\uc7a5\ud558\uace0 \ubd88\ub7ec\uc635\ub2c8\ub2e4. `Login` \ubc0f `Signup` \ucef4\ud3ec\ub10c\ud2b8\ub97c \uad6c\ud604\ud558\uace0, \uc0ac\uc6a9\uc790 \uc815\ubcf4(\uc608: `username`)\ub97c \uc785\ub825\ubc1b\uc544 `localStorage.setItem('user', JSON.stringify({ ... }))`\uc73c\ub85c \uc800\uc7a5\ud558\uba70, \ud398\uc774\uc9c0 \ub85c\ub4dc \uc2dc `localStorage.getItem('user')`\ub97c \ud1b5\ud574 \uc0ac\uc6a9\uc790 \uc138\uc158\uc744 \ubcf5\uc6d0\ud569\ub2c8\ub2e4.",
+        "testStrategy": "\ud68c\uc6d0\uac00\uc785, \ub85c\uadf8\uc778, \ub85c\uadf8\uc544\uc6c3 \uae30\ub2a5\uc744 \ud14c\uc2a4\ud2b8\ud558\uc5ec \uc0ac\uc6a9\uc790 \uc815\ubcf4\uac00 \ub85c\uceec \uc2a4\ud1a0\ub9ac\uc9c0\uc5d0 \uc62c\ubc14\ub974\uac8c \uc800\uc7a5/\uc0ad\uc81c\ub418\uace0, \ud398\uc774\uc9c0 \uc0c8\ub85c\uace0\uce68 \ud6c4\uc5d0\ub3c4 \uc138\uc158\uc774 \uc720\uc9c0\ub418\ub294\uc9c0 \ud655\uc778\ud569\ub2c8\ub2e4.",
         "priority": "high",
         "dependencies": [
           "1"
@@ -545,10 +545,10 @@
       },
       {
         "id": "9",
-        "title": "IndexedDB 기반 타이핑 세션 데이터 저장",
-        "description": "사용자의 타이핑 세션 결과(`TypingSession` 데이터)를 IndexedDB에 저장하여 영구적인 기록 및 오프라인 기능을 지원하도록 구현합니다.",
-        "details": "IndexedDB를 사용하기 위해 `dexie.js`와 같은 라이브러리를 활용하거나 직접 `IndexedDB` API를 랩핑하는 유틸리티 모듈을 생성합니다. `TypingSession` 데이터 모델(`id`, `user_id`, `text_id`, `wpm`, `accuracy`, `duration`, `timestamp`)을 정의하고, 타이핑 세션 완료 시 이 데이터를 IndexedDB의 `TypingSession` 스토어에 저장하는 로직을 구현합니다. `user_id`는 로컬 스토리지에 저장된 사용자 ID를 활용합니다.",
-        "testStrategy": "여러 타이핑 세션을 완료한 후 개발자 도구의 Application 탭에서 IndexedDB에 `TypingSession` 데이터가 올바르게 저장되는지 확인합니다. 새로고침 후에도 기록이 유지되는지 검증합니다.",
+        "title": "IndexedDB \uae30\ubc18 \ud0c0\uc774\ud551 \uc138\uc158 \ub370\uc774\ud130 \uc800\uc7a5",
+        "description": "\uc0ac\uc6a9\uc790\uc758 \ud0c0\uc774\ud551 \uc138\uc158 \uacb0\uacfc(`TypingSession` \ub370\uc774\ud130)\ub97c IndexedDB\uc5d0 \uc800\uc7a5\ud558\uc5ec \uc601\uad6c\uc801\uc778 \uae30\ub85d \ubc0f \uc624\ud504\ub77c\uc778 \uae30\ub2a5\uc744 \uc9c0\uc6d0\ud558\ub3c4\ub85d \uad6c\ud604\ud569\ub2c8\ub2e4.",
+        "details": "IndexedDB\ub97c \uc0ac\uc6a9\ud558\uae30 \uc704\ud574 `dexie.js`\uc640 \uac19\uc740 \ub77c\uc774\ube0c\ub7ec\ub9ac\ub97c \ud65c\uc6a9\ud558\uac70\ub098 \uc9c1\uc811 `IndexedDB` API\ub97c \ub7a9\ud551\ud558\ub294 \uc720\ud2f8\ub9ac\ud2f0 \ubaa8\ub4c8\uc744 \uc0dd\uc131\ud569\ub2c8\ub2e4. `TypingSession` \ub370\uc774\ud130 \ubaa8\ub378(`id`, `user_id`, `text_id`, `wpm`, `accuracy`, `duration`, `timestamp`)\uc744 \uc815\uc758\ud558\uace0, \ud0c0\uc774\ud551 \uc138\uc158 \uc644\ub8cc \uc2dc \uc774 \ub370\uc774\ud130\ub97c IndexedDB\uc758 `TypingSession` \uc2a4\ud1a0\uc5b4\uc5d0 \uc800\uc7a5\ud558\ub294 \ub85c\uc9c1\uc744 \uad6c\ud604\ud569\ub2c8\ub2e4. `user_id`\ub294 \ub85c\uceec \uc2a4\ud1a0\ub9ac\uc9c0\uc5d0 \uc800\uc7a5\ub41c \uc0ac\uc6a9\uc790 ID\ub97c \ud65c\uc6a9\ud569\ub2c8\ub2e4.",
+        "testStrategy": "\uc5ec\ub7ec \ud0c0\uc774\ud551 \uc138\uc158\uc744 \uc644\ub8cc\ud55c \ud6c4 \uac1c\ubc1c\uc790 \ub3c4\uad6c\uc758 Application \ud0ed\uc5d0\uc11c IndexedDB\uc5d0 `TypingSession` \ub370\uc774\ud130\uac00 \uc62c\ubc14\ub974\uac8c \uc800\uc7a5\ub418\ub294\uc9c0 \ud655\uc778\ud569\ub2c8\ub2e4. \uc0c8\ub85c\uace0\uce68 \ud6c4\uc5d0\ub3c4 \uae30\ub85d\uc774 \uc720\uc9c0\ub418\ub294\uc9c0 \uac80\uc99d\ud569\ub2c8\ub2e4.",
         "priority": "medium",
         "dependencies": [
           "5",
@@ -559,10 +559,10 @@
       },
       {
         "id": "10",
-        "title": "세션 결과 표시 및 간단한 통계 UI 구현",
-        "description": "타이핑 세션이 완료된 후, 해당 세션의 WPM, 정확성, 소요 시간 등 주요 결과를 사용자에게 표시하는 UI 컴포넌트를 개발합니다.",
-        "details": "`SessionResult` 컴포넌트를 생성하여 `wpm`, `accuracy`, `duration` 등의 세션 결과 데이터를 props로 받아 사용자에게 가독성 좋게 표시합니다. 이전 작업에서 저장된 `TypingSession` 데이터를 IndexedDB에서 불러와 가장 최근 세션의 결과를 표시할 수 있도록 합니다. 결과 화면에서 다시 시작하거나 다른 텍스트를 선택할 수 있는 액션 버튼도 포함합니다.",
-        "testStrategy": "타이핑 세션을 완료한 후 결과 화면에 WPM, 정확성, 소요 시간 등의 수치가 올바르게 표시되는지 확인합니다. 여러 세션 후에도 최신 결과가 정확히 나타나는지 검증합니다.",
+        "title": "\uc138\uc158 \uacb0\uacfc \ud45c\uc2dc \ubc0f \uac04\ub2e8\ud55c \ud1b5\uacc4 UI \uad6c\ud604",
+        "description": "\ud0c0\uc774\ud551 \uc138\uc158\uc774 \uc644\ub8cc\ub41c \ud6c4, \ud574\ub2f9 \uc138\uc158\uc758 WPM, \uc815\ud655\uc131, \uc18c\uc694 \uc2dc\uac04 \ub4f1 \uc8fc\uc694 \uacb0\uacfc\ub97c \uc0ac\uc6a9\uc790\uc5d0\uac8c \ud45c\uc2dc\ud558\ub294 UI \ucef4\ud3ec\ub10c\ud2b8\ub97c \uac1c\ubc1c\ud569\ub2c8\ub2e4.",
+        "details": "`SessionResult` \ucef4\ud3ec\ub10c\ud2b8\ub97c \uc0dd\uc131\ud558\uc5ec `wpm`, `accuracy`, `duration` \ub4f1\uc758 \uc138\uc158 \uacb0\uacfc \ub370\uc774\ud130\ub97c props\ub85c \ubc1b\uc544 \uc0ac\uc6a9\uc790\uc5d0\uac8c \uac00\ub3c5\uc131 \uc88b\uac8c \ud45c\uc2dc\ud569\ub2c8\ub2e4. \uc774\uc804 \uc791\uc5c5\uc5d0\uc11c \uc800\uc7a5\ub41c `TypingSession` \ub370\uc774\ud130\ub97c IndexedDB\uc5d0\uc11c \ubd88\ub7ec\uc640 \uac00\uc7a5 \ucd5c\uadfc \uc138\uc158\uc758 \uacb0\uacfc\ub97c \ud45c\uc2dc\ud560 \uc218 \uc788\ub3c4\ub85d \ud569\ub2c8\ub2e4. \uacb0\uacfc \ud654\uba74\uc5d0\uc11c \ub2e4\uc2dc \uc2dc\uc791\ud558\uac70\ub098 \ub2e4\ub978 \ud14d\uc2a4\ud2b8\ub97c \uc120\ud0dd\ud560 \uc218 \uc788\ub294 \uc561\uc158 \ubc84\ud2bc\ub3c4 \ud3ec\ud568\ud569\ub2c8\ub2e4.",
+        "testStrategy": "\ud0c0\uc774\ud551 \uc138\uc158\uc744 \uc644\ub8cc\ud55c \ud6c4 \uacb0\uacfc \ud654\uba74\uc5d0 WPM, \uc815\ud655\uc131, \uc18c\uc694 \uc2dc\uac04 \ub4f1\uc758 \uc218\uce58\uac00 \uc62c\ubc14\ub974\uac8c \ud45c\uc2dc\ub418\ub294\uc9c0 \ud655\uc778\ud569\ub2c8\ub2e4. \uc5ec\ub7ec \uc138\uc158 \ud6c4\uc5d0\ub3c4 \ucd5c\uc2e0 \uacb0\uacfc\uac00 \uc815\ud655\ud788 \ub098\ud0c0\ub098\ub294\uc9c0 \uac80\uc99d\ud569\ub2c8\ub2e4.",
         "priority": "medium",
         "dependencies": [
           "5",
@@ -572,75 +572,75 @@
         "subtasks": [
           {
             "id": 1,
-            "title": "세션 결과 컴포넌트 (SessionResult) 스켈레톤 및 기본 정보 표시 UI 구현",
-            "description": "타이핑 세션이 완료된 후 WPM, 정확성, 소요 시간 등 핵심 통계 데이터를 표시할 `SessionResult` 컴포넌트의 초기 구조를 정의합니다. `Task 2`의 디자인 가이드라인에 따라 레이아웃을 구성하고, 각 통계 항목을 표시할 더미 플레이스홀더를 포함합니다.",
+            "title": "\uc138\uc158 \uacb0\uacfc \ucef4\ud3ec\ub10c\ud2b8 (SessionResult) \uc2a4\ucf08\ub808\ud1a4 \ubc0f \uae30\ubcf8 \uc815\ubcf4 \ud45c\uc2dc UI \uad6c\ud604",
+            "description": "\ud0c0\uc774\ud551 \uc138\uc158\uc774 \uc644\ub8cc\ub41c \ud6c4 WPM, \uc815\ud655\uc131, \uc18c\uc694 \uc2dc\uac04 \ub4f1 \ud575\uc2ec \ud1b5\uacc4 \ub370\uc774\ud130\ub97c \ud45c\uc2dc\ud560 `SessionResult` \ucef4\ud3ec\ub10c\ud2b8\uc758 \ucd08\uae30 \uad6c\uc870\ub97c \uc815\uc758\ud569\ub2c8\ub2e4. `Task 2`\uc758 \ub514\uc790\uc778 \uac00\uc774\ub4dc\ub77c\uc778\uc5d0 \ub530\ub77c \ub808\uc774\uc544\uc6c3\uc744 \uad6c\uc131\ud558\uace0, \uac01 \ud1b5\uacc4 \ud56d\ubaa9\uc744 \ud45c\uc2dc\ud560 \ub354\ubbf8 \ud50c\ub808\uc774\uc2a4\ud640\ub354\ub97c \ud3ec\ud568\ud569\ub2c8\ub2e4.",
             "dependencies": [
               2
             ],
-            "details": "React 함수형 컴포넌트로 `src/components/SessionResult.tsx` 파일을 생성합니다. `wpm`, `accuracy`, `duration`을 props로 받아들이는 인터페이스를 정의하고, 이 값들을 표시할 JSX 구조를 만듭니다. Tailwind CSS 클래스 또는 Styled-components를 활용하여 가독성 좋은 스타일을 적용합니다. 초기에는 더미 데이터로 UI를 채웁니다.",
+            "details": "React \ud568\uc218\ud615 \ucef4\ud3ec\ub10c\ud2b8\ub85c `src/components/SessionResult.tsx` \ud30c\uc77c\uc744 \uc0dd\uc131\ud569\ub2c8\ub2e4. `wpm`, `accuracy`, `duration`\uc744 props\ub85c \ubc1b\uc544\ub4e4\uc774\ub294 \uc778\ud130\ud398\uc774\uc2a4\ub97c \uc815\uc758\ud558\uace0, \uc774 \uac12\ub4e4\uc744 \ud45c\uc2dc\ud560 JSX \uad6c\uc870\ub97c \ub9cc\ub4ed\ub2c8\ub2e4. Tailwind CSS \ud074\ub798\uc2a4 \ub610\ub294 Styled-components\ub97c \ud65c\uc6a9\ud558\uc5ec \uac00\ub3c5\uc131 \uc88b\uc740 \uc2a4\ud0c0\uc77c\uc744 \uc801\uc6a9\ud569\ub2c8\ub2e4. \ucd08\uae30\uc5d0\ub294 \ub354\ubbf8 \ub370\uc774\ud130\ub85c UI\ub97c \ucc44\uc6c1\ub2c8\ub2e4.",
             "status": "pending",
-            "testStrategy": "스토리북(Storybook) 또는 별도의 개발 페이지에서 `SessionResult` 컴포넌트를 더미 데이터와 함께 렌더링하여 UI 레이아웃과 스타일이 올바르게 표시되는지 시각적으로 확인합니다.",
+            "testStrategy": "\uc2a4\ud1a0\ub9ac\ubd81(Storybook) \ub610\ub294 \ubcc4\ub3c4\uc758 \uac1c\ubc1c \ud398\uc774\uc9c0\uc5d0\uc11c `SessionResult` \ucef4\ud3ec\ub10c\ud2b8\ub97c \ub354\ubbf8 \ub370\uc774\ud130\uc640 \ud568\uaed8 \ub80c\ub354\ub9c1\ud558\uc5ec UI \ub808\uc774\uc544\uc6c3\uacfc \uc2a4\ud0c0\uc77c\uc774 \uc62c\ubc14\ub974\uac8c \ud45c\uc2dc\ub418\ub294\uc9c0 \uc2dc\uac01\uc801\uc73c\ub85c \ud655\uc778\ud569\ub2c8\ub2e4.",
             "parentId": "undefined"
           },
           {
             "id": 2,
-            "title": "IndexedDB에서 최신 TypingSession 데이터 조회 로직 개발",
-            "description": "`Task 9`에서 저장된 `TypingSession` 데이터 중 가장 최근에 완료된 세션의 데이터를 IndexedDB에서 비동기적으로 조회하는 로직을 구현합니다. 이 조회 로직은 애플리케이션의 전역 상태 관리(예: Redux 또는 Context API)와 통합될 수 있도록 설계합니다.",
+            "title": "IndexedDB\uc5d0\uc11c \ucd5c\uc2e0 TypingSession \ub370\uc774\ud130 \uc870\ud68c \ub85c\uc9c1 \uac1c\ubc1c",
+            "description": "`Task 9`\uc5d0\uc11c \uc800\uc7a5\ub41c `TypingSession` \ub370\uc774\ud130 \uc911 \uac00\uc7a5 \ucd5c\uadfc\uc5d0 \uc644\ub8cc\ub41c \uc138\uc158\uc758 \ub370\uc774\ud130\ub97c IndexedDB\uc5d0\uc11c \ube44\ub3d9\uae30\uc801\uc73c\ub85c \uc870\ud68c\ud558\ub294 \ub85c\uc9c1\uc744 \uad6c\ud604\ud569\ub2c8\ub2e4. \uc774 \uc870\ud68c \ub85c\uc9c1\uc740 \uc560\ud50c\ub9ac\ucf00\uc774\uc158\uc758 \uc804\uc5ed \uc0c1\ud0dc \uad00\ub9ac(\uc608: Redux \ub610\ub294 Context API)\uc640 \ud1b5\ud569\ub420 \uc218 \uc788\ub3c4\ub85d \uc124\uacc4\ud569\ub2c8\ub2e4.",
             "dependencies": [
               9
             ],
-            "details": "`Task 9`에서 구현될 IndexedDB 유틸리티 함수를 활용하여 최신 `TypingSession` 데이터를 가져오는 비동기 함수를 작성합니다. 이 함수를 Redux Thunk 액션 또는 React Query와 같은 데이터 fetching 라이브러리를 통해 호출할 수 있도록 준비합니다. `SessionResult` 컴포넌트가 마운트될 때 이 데이터를 트리거하도록 준비합니다.",
+            "details": "`Task 9`\uc5d0\uc11c \uad6c\ud604\ub420 IndexedDB \uc720\ud2f8\ub9ac\ud2f0 \ud568\uc218\ub97c \ud65c\uc6a9\ud558\uc5ec \ucd5c\uc2e0 `TypingSession` \ub370\uc774\ud130\ub97c \uac00\uc838\uc624\ub294 \ube44\ub3d9\uae30 \ud568\uc218\ub97c \uc791\uc131\ud569\ub2c8\ub2e4. \uc774 \ud568\uc218\ub97c Redux Thunk \uc561\uc158 \ub610\ub294 React Query\uc640 \uac19\uc740 \ub370\uc774\ud130 fetching \ub77c\uc774\ube0c\ub7ec\ub9ac\ub97c \ud1b5\ud574 \ud638\ucd9c\ud560 \uc218 \uc788\ub3c4\ub85d \uc900\ube44\ud569\ub2c8\ub2e4. `SessionResult` \ucef4\ud3ec\ub10c\ud2b8\uac00 \ub9c8\uc6b4\ud2b8\ub420 \ub54c \uc774 \ub370\uc774\ud130\ub97c \ud2b8\ub9ac\uac70\ud558\ub3c4\ub85d \uc900\ube44\ud569\ub2c8\ub2e4.",
             "status": "pending",
-            "testStrategy": "개발자 도구의 IndexedDB에서 여러 `TypingSession` 데이터를 생성한 후, 구현된 조회 로직을 사용하여 가장 최근의 데이터가 올바르게 조회되는지 테스트합니다. Redux DevTools를 통해 상태 업데이트를 모니터링하여 데이터 흐름을 확인합니다.",
+            "testStrategy": "\uac1c\ubc1c\uc790 \ub3c4\uad6c\uc758 IndexedDB\uc5d0\uc11c \uc5ec\ub7ec `TypingSession` \ub370\uc774\ud130\ub97c \uc0dd\uc131\ud55c \ud6c4, \uad6c\ud604\ub41c \uc870\ud68c \ub85c\uc9c1\uc744 \uc0ac\uc6a9\ud558\uc5ec \uac00\uc7a5 \ucd5c\uadfc\uc758 \ub370\uc774\ud130\uac00 \uc62c\ubc14\ub974\uac8c \uc870\ud68c\ub418\ub294\uc9c0 \ud14c\uc2a4\ud2b8\ud569\ub2c8\ub2e4. Redux DevTools\ub97c \ud1b5\ud574 \uc0c1\ud0dc \uc5c5\ub370\uc774\ud2b8\ub97c \ubaa8\ub2c8\ud130\ub9c1\ud558\uc5ec \ub370\uc774\ud130 \ud750\ub984\uc744 \ud655\uc778\ud569\ub2c8\ub2e4.",
             "parentId": "undefined"
           },
           {
             "id": 3,
-            "title": "SessionResult 컴포넌트에 실제 통계 데이터 연결 및 시각화",
-            "description": "IndexedDB에서 조회된 최신 `TypingSession` 데이터로부터 `Task 5`에서 계산된 WPM, 정확성, 소요 시간 등의 통계 지표를 추출하고, 이를 `SessionResult` 컴포넌트의 props로 전달하여 사용자에게 표시합니다. 데이터 형식 변환 및 단위 표시를 포함합니다.",
+            "title": "SessionResult \ucef4\ud3ec\ub10c\ud2b8\uc5d0 \uc2e4\uc81c \ud1b5\uacc4 \ub370\uc774\ud130 \uc5f0\uacb0 \ubc0f \uc2dc\uac01\ud654",
+            "description": "IndexedDB\uc5d0\uc11c \uc870\ud68c\ub41c \ucd5c\uc2e0 `TypingSession` \ub370\uc774\ud130\ub85c\ubd80\ud130 `Task 5`\uc5d0\uc11c \uacc4\uc0b0\ub41c WPM, \uc815\ud655\uc131, \uc18c\uc694 \uc2dc\uac04 \ub4f1\uc758 \ud1b5\uacc4 \uc9c0\ud45c\ub97c \ucd94\ucd9c\ud558\uace0, \uc774\ub97c `SessionResult` \ucef4\ud3ec\ub10c\ud2b8\uc758 props\ub85c \uc804\ub2ec\ud558\uc5ec \uc0ac\uc6a9\uc790\uc5d0\uac8c \ud45c\uc2dc\ud569\ub2c8\ub2e4. \ub370\uc774\ud130 \ud615\uc2dd \ubcc0\ud658 \ubc0f \ub2e8\uc704 \ud45c\uc2dc\ub97c \ud3ec\ud568\ud569\ub2c8\ub2e4.",
             "dependencies": [
               5,
               9
             ],
-            "details": "`SessionResult` 컴포넌트 또는 이를 감싸는 컨테이너 컴포넌트에서 `Task 2`에서 구현한 데이터 조회 로직을 사용하여 `wpm`, `accuracy`, `duration` 값을 가져옵니다. 예를 들어, `duration`은 초 단위로 받아와 분:초 형식으로 변환하여 표시하고, `accuracy`는 백분율로 포맷팅하여 표시합니다. `Task 1`에서 설정된 전역 상태 관리를 통해 데이터를 전달합니다.",
+            "details": "`SessionResult` \ucef4\ud3ec\ub10c\ud2b8 \ub610\ub294 \uc774\ub97c \uac10\uc2f8\ub294 \ucee8\ud14c\uc774\ub108 \ucef4\ud3ec\ub10c\ud2b8\uc5d0\uc11c `Task 2`\uc5d0\uc11c \uad6c\ud604\ud55c \ub370\uc774\ud130 \uc870\ud68c \ub85c\uc9c1\uc744 \uc0ac\uc6a9\ud558\uc5ec `wpm`, `accuracy`, `duration` \uac12\uc744 \uac00\uc838\uc635\ub2c8\ub2e4. \uc608\ub97c \ub4e4\uc5b4, `duration`\uc740 \ucd08 \ub2e8\uc704\ub85c \ubc1b\uc544\uc640 \ubd84:\ucd08 \ud615\uc2dd\uc73c\ub85c \ubcc0\ud658\ud558\uc5ec \ud45c\uc2dc\ud558\uace0, `accuracy`\ub294 \ubc31\ubd84\uc728\ub85c \ud3ec\ub9f7\ud305\ud558\uc5ec \ud45c\uc2dc\ud569\ub2c8\ub2e4. `Task 1`\uc5d0\uc11c \uc124\uc815\ub41c \uc804\uc5ed \uc0c1\ud0dc \uad00\ub9ac\ub97c \ud1b5\ud574 \ub370\uc774\ud130\ub97c \uc804\ub2ec\ud569\ub2c8\ub2e4.",
             "status": "pending",
-            "testStrategy": "타이핑 세션을 완료한 후 `SessionResult` 화면에서 WPM, 정확성, 소요 시간 값이 실제 세션 결과와 일치하는지 확인합니다. 소수점 처리, 백분율, 시간 단위 표시 등 데이터 포맷팅이 올바른지 검증합니다.",
+            "testStrategy": "\ud0c0\uc774\ud551 \uc138\uc158\uc744 \uc644\ub8cc\ud55c \ud6c4 `SessionResult` \ud654\uba74\uc5d0\uc11c WPM, \uc815\ud655\uc131, \uc18c\uc694 \uc2dc\uac04 \uac12\uc774 \uc2e4\uc81c \uc138\uc158 \uacb0\uacfc\uc640 \uc77c\uce58\ud558\ub294\uc9c0 \ud655\uc778\ud569\ub2c8\ub2e4. \uc18c\uc218\uc810 \ucc98\ub9ac, \ubc31\ubd84\uc728, \uc2dc\uac04 \ub2e8\uc704 \ud45c\uc2dc \ub4f1 \ub370\uc774\ud130 \ud3ec\ub9f7\ud305\uc774 \uc62c\ubc14\ub978\uc9c0 \uac80\uc99d\ud569\ub2c8\ub2e4.",
             "parentId": "undefined"
           },
           {
             "id": 4,
-            "title": "세션 재시작 및 다른 텍스트 선택 액션 버튼 기능 추가",
-            "description": "`SessionResult` 화면에 '다시 시작' 및 '다른 텍스트 선택' 버튼을 추가하고, 각 버튼 클릭 시 적절한 애플리케이션 상태 변경 및 화면 전환 로직을 구현합니다.",
+            "title": "\uc138\uc158 \uc7ac\uc2dc\uc791 \ubc0f \ub2e4\ub978 \ud14d\uc2a4\ud2b8 \uc120\ud0dd \uc561\uc158 \ubc84\ud2bc \uae30\ub2a5 \ucd94\uac00",
+            "description": "`SessionResult` \ud654\uba74\uc5d0 '\ub2e4\uc2dc \uc2dc\uc791' \ubc0f '\ub2e4\ub978 \ud14d\uc2a4\ud2b8 \uc120\ud0dd' \ubc84\ud2bc\uc744 \ucd94\uac00\ud558\uace0, \uac01 \ubc84\ud2bc \ud074\ub9ad \uc2dc \uc801\uc808\ud55c \uc560\ud50c\ub9ac\ucf00\uc774\uc158 \uc0c1\ud0dc \ubcc0\uacbd \ubc0f \ud654\uba74 \uc804\ud658 \ub85c\uc9c1\uc744 \uad6c\ud604\ud569\ub2c8\ub2e4.",
             "dependencies": [
               1,
               5
             ],
-            "details": "`SessionResult` 컴포넌트 내에 두 개의 `Button` 컴포넌트(또는 유사한 UI 요소)를 추가합니다. '다시 시작' 버튼 클릭 시에는 `Task 5`에서 관리하는 타이핑 세션 관련 Redux 상태를 초기화하고, 타이핑 화면으로 전환합니다. '다른 텍스트 선택' 버튼 클릭 시에는 `Task 1`에서 설정된 `react-router-dom`의 `useNavigate` 훅을 활용하여 텍스트 선택 화면으로 라우팅합니다.",
+            "details": "`SessionResult` \ucef4\ud3ec\ub10c\ud2b8 \ub0b4\uc5d0 \ub450 \uac1c\uc758 `Button` \ucef4\ud3ec\ub10c\ud2b8(\ub610\ub294 \uc720\uc0ac\ud55c UI \uc694\uc18c)\ub97c \ucd94\uac00\ud569\ub2c8\ub2e4. '\ub2e4\uc2dc \uc2dc\uc791' \ubc84\ud2bc \ud074\ub9ad \uc2dc\uc5d0\ub294 `Task 5`\uc5d0\uc11c \uad00\ub9ac\ud558\ub294 \ud0c0\uc774\ud551 \uc138\uc158 \uad00\ub828 Redux \uc0c1\ud0dc\ub97c \ucd08\uae30\ud654\ud558\uace0, \ud0c0\uc774\ud551 \ud654\uba74\uc73c\ub85c \uc804\ud658\ud569\ub2c8\ub2e4. '\ub2e4\ub978 \ud14d\uc2a4\ud2b8 \uc120\ud0dd' \ubc84\ud2bc \ud074\ub9ad \uc2dc\uc5d0\ub294 `Task 1`\uc5d0\uc11c \uc124\uc815\ub41c `react-router-dom`\uc758 `useNavigate` \ud6c5\uc744 \ud65c\uc6a9\ud558\uc5ec \ud14d\uc2a4\ud2b8 \uc120\ud0dd \ud654\uba74\uc73c\ub85c \ub77c\uc6b0\ud305\ud569\ub2c8\ub2e4.",
             "status": "pending",
-            "testStrategy": "'다시 시작' 버튼 클릭 시 타이핑 세션 상태가 초기화되고 사용자가 다시 타이핑을 시작할 준비가 되는지 확인합니다. '다른 텍스트 선택' 버튼 클릭 시 텍스트 선택 화면으로 정확히 이동하는지 테스트합니다.",
+            "testStrategy": "'\ub2e4\uc2dc \uc2dc\uc791' \ubc84\ud2bc \ud074\ub9ad \uc2dc \ud0c0\uc774\ud551 \uc138\uc158 \uc0c1\ud0dc\uac00 \ucd08\uae30\ud654\ub418\uace0 \uc0ac\uc6a9\uc790\uac00 \ub2e4\uc2dc \ud0c0\uc774\ud551\uc744 \uc2dc\uc791\ud560 \uc900\ube44\uac00 \ub418\ub294\uc9c0 \ud655\uc778\ud569\ub2c8\ub2e4. '\ub2e4\ub978 \ud14d\uc2a4\ud2b8 \uc120\ud0dd' \ubc84\ud2bc \ud074\ub9ad \uc2dc \ud14d\uc2a4\ud2b8 \uc120\ud0dd \ud654\uba74\uc73c\ub85c \uc815\ud655\ud788 \uc774\ub3d9\ud558\ub294\uc9c0 \ud14c\uc2a4\ud2b8\ud569\ub2c8\ub2e4.",
             "parentId": "undefined"
           },
           {
             "id": 5,
-            "title": "세션 완료 시 SessionResult 컴포넌트 조건부 렌더링 및 애플리케이션 흐름 통합",
-            "description": "타이핑 세션이 완료되었음을 나타내는 상태(예: Redux의 `sessionStatus: 'completed'`)를 감지하여 `SessionResult` 컴포넌트를 조건부로 렌더링하고, 타이핑 화면과 결과 화면 간의 원활한 UI 흐름을 관리합니다.",
+            "title": "\uc138\uc158 \uc644\ub8cc \uc2dc SessionResult \ucef4\ud3ec\ub10c\ud2b8 \uc870\uac74\ubd80 \ub80c\ub354\ub9c1 \ubc0f \uc560\ud50c\ub9ac\ucf00\uc774\uc158 \ud750\ub984 \ud1b5\ud569",
+            "description": "\ud0c0\uc774\ud551 \uc138\uc158\uc774 \uc644\ub8cc\ub418\uc5c8\uc74c\uc744 \ub098\ud0c0\ub0b4\ub294 \uc0c1\ud0dc(\uc608: Redux\uc758 `sessionStatus: 'completed'`)\ub97c \uac10\uc9c0\ud558\uc5ec `SessionResult` \ucef4\ud3ec\ub10c\ud2b8\ub97c \uc870\uac74\ubd80\ub85c \ub80c\ub354\ub9c1\ud558\uace0, \ud0c0\uc774\ud551 \ud654\uba74\uacfc \uacb0\uacfc \ud654\uba74 \uac04\uc758 \uc6d0\ud65c\ud55c UI \ud750\ub984\uc744 \uad00\ub9ac\ud569\ub2c8\ub2e4.",
             "dependencies": [
               1,
               2
             ],
-            "details": "메인 타이핑 화면 컴포넌트에서 `Task 1`에서 설정된 Redux 스토어의 `sessionStatus` 상태를 구독합니다. `sessionStatus`가 'completed'로 변경될 때 `SessionResult` 컴포넌트가 표시되도록 조건부 렌더링 로직을 구현합니다. 필요한 데이터를 `SessionResult` 컴포넌트에 props로 전달합니다. `Task 2`의 레이아웃 구성에 따라 자연스럽게 통합되도록 합니다. (향후 `Task 14`에서 애니메이션 효과 추가 가능)",
+            "details": "\uba54\uc778 \ud0c0\uc774\ud551 \ud654\uba74 \ucef4\ud3ec\ub10c\ud2b8\uc5d0\uc11c `Task 1`\uc5d0\uc11c \uc124\uc815\ub41c Redux \uc2a4\ud1a0\uc5b4\uc758 `sessionStatus` \uc0c1\ud0dc\ub97c \uad6c\ub3c5\ud569\ub2c8\ub2e4. `sessionStatus`\uac00 'completed'\ub85c \ubcc0\uacbd\ub420 \ub54c `SessionResult` \ucef4\ud3ec\ub10c\ud2b8\uac00 \ud45c\uc2dc\ub418\ub3c4\ub85d \uc870\uac74\ubd80 \ub80c\ub354\ub9c1 \ub85c\uc9c1\uc744 \uad6c\ud604\ud569\ub2c8\ub2e4. \ud544\uc694\ud55c \ub370\uc774\ud130\ub97c `SessionResult` \ucef4\ud3ec\ub10c\ud2b8\uc5d0 props\ub85c \uc804\ub2ec\ud569\ub2c8\ub2e4. `Task 2`\uc758 \ub808\uc774\uc544\uc6c3 \uad6c\uc131\uc5d0 \ub530\ub77c \uc790\uc5f0\uc2a4\ub7fd\uac8c \ud1b5\ud569\ub418\ub3c4\ub85d \ud569\ub2c8\ub2e4. (\ud5a5\ud6c4 `Task 14`\uc5d0\uc11c \uc560\ub2c8\uba54\uc774\uc158 \ud6a8\uacfc \ucd94\uac00 \uac00\ub2a5)",
             "status": "pending",
-            "testStrategy": "타이핑 세션을 완료했을 때 `SessionResult` 컴포넌트가 올바르게 나타나고, 다시 타이핑을 시작하거나 다른 텍스트를 선택하기 전까지 결과 화면이 유지되는지 확인합니다. 세션 진행 중에는 `SessionResult`가 표시되지 않는지 검증합니다.",
+            "testStrategy": "\ud0c0\uc774\ud551 \uc138\uc158\uc744 \uc644\ub8cc\ud588\uc744 \ub54c `SessionResult` \ucef4\ud3ec\ub10c\ud2b8\uac00 \uc62c\ubc14\ub974\uac8c \ub098\ud0c0\ub098\uace0, \ub2e4\uc2dc \ud0c0\uc774\ud551\uc744 \uc2dc\uc791\ud558\uac70\ub098 \ub2e4\ub978 \ud14d\uc2a4\ud2b8\ub97c \uc120\ud0dd\ud558\uae30 \uc804\uae4c\uc9c0 \uacb0\uacfc \ud654\uba74\uc774 \uc720\uc9c0\ub418\ub294\uc9c0 \ud655\uc778\ud569\ub2c8\ub2e4. \uc138\uc158 \uc9c4\ud589 \uc911\uc5d0\ub294 `SessionResult`\uac00 \ud45c\uc2dc\ub418\uc9c0 \uc54a\ub294\uc9c0 \uac80\uc99d\ud569\ub2c8\ub2e4.",
             "parentId": "undefined"
           }
         ]
       },
       {
         "id": "11",
-        "title": "Chart.js/Recharts 연동을 통한 기본 통계 시각화",
-        "description": "사용자의 학습 진도를 시각적으로 보여주기 위해 Chart.js 또는 Recharts 라이브러리를 활용하여 기본적인 타이핑 통계(예: 시간별 WPM 추이)를 차트로 표시합니다.",
-        "details": "`StatsChart` 컴포넌트를 생성하고 Chart.js 또는 Recharts를 사용하여 선 그래프(Line Chart)를 구현합니다. IndexedDB에 저장된 `TypingSession` 데이터에서 특정 기간(예: 최근 7일) 동안의 WPM 및 정확성 데이터를 가져와 차트의 데이터 소스로 사용합니다. 사용자에게 학습 추이를 직관적으로 보여줄 수 있도록 Y축은 WPM/정확성, X축은 시간(날짜)으로 설정합니다.",
-        "testStrategy": "여러 타이핑 세션을 기록한 후 통계 화면에서 차트가 올바르게 렌더링되는지 확인합니다. 데이터가 추가될 때 차트가 업데이트되고, WPM 또는 정확성 변화가 그래프에 정확히 반영되는지 검증합니다.",
+        "title": "Chart.js/Recharts \uc5f0\ub3d9\uc744 \ud1b5\ud55c \uae30\ubcf8 \ud1b5\uacc4 \uc2dc\uac01\ud654",
+        "description": "\uc0ac\uc6a9\uc790\uc758 \ud559\uc2b5 \uc9c4\ub3c4\ub97c \uc2dc\uac01\uc801\uc73c\ub85c \ubcf4\uc5ec\uc8fc\uae30 \uc704\ud574 Chart.js \ub610\ub294 Recharts \ub77c\uc774\ube0c\ub7ec\ub9ac\ub97c \ud65c\uc6a9\ud558\uc5ec \uae30\ubcf8\uc801\uc778 \ud0c0\uc774\ud551 \ud1b5\uacc4(\uc608: \uc2dc\uac04\ubcc4 WPM \ucd94\uc774)\ub97c \ucc28\ud2b8\ub85c \ud45c\uc2dc\ud569\ub2c8\ub2e4.",
+        "details": "`StatsChart` \ucef4\ud3ec\ub10c\ud2b8\ub97c \uc0dd\uc131\ud558\uace0 Chart.js \ub610\ub294 Recharts\ub97c \uc0ac\uc6a9\ud558\uc5ec \uc120 \uadf8\ub798\ud504(Line Chart)\ub97c \uad6c\ud604\ud569\ub2c8\ub2e4. IndexedDB\uc5d0 \uc800\uc7a5\ub41c `TypingSession` \ub370\uc774\ud130\uc5d0\uc11c \ud2b9\uc815 \uae30\uac04(\uc608: \ucd5c\uadfc 7\uc77c) \ub3d9\uc548\uc758 WPM \ubc0f \uc815\ud655\uc131 \ub370\uc774\ud130\ub97c \uac00\uc838\uc640 \ucc28\ud2b8\uc758 \ub370\uc774\ud130 \uc18c\uc2a4\ub85c \uc0ac\uc6a9\ud569\ub2c8\ub2e4. \uc0ac\uc6a9\uc790\uc5d0\uac8c \ud559\uc2b5 \ucd94\uc774\ub97c \uc9c1\uad00\uc801\uc73c\ub85c \ubcf4\uc5ec\uc904 \uc218 \uc788\ub3c4\ub85d Y\ucd95\uc740 WPM/\uc815\ud655\uc131, X\ucd95\uc740 \uc2dc\uac04(\ub0a0\uc9dc)\uc73c\ub85c \uc124\uc815\ud569\ub2c8\ub2e4.",
+        "testStrategy": "\uc5ec\ub7ec \ud0c0\uc774\ud551 \uc138\uc158\uc744 \uae30\ub85d\ud55c \ud6c4 \ud1b5\uacc4 \ud654\uba74\uc5d0\uc11c \ucc28\ud2b8\uac00 \uc62c\ubc14\ub974\uac8c \ub80c\ub354\ub9c1\ub418\ub294\uc9c0 \ud655\uc778\ud569\ub2c8\ub2e4. \ub370\uc774\ud130\uac00 \ucd94\uac00\ub420 \ub54c \ucc28\ud2b8\uac00 \uc5c5\ub370\uc774\ud2b8\ub418\uace0, WPM \ub610\ub294 \uc815\ud655\uc131 \ubcc0\ud654\uac00 \uadf8\ub798\ud504\uc5d0 \uc815\ud655\ud788 \ubc18\uc601\ub418\ub294\uc9c0 \uac80\uc99d\ud569\ub2c8\ub2e4.",
         "priority": "medium",
         "dependencies": [
           "9",
@@ -651,10 +651,10 @@
       },
       {
         "id": "12",
-        "title": "PWA (Progressive Web App) 기본 설정 및 구현",
-        "description": "애플리케이션이 오프라인 모드를 지원하고 사용자가 앱을 설치할 수 있도록 PWA 기능을 구현합니다.",
-        "details": "서비스 워커(`service-worker.js`)를 등록하고, 애플리케이션 셸(HTML, CSS, JS 번들) 및 핵심 에셋(이미지, 폰트)을 캐싱하여 오프라인에서도 작동하도록 설정합니다. `manifest.json` 파일을 구성하여 앱 이름, 아이콘, 시작 URL, 표시 모드(standalone) 등을 정의합니다. `create-react-app`의 경우 PWA 템플릿을 활용하거나 `workbox`와 같은 라이브러리를 사용합니다.",
-        "testStrategy": "개발자 도구에서 'Audit' 탭을 사용하여 PWA 점수를 확인합니다. 네트워크를 오프라인으로 전환한 후 앱이 정상적으로 로드되고 핵심 기능(타이핑 연습)이 작동하는지 테스트합니다. 브라우저에서 '홈 화면에 추가' 또는 '설치' 옵션이 나타나는지 확인합니다.",
+        "title": "PWA (Progressive Web App) \uae30\ubcf8 \uc124\uc815 \ubc0f \uad6c\ud604",
+        "description": "\uc560\ud50c\ub9ac\ucf00\uc774\uc158\uc774 \uc624\ud504\ub77c\uc778 \ubaa8\ub4dc\ub97c \uc9c0\uc6d0\ud558\uace0 \uc0ac\uc6a9\uc790\uac00 \uc571\uc744 \uc124\uce58\ud560 \uc218 \uc788\ub3c4\ub85d PWA \uae30\ub2a5\uc744 \uad6c\ud604\ud569\ub2c8\ub2e4.",
+        "details": "\uc11c\ube44\uc2a4 \uc6cc\ucee4(`service-worker.js`)\ub97c \ub4f1\ub85d\ud558\uace0, \uc560\ud50c\ub9ac\ucf00\uc774\uc158 \uc178(HTML, CSS, JS \ubc88\ub4e4) \ubc0f \ud575\uc2ec \uc5d0\uc14b(\uc774\ubbf8\uc9c0, \ud3f0\ud2b8)\uc744 \uce90\uc2f1\ud558\uc5ec \uc624\ud504\ub77c\uc778\uc5d0\uc11c\ub3c4 \uc791\ub3d9\ud558\ub3c4\ub85d \uc124\uc815\ud569\ub2c8\ub2e4. `manifest.json` \ud30c\uc77c\uc744 \uad6c\uc131\ud558\uc5ec \uc571 \uc774\ub984, \uc544\uc774\ucf58, \uc2dc\uc791 URL, \ud45c\uc2dc \ubaa8\ub4dc(standalone) \ub4f1\uc744 \uc815\uc758\ud569\ub2c8\ub2e4. `create-react-app`\uc758 \uacbd\uc6b0 PWA \ud15c\ud50c\ub9bf\uc744 \ud65c\uc6a9\ud558\uac70\ub098 `workbox`\uc640 \uac19\uc740 \ub77c\uc774\ube0c\ub7ec\ub9ac\ub97c \uc0ac\uc6a9\ud569\ub2c8\ub2e4.",
+        "testStrategy": "\uac1c\ubc1c\uc790 \ub3c4\uad6c\uc5d0\uc11c 'Audit' \ud0ed\uc744 \uc0ac\uc6a9\ud558\uc5ec PWA \uc810\uc218\ub97c \ud655\uc778\ud569\ub2c8\ub2e4. \ub124\ud2b8\uc6cc\ud06c\ub97c \uc624\ud504\ub77c\uc778\uc73c\ub85c \uc804\ud658\ud55c \ud6c4 \uc571\uc774 \uc815\uc0c1\uc801\uc73c\ub85c \ub85c\ub4dc\ub418\uace0 \ud575\uc2ec \uae30\ub2a5(\ud0c0\uc774\ud551 \uc5f0\uc2b5)\uc774 \uc791\ub3d9\ud558\ub294\uc9c0 \ud14c\uc2a4\ud2b8\ud569\ub2c8\ub2e4. \ube0c\ub77c\uc6b0\uc800\uc5d0\uc11c '\ud648 \ud654\uba74\uc5d0 \ucd94\uac00' \ub610\ub294 '\uc124\uce58' \uc635\uc158\uc774 \ub098\ud0c0\ub098\ub294\uc9c0 \ud655\uc778\ud569\ub2c8\ub2e4.",
         "priority": "medium",
         "dependencies": [
           "9"
@@ -664,10 +664,10 @@
       },
       {
         "id": "13",
-        "title": "한글 자모 연습 모드 개발 (초보자용)",
-        "description": "한글 타이핑 초보자를 위한 자음과 모음 개별 연습 모드를 구현합니다. 이는 '맞춤형 학습 콘텐츠'의 한글 자모 연습 모드 요구사항을 충족합니다.",
-        "details": "한글의 자음(ㄱ, ㄴ, ㄷ...), 모음(ㅏ, ㅑ, ㅓ...) 목록을 정의합니다. `TypingTextDisplay` 컴포넌트를 재활용하거나 새롭게 자모 연습에 특화된 컴포넌트를 개발하여, 한 번에 하나의 자음 또는 모음을 화면에 표시하고 사용자가 이를 입력하도록 합니다. 입력이 성공하면 다음 자모로 넘어갑니다. 기본적인 통계(정확성, 소요 시간)도 기록합니다.",
-        "testStrategy": "각 자음과 모음을 정확하게 입력했을 때 다음 자모로 넘어가는지 확인합니다. 오타 발생 시 피드백이 올바르게 나타나는지, 그리고 이 모드에서 얻은 통계가 다른 연습 모드와 분리되어 기록되는지 테스트합니다.",
+        "title": "\ud55c\uae00 \uc790\ubaa8 \uc5f0\uc2b5 \ubaa8\ub4dc \uac1c\ubc1c (\ucd08\ubcf4\uc790\uc6a9)",
+        "description": "\ud55c\uae00 \ud0c0\uc774\ud551 \ucd08\ubcf4\uc790\ub97c \uc704\ud55c \uc790\uc74c\uacfc \ubaa8\uc74c \uac1c\ubcc4 \uc5f0\uc2b5 \ubaa8\ub4dc\ub97c \uad6c\ud604\ud569\ub2c8\ub2e4. \uc774\ub294 '\ub9de\ucda4\ud615 \ud559\uc2b5 \ucf58\ud150\uce20'\uc758 \ud55c\uae00 \uc790\ubaa8 \uc5f0\uc2b5 \ubaa8\ub4dc \uc694\uad6c\uc0ac\ud56d\uc744 \ucda9\uc871\ud569\ub2c8\ub2e4.",
+        "details": "\ud55c\uae00\uc758 \uc790\uc74c(\u3131, \u3134, \u3137...), \ubaa8\uc74c(\u314f, \u3151, \u3153...) \ubaa9\ub85d\uc744 \uc815\uc758\ud569\ub2c8\ub2e4. `TypingTextDisplay` \ucef4\ud3ec\ub10c\ud2b8\ub97c \uc7ac\ud65c\uc6a9\ud558\uac70\ub098 \uc0c8\ub86d\uac8c \uc790\ubaa8 \uc5f0\uc2b5\uc5d0 \ud2b9\ud654\ub41c \ucef4\ud3ec\ub10c\ud2b8\ub97c \uac1c\ubc1c\ud558\uc5ec, \ud55c \ubc88\uc5d0 \ud558\ub098\uc758 \uc790\uc74c \ub610\ub294 \ubaa8\uc74c\uc744 \ud654\uba74\uc5d0 \ud45c\uc2dc\ud558\uace0 \uc0ac\uc6a9\uc790\uac00 \uc774\ub97c \uc785\ub825\ud558\ub3c4\ub85d \ud569\ub2c8\ub2e4. \uc785\ub825\uc774 \uc131\uacf5\ud558\uba74 \ub2e4\uc74c \uc790\ubaa8\ub85c \ub118\uc5b4\uac11\ub2c8\ub2e4. \uae30\ubcf8\uc801\uc778 \ud1b5\uacc4(\uc815\ud655\uc131, \uc18c\uc694 \uc2dc\uac04)\ub3c4 \uae30\ub85d\ud569\ub2c8\ub2e4.",
+        "testStrategy": "\uac01 \uc790\uc74c\uacfc \ubaa8\uc74c\uc744 \uc815\ud655\ud558\uac8c \uc785\ub825\ud588\uc744 \ub54c \ub2e4\uc74c \uc790\ubaa8\ub85c \ub118\uc5b4\uac00\ub294\uc9c0 \ud655\uc778\ud569\ub2c8\ub2e4. \uc624\ud0c0 \ubc1c\uc0dd \uc2dc \ud53c\ub4dc\ubc31\uc774 \uc62c\ubc14\ub974\uac8c \ub098\ud0c0\ub098\ub294\uc9c0, \uadf8\ub9ac\uace0 \uc774 \ubaa8\ub4dc\uc5d0\uc11c \uc5bb\uc740 \ud1b5\uacc4\uac00 \ub2e4\ub978 \uc5f0\uc2b5 \ubaa8\ub4dc\uc640 \ubd84\ub9ac\ub418\uc5b4 \uae30\ub85d\ub418\ub294\uc9c0 \ud14c\uc2a4\ud2b8\ud569\ub2c8\ub2e4.",
         "priority": "low",
         "dependencies": [
           "3",
@@ -678,10 +678,10 @@
       },
       {
         "id": "14",
-        "title": "Framer Motion을 활용한 부드러운 애니메이션 효과 추가",
-        "description": "사용자 경험을 향상시키기 위해 Framer Motion 라이브러리를 사용하여 UI 전환 및 피드백에 부드러운 애니메이션 효과를 적용합니다.",
-        "details": "버튼 클릭, 모달 열기/닫기, 세션 결과 표시 전환, 오타 피드백 등 주요 UI 요소에 Framer Motion의 `motion` 컴포넌트와 `useAnimation` 훅을 적용하여 `fade`, `slide`, `scale` 등의 애니메이션 효과를 추가합니다. 특히 오타 시각적 피드백에는 경고 애니메이션(예: 잠시 흔들림)을 추가하여 시각적 강조 효과를 높입니다.",
-        "testStrategy": "애플리케이션을 사용하면서 주요 UI 상호작용에서 애니메이션이 부드럽게 작동하고 사용자 경험을 방해하지 않는지 시각적으로 확인합니다. 애니메이션이 적용된 컴포넌트의 상태 변화에 따라 예상대로 동작하는지 검증합니다.",
+        "title": "Framer Motion\uc744 \ud65c\uc6a9\ud55c \ubd80\ub4dc\ub7ec\uc6b4 \uc560\ub2c8\uba54\uc774\uc158 \ud6a8\uacfc \ucd94\uac00",
+        "description": "\uc0ac\uc6a9\uc790 \uacbd\ud5d8\uc744 \ud5a5\uc0c1\uc2dc\ud0a4\uae30 \uc704\ud574 Framer Motion \ub77c\uc774\ube0c\ub7ec\ub9ac\ub97c \uc0ac\uc6a9\ud558\uc5ec UI \uc804\ud658 \ubc0f \ud53c\ub4dc\ubc31\uc5d0 \ubd80\ub4dc\ub7ec\uc6b4 \uc560\ub2c8\uba54\uc774\uc158 \ud6a8\uacfc\ub97c \uc801\uc6a9\ud569\ub2c8\ub2e4.",
+        "details": "\ubc84\ud2bc \ud074\ub9ad, \ubaa8\ub2ec \uc5f4\uae30/\ub2eb\uae30, \uc138\uc158 \uacb0\uacfc \ud45c\uc2dc \uc804\ud658, \uc624\ud0c0 \ud53c\ub4dc\ubc31 \ub4f1 \uc8fc\uc694 UI \uc694\uc18c\uc5d0 Framer Motion\uc758 `motion` \ucef4\ud3ec\ub10c\ud2b8\uc640 `useAnimation` \ud6c5\uc744 \uc801\uc6a9\ud558\uc5ec `fade`, `slide`, `scale` \ub4f1\uc758 \uc560\ub2c8\uba54\uc774\uc158 \ud6a8\uacfc\ub97c \ucd94\uac00\ud569\ub2c8\ub2e4. \ud2b9\ud788 \uc624\ud0c0 \uc2dc\uac01\uc801 \ud53c\ub4dc\ubc31\uc5d0\ub294 \uacbd\uace0 \uc560\ub2c8\uba54\uc774\uc158(\uc608: \uc7a0\uc2dc \ud754\ub4e4\ub9bc)\uc744 \ucd94\uac00\ud558\uc5ec \uc2dc\uac01\uc801 \uac15\uc870 \ud6a8\uacfc\ub97c \ub192\uc785\ub2c8\ub2e4.",
+        "testStrategy": "\uc560\ud50c\ub9ac\ucf00\uc774\uc158\uc744 \uc0ac\uc6a9\ud558\uba74\uc11c \uc8fc\uc694 UI \uc0c1\ud638\uc791\uc6a9\uc5d0\uc11c \uc560\ub2c8\uba54\uc774\uc158\uc774 \ubd80\ub4dc\ub7fd\uac8c \uc791\ub3d9\ud558\uace0 \uc0ac\uc6a9\uc790 \uacbd\ud5d8\uc744 \ubc29\ud574\ud558\uc9c0 \uc54a\ub294\uc9c0 \uc2dc\uac01\uc801\uc73c\ub85c \ud655\uc778\ud569\ub2c8\ub2e4. \uc560\ub2c8\uba54\uc774\uc158\uc774 \uc801\uc6a9\ub41c \ucef4\ud3ec\ub10c\ud2b8\uc758 \uc0c1\ud0dc \ubcc0\ud654\uc5d0 \ub530\ub77c \uc608\uc0c1\ub300\ub85c \ub3d9\uc791\ud558\ub294\uc9c0 \uac80\uc99d\ud569\ub2c8\ub2e4.",
         "priority": "low",
         "dependencies": [
           "2",
@@ -692,76 +692,76 @@
         "subtasks": [
           {
             "id": 1,
-            "title": "Framer Motion 기본 구조 설정 및 공통 애니메이션 유틸리티 정의",
-            "description": "Framer Motion 라이브러리를 애플리케이션에 통합하기 위한 기본 설정을 완료하고, fade, slide, scale 등 재사용 가능한 공통 애니메이션 variants를 정의합니다.",
+            "title": "Framer Motion \uae30\ubcf8 \uad6c\uc870 \uc124\uc815 \ubc0f \uacf5\ud1b5 \uc560\ub2c8\uba54\uc774\uc158 \uc720\ud2f8\ub9ac\ud2f0 \uc815\uc758",
+            "description": "Framer Motion \ub77c\uc774\ube0c\ub7ec\ub9ac\ub97c \uc560\ud50c\ub9ac\ucf00\uc774\uc158\uc5d0 \ud1b5\ud569\ud558\uae30 \uc704\ud55c \uae30\ubcf8 \uc124\uc815\uc744 \uc644\ub8cc\ud558\uace0, fade, slide, scale \ub4f1 \uc7ac\uc0ac\uc6a9 \uac00\ub2a5\ud55c \uacf5\ud1b5 \uc560\ub2c8\uba54\uc774\uc158 variants\ub97c \uc815\uc758\ud569\ub2c8\ub2e4.",
             "dependencies": [
               1,
               2
             ],
-            "details": "motion 컴포넌트를 사용하고 initial, animate, exit 속성을 활용하기 위한 환경을 조성합니다. 자주 사용될 fade (투명도), slide (위치), scale (크기) 등의 variants 객체를 animation.ts 또는 유사한 유틸리티 파일에 정의하여 재사용성을 높입니다.",
+            "details": "motion \ucef4\ud3ec\ub10c\ud2b8\ub97c \uc0ac\uc6a9\ud558\uace0 initial, animate, exit \uc18d\uc131\uc744 \ud65c\uc6a9\ud558\uae30 \uc704\ud55c \ud658\uacbd\uc744 \uc870\uc131\ud569\ub2c8\ub2e4. \uc790\uc8fc \uc0ac\uc6a9\ub420 fade (\ud22c\uba85\ub3c4), slide (\uc704\uce58), scale (\ud06c\uae30) \ub4f1\uc758 variants \uac1d\uccb4\ub97c animation.ts \ub610\ub294 \uc720\uc0ac\ud55c \uc720\ud2f8\ub9ac\ud2f0 \ud30c\uc77c\uc5d0 \uc815\uc758\ud558\uc5ec \uc7ac\uc0ac\uc6a9\uc131\uc744 \ub192\uc785\ub2c8\ub2e4.",
             "status": "pending",
-            "testStrategy": "더미 컴포넌트에 정의된 variants를 적용하여 애니메이션이 올바르게 트리거되고 예상대로 동작하는지 시각적으로 확인합니다. motion 컴포넌트가 렌더링되는지 확인합니다.",
+            "testStrategy": "\ub354\ubbf8 \ucef4\ud3ec\ub10c\ud2b8\uc5d0 \uc815\uc758\ub41c variants\ub97c \uc801\uc6a9\ud558\uc5ec \uc560\ub2c8\uba54\uc774\uc158\uc774 \uc62c\ubc14\ub974\uac8c \ud2b8\ub9ac\uac70\ub418\uace0 \uc608\uc0c1\ub300\ub85c \ub3d9\uc791\ud558\ub294\uc9c0 \uc2dc\uac01\uc801\uc73c\ub85c \ud655\uc778\ud569\ub2c8\ub2e4. motion \ucef4\ud3ec\ub10c\ud2b8\uac00 \ub80c\ub354\ub9c1\ub418\ub294\uc9c0 \ud655\uc778\ud569\ub2c8\ub2e4.",
             "parentId": "undefined"
           },
           {
             "id": 2,
-            "title": "버튼 및 주요 UI 요소에 기본 상호작용 애니메이션 적용",
-            "description": "애플리케이션 내의 버튼 클릭, 호버 등 주요 UI 상호작용에 fade 및 scale 애니메이션 효과를 적용하여 사용자 피드백을 강화합니다.",
+            "title": "\ubc84\ud2bc \ubc0f \uc8fc\uc694 UI \uc694\uc18c\uc5d0 \uae30\ubcf8 \uc0c1\ud638\uc791\uc6a9 \uc560\ub2c8\uba54\uc774\uc158 \uc801\uc6a9",
+            "description": "\uc560\ud50c\ub9ac\ucf00\uc774\uc158 \ub0b4\uc758 \ubc84\ud2bc \ud074\ub9ad, \ud638\ubc84 \ub4f1 \uc8fc\uc694 UI \uc0c1\ud638\uc791\uc6a9\uc5d0 fade \ubc0f scale \uc560\ub2c8\uba54\uc774\uc158 \ud6a8\uacfc\ub97c \uc801\uc6a9\ud558\uc5ec \uc0ac\uc6a9\uc790 \ud53c\ub4dc\ubc31\uc744 \uac15\ud654\ud569\ub2c8\ub2e4.",
             "dependencies": [
               1
             ],
-            "details": "motion.button 또는 다른 motion 컴포넌트를 사용하여 whileHover, whileTap 속성을 통해 버튼에 시각적 피드백 애니메이션(예: 살짝 커지는 scale, 투명도 변화)을 추가합니다. 기타 중요한 상호작용 가능한 UI 요소에도 유사한 효과를 적용합니다.",
+            "details": "motion.button \ub610\ub294 \ub2e4\ub978 motion \ucef4\ud3ec\ub10c\ud2b8\ub97c \uc0ac\uc6a9\ud558\uc5ec whileHover, whileTap \uc18d\uc131\uc744 \ud1b5\ud574 \ubc84\ud2bc\uc5d0 \uc2dc\uac01\uc801 \ud53c\ub4dc\ubc31 \uc560\ub2c8\uba54\uc774\uc158(\uc608: \uc0b4\uc9dd \ucee4\uc9c0\ub294 scale, \ud22c\uba85\ub3c4 \ubcc0\ud654)\uc744 \ucd94\uac00\ud569\ub2c8\ub2e4. \uae30\ud0c0 \uc911\uc694\ud55c \uc0c1\ud638\uc791\uc6a9 \uac00\ub2a5\ud55c UI \uc694\uc18c\uc5d0\ub3c4 \uc720\uc0ac\ud55c \ud6a8\uacfc\ub97c \uc801\uc6a9\ud569\ub2c8\ub2e4.",
             "status": "pending",
-            "testStrategy": "각 버튼 및 UI 요소를 클릭하거나 호버링하여 정의된 애니메이션이 부드럽게 재생되고 사용성을 해치지 않는지 시각적으로 확인합니다.",
+            "testStrategy": "\uac01 \ubc84\ud2bc \ubc0f UI \uc694\uc18c\ub97c \ud074\ub9ad\ud558\uac70\ub098 \ud638\ubc84\ub9c1\ud558\uc5ec \uc815\uc758\ub41c \uc560\ub2c8\uba54\uc774\uc158\uc774 \ubd80\ub4dc\ub7fd\uac8c \uc7ac\uc0dd\ub418\uace0 \uc0ac\uc6a9\uc131\uc744 \ud574\uce58\uc9c0 \uc54a\ub294\uc9c0 \uc2dc\uac01\uc801\uc73c\ub85c \ud655\uc778\ud569\ub2c8\ub2e4.",
             "parentId": "undefined"
           },
           {
             "id": 3,
-            "title": "모달 컴포넌트 열기/닫기 전환 애니메이션 구현",
-            "description": "모달 컴포넌트가 열리고 닫힐 때 AnimatePresence를 활용하여 부드러운 fade 및 slide 전환 애니메이션을 적용합니다.",
+            "title": "\ubaa8\ub2ec \ucef4\ud3ec\ub10c\ud2b8 \uc5f4\uae30/\ub2eb\uae30 \uc804\ud658 \uc560\ub2c8\uba54\uc774\uc158 \uad6c\ud604",
+            "description": "\ubaa8\ub2ec \ucef4\ud3ec\ub10c\ud2b8\uac00 \uc5f4\ub9ac\uace0 \ub2eb\ud790 \ub54c AnimatePresence\ub97c \ud65c\uc6a9\ud558\uc5ec \ubd80\ub4dc\ub7ec\uc6b4 fade \ubc0f slide \uc804\ud658 \uc560\ub2c8\uba54\uc774\uc158\uc744 \uc801\uc6a9\ud569\ub2c8\ub2e4.",
             "dependencies": [
               1,
               2
             ],
-            "details": "기존 모달 컴포넌트를 motion.div로 감싸고, AnimatePresence 컴포넌트를 사용하여 모달이 DOM에서 제거될 때 exit 애니메이션이 실행되도록 합니다. initial, animate, exit 속성에 fade 또는 slide variants를 적용하여 자연스러운 등장/퇴장 효과를 구현합니다.",
+            "details": "\uae30\uc874 \ubaa8\ub2ec \ucef4\ud3ec\ub10c\ud2b8\ub97c motion.div\ub85c \uac10\uc2f8\uace0, AnimatePresence \ucef4\ud3ec\ub10c\ud2b8\ub97c \uc0ac\uc6a9\ud558\uc5ec \ubaa8\ub2ec\uc774 DOM\uc5d0\uc11c \uc81c\uac70\ub420 \ub54c exit \uc560\ub2c8\uba54\uc774\uc158\uc774 \uc2e4\ud589\ub418\ub3c4\ub85d \ud569\ub2c8\ub2e4. initial, animate, exit \uc18d\uc131\uc5d0 fade \ub610\ub294 slide variants\ub97c \uc801\uc6a9\ud558\uc5ec \uc790\uc5f0\uc2a4\ub7ec\uc6b4 \ub4f1\uc7a5/\ud1f4\uc7a5 \ud6a8\uacfc\ub97c \uad6c\ud604\ud569\ub2c8\ub2e4.",
             "status": "pending",
-            "testStrategy": "모달을 열고 닫으면서 애니메이션이 부드럽게 시작하고 끝나는지, 내용이 깜빡이지 않는지 시각적으로 확인합니다. 여러 번 반복하여 안정성을 검증합니다.",
+            "testStrategy": "\ubaa8\ub2ec\uc744 \uc5f4\uace0 \ub2eb\uc73c\uba74\uc11c \uc560\ub2c8\uba54\uc774\uc158\uc774 \ubd80\ub4dc\ub7fd\uac8c \uc2dc\uc791\ud558\uace0 \ub05d\ub098\ub294\uc9c0, \ub0b4\uc6a9\uc774 \uae5c\ube61\uc774\uc9c0 \uc54a\ub294\uc9c0 \uc2dc\uac01\uc801\uc73c\ub85c \ud655\uc778\ud569\ub2c8\ub2e4. \uc5ec\ub7ec \ubc88 \ubc18\ubcf5\ud558\uc5ec \uc548\uc815\uc131\uc744 \uac80\uc99d\ud569\ub2c8\ub2e4.",
             "parentId": "undefined"
           },
           {
             "id": 4,
-            "title": "세션 결과 화면 전환 애니메이션 적용",
-            "description": "타이핑 세션이 완료된 후 결과 화면으로 전환될 때 slide 또는 fade 애니메이션을 적용하여 사용자에게 시각적 흐름을 제공합니다.",
+            "title": "\uc138\uc158 \uacb0\uacfc \ud654\uba74 \uc804\ud658 \uc560\ub2c8\uba54\uc774\uc158 \uc801\uc6a9",
+            "description": "\ud0c0\uc774\ud551 \uc138\uc158\uc774 \uc644\ub8cc\ub41c \ud6c4 \uacb0\uacfc \ud654\uba74\uc73c\ub85c \uc804\ud658\ub420 \ub54c slide \ub610\ub294 fade \uc560\ub2c8\uba54\uc774\uc158\uc744 \uc801\uc6a9\ud558\uc5ec \uc0ac\uc6a9\uc790\uc5d0\uac8c \uc2dc\uac01\uc801 \ud750\ub984\uc744 \uc81c\uacf5\ud569\ub2c8\ub2e4.",
             "dependencies": [
               1,
               5
             ],
-            "details": "세션 결과가 표시되는 컴포넌트 또는 뷰에 motion.div를 적용하고, initial, animate 속성을 사용하여 부드러운 등장 애니메이션(예: 아래에서 위로 slide 업, fade 인)을 구현합니다. 필요하다면 AnimatePresence를 사용하여 이전 화면과의 전환 효과를 만듭니다.",
+            "details": "\uc138\uc158 \uacb0\uacfc\uac00 \ud45c\uc2dc\ub418\ub294 \ucef4\ud3ec\ub10c\ud2b8 \ub610\ub294 \ubdf0\uc5d0 motion.div\ub97c \uc801\uc6a9\ud558\uace0, initial, animate \uc18d\uc131\uc744 \uc0ac\uc6a9\ud558\uc5ec \ubd80\ub4dc\ub7ec\uc6b4 \ub4f1\uc7a5 \uc560\ub2c8\uba54\uc774\uc158(\uc608: \uc544\ub798\uc5d0\uc11c \uc704\ub85c slide \uc5c5, fade \uc778)\uc744 \uad6c\ud604\ud569\ub2c8\ub2e4. \ud544\uc694\ud558\ub2e4\uba74 AnimatePresence\ub97c \uc0ac\uc6a9\ud558\uc5ec \uc774\uc804 \ud654\uba74\uacfc\uc758 \uc804\ud658 \ud6a8\uacfc\ub97c \ub9cc\ub4ed\ub2c8\ub2e4.",
             "status": "pending",
-            "testStrategy": "타이핑 세션을 완료한 후 결과 화면이 나타날 때 애니메이션이 의도한 대로 자연스럽게 재생되는지 확인합니다. 다양한 조건에서 전환 효과가 일관되게 나타나는지 검증합니다.",
+            "testStrategy": "\ud0c0\uc774\ud551 \uc138\uc158\uc744 \uc644\ub8cc\ud55c \ud6c4 \uacb0\uacfc \ud654\uba74\uc774 \ub098\ud0c0\ub0a0 \ub54c \uc560\ub2c8\uba54\uc774\uc158\uc774 \uc758\ub3c4\ud55c \ub300\ub85c \uc790\uc5f0\uc2a4\ub7fd\uac8c \uc7ac\uc0dd\ub418\ub294\uc9c0 \ud655\uc778\ud569\ub2c8\ub2e4. \ub2e4\uc591\ud55c \uc870\uac74\uc5d0\uc11c \uc804\ud658 \ud6a8\uacfc\uac00 \uc77c\uad00\ub418\uac8c \ub098\ud0c0\ub098\ub294\uc9c0 \uac80\uc99d\ud569\ub2c8\ub2e4.",
             "parentId": "undefined"
           },
           {
             "id": 5,
-            "title": "오타 발생 시 시각적 경고 애니메이션 (흔들림) 구현",
-            "description": "사용자가 오타를 입력했을 때 텍스트 입력 필드나 관련 UI 요소에 useAnimation 훅을 활용한 '흔들림' 경고 애니메이션을 적용하여 즉각적인 시각적 피드백을 제공합니다.",
+            "title": "\uc624\ud0c0 \ubc1c\uc0dd \uc2dc \uc2dc\uac01\uc801 \uacbd\uace0 \uc560\ub2c8\uba54\uc774\uc158 (\ud754\ub4e4\ub9bc) \uad6c\ud604",
+            "description": "\uc0ac\uc6a9\uc790\uac00 \uc624\ud0c0\ub97c \uc785\ub825\ud588\uc744 \ub54c \ud14d\uc2a4\ud2b8 \uc785\ub825 \ud544\ub4dc\ub098 \uad00\ub828 UI \uc694\uc18c\uc5d0 useAnimation \ud6c5\uc744 \ud65c\uc6a9\ud55c '\ud754\ub4e4\ub9bc' \uacbd\uace0 \uc560\ub2c8\uba54\uc774\uc158\uc744 \uc801\uc6a9\ud558\uc5ec \uc989\uac01\uc801\uc778 \uc2dc\uac01\uc801 \ud53c\ub4dc\ubc31\uc744 \uc81c\uacf5\ud569\ub2c8\ub2e4.",
             "dependencies": [
               1,
               5
             ],
-            "details": "오타 감지 로직(Task 5에서 제공될 것으로 예상)에 연결하여 오타 발생 시 useAnimation 훅으로 제어되는 motion 컴포넌트의 animate 함수를 호출합니다. keyframes 또는 transition 속성을 사용하여 좌우로 짧게 흔들리는 듯한 애니메이션 효과를 구현합니다. 예를 들어, x 값을 -10px, 10px, 0px 등으로 빠르게 변경합니다.",
+            "details": "\uc624\ud0c0 \uac10\uc9c0 \ub85c\uc9c1(Task 5\uc5d0\uc11c \uc81c\uacf5\ub420 \uac83\uc73c\ub85c \uc608\uc0c1)\uc5d0 \uc5f0\uacb0\ud558\uc5ec \uc624\ud0c0 \ubc1c\uc0dd \uc2dc useAnimation \ud6c5\uc73c\ub85c \uc81c\uc5b4\ub418\ub294 motion \ucef4\ud3ec\ub10c\ud2b8\uc758 animate \ud568\uc218\ub97c \ud638\ucd9c\ud569\ub2c8\ub2e4. keyframes \ub610\ub294 transition \uc18d\uc131\uc744 \uc0ac\uc6a9\ud558\uc5ec \uc88c\uc6b0\ub85c \uc9e7\uac8c \ud754\ub4e4\ub9ac\ub294 \ub4ef\ud55c \uc560\ub2c8\uba54\uc774\uc158 \ud6a8\uacfc\ub97c \uad6c\ud604\ud569\ub2c8\ub2e4. \uc608\ub97c \ub4e4\uc5b4, x \uac12\uc744 -10px, 10px, 0px \ub4f1\uc73c\ub85c \ube60\ub974\uac8c \ubcc0\uacbd\ud569\ub2c8\ub2e4.",
             "status": "pending",
-            "testStrategy": "의도적으로 오타를 입력하여 경고 애니메이션이 즉시, 한 번만, 그리고 눈에 띄게 재생되는지 확인합니다. 여러 번 오타를 냈을 때 애니메이션이 중첩되지 않고 올바르게 동작하는지 검증합니다.",
+            "testStrategy": "\uc758\ub3c4\uc801\uc73c\ub85c \uc624\ud0c0\ub97c \uc785\ub825\ud558\uc5ec \uacbd\uace0 \uc560\ub2c8\uba54\uc774\uc158\uc774 \uc989\uc2dc, \ud55c \ubc88\ub9cc, \uadf8\ub9ac\uace0 \ub208\uc5d0 \ub744\uac8c \uc7ac\uc0dd\ub418\ub294\uc9c0 \ud655\uc778\ud569\ub2c8\ub2e4. \uc5ec\ub7ec \ubc88 \uc624\ud0c0\ub97c \ub0c8\uc744 \ub54c \uc560\ub2c8\uba54\uc774\uc158\uc774 \uc911\ucca9\ub418\uc9c0 \uc54a\uace0 \uc62c\ubc14\ub974\uac8c \ub3d9\uc791\ud558\ub294\uc9c0 \uac80\uc99d\ud569\ub2c8\ub2e4.",
             "parentId": "undefined"
           }
         ]
       },
       {
         "id": "15",
-        "title": "사용자 피드백 기반 초기 텍스트 콘텐츠 확장 및 수정",
-        "description": "MVP 배포 후 사용자 피드백을 수집하여 초기 텍스트 콘텐츠의 양과 질을 개선하고, 다양한 주제 및 난이도의 텍스트를 추가합니다.",
-        "details": "사용자 테스트 및 피드백을 통해 어떤 종류의 텍스트가 인기가 많고, 어떤 난이도 조절이 필요한지 파악합니다. 뉴스 기사, 문학 작품, 일상 대화 등 다양한 주제의 한글 텍스트를 수집하고, 이를 `Text` 데이터 모델에 맞게 추가합니다. 텍스트의 길이나 복잡성(희귀 단어, 문장 구조)을 기준으로 난이도를 분류하여 시스템에 반영합니다.",
-        "testStrategy": "새롭게 추가된 텍스트들이 `TypingTextDisplay`에 올바르게 로드되고, 해당 텍스트로 타이핑 연습 시 통계 계산이 정상적으로 이루어지는지 확인합니다. 다양한 난이도의 텍스트가 의도한 대로 난이도 구분을 따르는지 검증합니다.",
+        "title": "\uc0ac\uc6a9\uc790 \ud53c\ub4dc\ubc31 \uae30\ubc18 \ucd08\uae30 \ud14d\uc2a4\ud2b8 \ucf58\ud150\uce20 \ud655\uc7a5 \ubc0f \uc218\uc815",
+        "description": "MVP \ubc30\ud3ec \ud6c4 \uc0ac\uc6a9\uc790 \ud53c\ub4dc\ubc31\uc744 \uc218\uc9d1\ud558\uc5ec \ucd08\uae30 \ud14d\uc2a4\ud2b8 \ucf58\ud150\uce20\uc758 \uc591\uacfc \uc9c8\uc744 \uac1c\uc120\ud558\uace0, \ub2e4\uc591\ud55c \uc8fc\uc81c \ubc0f \ub09c\uc774\ub3c4\uc758 \ud14d\uc2a4\ud2b8\ub97c \ucd94\uac00\ud569\ub2c8\ub2e4.",
+        "details": "\uc0ac\uc6a9\uc790 \ud14c\uc2a4\ud2b8 \ubc0f \ud53c\ub4dc\ubc31\uc744 \ud1b5\ud574 \uc5b4\ub5a4 \uc885\ub958\uc758 \ud14d\uc2a4\ud2b8\uac00 \uc778\uae30\uac00 \ub9ce\uace0, \uc5b4\ub5a4 \ub09c\uc774\ub3c4 \uc870\uc808\uc774 \ud544\uc694\ud55c\uc9c0 \ud30c\uc545\ud569\ub2c8\ub2e4. \ub274\uc2a4 \uae30\uc0ac, \ubb38\ud559 \uc791\ud488, \uc77c\uc0c1 \ub300\ud654 \ub4f1 \ub2e4\uc591\ud55c \uc8fc\uc81c\uc758 \ud55c\uae00 \ud14d\uc2a4\ud2b8\ub97c \uc218\uc9d1\ud558\uace0, \uc774\ub97c `Text` \ub370\uc774\ud130 \ubaa8\ub378\uc5d0 \ub9de\uac8c \ucd94\uac00\ud569\ub2c8\ub2e4. \ud14d\uc2a4\ud2b8\uc758 \uae38\uc774\ub098 \ubcf5\uc7a1\uc131(\ud76c\uadc0 \ub2e8\uc5b4, \ubb38\uc7a5 \uad6c\uc870)\uc744 \uae30\uc900\uc73c\ub85c \ub09c\uc774\ub3c4\ub97c \ubd84\ub958\ud558\uc5ec \uc2dc\uc2a4\ud15c\uc5d0 \ubc18\uc601\ud569\ub2c8\ub2e4.",
+        "testStrategy": "\uc0c8\ub86d\uac8c \ucd94\uac00\ub41c \ud14d\uc2a4\ud2b8\ub4e4\uc774 `TypingTextDisplay`\uc5d0 \uc62c\ubc14\ub974\uac8c \ub85c\ub4dc\ub418\uace0, \ud574\ub2f9 \ud14d\uc2a4\ud2b8\ub85c \ud0c0\uc774\ud551 \uc5f0\uc2b5 \uc2dc \ud1b5\uacc4 \uacc4\uc0b0\uc774 \uc815\uc0c1\uc801\uc73c\ub85c \uc774\ub8e8\uc5b4\uc9c0\ub294\uc9c0 \ud655\uc778\ud569\ub2c8\ub2e4. \ub2e4\uc591\ud55c \ub09c\uc774\ub3c4\uc758 \ud14d\uc2a4\ud2b8\uac00 \uc758\ub3c4\ud55c \ub300\ub85c \ub09c\uc774\ub3c4 \uad6c\ubd84\uc744 \ub530\ub974\ub294\uc9c0 \uac80\uc99d\ud569\ub2c8\ub2e4.",
         "priority": "low",
         "dependencies": [
           "7"
@@ -770,60 +770,60 @@
         "subtasks": [
           {
             "id": 1,
-            "title": "사용자 피드백 분석 방법론 수립 및 초기 보고서 작성",
-            "description": "MVP 배포 후 사용자로부터 수집될 텍스트 콘텐츠 관련 피드백(선호하는 주제, 난이도 선호도, 불편사항 등)을 효과적으로 수집하고 분석하기 위한 방법론을 수립하고, 이를 바탕으로 초기 분석 보고서를 작성합니다.",
+            "title": "\uc0ac\uc6a9\uc790 \ud53c\ub4dc\ubc31 \ubd84\uc11d \ubc29\ubc95\ub860 \uc218\ub9bd \ubc0f \ucd08\uae30 \ubcf4\uace0\uc11c \uc791\uc131",
+            "description": "MVP \ubc30\ud3ec \ud6c4 \uc0ac\uc6a9\uc790\ub85c\ubd80\ud130 \uc218\uc9d1\ub420 \ud14d\uc2a4\ud2b8 \ucf58\ud150\uce20 \uad00\ub828 \ud53c\ub4dc\ubc31(\uc120\ud638\ud558\ub294 \uc8fc\uc81c, \ub09c\uc774\ub3c4 \uc120\ud638\ub3c4, \ubd88\ud3b8\uc0ac\ud56d \ub4f1)\uc744 \ud6a8\uacfc\uc801\uc73c\ub85c \uc218\uc9d1\ud558\uace0 \ubd84\uc11d\ud558\uae30 \uc704\ud55c \ubc29\ubc95\ub860\uc744 \uc218\ub9bd\ud558\uace0, \uc774\ub97c \ubc14\ud0d5\uc73c\ub85c \ucd08\uae30 \ubd84\uc11d \ubcf4\uace0\uc11c\ub97c \uc791\uc131\ud569\ub2c8\ub2e4.",
             "dependencies": [],
-            "details": "피드백 수집 채널(예: 인앱 설문조사, 사용자 인터뷰)을 결정하고, 수집된 데이터를 정량적/정성적으로 분석하는 절차를 명시합니다. 텍스트 주제(예: 뉴스, 문학, 일상 대화), 길이, 난이도, 오류 발생 빈도 등에 대한 사용자 선호도 파악을 목표로 합니다. 분석 결과는 향후 텍스트 수집 및 난이도 분류 기준을 정하는 데 활용됩니다.",
+            "details": "\ud53c\ub4dc\ubc31 \uc218\uc9d1 \ucc44\ub110(\uc608: \uc778\uc571 \uc124\ubb38\uc870\uc0ac, \uc0ac\uc6a9\uc790 \uc778\ud130\ubdf0)\uc744 \uacb0\uc815\ud558\uace0, \uc218\uc9d1\ub41c \ub370\uc774\ud130\ub97c \uc815\ub7c9\uc801/\uc815\uc131\uc801\uc73c\ub85c \ubd84\uc11d\ud558\ub294 \uc808\ucc28\ub97c \uba85\uc2dc\ud569\ub2c8\ub2e4. \ud14d\uc2a4\ud2b8 \uc8fc\uc81c(\uc608: \ub274\uc2a4, \ubb38\ud559, \uc77c\uc0c1 \ub300\ud654), \uae38\uc774, \ub09c\uc774\ub3c4, \uc624\ub958 \ubc1c\uc0dd \ube48\ub3c4 \ub4f1\uc5d0 \ub300\ud55c \uc0ac\uc6a9\uc790 \uc120\ud638\ub3c4 \ud30c\uc545\uc744 \ubaa9\ud45c\ub85c \ud569\ub2c8\ub2e4. \ubd84\uc11d \uacb0\uacfc\ub294 \ud5a5\ud6c4 \ud14d\uc2a4\ud2b8 \uc218\uc9d1 \ubc0f \ub09c\uc774\ub3c4 \ubd84\ub958 \uae30\uc900\uc744 \uc815\ud558\ub294 \ub370 \ud65c\uc6a9\ub429\ub2c8\ub2e4.",
             "status": "pending",
-            "testStrategy": "수립된 방법론에 따라 최소 10명 이상의 가상 사용자 피드백을 시뮬레이션하여 분석 보고서가 의도대로 작성되는지 검증합니다. 피드백 수집 도구가 정상 작동하는지 확인합니다.",
+            "testStrategy": "\uc218\ub9bd\ub41c \ubc29\ubc95\ub860\uc5d0 \ub530\ub77c \ucd5c\uc18c 10\uba85 \uc774\uc0c1\uc758 \uac00\uc0c1 \uc0ac\uc6a9\uc790 \ud53c\ub4dc\ubc31\uc744 \uc2dc\ubbac\ub808\uc774\uc158\ud558\uc5ec \ubd84\uc11d \ubcf4\uace0\uc11c\uac00 \uc758\ub3c4\ub300\ub85c \uc791\uc131\ub418\ub294\uc9c0 \uac80\uc99d\ud569\ub2c8\ub2e4. \ud53c\ub4dc\ubc31 \uc218\uc9d1 \ub3c4\uad6c\uac00 \uc815\uc0c1 \uc791\ub3d9\ud558\ub294\uc9c0 \ud655\uc778\ud569\ub2c8\ub2e4.",
             "parentId": "undefined"
           },
           {
             "id": 2,
-            "title": "Text 데이터 모델에 난이도 및 주제 필드 추가",
-            "description": "기존 텍스트 데이터 모델(예: 백엔드의 `Text` 스키마)에 사용자의 피드백을 반영하여 텍스트의 난이도와 주제를 나타낼 수 있는 필드를 추가합니다. 이는 텍스트 분류 및 필터링 기능의 기반이 됩니다.",
+            "title": "Text \ub370\uc774\ud130 \ubaa8\ub378\uc5d0 \ub09c\uc774\ub3c4 \ubc0f \uc8fc\uc81c \ud544\ub4dc \ucd94\uac00",
+            "description": "\uae30\uc874 \ud14d\uc2a4\ud2b8 \ub370\uc774\ud130 \ubaa8\ub378(\uc608: \ubc31\uc5d4\ub4dc\uc758 `Text` \uc2a4\ud0a4\ub9c8)\uc5d0 \uc0ac\uc6a9\uc790\uc758 \ud53c\ub4dc\ubc31\uc744 \ubc18\uc601\ud558\uc5ec \ud14d\uc2a4\ud2b8\uc758 \ub09c\uc774\ub3c4\uc640 \uc8fc\uc81c\ub97c \ub098\ud0c0\ub0bc \uc218 \uc788\ub294 \ud544\ub4dc\ub97c \ucd94\uac00\ud569\ub2c8\ub2e4. \uc774\ub294 \ud14d\uc2a4\ud2b8 \ubd84\ub958 \ubc0f \ud544\ud130\ub9c1 \uae30\ub2a5\uc758 \uae30\ubc18\uc774 \ub429\ub2c8\ub2e4.",
             "dependencies": [],
-            "details": "`Text` 모델(예: `src/models/Text.ts` 또는 데이터베이스 스키마 정의 파일)에 `difficulty` (예: `number` 또는 `enum` 타입), `topic` (예: `string` 또는 `enum` 'news', 'literature', 'conversation' 등) 필드를 추가합니다. 필요한 경우 `source` 또는 `author` 필드도 고려합니다. 기존 데이터에 영향을 주지 않는 데이터베이스 마이그레이션 스크립트를 작성합니다.",
+            "details": "`Text` \ubaa8\ub378(\uc608: `src/models/Text.ts` \ub610\ub294 \ub370\uc774\ud130\ubca0\uc774\uc2a4 \uc2a4\ud0a4\ub9c8 \uc815\uc758 \ud30c\uc77c)\uc5d0 `difficulty` (\uc608: `number` \ub610\ub294 `enum` \ud0c0\uc785), `topic` (\uc608: `string` \ub610\ub294 `enum` 'news', 'literature', 'conversation' \ub4f1) \ud544\ub4dc\ub97c \ucd94\uac00\ud569\ub2c8\ub2e4. \ud544\uc694\ud55c \uacbd\uc6b0 `source` \ub610\ub294 `author` \ud544\ub4dc\ub3c4 \uace0\ub824\ud569\ub2c8\ub2e4. \uae30\uc874 \ub370\uc774\ud130\uc5d0 \uc601\ud5a5\uc744 \uc8fc\uc9c0 \uc54a\ub294 \ub370\uc774\ud130\ubca0\uc774\uc2a4 \ub9c8\uc774\uadf8\ub808\uc774\uc158 \uc2a4\ud06c\ub9bd\ud2b8\ub97c \uc791\uc131\ud569\ub2c8\ub2e4.",
             "status": "pending",
-            "testStrategy": "데이터베이스 스키마가 성공적으로 업데이트되었는지 확인하고, 새로운 필드에 데이터를 삽입 및 조회할 수 있는지 간단한 CRUD 테스트를 수행합니다.",
+            "testStrategy": "\ub370\uc774\ud130\ubca0\uc774\uc2a4 \uc2a4\ud0a4\ub9c8\uac00 \uc131\uacf5\uc801\uc73c\ub85c \uc5c5\ub370\uc774\ud2b8\ub418\uc5c8\ub294\uc9c0 \ud655\uc778\ud558\uace0, \uc0c8\ub85c\uc6b4 \ud544\ub4dc\uc5d0 \ub370\uc774\ud130\ub97c \uc0bd\uc785 \ubc0f \uc870\ud68c\ud560 \uc218 \uc788\ub294\uc9c0 \uac04\ub2e8\ud55c CRUD \ud14c\uc2a4\ud2b8\ub97c \uc218\ud589\ud569\ub2c8\ub2e4.",
             "parentId": "undefined"
           },
           {
             "id": 3,
-            "title": "한글 텍스트 복잡성 측정 로직 개발 및 난이도 지표 정의",
-            "description": "텍스트의 난이도를 객관적으로 판단할 수 있는 복잡성 측정 로직을 개발하고, 이를 기반으로 '쉬움', '보통', '어려움' 등의 난이도 지표를 정의합니다.",
+            "title": "\ud55c\uae00 \ud14d\uc2a4\ud2b8 \ubcf5\uc7a1\uc131 \uce21\uc815 \ub85c\uc9c1 \uac1c\ubc1c \ubc0f \ub09c\uc774\ub3c4 \uc9c0\ud45c \uc815\uc758",
+            "description": "\ud14d\uc2a4\ud2b8\uc758 \ub09c\uc774\ub3c4\ub97c \uac1d\uad00\uc801\uc73c\ub85c \ud310\ub2e8\ud560 \uc218 \uc788\ub294 \ubcf5\uc7a1\uc131 \uce21\uc815 \ub85c\uc9c1\uc744 \uac1c\ubc1c\ud558\uace0, \uc774\ub97c \uae30\ubc18\uc73c\ub85c '\uc26c\uc6c0', '\ubcf4\ud1b5', '\uc5b4\ub824\uc6c0' \ub4f1\uc758 \ub09c\uc774\ub3c4 \uc9c0\ud45c\ub97c \uc815\uc758\ud569\ub2c8\ub2e4.",
             "dependencies": [
               2
             ],
-            "details": "한글 텍스트의 복잡성을 측정하기 위한 기준을 설정합니다. 예를 들어, 문장 길이, 어휘 난이도(희귀 단어 사용 빈도), 문장 구조의 복잡성 등을 고려하여 이를 계산하는 유틸리티 함수(예: `src/utils/textAnalysis.ts` 또는 유사 모듈)를 작성합니다. 이 로직을 사용하여 텍스트에 `difficulty` 값을 할당하는 기준(예: 점수 범위별 난이도 등급)을 정의합니다.",
+            "details": "\ud55c\uae00 \ud14d\uc2a4\ud2b8\uc758 \ubcf5\uc7a1\uc131\uc744 \uce21\uc815\ud558\uae30 \uc704\ud55c \uae30\uc900\uc744 \uc124\uc815\ud569\ub2c8\ub2e4. \uc608\ub97c \ub4e4\uc5b4, \ubb38\uc7a5 \uae38\uc774, \uc5b4\ud718 \ub09c\uc774\ub3c4(\ud76c\uadc0 \ub2e8\uc5b4 \uc0ac\uc6a9 \ube48\ub3c4), \ubb38\uc7a5 \uad6c\uc870\uc758 \ubcf5\uc7a1\uc131 \ub4f1\uc744 \uace0\ub824\ud558\uc5ec \uc774\ub97c \uacc4\uc0b0\ud558\ub294 \uc720\ud2f8\ub9ac\ud2f0 \ud568\uc218(\uc608: `src/utils/textAnalysis.ts` \ub610\ub294 \uc720\uc0ac \ubaa8\ub4c8)\ub97c \uc791\uc131\ud569\ub2c8\ub2e4. \uc774 \ub85c\uc9c1\uc744 \uc0ac\uc6a9\ud558\uc5ec \ud14d\uc2a4\ud2b8\uc5d0 `difficulty` \uac12\uc744 \ud560\ub2f9\ud558\ub294 \uae30\uc900(\uc608: \uc810\uc218 \ubc94\uc704\ubcc4 \ub09c\uc774\ub3c4 \ub4f1\uae09)\uc744 \uc815\uc758\ud569\ub2c8\ub2e4.",
             "status": "pending",
-            "testStrategy": "다양한 길이와 어휘 난이도를 가진 샘플 한글 텍스트를 준비하고, 개발된 복잡성 측정 로직이 예상대로 난이도 점수를 반환하는지 유닛 테스트를 작성합니다. 정의된 난이도 지표에 따라 샘플 텍스트가 올바른 등급으로 분류되는지 확인합니다.",
+            "testStrategy": "\ub2e4\uc591\ud55c \uae38\uc774\uc640 \uc5b4\ud718 \ub09c\uc774\ub3c4\ub97c \uac00\uc9c4 \uc0d8\ud50c \ud55c\uae00 \ud14d\uc2a4\ud2b8\ub97c \uc900\ube44\ud558\uace0, \uac1c\ubc1c\ub41c \ubcf5\uc7a1\uc131 \uce21\uc815 \ub85c\uc9c1\uc774 \uc608\uc0c1\ub300\ub85c \ub09c\uc774\ub3c4 \uc810\uc218\ub97c \ubc18\ud658\ud558\ub294\uc9c0 \uc720\ub2db \ud14c\uc2a4\ud2b8\ub97c \uc791\uc131\ud569\ub2c8\ub2e4. \uc815\uc758\ub41c \ub09c\uc774\ub3c4 \uc9c0\ud45c\uc5d0 \ub530\ub77c \uc0d8\ud50c \ud14d\uc2a4\ud2b8\uac00 \uc62c\ubc14\ub978 \ub4f1\uae09\uc73c\ub85c \ubd84\ub958\ub418\ub294\uc9c0 \ud655\uc778\ud569\ub2c8\ub2e4.",
             "parentId": "undefined"
           },
           {
             "id": 4,
-            "title": "사용자 피드백 기반 신규 한글 텍스트 콘텐츠 수집 및 가공",
-            "description": "사용자 피드백 분석 결과 및 정의된 난이도/주제 지표에 따라 뉴스 기사, 문학 작품, 일상 대화 등 다양한 주제와 난이도의 새로운 한글 텍스트 콘텐츠를 수집하고, `Text` 데이터 모델에 맞게 가공합니다.",
+            "title": "\uc0ac\uc6a9\uc790 \ud53c\ub4dc\ubc31 \uae30\ubc18 \uc2e0\uaddc \ud55c\uae00 \ud14d\uc2a4\ud2b8 \ucf58\ud150\uce20 \uc218\uc9d1 \ubc0f \uac00\uacf5",
+            "description": "\uc0ac\uc6a9\uc790 \ud53c\ub4dc\ubc31 \ubd84\uc11d \uacb0\uacfc \ubc0f \uc815\uc758\ub41c \ub09c\uc774\ub3c4/\uc8fc\uc81c \uc9c0\ud45c\uc5d0 \ub530\ub77c \ub274\uc2a4 \uae30\uc0ac, \ubb38\ud559 \uc791\ud488, \uc77c\uc0c1 \ub300\ud654 \ub4f1 \ub2e4\uc591\ud55c \uc8fc\uc81c\uc640 \ub09c\uc774\ub3c4\uc758 \uc0c8\ub85c\uc6b4 \ud55c\uae00 \ud14d\uc2a4\ud2b8 \ucf58\ud150\uce20\ub97c \uc218\uc9d1\ud558\uace0, `Text` \ub370\uc774\ud130 \ubaa8\ub378\uc5d0 \ub9de\uac8c \uac00\uacf5\ud569\ub2c8\ub2e4.",
             "dependencies": [
               1,
               3
             ],
-            "details": "외부 자료(뉴스 웹사이트, 공개 문학 자료, 대화 스크립트 등)에서 텍스트를 수집하고, 저작권 및 사용 가능 여부를 확인합니다. 개인 정보 등 민감한 내용은 제거하고, `Text` 모델의 필드에 맞춰 내용 정제, 길이 조절, 불필요한 특수문자 제거 등의 전처리 작업을 수행합니다. 이 과정에서 개발된 텍스트 복잡성 측정 로직을 사용하여 초기 난이도를 부여합니다.",
+            "details": "\uc678\ubd80 \uc790\ub8cc(\ub274\uc2a4 \uc6f9\uc0ac\uc774\ud2b8, \uacf5\uac1c \ubb38\ud559 \uc790\ub8cc, \ub300\ud654 \uc2a4\ud06c\ub9bd\ud2b8 \ub4f1)\uc5d0\uc11c \ud14d\uc2a4\ud2b8\ub97c \uc218\uc9d1\ud558\uace0, \uc800\uc791\uad8c \ubc0f \uc0ac\uc6a9 \uac00\ub2a5 \uc5ec\ubd80\ub97c \ud655\uc778\ud569\ub2c8\ub2e4. \uac1c\uc778 \uc815\ubcf4 \ub4f1 \ubbfc\uac10\ud55c \ub0b4\uc6a9\uc740 \uc81c\uac70\ud558\uace0, `Text` \ubaa8\ub378\uc758 \ud544\ub4dc\uc5d0 \ub9de\ucdb0 \ub0b4\uc6a9 \uc815\uc81c, \uae38\uc774 \uc870\uc808, \ubd88\ud544\uc694\ud55c \ud2b9\uc218\ubb38\uc790 \uc81c\uac70 \ub4f1\uc758 \uc804\ucc98\ub9ac \uc791\uc5c5\uc744 \uc218\ud589\ud569\ub2c8\ub2e4. \uc774 \uacfc\uc815\uc5d0\uc11c \uac1c\ubc1c\ub41c \ud14d\uc2a4\ud2b8 \ubcf5\uc7a1\uc131 \uce21\uc815 \ub85c\uc9c1\uc744 \uc0ac\uc6a9\ud558\uc5ec \ucd08\uae30 \ub09c\uc774\ub3c4\ub97c \ubd80\uc5ec\ud569\ub2c8\ub2e4.",
             "status": "pending",
-            "testStrategy": "수집된 텍스트 샘플이 `Text` 데이터 모델의 제약 조건을 준수하는지 확인합니다. 가공된 텍스트가 예상되는 주제 및 난이도 특성을 잘 반영하는지 수동으로 검토합니다(예: '쉬움'으로 분류된 텍스트에 어려운 단어나 복잡한 문장이 없는지 확인).",
+            "testStrategy": "\uc218\uc9d1\ub41c \ud14d\uc2a4\ud2b8 \uc0d8\ud50c\uc774 `Text` \ub370\uc774\ud130 \ubaa8\ub378\uc758 \uc81c\uc57d \uc870\uac74\uc744 \uc900\uc218\ud558\ub294\uc9c0 \ud655\uc778\ud569\ub2c8\ub2e4. \uac00\uacf5\ub41c \ud14d\uc2a4\ud2b8\uac00 \uc608\uc0c1\ub418\ub294 \uc8fc\uc81c \ubc0f \ub09c\uc774\ub3c4 \ud2b9\uc131\uc744 \uc798 \ubc18\uc601\ud558\ub294\uc9c0 \uc218\ub3d9\uc73c\ub85c \uac80\ud1a0\ud569\ub2c8\ub2e4(\uc608: '\uc26c\uc6c0'\uc73c\ub85c \ubd84\ub958\ub41c \ud14d\uc2a4\ud2b8\uc5d0 \uc5b4\ub824\uc6b4 \ub2e8\uc5b4\ub098 \ubcf5\uc7a1\ud55c \ubb38\uc7a5\uc774 \uc5c6\ub294\uc9c0 \ud655\uc778).",
             "parentId": "undefined"
           },
           {
             "id": 5,
-            "title": "수집된 텍스트 데이터베이스 삽입 및 프론트엔드 텍스트 선택 기능 업데이트",
-            "description": "가공된 새로운 한글 텍스트 콘텐츠를 데이터베이스에 삽입하고, 프론트엔드 `TypingTextDisplay` 컴포넌트에서 이 새로운 텍스트들을 선택하고 불러올 수 있도록 기능을 업데이트합니다.",
+            "title": "\uc218\uc9d1\ub41c \ud14d\uc2a4\ud2b8 \ub370\uc774\ud130\ubca0\uc774\uc2a4 \uc0bd\uc785 \ubc0f \ud504\ub860\ud2b8\uc5d4\ub4dc \ud14d\uc2a4\ud2b8 \uc120\ud0dd \uae30\ub2a5 \uc5c5\ub370\uc774\ud2b8",
+            "description": "\uac00\uacf5\ub41c \uc0c8\ub85c\uc6b4 \ud55c\uae00 \ud14d\uc2a4\ud2b8 \ucf58\ud150\uce20\ub97c \ub370\uc774\ud130\ubca0\uc774\uc2a4\uc5d0 \uc0bd\uc785\ud558\uace0, \ud504\ub860\ud2b8\uc5d4\ub4dc `TypingTextDisplay` \ucef4\ud3ec\ub10c\ud2b8\uc5d0\uc11c \uc774 \uc0c8\ub85c\uc6b4 \ud14d\uc2a4\ud2b8\ub4e4\uc744 \uc120\ud0dd\ud558\uace0 \ubd88\ub7ec\uc62c \uc218 \uc788\ub3c4\ub85d \uae30\ub2a5\uc744 \uc5c5\ub370\uc774\ud2b8\ud569\ub2c8\ub2e4.",
             "dependencies": [
               2,
               4
             ],
-            "details": "데이터베이스 관리 도구 또는 스크립트(예: `scripts/importTexts.ts`)를 사용하여 가공된 텍스트를 데이터베이스에 대량으로 삽입합니다. 프론트엔드의 `TypingTextDisplay` 또는 관련 로직(예: Redux store의 `text` slice)을 수정하여, 사용자가 주제나 난이도 필터를 사용하여 텍스트를 선택하고 불러올 수 있도록 API 연동을 업데이트합니다.",
+            "details": "\ub370\uc774\ud130\ubca0\uc774\uc2a4 \uad00\ub9ac \ub3c4\uad6c \ub610\ub294 \uc2a4\ud06c\ub9bd\ud2b8(\uc608: `scripts/importTexts.ts`)\ub97c \uc0ac\uc6a9\ud558\uc5ec \uac00\uacf5\ub41c \ud14d\uc2a4\ud2b8\ub97c \ub370\uc774\ud130\ubca0\uc774\uc2a4\uc5d0 \ub300\ub7c9\uc73c\ub85c \uc0bd\uc785\ud569\ub2c8\ub2e4. \ud504\ub860\ud2b8\uc5d4\ub4dc\uc758 `TypingTextDisplay` \ub610\ub294 \uad00\ub828 \ub85c\uc9c1(\uc608: Redux store\uc758 `text` slice)\uc744 \uc218\uc815\ud558\uc5ec, \uc0ac\uc6a9\uc790\uac00 \uc8fc\uc81c\ub098 \ub09c\uc774\ub3c4 \ud544\ud130\ub97c \uc0ac\uc6a9\ud558\uc5ec \ud14d\uc2a4\ud2b8\ub97c \uc120\ud0dd\ud558\uace0 \ubd88\ub7ec\uc62c \uc218 \uc788\ub3c4\ub85d API \uc5f0\ub3d9\uc744 \uc5c5\ub370\uc774\ud2b8\ud569\ub2c8\ub2e4.",
             "status": "pending",
-            "testStrategy": "새로 추가된 텍스트들이 백엔드 API를 통해 성공적으로 조회되는지 API 클라이언트(예: Postman)로 테스트합니다. 프론트엔드에서 주제 및 난이도 필터를 사용하여 다양한 텍스트를 선택하고, 선택된 텍스트가 `TypingTextDisplay`에 올바르게 로드되는지 E2E 테스트를 수행합니다. 타이핑 연습 시 통계 계산이 정상적으로 이루어지는지 확인합니다.",
+            "testStrategy": "\uc0c8\ub85c \ucd94\uac00\ub41c \ud14d\uc2a4\ud2b8\ub4e4\uc774 \ubc31\uc5d4\ub4dc API\ub97c \ud1b5\ud574 \uc131\uacf5\uc801\uc73c\ub85c \uc870\ud68c\ub418\ub294\uc9c0 API \ud074\ub77c\uc774\uc5b8\ud2b8(\uc608: Postman)\ub85c \ud14c\uc2a4\ud2b8\ud569\ub2c8\ub2e4. \ud504\ub860\ud2b8\uc5d4\ub4dc\uc5d0\uc11c \uc8fc\uc81c \ubc0f \ub09c\uc774\ub3c4 \ud544\ud130\ub97c \uc0ac\uc6a9\ud558\uc5ec \ub2e4\uc591\ud55c \ud14d\uc2a4\ud2b8\ub97c \uc120\ud0dd\ud558\uace0, \uc120\ud0dd\ub41c \ud14d\uc2a4\ud2b8\uac00 `TypingTextDisplay`\uc5d0 \uc62c\ubc14\ub974\uac8c \ub85c\ub4dc\ub418\ub294\uc9c0 E2E \ud14c\uc2a4\ud2b8\ub97c \uc218\ud589\ud569\ub2c8\ub2e4. \ud0c0\uc774\ud551 \uc5f0\uc2b5 \uc2dc \ud1b5\uacc4 \uacc4\uc0b0\uc774 \uc815\uc0c1\uc801\uc73c\ub85c \uc774\ub8e8\uc5b4\uc9c0\ub294\uc9c0 \ud655\uc778\ud569\ub2c8\ub2e4.",
             "parentId": "undefined"
           }
         ]
