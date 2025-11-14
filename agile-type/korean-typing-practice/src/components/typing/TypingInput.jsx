@@ -5,12 +5,11 @@ import { TypingInput } from './TypingStyles';
 
 const TypingInputField = forwardRef((props, ref) => {
   const { theme } = useSelector(state => state.theme);
-  const { 
-    currentText, 
-    typedText, 
-    isActive, 
+  const {
+    currentText,
+    typedText,
+    isActive,
     isCompleted,
-    currentIndex,
     errors,
   } = useSelector(state => state.typing);
 
@@ -18,7 +17,7 @@ const TypingInputField = forwardRef((props, ref) => {
   const inputRef = ref || localRef;
 
   // Handle input change (controlled component)
-  const handleChange = (event) => {
+  const handleChange = () => {
     // This is handled by the useTypingInput hook
     // We keep this as a no-op to prevent React warnings
   };
@@ -70,7 +69,7 @@ const TypingInputField = forwardRef((props, ref) => {
         announcementElement.textContent = announcement;
       }
     }
-  }, [isCompleted, errors.length]);
+  }, [isCompleted, errors.length, inputRef]);
 
   // Handle keyboard navigation for accessibility
   const handleKeyDown = (event) => {

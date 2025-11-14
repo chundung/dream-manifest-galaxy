@@ -21,10 +21,69 @@ export const useTypingInput = () => {
     errors,
   } = useSelector(state => state.typing);
 
+  // Handle character input
+  const handleCharacterInput = useCallback((character) => {
+    if (!currentText || isCompleted) return;
+
+    // Start typing if not active
+    if (!isActive) {
+      dispatch(startTyping());
+    }
+
+    // Calculate new typed text
+    const newTypedText = typedText + character;
+
+    // Check if character is correct
+    const expectedChar = currentText[currentIndex];
+    const isCorrect = character === expectedChar;
+
+    // Record keystroke for analytics
+    dispatch(recordKeystroke({
+      charIndex: currentIndex,
+      character,
+      expected: expectedChar,
+      isCorrect,
+      timestamp: Date.now(),
+    }));
+
+    // Update error tracking
+    if (!isCorrect && currentIndex < currentText.length) {
+      dispatch(addError(currentIndex));
+    } else if (isCorrect && errors.includes(currentIndex)) {
+      dispatch(removeError(currentIndex));
+    }
+
+    // Update typed text
+    dispatch(updateTypedText(newTypedText));
+  }, [currentText, typedText, currentIndex, isActive, isCompleted, errors, dispatch]);
+
+  // Handle backspace
+  const handleBackspace = useCallback(() => {
+    if (typedText.length === 0) return;
+
+    const newTypedText = typedText.slice(0, -1);
+
+    // Remove error if backspacing from incorrect character
+    const removedIndex = typedText.length - 1;
+    if (errors.includes(removedIndex)) {
+      dispatch(removeError(removedIndex));
+    }
+
+    dispatch(updateTypedText(newTypedText));
+  }, [typedText, errors, dispatch]);
+
+  // Handle reset
+  const handleReset = useCallback(() => {
+    dispatch(resetTyping());
+    if (inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, [dispatch]);
+
   // Handle individual keystrokes
   const handleKeystroke = useCallback((event) => {
-    const { key, ctrlKey, metaKey, shiftKey } = event;
-    
+    const { key, ctrlKey, metaKey } = event;
+
     // Prevent default for typing-related keys
     if (!ctrlKey && !metaKey && key.length === 1) {
       event.preventDefault();
@@ -53,66 +112,7 @@ export const useTypingInput = () => {
     if (key.length === 1 && !ctrlKey && !metaKey) {
       handleCharacterInput(key);
     }
-  }, [currentText, typedText, currentIndex]);
-
-  // Handle character input
-  const handleCharacterInput = useCallback((character) => {
-    if (!currentText || isCompleted) return;
-
-    // Start typing if not active
-    if (!isActive) {
-      dispatch(startTyping());
-    }
-
-    // Calculate new typed text
-    const newTypedText = typedText + character;
-    
-    // Check if character is correct
-    const expectedChar = currentText[currentIndex];
-    const isCorrect = character === expectedChar;
-    
-    // Record keystroke for analytics
-    dispatch(recordKeystroke({
-      charIndex: currentIndex,
-      character,
-      expected: expectedChar,
-      isCorrect,
-      timestamp: Date.now(),
-    }));
-
-    // Update error tracking
-    if (!isCorrect && currentIndex < currentText.length) {
-      dispatch(addError(currentIndex));
-    } else if (isCorrect && errors.includes(currentIndex)) {
-      dispatch(removeError(currentIndex));
-    }
-
-    // Update typed text
-    dispatch(updateTypedText(newTypedText));
-  }, [currentText, typedText, currentIndex, isActive, isCompleted, errors, dispatch]);
-
-  // Handle backspace
-  const handleBackspace = useCallback(() => {
-    if (typedText.length === 0) return;
-
-    const newTypedText = typedText.slice(0, -1);
-    
-    // Remove error if backspacing from incorrect character
-    const removedIndex = typedText.length - 1;
-    if (errors.includes(removedIndex)) {
-      dispatch(removeError(removedIndex));
-    }
-
-    dispatch(updateTypedText(newTypedText));
-  }, [typedText, errors, dispatch]);
-
-  // Handle reset
-  const handleReset = useCallback(() => {
-    dispatch(resetTyping());
-    if (inputRef.current) {
-      inputRef.current.focus();
-    }
-  }, [dispatch]);
+  }, [handleCharacterInput, handleBackspace, handleReset]);
 
   // Handle paste events
   const handlePaste = useCallback((event) => {

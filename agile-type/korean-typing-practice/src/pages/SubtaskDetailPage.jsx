@@ -1595,6 +1595,1020 @@ export default ThemeSelector;`,
           solution: "CSS transition을 추가하고, 테마 변경을 최소화하여 성능을 최적화하세요"
         }
       ]
+    },
+    '3-1': {
+      title: "TypingTextDisplay 컴포넌트 초기 설정 및 기본 텍스트 렌더링",
+      description: "TypingTextDisplay 컴포넌트를 생성하고, 텍스트를 개별 문자로 분리하여 화면에 표시하는 기본 기능을 구현합니다.",
+      objectives: [
+        "React 함수형 컴포넌트 생성하기",
+        "텍스트 props 처리하기",
+        "문자열 split() 메서드 활용하기",
+        "개별 문자 렌더링 구현하기",
+        "key prop을 통한 리스트 최적화하기",
+        "기본 스타일 적용하기"
+      ],
+      prerequisites: [
+        "React 기본 지식",
+        "JavaScript ES6+ 문법",
+        "JSX 사용법",
+        "props 개념 이해"
+      ],
+      steps: [
+        {
+          title: "1. TypingTextDisplay 컴포넌트 생성",
+          content: "React 함수형 컴포넌트를 생성하고 기본적인 컴포넌트 구조를 설정합니다.",
+          code: `const TypingTextDisplay = ({ text }) => {
+  return (
+    <div className="text-display">
+      {/* 텍스트 렌더링 로직 */}
+    </div>
+  );
+};`,
+          explanation: "함수형 컴포넌트를 사용하여 TypingTextDisplay를 생성합니다. text prop을 받아서 처리할 준비를 합니다."
+        },
+        {
+          title: "2. 텍스트를 개별 문자로 분리",
+          content: "받은 텍스트를 split() 메서드를 사용하여 개별 문자 배열로 변환합니다.",
+          code: `const TypingTextDisplay = ({ text }) => {
+  const characters = text.split('');
+
+  return (
+    <div className="text-display">
+      {/* characters 배열을 렌더링 */}
+    </div>
+  );
+};`,
+          explanation: "split('')을 사용하여 텍스트를 개별 문자로 분리합니다. 이렇게 하면 각 문자를 개별적으로 스타일링할 수 있습니다."
+        },
+        {
+          title: "3. 개별 문자 렌더링",
+          content: "map() 함수를 사용하여 각 문자를 span 요소로 렌더링합니다.",
+          code: `const TypingTextDisplay = ({ text }) => {
+  return (
+    <div className="text-display">
+      {text.split('').map((char, index) => (
+        <span key={index} className="character">
+          {char}
+        </span>
+      ))}
+    </div>
+  );
+};`,
+          explanation: "map() 함수로 각 문자를 span 요소로 변환합니다. key prop은 React의 리스트 최적화를 위해 필수적입니다."
+        },
+        {
+          title: "4. 기본 스타일 적용",
+          content: "CSS나 styled-components를 사용하여 기본적인 스타일을 적용합니다.",
+          code: `const CharacterSpan = styled.span\`
+  display: inline-block;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin: 0.1rem;
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+  transition: all 0.2s ease;
+\`;`,
+          explanation: "기본적인 타이포그래피와 간격을 설정하여 읽기 쉽고 시각적으로 매력적인 컴포넌트를 만듭니다."
+        }
+      ],
+      codeExamples: [
+        {
+          title: "TypingTextDisplay 컴포넌트 기본 구조",
+          code: `const TypingTextDisplay = ({ text }) => {
+  return (
+    <div className="text-display">
+      {text.split('').map((char, index) => (
+        <span key={index} className="character">
+          {char}
+        </span>
+      ))}
+    </div>
+  );
+};`,
+          explanation: "컴포넌트의 기본 구조를 보여줍니다. text prop을 받아서 개별 문자로 분리하여 렌더링합니다."
+        },
+        {
+          title: "개별 문자 컴포넌트",
+          code: `const CharacterSpan = styled.span\`
+  display: inline-block;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin: 0.1rem;
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+  transition: all 0.2s ease;
+\`;`,
+          explanation: "각 문자를 감싸는 span 요소의 스타일을 정의합니다. inline-block으로 배치하고 적절한 간격을 줍니다."
+        },
+        {
+          title: "컴포넌트 사용 예시",
+          code: `<TypingTextDisplay text="안녕하세요! 타이핑 연습을 시작합니다." />`,
+          explanation: "컴포넌트를 사용하는 방법을 보여줍니다. text prop으로 표시할 텍스트를 전달합니다."
+        }
+      ],
+      tips: [
+        "key prop은 각 요소의 고유성을 보장하기 위해 필수적입니다",
+        "split('')은 빈 문자열을 구분자로 사용하여 각 문자를 분리합니다",
+        "map() 함수는 새로운 배열을 반환하므로 원본 텍스트를 변경하지 않습니다",
+        "기본 스타일은 나중에 동적 스타일링을 위한 기반이 됩니다",
+        "컴포넌트 이름은 PascalCase를 사용합니다"
+      ],
+      commonErrors: [
+        {
+          error: "key prop이 없어서 경고가 발생함",
+          solution: "map() 함수에서 각 요소에 key={index}를 추가하세요"
+        },
+        {
+          error: "텍스트가 제대로 분리되지 않음",
+          solution: "split('') 대신 split('')을 사용했는지 확인하세요"
+        }
+      ]
+    },
+    '3-2': {
+      title: "입력 상태 및 오류 추적을 위한 상태 관리 구현",
+      description: "사용자의 입력 상태, 현재 위치, 오류 위치 등을 추적하기 위한 React 상태 관리를 구현합니다.",
+      objectives: [
+        "useState 훅 활용하기",
+        "입력된 텍스트 상태 관리하기",
+        "커서 위치 추적하기",
+        "오류 위치 배열 관리하기",
+        "상태 초기화 로직 구현하기",
+        "상태 업데이트 패턴 이해하기"
+      ],
+      prerequisites: [
+        "React Hooks 기본 지식",
+        "JavaScript 배열 메서드",
+        "상태 관리 개념"
+      ],
+      steps: [
+        {
+          title: "1. 상태 변수 정의",
+          content: "타이핑 연습에 필요한 상태 변수들을 useState로 정의합니다.",
+          code: `const TypingTextDisplay = ({ text }) => {
+  const [typedText, setTypedText] = useState('');
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [errorIndices, setErrorIndices] = useState([]);
+
+  // 상태 초기화 함수
+  const resetTyping = () => {
+    setTypedText('');
+    setCurrentIndex(0);
+    setErrorIndices([]);
+  };
+
+  return (
+    <div className="text-display">
+      {/* 텍스트 렌더링 로직 */}
+    </div>
+  );
+};`,
+          explanation: "typedText는 사용자가 입력한 텍스트, currentIndex는 현재 입력 위치, errorIndices는 오류가 발생한 위치들을 저장합니다."
+        },
+        {
+          title: "2. 입력 처리 함수 구현",
+          content: "사용자의 입력을 처리하고 상태를 업데이트하는 함수를 구현합니다.",
+          code: `const handleInput = (inputChar) => {
+  const expectedChar = text[currentIndex];
+
+  if (inputChar === expectedChar) {
+    // 올바른 입력
+    setTypedText(prev => prev + inputChar);
+    setCurrentIndex(prev => prev + 1);
+  } else {
+    // 오류 발생
+    setErrorIndices(prev => [...prev, currentIndex]);
+    setTypedText(prev => prev + inputChar);
+    setCurrentIndex(prev => prev + 1);
+  }
+};`,
+          explanation: "입력된 문자가 기대하는 문자와 일치하는지 확인하고, 상태를 적절히 업데이트합니다."
+        },
+        {
+          title: "3. 백스페이스 처리",
+          content: "백스페이스 키 입력을 처리하여 이전 상태로 되돌립니다.",
+          code: `const handleBackspace = () => {
+  if (typedText.length > 0) {
+    const newTypedText = typedText.slice(0, -1);
+    const removedIndex = typedText.length - 1;
+
+    setTypedText(newTypedText);
+    setCurrentIndex(newTypedText.length);
+
+    // 오류 인덱스에서도 제거
+    setErrorIndices(prev => prev.filter(index => index !== removedIndex));
+  }
+};`,
+          explanation: "백스페이스로 문자를 지울 때 모든 관련 상태를 적절히 업데이트합니다."
+        }
+      ],
+      codeExamples: [
+        {
+          title: "상태 변수 정의",
+          code: `const TypingTextDisplay = ({ text }) => {
+  const [typedText, setTypedText] = useState('');
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [errorIndices, setErrorIndices] = useState([]);
+
+  // 상태 초기화 함수
+  const resetTyping = () => {
+    setTypedText('');
+    setCurrentIndex(0);
+    setErrorIndices([]);
+  };
+
+  return (
+    <div className="text-display">
+      {/* 텍스트 렌더링 로직 */}
+    </div>
+  );
+};`,
+          explanation: "필요한 상태 변수들을 정의하고 초기화 함수를 준비합니다."
+        },
+        {
+          title: "입력 처리 함수",
+          code: `const handleInput = (inputChar) => {
+  const expectedChar = text[currentIndex];
+
+  if (inputChar === expectedChar) {
+    // 올바른 입력
+    setTypedText(prev => prev + inputChar);
+    setCurrentIndex(prev => prev + 1);
+  } else {
+    // 오류 발생
+    setErrorIndices(prev => [...prev, currentIndex]);
+    setTypedText(prev => prev + inputChar);
+    setCurrentIndex(prev => prev + 1);
+  }
+};`,
+          explanation: "입력 검증 로직을 구현하여 정확도 추적을 가능하게 합니다."
+        },
+        {
+          title: "백스페이스 처리",
+          code: `const handleBackspace = () => {
+  if (typedText.length > 0) {
+    const newTypedText = typedText.slice(0, -1);
+    const removedIndex = typedText.length - 1;
+
+    setTypedText(newTypedText);
+    setCurrentIndex(newTypedText.length);
+
+    // 오류 인덱스에서도 제거
+    setErrorIndices(prev => prev.filter(index => index !== removedIndex));
+  }
+};`,
+          explanation: "백스페이스 처리를 통해 사용자가 실수를 바로잡을 수 있게 합니다."
+        }
+      ],
+      tips: [
+        "상태 업데이트는 불변성을 유지해야 합니다",
+        "useState의 함수형 업데이트를 사용하여 이전 상태에 의존하는 업데이트를 안전하게 처리하세요",
+        "배열 상태 업데이트 시 spread 연산자를 사용하세요",
+        "상태 초기화는 별도의 함수로 분리하여 재사용성을 높이세요"
+      ],
+      commonErrors: [
+        {
+          error: "상태가 제대로 업데이트되지 않음",
+          solution: "함수형 업데이트를 사용하세요: setState(prev => prev + 1)"
+        },
+        {
+          error: "배열 상태가 직접 수정됨",
+          solution: "spread 연산자나 배열 메서드를 사용하여 새 배열을 생성하세요"
+        }
+      ]
+    },
+    '3-3': {
+      title: "입력 상태에 따른 문자별 동적 스타일링 로직 구현",
+      description: "입력 상태에 따라 각 문자의 색상과 스타일을 동적으로 변경하는 로직을 구현합니다.",
+      objectives: [
+        "조건부 스타일링 구현하기",
+        "문자 상태 분류하기 (correct, incorrect, current, untyped)",
+        "CSS 클래스 동적 적용하기",
+        "색상 시스템 활용하기",
+        "애니메이션 효과 추가하기",
+        "시각적 피드백 제공하기"
+      ],
+      prerequisites: [
+        "CSS 기본 지식",
+        "JavaScript 조건문",
+        "React 조건부 렌더링"
+      ],
+      steps: [
+        {
+          title: "1. 문자 상태 계산 함수",
+          content: "각 문자의 현재 상태를 계산하는 함수를 구현합니다.",
+          code: `const getCharacterState = (index) => {
+  if (index < typedText.length) {
+    // 이미 입력된 문자
+    return typedText[index] === text[index] ? 'correct' : 'incorrect';
+  } else if (index === typedText.length) {
+    // 현재 입력 위치
+    return 'current';
+  } else {
+    // 아직 입력하지 않은 문자
+    return 'untyped';
+  }
+};`,
+          explanation: "각 문자의 상태를 결정하는 로직을 구현합니다. 입력된 문자, 현재 위치, 미입력 문자를 구분합니다."
+        },
+        {
+          title: "2. 동적 스타일링 적용",
+          content: "상태에 따라 적절한 스타일을 적용하여 시각적 피드백을 제공합니다.",
+          code: `const renderCharacters = () => {
+  return text.split('').map((char, index) => {
+    const state = getCharacterState(index);
+    const hasError = errorIndices.includes(index);
+
+    return (
+      <CharacterSpan
+        key={index}
+        state={state}
+        hasError={hasError}
+        className={state}
+      >
+        {char}
+      </CharacterSpan>
+    );
+  });
+};`,
+          explanation: "각 문자에 상태에 따른 클래스를 적용하여 동적 스타일링을 구현합니다."
+        },
+        {
+          title: "3. CSS 클래스별 스타일 정의",
+          content: "각 상태에 대한 CSS 스타일을 정의합니다.",
+          code: `const CharacterSpan = styled.span\`
+  display: inline-block;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin: 0.1rem;
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+  transition: all 0.2s ease;
+
+  /* 올바른 입력 */
+  &.correct {
+    color: #28a745;
+    background-color: rgba(40, 167, 69, 0.1);
+  }
+
+  /* 잘못된 입력 */
+  &.incorrect {
+    color: #dc3545;
+    background-color: rgba(220, 53, 69, 0.1);
+    animation: shake 0.3s ease-in-out;
+  }
+
+  /* 현재 입력 위치 */
+  &.current {
+    background-color: rgba(0, 123, 255, 0.2);
+    border-bottom: 2px solid #007bff;
+    animation: blink 1s infinite;
+  }
+
+  /* 미입력 */
+  &.untyped {
+    color: #6c757d;
+    opacity: 0.7;
+  }
+
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    75% { transform: translateX(2px); }
+  }
+
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0.3; }
+  }
+\`;`,
+          explanation: "각 상태에 맞는 색상과 애니메이션 효과를 적용하여 직관적인 피드백을 제공합니다."
+        }
+      ],
+      codeExamples: [
+        {
+          title: "문자 상태 계산 함수",
+          code: `const getCharacterState = (index) => {
+  if (index < typedText.length) {
+    // 이미 입력된 문자
+    return typedText[index] === text[index] ? 'correct' : 'incorrect';
+  } else if (index === typedText.length) {
+    // 현재 입력 위치
+    return 'current';
+  } else {
+    // 아직 입력하지 않은 문자
+    return 'untyped';
+  }
+};`,
+          explanation: "문자의 상태를 결정하는 핵심 로직입니다."
+        },
+        {
+          title: "동적 스타일링 적용",
+          code: `const renderCharacters = () => {
+  return text.split('').map((char, index) => {
+    const state = getCharacterState(index);
+    const hasError = errorIndices.includes(index);
+
+    return (
+      <CharacterSpan
+        key={index}
+        state={state}
+        hasError={hasError}
+        className={state}
+      >
+        {char}
+      </CharacterSpan>
+    );
+  });
+};`,
+          explanation: "상태에 따라 동적으로 클래스를 적용합니다."
+        },
+        {
+          title: "스타일드 컴포넌트 상태별 스타일",
+          code: `const CharacterSpan = styled.span\`
+  /* 기본 스타일 */
+  display: inline-block;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin: 0.1rem;
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+  transition: all 0.2s ease;
+
+  /* 올바른 입력 */
+  &.correct {
+    color: #28a745;
+    background-color: rgba(40, 167, 69, 0.1);
+  }
+
+  /* 잘못된 입력 */
+  &.incorrect {
+    color: #dc3545;
+    background-color: rgba(220, 53, 69, 0.1);
+    animation: shake 0.3s ease-in-out;
+  }
+
+  /* 현재 입력 위치 */
+  &.current {
+    background-color: rgba(0, 123, 255, 0.2);
+    border-bottom: 2px solid #007bff;
+    animation: blink 1s infinite;
+  }
+
+  /* 미입력 */
+  &.untyped {
+    color: #6c757d;
+    opacity: 0.7;
+  }
+
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    75% { transform: translateX(2px); }
+  }
+
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0.3; }
+  }
+\`;`,
+          explanation: "각 상태에 맞는 시각적 스타일을 정의합니다."
+        }
+      ],
+      tips: [
+        "색각 이상이 있는 사용자도 구분할 수 있도록 색상 외에 다른 시각적 단서도 제공하세요",
+        "애니메이션은 과도하게 사용하지 말고 중요한 피드백에만 적용하세요",
+        "CSS 클래스를 동적으로 적용할 때는 className을 사용하세요",
+        "접근성을 위해 색상에만 의존하지 말고 다른 시각적 요소도 활용하세요"
+      ],
+      commonErrors: [
+        {
+          error: "스타일이 적용되지 않음",
+          solution: "className에 올바른 클래스 이름을 적용했는지 확인하세요"
+        },
+        {
+          error: "애니메이션이 작동하지 않음",
+          solution: "CSS 애니메이션은 DOM에 요소가 추가된 후에만 작동합니다"
+        }
+      ]
+    },
+    '3-4': {
+      title: "외부 입력 이벤트 처리 및 TypingTextDisplay 상태 업데이트 함수 구현",
+      description: "부모 컴포넌트로부터 입력 이벤트를 받아 상태를 업데이트하는 인터페이스를 구현합니다.",
+      objectives: [
+        "props를 통한 이벤트 처리하기",
+        "콜백 함수 패턴 이해하기",
+        "부모-자식 컴포넌트 통신하기",
+        "이벤트 핸들러 바인딩하기",
+        "상태 동기화하기",
+        "컴포넌트 재사용성 높이기"
+      ],
+      prerequisites: [
+        "React props 개념",
+        "콜백 함수",
+        "이벤트 처리",
+        "컴포넌트 통신 패턴"
+      ],
+      steps: [
+        {
+          title: "1. 컴포넌트 인터페이스 정의",
+          content: "TypingTextDisplay 컴포넌트가 외부로부터 받을 props를 정의합니다.",
+          code: `const TypingTextDisplay = ({
+  text,
+  typedText,
+  currentIndex,
+  errorIndices,
+  onInput,
+  onBackspace,
+  onReset
+}) => {
+  // 상태를 props로 받아서 사용
+  const renderCharacters = () => {
+    return text.split('').map((char, index) => {
+      let state = 'untyped';
+
+      if (index < typedText.length) {
+        state = typedText[index] === text[index] ? 'correct' : 'incorrect';
+      } else if (index === typedText.length) {
+        state = 'current';
+      }
+
+      const hasError = errorIndices.includes(index);
+
+      return (
+        <CharacterSpan
+          key={index}
+          state={state}
+          hasError={hasError}
+        >
+          {char}
+        </CharacterSpan>
+      );
+    });
+  };
+
+  return (
+    <div className="text-display">
+      {renderCharacters()}
+    </div>
+  );
+};`,
+          explanation: "컴포넌트가 상태를 직접 관리하지 않고 props로 받아서 외부에서 제어할 수 있게 합니다."
+        },
+        {
+          title: "2. 부모 컴포넌트에서의 사용",
+          content: "부모 컴포넌트에서 상태를 관리하고 TypingTextDisplay에 props로 전달합니다.",
+          code: `const TypingPractice = () => {
+  const [typedText, setTypedText] = useState('');
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [errorIndices, setErrorIndices] = useState([]);
+
+  const handleInput = (char) => {
+    const expectedChar = text[currentIndex];
+
+    if (char === expectedChar) {
+      setTypedText(prev => prev + char);
+      setCurrentIndex(prev => prev + 1);
+    } else {
+      setErrorIndices(prev => [...prev, currentIndex]);
+      setTypedText(prev => prev + char);
+      setCurrentIndex(prev => prev + 1);
+    }
+  };
+
+  const handleBackspace = () => {
+    if (typedText.length > 0) {
+      const newTypedText = typedText.slice(0, -1);
+      setTypedText(newTypedText);
+      setCurrentIndex(newTypedText.length);
+      setErrorIndices(prev => prev.filter(index => index !== typedText.length - 1));
+    }
+  };
+
+  return (
+    <TypingTextDisplay
+      text={text}
+      typedText={typedText}
+      currentIndex={currentIndex}
+      errorIndices={errorIndices}
+      onInput={handleInput}
+      onBackspace={handleBackspace}
+      onReset={() => {
+        setTypedText('');
+        setCurrentIndex(0);
+        setErrorIndices([]);
+      }}
+    />
+  );
+};`,
+          explanation: "부모 컴포넌트가 상태를 관리하고 자식 컴포넌트에 콜백 함수를 전달합니다."
+        },
+        {
+          title: "3. 키보드 이벤트 통합",
+          content: "키보드 이벤트를 감지하여 입력 처리를 자동화합니다.",
+          code: `const TypingPractice = () => {
+  // ... 상태 관리
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === 'Backspace') {
+        event.preventDefault();
+        handleBackspace();
+      } else if (event.key.length === 1) {
+        event.preventDefault();
+        handleInput(event.key);
+      } else if (event.key === 'Escape') {
+        handleReset();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [typedText, currentIndex]);
+
+  return (
+    <TypingTextDisplay
+      text={text}
+      typedText={typedText}
+      currentIndex={currentIndex}
+      errorIndices={errorIndices}
+    />
+  );
+};`,
+          explanation: "키보드 이벤트를 자동으로 처리하여 사용자 입력을 캡처합니다."
+        }
+      ],
+      codeExamples: [
+        {
+          title: "컴포넌트 인터페이스 정의",
+          code: `const TypingTextDisplay = ({
+  text,
+  typedText,
+  currentIndex,
+  errorIndices,
+  onInput,
+  onBackspace,
+  onReset
+}) => {
+  // 상태를 props로 받아서 사용
+  const renderCharacters = () => {
+    return text.split('').map((char, index) => {
+      let state = 'untyped';
+
+      if (index < typedText.length) {
+        state = typedText[index] === text[index] ? 'correct' : 'incorrect';
+      } else if (index === typedText.length) {
+        state = 'current';
+      }
+
+      const hasError = errorIndices.includes(index);
+
+      return (
+        <CharacterSpan
+          key={index}
+          state={state}
+          hasError={hasError}
+        >
+          {char}
+        </CharacterSpan>
+      );
+    });
+  };
+
+  return (
+    <div className="text-display">
+      {renderCharacters()}
+    </div>
+  );
+};`,
+          explanation: "컴포넌트의 인터페이스를 명확히 정의하여 재사용성을 높입니다."
+        },
+        {
+          title: "부모 컴포넌트에서의 사용",
+          code: `const TypingPractice = () => {
+  const [typedText, setTypedText] = useState('');
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [errorIndices, setErrorIndices] = useState([]);
+
+  const handleInput = (char) => {
+    const expectedChar = text[currentIndex];
+
+    if (char === expectedChar) {
+      setTypedText(prev => prev + char);
+      setCurrentIndex(prev => prev + 1);
+    } else {
+      setErrorIndices(prev => [...prev, currentIndex]);
+      setTypedText(prev => prev + char);
+      setCurrentIndex(prev => prev + 1);
+    }
+  };
+
+  const handleBackspace = () => {
+    if (typedText.length > 0) {
+      const newTypedText = typedText.slice(0, -1);
+      setTypedText(newTypedText);
+      setCurrentIndex(newTypedText.length);
+      setErrorIndices(prev => prev.filter(index => index !== typedText.length - 1));
+    }
+  };
+
+  return (
+    <TypingTextDisplay
+      text={text}
+      typedText={typedText}
+      currentIndex={currentIndex}
+      errorIndices={errorIndices}
+      onInput={handleInput}
+      onBackspace={handleBackspace}
+      onReset={() => {
+        setTypedText('');
+        setCurrentIndex(0);
+        setErrorIndices([]);
+      }}
+    />
+  );
+};`,
+          explanation: "부모 컴포넌트가 상태를 관리하고 자식 컴포넌트에 필요한 데이터를 전달합니다."
+        },
+        {
+          title: "키보드 이벤트 통합",
+          code: `const TypingPractice = () => {
+  // ... 상태 관리
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === 'Backspace') {
+        event.preventDefault();
+        handleBackspace();
+      } else if (event.key.length === 1) {
+        event.preventDefault();
+        handleInput(event.key);
+      } else if (event.key === 'Escape') {
+        handleReset();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [typedText, currentIndex]);
+
+  return (
+    <TypingTextDisplay
+      text={text}
+      typedText={typedText}
+      currentIndex={currentIndex}
+      errorIndices={errorIndices}
+    />
+  );
+};`,
+          explanation: "키보드 이벤트를 처리하여 사용자 입력을 자동으로 캡처합니다."
+        }
+      ],
+      tips: [
+        "콜백 함수는 useCallback으로 메모이제이션하여 불필요한 리렌더링을 방지하세요",
+        "컴포넌트 인터페이스는 명확하고 일관되게 유지하세요",
+        "이벤트 핸들러에서 preventDefault()를 적절히 사용하세요",
+        "컴포넌트 간 통신은 props를 통해 단방향으로 유지하세요"
+      ],
+      commonErrors: [
+        {
+          error: "콜백 함수가 제대로 전달되지 않음",
+          solution: "함수를 props로 전달할 때 화살표 함수가 아닌 함수 참조를 사용하세요"
+        },
+        {
+          error: "키보드 이벤트가 중복 처리됨",
+          solution: "이벤트 리스너를 useEffect에서 적절히 정리하세요"
+        }
+      ]
+    },
+    '3-5': {
+      title: "컴포넌트 접근성 및 성능 최적화",
+      description: "화면 리더기 지원과 성능 최적화를 통해 컴포넌트를 개선합니다.",
+      objectives: [
+        "ARIA 속성 활용하기",
+        "스크린 리더기 지원하기",
+        "React.memo를 통한 최적화하기",
+        "useCallback을 통한 함수 메모이제이션하기",
+        "접근성 테스트하기",
+        "성능 모니터링하기"
+      ],
+      prerequisites: [
+        "웹 접근성 기본 지식",
+        "React 성능 최적화",
+        "ARIA 속성",
+        "스크린 리더기 사용법"
+      ],
+      steps: [
+        {
+          title: "1. 접근성 향상",
+          content: "ARIA 속성과 시맨틱 HTML을 사용하여 스크린 리더기 지원을 추가합니다.",
+          code: `const TypingTextDisplay = ({ text, typedText, currentIndex, errorIndices }) => {
+  const renderCharacters = useMemo(() => {
+    return text.split('').map((char, index) => {
+      let state = 'untyped';
+      let ariaLabel = '';
+
+      if (index < typedText.length) {
+        state = typedText[index] === text[index] ? 'correct' : 'incorrect';
+        ariaLabel = state === 'correct' ? '올바르게 입력됨' : '오류로 입력됨';
+      } else if (index === typedText.length) {
+        state = 'current';
+        ariaLabel = '현재 입력 위치';
+      } else {
+        ariaLabel = '아직 입력하지 않음';
+      }
+
+      const hasError = errorIndices.includes(index);
+
+      return (
+        <CharacterSpan
+          key={index}
+          state={state}
+          hasError={hasError}
+          role="text"
+          aria-label={ariaLabel}
+        >
+          {char}
+        </CharacterSpan>
+      );
+    });
+  }, [text, typedText, currentIndex, errorIndices]);
+
+  return (
+    <div
+      className="text-display"
+      role="textbox"
+      aria-label="타이핑 연습 텍스트"
+      aria-readonly="true"
+    >
+      {renderCharacters}
+    </div>
+  );
+};`,
+          explanation: "ARIA 속성을 추가하여 스크린 리더기가 텍스트의 상태를 읽을 수 있게 합니다."
+        },
+        {
+          title: "2. 성능 최적화",
+          content: "React.memo와 useCallback을 사용하여 불필요한 리렌더링을 방지합니다.",
+          code: `const TypingTextDisplay = React.memo(({
+  text,
+  typedText,
+  currentIndex,
+  errorIndices
+}) => {
+  const renderCharacters = useCallback(() => {
+    return text.split('').map((char, index) => {
+      // ... 렌더링 로직
+    });
+  }, [text, typedText, currentIndex, errorIndices]);
+
+  return (
+    <div className="text-display">
+      {renderCharacters()}
+    </div>
+  );
+});`,
+          explanation: "React.memo로 컴포넌트를 메모이제이션하고 useCallback으로 함수를 메모이제이션합니다."
+        },
+        {
+          title: "3. 진행률 표시 및 통계",
+          content: "사용자의 진행 상황과 통계를 표시하여 피드백을 제공합니다.",
+          code: `const TypingStats = ({ text, typedText, errorIndices }) => {
+  const stats = useMemo(() => {
+    const totalChars = text.length;
+    const typedChars = typedText.length;
+    const correctChars = typedText.split('').filter((char, index) =>
+      char === text[index]
+    ).length;
+    const accuracy = typedChars > 0 ? (correctChars / typedChars) * 100 : 0;
+    const progress = (typedChars / totalChars) * 100;
+
+    return { accuracy, progress, correctChars, totalChars };
+  }, [text, typedText]);
+
+  return (
+    <div className="stats" role="status" aria-label="타이핑 통계">
+      <div>정확도: {stats.accuracy.toFixed(1)}%</div>
+      <div>진행률: {stats.progress.toFixed(1)}%</div>
+      <div>오류: {errorIndices.length}개</div>
+    </div>
+  );
+};`,
+          explanation: "실시간 통계를 제공하여 사용자의 진행 상황을 파악할 수 있게 합니다."
+        }
+      ],
+      codeExamples: [
+        {
+          title: "접근성 향상",
+          code: `const TypingTextDisplay = ({ text, typedText, currentIndex, errorIndices }) => {
+  const renderCharacters = useMemo(() => {
+    return text.split('').map((char, index) => {
+      let state = 'untyped';
+      let ariaLabel = '';
+
+      if (index < typedText.length) {
+        state = typedText[index] === text[index] ? 'correct' : 'incorrect';
+        ariaLabel = state === 'correct' ? '올바르게 입력됨' : '오류로 입력됨';
+      } else if (index === typedText.length) {
+        state = 'current';
+        ariaLabel = '현재 입력 위치';
+      } else {
+        ariaLabel = '아직 입력하지 않음';
+      }
+
+      const hasError = errorIndices.includes(index);
+
+      return (
+        <CharacterSpan
+          key={index}
+          state={state}
+          hasError={hasError}
+          role="text"
+          aria-label={ariaLabel}
+        >
+          {char}
+        </CharacterSpan>
+      );
+    });
+  }, [text, typedText, currentIndex, errorIndices]);
+
+  return (
+    <div
+      className="text-display"
+      role="textbox"
+      aria-label="타이핑 연습 텍스트"
+      aria-readonly="true"
+    >
+      {renderCharacters}
+    </div>
+  );
+};`,
+          explanation: "ARIA 속성을 추가하여 접근성을 향상시킵니다."
+        },
+        {
+          title: "성능 최적화",
+          code: `const TypingTextDisplay = React.memo(({
+  text,
+  typedText,
+  currentIndex,
+  errorIndices
+}) => {
+  const renderCharacters = useCallback(() => {
+    return text.split('').map((char, index) => {
+      // ... 렌더링 로직
+    });
+  }, [text, typedText, currentIndex, errorIndices]);
+
+  return (
+    <div className="text-display">
+      {renderCharacters()}
+    </div>
+  );
+});`,
+          explanation: "React.memo와 useCallback을 사용하여 성능을 최적화합니다."
+        },
+        {
+          title: "진행률 표시 및 통계",
+          code: `const TypingStats = ({ text, typedText, errorIndices }) => {
+  const stats = useMemo(() => {
+    const totalChars = text.length;
+    const typedChars = typedText.length;
+    const correctChars = typedText.split('').filter((char, index) =>
+      char === text[index]
+    ).length;
+    const accuracy = typedChars > 0 ? (correctChars / typedChars) * 100 : 0;
+    const progress = (typedChars / totalChars) * 100;
+
+    return { accuracy, progress, correctChars, totalChars };
+  }, [text, typedText]);
+
+  return (
+    <div className="stats" role="status" aria-label="타이핑 통계">
+      <div>정확도: {stats.accuracy.toFixed(1)}%</div>
+      <div>진행률: {stats.progress.toFixed(1)}%</div>
+      <div>오류: {errorIndices.length}개</div>
+    </div>
+  );
+};`,
+          explanation: "사용자의 타이핑 통계를 실시간으로 표시합니다."
+        }
+      ],
+      tips: [
+        "접근성은 모든 사용자에게 필수적인 기능입니다",
+        "성능 최적화는 체감 성능에 큰 영향을 미칩니다",
+        "React.memo는 props가 변경되지 않았을 때 리렌더링을 방지합니다",
+        "useMemo와 useCallback은 계산 비용이 높은 연산에 사용하세요",
+        "접근성 테스트는 실제 스크린 리더기로 수행하는 것이 좋습니다"
+      ],
+      commonErrors: [
+        {
+          error: "React.memo가 작동하지 않음",
+          solution: "props 비교가 객체인 경우 얕은 비교만 하므로 주의하세요"
+        },
+        {
+          error: "스크린 리더기가 텍스트를 읽지 않음",
+          solution: "적절한 ARIA 속성과 role을 추가했는지 확인하세요"
+        }
+      ]
     }
   };
 
