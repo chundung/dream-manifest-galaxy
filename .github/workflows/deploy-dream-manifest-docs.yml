@@ -38,13 +38,13 @@ jobs:
 
     - name: Build documentation
       run: |
-        cd dream-manifest/docs-src
-        mkdocs build --site-dir ../docs
+        cd docs-src
+        mkdocs build --site-dir ./docs
 
     - name: Check if docs directory has changes
       id: verify-changed-files
       run: |
-        if [ -d "dream-manifest/docs" ]; then
+        if [ -d "docs" ]; then
           echo "docs_exists=true" >> $GITHUB_OUTPUT
           if git diff --quiet HEAD -- dream-manifest/docs/; then
             echo "docs_changed=false" >> $GITHUB_OUTPUT
@@ -59,9 +59,9 @@ jobs:
     - name: Commit and push changes
       if: steps.verify-changed-files.outputs.docs_changed == 'true'
       run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add dream-manifest/docs/
+        git config --local user.email "chundung9324@gmail.com"
+        git config --local user.name "chundung"
+        git add docs/
         git commit -m "Build and deploy documentation [skip ci]" || echo "No changes to commit"
         git push
 
@@ -73,7 +73,7 @@ jobs:
       if: steps.verify-changed-files.outputs.docs_exists == 'true'
       uses: actions/upload-pages-artifact@v3
       with:
-        path: dream-manifest/docs
+        path: docs
 
     - name: Deploy to GitHub Pages
       if: steps.verify-changed-files.outputs.docs_exists == 'true'
