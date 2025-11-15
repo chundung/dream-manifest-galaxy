@@ -41,7 +41,8 @@ jobs:
         cd docs-src
         mkdir -p docs
         cp *.md docs/
-        mkdocs build --site-dir ./docs
+        mkdocs build
+        mv site docs
 
     - name: Check if docs directory has changes
       id: verify-changed-files
