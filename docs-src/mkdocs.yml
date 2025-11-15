@@ -2,7 +2,7 @@ site_name: Korean Typing Practice Documentation
 site_description: Comprehensive documentation for the Korean typing practice application
 site_author: Nexus Codex Team
 
-docs_dir: docs
+docs_dir: .
 
 theme:
   name: material

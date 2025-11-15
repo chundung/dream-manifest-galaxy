@@ -39,6 +39,8 @@ jobs:
     - name: Build documentation
       run: |
         cd docs-src
+        mkdir -p docs
+        cp *.md docs/
         mkdocs build --site-dir ./docs
 
     - name: Check if docs directory has changes
