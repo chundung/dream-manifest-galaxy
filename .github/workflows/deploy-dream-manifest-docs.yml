@@ -1,0 +1,81 @@
+name: Deploy Dream Manifest Documentation
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'dream-manifest/docs-src/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: Install MKDocs and dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install mkdocs mkdocs-material pymdown-extensions mkdocs-minify-plugin
+
+    - name: Build documentation
+      run: |
+        cd dream-manifest/docs-src
+        mkdocs build --site-dir ../docs
+
+    - name: Check if docs directory has changes
+      id: verify-changed-files
+      run: |
+        if [ -d "dream-manifest/docs" ]; then
+          echo "docs_exists=true" >> $GITHUB_OUTPUT
+          if git diff --quiet HEAD -- dream-manifest/docs/; then
+            echo "docs_changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "docs_changed=true" >> $GITHUB_OUTPUT
+          fi
+        else
+          echo "docs_exists=false" >> $GITHUB_OUTPUT
+          echo "docs_changed=true" >> $GITHUB_OUTPUT
+        fi
+
+    - name: Commit and push changes
+      if: steps.verify-changed-files.outputs.docs_changed == 'true'
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add dream-manifest/docs/
+        git commit -m "Build and deploy documentation [skip ci]" || echo "No changes to commit"
+        git push
+
+    - name: Setup Pages
+      if: steps.verify-changed-files.outputs.docs_exists == 'true'
+      uses: actions/configure-pages@v4
+
+    - name: Upload artifact
+      if: steps.verify-changed-files.outputs.docs_exists == 'true'
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: dream-manifest/docs
+
+    - name: Deploy to GitHub Pages
+      if: steps.verify-changed-files.outputs.docs_exists == 'true'
+      id: deployment
+      uses: actions/deploy-pages@v4
