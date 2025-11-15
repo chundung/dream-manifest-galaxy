@@ -59,6 +59,19 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Task 1: korean-typing-practice-task1.md
-  - Task 2: korean-typing-practice-task2.md
-  - Task 3: korean-typing-practice-task3.md
+  - Tasks:
+    - Task 1: task-1.md
+    - Task 2: task-2.md
+    - Task 3: task-3.md
+    - Task 4: task-4.md
+    - Task 5: task-5.md
+    - Task 6: task-6.md
+    - Task 7: task-7.md
+    - Task 8: task-8.md
+    - Task 9: task-9.md
+    - Task 10: task-10.md
+    - Task 11: task-11.md
+    - Task 12: task-12.md
+    - Task 13: task-13.md
+    - Task 14: task-14.md
+    - Task 15: task-15.md
